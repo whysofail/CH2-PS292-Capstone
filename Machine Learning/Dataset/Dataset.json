@@ -1,11 +1,5 @@
 [
  {
-   "tag" : "hutang piutang",
-   "question": "Bagaimana tata cara pelaporan utang piutang antara perusahaan kepada Otoritas Jasa Keuangan (OJK)?",
-   "answer": "Perusahaan keuangan atau lembaga yang diawasi oleh OJK harus melaporkan utang piutang mereka sesuai dengan ketentuan yang berlaku.",
-    "context_set": ""
-},
- {
    "tag": "greeting",
    "patterns": [
       "Hi",
@@ -37,8 +31,7 @@
       "Good to see you again!, what can i help you today?",
       "Hi there!, how can i help you?",
       "Aku disini!, ada yang bisa kubantu?"
-   ],
-   "context_set": ""
+   ]
 },
   {
    "tag": "goodbye",
@@ -71,8 +64,7 @@
       "baiklah, semoga jawabanku bermanfaat ya.",
       "Senang bisa membantu.",
       "Semoga masalahmu cepat terselesaikan ya."
-   ],
-   "context_set": ""
+   ]
 },
  {
    "tag": "creator",
@@ -114,8 +106,7 @@
       "My Creator are Cohort Bangkit Academy 2023 from CH2-PS292 Capstone Project Group",
       "Cohort Bangkit Academy 2023 from CH2-PS292 Capstone Project Group made me",
       "Cohort Bangkit Academy 2023 from CH2-PS292 Capstone Project Group developed me"
-   ],
-   "context_set": ""
+   ]
 },
  {
    "tag": "name",
@@ -159,8 +150,12 @@
       "Aku LawMate, Kamu bisa bertanya apapun kepadaku terkait hukum",
       "Kamu Bisa Memanggilku LawMate",
       "Sekarang kamu sedang menghubungi LawMate, temanmu dalam hukum"
-   ],
-   "context_set": ""
+   ]
+},
+  {
+  "tag" : "hutang piutang",
+  "question": "Bagaimana tata cara pelaporan utang piutang antara perusahaan kepada Otoritas Jasa Keuangan (OJK)?",
+  "answer": "Perusahaan keuangan atau lembaga yang diawasi oleh OJK harus melaporkan utang piutang mereka sesuai dengan ketentuan yang berlaku."
 },
  {
    "tag": "hutang piutang",
@@ -1436,6 +1431,7 @@
    "answer": "Hukum mengatur perjanjian utang piutang yang melibatkan penyelesaian sengketa, termasuk ketentuan-ketentuan yang mengatur mekanisme penyelesaian sengketa, yurisdiksi yang berlaku, dan dampak hukum dari ketidaksetujuan dalam penyelesaian sengketa."
  },
  {
+   "tag" : "hutang piutang - studi kasus",
    "Question": "Seorang pengusaha (Pemberi Utang) memberikan pinjaman kepada rekan bisnisnya (Penerima Utang) untuk pengembangan usaha. Setelah beberapa bulan, Penerima Utang tidak dapat membayar kembali pinjaman tersebut. Bagaimana penyelesaian hukumnya?",
    "Answer": "Jika Penerima Utang tidak dapat membayar pinjaman, Pemberi Utang dapat mengambil langkah-langkah hukum seperti mengajukan gugatan di pengadilan berdasarkan ketentuan perjanjian pinjaman dan Kitab Undang-Undang Hukum Perdata (KUHPerdata)."
  },
