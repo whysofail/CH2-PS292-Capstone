@@ -1,10 +1,10 @@
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors")
-require("dotenv").config();
-
+require('./app/utils/db')
 
 const app = express();
-const { PORT = 8000 } = process.env;
+const { PORT = 8080 } = process.env;
 
 app.use(cors())
 app.get("/", (req, res) => {
