@@ -4,7 +4,6 @@ const { User } = require('../../models');
 
 const SALT = 10;
 
-
 function encryptPassword(password) {
   return new Promise((resolve, reject) => {
     bcrypt.hash(password, SALT, (err, encryptedPassword) => {
@@ -39,11 +38,10 @@ function createToken(payload) {
   return [access, refresh];
 }
 
-
 const register = async (req, res) => {
   const email = req.body.email.toLowerCase();
   const {
-    name, password, confirmationPassword, birthDate, gender, phone,
+    password, confirmationPassword, role_id,
   } = req.body;
  
   if (password !== confirmationPassword) {
@@ -54,13 +52,9 @@ const register = async (req, res) => {
     const encryptedPassword = await encryptPassword(password);
 
     const user = await User.create({
-      name,
       email,
       encryptedPassword,
-      birthDate: new Date(birthDate).toISOString(),
-      gender,
-      phone,
-      roleId: role,
+      role_id,
     });
     res.status(200).json('Register success');
   } catch (err) {
@@ -92,16 +86,11 @@ const login = async (req, res) => {
   }
 
   const token = createToken({
-    id: user.id,
-    name: user.name,
-    image: user.image,
+    user_id: user.id,
     email: user.email,
-    birthDate: user.birthDate,
-    gender: user.gender,
-    phone: user.phone,
-    roleId: user.roleId,
     createdAt: user.createdAt,
     updatedAt: user.updatedAt,
+    role_id: user.role_id,
   });
   const accesstToken = token[0];
   const refreshToken = token[1];
@@ -120,8 +109,11 @@ const login = async (req, res) => {
   res.status(201).json({
     message: 'login success',
     user: {
-      id: user.id,
+      user_id: user.id,
       email: user.email,
+      createdAt: user.createdAt,
+      updatedAt: user.updatedAt,
+      role_id: user.role_id,
       accesstToken,
     },
   });
@@ -188,20 +180,15 @@ const refreshToken = async (req, res) => {
       }
       const userId = user.id;
       const {
-        email, createdAt, updatedAt, roleId,
+        email, createdAt, updatedAt, role_id,
       } = user;
       const accessToken = jwt.sign(
         {
-          id: user.id,
-          name: user.name,
-          image: user.image,
+          user_id: user.id,
           email: user.email,
-          birthDate: user.birthDate,
-          gender: user.gender,
-          phone: user.phone,
-          roleId: user.roleId,
           createdAt: user.createdAt,
           updatedAt: user.updatedAt,
+          role_id: user.role_id,
         },
         process.env.ACCESS_TOKEN_SECRET,
         {
@@ -209,8 +196,11 @@ const refreshToken = async (req, res) => {
         },
       );
       res.json({
-        userId,
+        user_id: userId,
         email,
+        createdAt,
+        updatedAt,
+        role_id,
         accessToken,
       });
     });
@@ -223,7 +213,6 @@ const refreshToken = async (req, res) => {
     });
   }
 };
-
 
 
 module.exports = {
