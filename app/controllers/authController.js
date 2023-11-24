@@ -1,11 +1,6 @@
-/* eslint-disable max-len */
-/* eslint-disable no-unused-vars */
-
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const randomstring = require('randomstring');
-const { Op } = require('sequelize');
-const { User, UserEmailConfirmation } = require('../../models');
+const { User } = require('../../models');
 
 const SALT = 10;
 

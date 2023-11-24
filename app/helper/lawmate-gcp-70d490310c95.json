@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "lawmate-gcp",
+  "private_key_id": "70d490310c9527db48e1f4e3157c94046d0f6fc5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCeaYzTRVEll+Y7\nWriJIbWFL6Zr8uyhEKhtFNs/HkxmMDwQwhkA6stKOPt2ReVhRymLRPYMOgODlSVI\nFRBZkWdjhjLzZwjgvQJZqsHVPZsX6QkH7KtIO6yqHpXBC4kvkaITrEEtd1eG7Mq0\n+rAL4Mpi3Eq1IKYSuEOia9lq8p2x6npCAGB3A5dDImabu6Uz9Eqg0aeoLmfLyMOX\nm30X8jxUJX1jyp0dl33k83+fW4H+64ciNz9mb7X6lhZKYmLRd8lvqYoLqTr3E0Ex\nvDrAOhgzYEGcjp05Q8gTPndOv7EW/MuR6C0OwztCNCRAhQLpkwr9mgF1j+gON6yt\nLCOVj/43AgMBAAECggEAAkhXvMzukBHHQdWwe7FeUeP6NutSLjlKOVV9RJnlf0If\nVh0l38CCW2MaJH3PV1PU17/k97oiRilxAb/j82vH8e7YxG8Yo/xf5fYy7XqsxcRt\nhTgLeR1QWJyGNeOPqigkDg/ZBJRdUNa6o671DcbDGSI+0ACqGUefGd5fTKOK/X7z\nTYaz5VAPwAO3eJB+eB7xvAxDhqi5Fnr3uQdV+0+3bN7rrmPJFL+av1pN9YEMrban\nK0PvLBEqbooAeUg0Vx/ANy/rrehK4dE769WEkDUP5vshJWe24nj1yLETXcTBJdwf\nXNTyvN3yN3OYXx6n/OHkL0OM2n/gUfMJIcn6S8FPsQKBgQDSkbVt1qLP/mA/avR3\nztMns0qIyrp8/DbKbwC1hYn0xG8x1Qa2XXSTyVwm590OCgPvc6znhUeY8Z56vZhj\napTAWZ6z+O+5Iy7ZqZl+WTUDCK7z3oMxcDn+cNJGgPDP/AjtY0j3pFwBZZsMaz/9\nQONGkZMG/U9kn2VBcuHhMaHjOQKBgQDAlxRvO9ChqB9G1Ppng0oFHCfnCpEsXBIN\nwzNmnfcgGBE7Y4kJk5T/5aFK2kgYTUfcj5uqM0vDHOkOPBdcYyhAlgzzZcbB3Z62\n8WFuT/0CuI4HBgMHblr0eIgwCGvdDZiKVkww23GBO0J7fbMlaUi8EQM93hMcA43m\ntj05Vge87wKBgQDEuXSzRY+empz5Isd7FzOXJ54+5ogMNOZLgiE7daNJliv8dnVq\n8yzy1XDOuFiBwUGj+IJVWuNlNHdHXNJ+LxkCC7iFk9EDOqeOmzDYJiesyfQJypzv\nF1ZXLLiHPfe9mE4O2m9VTazXcUHF/H0v8etkBqVCJm6CJ5jF6Lq3VVNVoQKBgGM8\n9lCi98x0/zjWgflY04lyirUo4smC3+KrlQ7pku+8txRtI64FmB+MSeJyO/gZyk/C\nyCmZqQ5vFUA6gqceiR1OtHmvFg3Ljv8hvlzDZtJCGx1PYbwwhzm16icmD76mRNXz\nxerfCMvYp1dO3EMIz2vpMExu5FXpFvOtMDsdM3uNAoGBAJmxfrGqF0Cmd2DFb18h\nXyYxXxDEIadaCkV8hmhkb/ldE/tCv2sp4yUHc3rtB31EbMjwt1q5McV+f+Ss+Y6x\niR8k6xRlU0EDIRJYIJ/E7EtPPZ6rlVH3r5No00+wxPU5hOUjyxiv2tGdEDm49wAj\nNj1k6y6LqkT4tAD6Rq/jR14C\n-----END PRIVATE KEY-----\n",
+  "client_email": "gsbucket-admin@lawmate-gcp.iam.gserviceaccount.com",
+  "client_id": "116100840822581651572",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/gsbucket-admin%40lawmate-gcp.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
