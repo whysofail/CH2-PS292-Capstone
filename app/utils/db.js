@@ -64,13 +64,6 @@ User.belongsTo(Role, { foreignKey: "role_id" });
 
 const main = async () => {
   try {
-    await sequelize.drop();
-    console.log("Table dropped");
-  } catch (error) {
-    console.error(error);
-  }
-
-  try {
     await sequelize.sync({force: true}).then(() => {
       console.log("Tabel telah disinkronkan");
     });
