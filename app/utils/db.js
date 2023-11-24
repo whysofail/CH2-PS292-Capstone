@@ -1,93 +1,84 @@
-const { Sequelize, DataTypes } = require('sequelize');
+const { Sequelize, DataTypes } = require("sequelize");
 
-const {
-  DB_USERNAME, 
-DB_PASSWORD,
-DB_NAME,
-DB_HOST,
-DB_PORT,
-} = process.env
+const { DB_USERNAME, DB_PASSWORD, DB_NAME, DB_HOST, DB_PORT } = process.env;
 
 const sequelize = new Sequelize(DB_NAME, DB_USERNAME, DB_PASSWORD, {
   host: DB_HOST,
   port: DB_PORT,
-  dialect: 'mysql'
+  dialect: "mysql",
 });
 
-const Role = sequelize.define('Role', {
+const Role = sequelize.define("Role", {
   role_id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
-    autoIncrement: true
+    autoIncrement: true,
   },
   rolename: {
     type: DataTypes.STRING,
-    allowNull: false
-  }
+    allowNull: false,
+  },
 });
 
-const User = sequelize.define('User', {
+const User = sequelize.define("User", {
   user_id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
-    autoIncrement: true
+    autoIncrement: true,
   },
   email: {
     type: DataTypes.STRING,
-    allowNull: false
+    allowNull: false,
   },
   password: {
     type: DataTypes.STRING,
-    allowNull: false
-  }
+    allowNull: false,
+  },
 });
 
-const Lawyer = sequelize.define('Lawyer', {
-  lawyer_id: {
-    type: DataTypes.INTEGER,
-    primaryKey: true,
-    autoIncrement: true
-  },
-  email: {
-    type: DataTypes.STRING,
-    allowNull: false
-  },
-  password: {
-    type: DataTypes.STRING,
-    allowNull: false
-  }
-});
-
-const Tags = sequelize.define('Tags', {
+const Tags = sequelize.define("Tags", {
   tag_id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
-    autoIncrement: true
+    autoIncrement: true,
   },
   name: {
     type: DataTypes.STRING,
-    allowNull: false
+    allowNull: false,
   },
   description: {
-    type: DataTypes.STRING
-  }
+    type: DataTypes.STRING,
+  },
 });
 
-const LawyerTags = sequelize.define('LawyerTags', {
+const LawyerTags = sequelize.define("LawyerTags", {
   lawyertags_id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
-    autoIncrement: true
-  }
+    autoIncrement: true,
+  },
 });
 
-Lawyer.belongsToMany(Tags, { through: LawyerTags, foreignKey: 'lawyer_id' });
-Tags.belongsToMany(Lawyer, { through: LawyerTags, foreignKey: 'tag_id' });
-User.belongsTo(Role, { foreignKey: 'role_id' });
+Tags.belongsToMany(User, { through: LawyerTags, foreignKey: "tag_id" });
+User.belongsTo(Role, { foreignKey: "role_id" });
 
-sequelize.sync()
-  .then(() => {
-    console.log('Tabel telah disinkronkan');
-  });
+const main = async () => {
+  try {
+    await sequelize.drop();
+    console.log("Table dropped");
+  } catch (error) {
+    console.error(error);
+  }
 
-module.exports = { Role, User, Lawyer, Tags, LawyerTags, sequelize };
+  try {
+    await sequelize.sync({force: true}).then(() => {
+      console.log("Tabel telah disinkronkan");
+    });
+  } catch (error) {
+    console.error(error)
+  }
+};
+
+main()
+
+module.exports = { Role, User, Tags, LawyerTags, sequelize };
