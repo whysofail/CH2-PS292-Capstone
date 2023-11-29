@@ -1,4 +1,4 @@
-const { User } = require('../utils/db');
+const { User } = require('../../models');
 
 const emailExist = async (req, res, next) => {
   const email = req.body.email.toLowerCase();
