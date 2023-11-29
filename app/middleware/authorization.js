@@ -10,7 +10,7 @@ const authorize = async (req, res, next) => {
     next();
   } catch (err) {
     res.status(401).json({
-      message: 'Unauthorized',
+      msg: 'Unauthorized',
     });
   }
 };
@@ -18,7 +18,7 @@ const authorize = async (req, res, next) => {
 const isAdmin = async (req, res, next) => {
   const auth = req.user.roleId;
   if (auth !== 1) {
-    res.status(403).json({ message: 'member unauthorized' })
+    res.status(403).json({ msg: 'member unauthorized' })
     return;
   }
   next();

@@ -50,11 +50,11 @@ const register = async (req, res) => {
       !password ||
       !confirmationPassword
     ) {
-      return res.status(400).json({ message: "All fields are required" });
+      return res.status(400).json({ msg: "All fields are required" });
     }
 
     if (password !== confirmationPassword) {
-      return res.status(401).json({ message: "Passwords do not match" });
+      return res.status(401).json({ msg: "Passwords do not match" });
     }
 
     const encryptedPassword = await encryptPassword(password);
@@ -68,14 +68,14 @@ const register = async (req, res) => {
       role_id,
     });
 
-    return res.status(200).json({ message: "Registration successful" });
+    return res.status(200).json({ msg: "Registration successful" });
   } catch (err) {
     console.error("Registration error:", err);
 
     return res.status(500).json({
       error: {
         name: err.name,
-        message: "An error occurred during registration",
+        msg: "An error occurred during registration",
       },
     });
   }
@@ -89,19 +89,19 @@ const login = async (req, res) => {
   });
 
   if (!user) {
-    res.status(404).json({ message: "Email not found" });
+    res.status(404).json({ msg: "Email not found" });
     return;
   }
 
   const isPasswordCorrect = await checkPassword(user.password, password);
 
   if (!isPasswordCorrect) {
-    res.status(401).json({ message: "Wrong password!" });
+    res.status(401).json({ msg: "Wrong password!" });
     return;
   }
 
   const token = createToken({
-    user_id: user.user_id,
+    user_id: user.id,
     first_name: user.first_name,
     last_name: user.last_name,
     email: user.email,
@@ -121,10 +121,10 @@ const login = async (req, res) => {
     httpOnly: true,
     maxAge: 24 * 60 * 60 * 1000,
   });
-  res.status(201).json({
-    message: "login success",
+  res.status(200).json({
+    msg: "login success",
     user: {
-      user_id: user.user_id,
+      user_id: user.id,
       first_name: user.first_name,
       last_name: user.last_name,
       email: user.email,
@@ -224,7 +224,7 @@ const refreshToken = async (req, res) => {
     res.status(422).json({
       error: {
         name: err.name,
-        message: err.message,
+        msg: err.msg,
       },
     });
   }
@@ -239,7 +239,7 @@ module.exports = {
   onLost(_req, res) {
     res.status(404).json({
       status: "FAIL",
-      message: "Route not found!",
+      msg: "Route not found!",
     });
   },
   onError(err, _req, res, _next) {
@@ -247,7 +247,7 @@ module.exports = {
       status: "ERROR",
       error: {
         name: err.name,
-        message: err.message,
+        msg: err.message,
       },
     });
   },
