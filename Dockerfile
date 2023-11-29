@@ -8,7 +8,7 @@ COPY . .
 RUN npm install
 
 # Menjalankan skrip db:refresh
-RUN npm run db:refresh
+# RUN npm run db:refresh
 
 EXPOSE 3306
 EXPOSE 8080
