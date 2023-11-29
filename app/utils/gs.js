@@ -12,7 +12,7 @@ const checkBucket = async () => {
         await bucket.get({
             userProject : GCP_PROJECT_ID
         })
-        console.log(`${bucketName} in ${GCP_PROJECT_ID} is exists.`)        
+        console.log(`${bucketName} in ${GCP_PROJECT_ID} is up.`)        
     } catch (error) {
         console.error(error)
     }
