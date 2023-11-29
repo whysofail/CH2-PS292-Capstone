@@ -1,3 +1,7 @@
-const nodeMailer = require('./nodemailer')
+const {authorize, isAdmin} = require('./authorization')
+const { emailExist } = require('./emailCheck')
 
-module.exports = { nodeMailer };
+module.exports = {
+    authorize,
+    emailExist
+}

@@ -1,10 +1,12 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
+const { authController } = require("../controllers");
 
-router.get('/halo', (req, res) => {
-    return res.json('Halo')
-})
+const middleware = require("../middleware");
 
+router.post("/login", authController.login);
+router.post("/register", middleware.emailExist, authController.register);
+router.get("/who", middleware.authorize, authController.whoAmI);
 
-module.exports = router
+module.exports = router;

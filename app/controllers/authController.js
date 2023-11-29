@@ -1,6 +1,6 @@
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
-const { User } = require('../../models');
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const { User } = require("../../models");
 
 const SALT = 10;
 
@@ -30,69 +30,84 @@ function checkPassword(encryptedPassword, password) {
 
 function createToken(payload) {
   const access = jwt.sign(payload, process.env.ACCESS_TOKEN_SECRET, {
-    expiresIn: '6h',
+    expiresIn: "6h",
   });
   const refresh = jwt.sign(payload, process.env.REFRESH_TOKEN_SECRET, {
-    expiresIn: '7d',
+    expiresIn: "7d",
   });
   return [access, refresh];
 }
 
 const register = async (req, res) => {
-  const email = req.body.email.toLowerCase();
-  const {
-    password, confirmationPassword, role_id,
-  } = req.body;
- 
-  if (password !== confirmationPassword) {
-    res.status(401).json({ message: 'password doesn`t match' });
-    return;
-  }
   try {
-    const encryptedPassword = await encryptPassword(password);
+    const { first_name, last_name, email, password, confirmationPassword } =
+      req.body;
 
+    if (
+      !first_name ||
+      !last_name ||
+      !email ||
+      !password ||
+      !confirmationPassword
+    ) {
+      return res.status(400).json({ msg: "All fields are required" });
+    }
+
+    if (password !== confirmationPassword) {
+      return res.status(401).json({ msg: "Passwords do not match" });
+    }
+
+    const encryptedPassword = await encryptPassword(password);
+    const USER = 1;
+    const role_id = USER;
     const user = await User.create({
+      first_name,
+      last_name,
       email,
-      encryptedPassword,
+      password: encryptedPassword,
       role_id,
     });
-    res.status(200).json('Register success');
+
+    return res.status(200).json({ msg: "Registration successful" });
   } catch (err) {
-    res.status(400).json({ err: { name: err.name, message: err.message } });
+    console.error("Registration error:", err);
+
+    return res.status(500).json({
+      error: {
+        name: err.name,
+        msg: "An error occurred during registration",
+      },
+    });
   }
 };
 
 const login = async (req, res) => {
-  const email = req.body.email.toLowerCase();
-  const { password } = req.body;
+  const { email, password } = req.body;
 
   const user = await User.findOne({
     where: { email },
   });
 
   if (!user) {
-    res.status(404).json({ message: 'Email not found' });
+    res.status(404).json({ msg: "Email not found" });
     return;
   }
 
-  const isPasswordCorrect = await checkPassword(
-    user.encryptedPassword,
-    password,
-  );
+  const isPasswordCorrect = await checkPassword(user.password, password);
 
   if (!isPasswordCorrect) {
-    res.status(401).json({ message: 'Wrong password!' });
+    res.status(401).json({ msg: "Wrong password!" });
     return;
   }
 
   const token = createToken({
     user_id: user.id,
+    first_name: user.first_name,
+    last_name: user.last_name,
     email: user.email,
-    createdAt: user.createdAt,
-    updatedAt: user.updatedAt,
     role_id: user.role_id,
   });
-  const accesstToken = token[0];
+  const accessToken = token[0];
   const refreshToken = token[1];
   await User.update(
     { refreshToken },
@@ -100,21 +115,21 @@ const login = async (req, res) => {
       where: {
         id: user.id,
       },
-    },
+    }
   );
-  res.cookie('refreshToken', refreshToken, {
+  res.cookie("refreshToken", refreshToken, {
     httpOnly: true,
     maxAge: 24 * 60 * 60 * 1000,
   });
-  res.status(201).json({
-    message: 'login success',
+  res.status(200).json({
+    msg: "login success",
     user: {
       user_id: user.id,
+      first_name: user.first_name,
+      last_name: user.last_name,
       email: user.email,
-      createdAt: user.createdAt,
-      updatedAt: user.updatedAt,
       role_id: user.role_id,
-      accesstToken,
+      accessToken,
     },
   });
 };
@@ -125,11 +140,12 @@ const whoAmI = async (req, res) => {
 
 const logout = async (req, res) => {
   try {
-    const refreshToken = req.body.refreshToken === undefined || req.body.refreshToken === null
-      ? req.cookies.refreshToken
-      : req.body.refreshToken;
+    const refreshToken =
+      req.body.refreshToken === undefined || req.body.refreshToken === null
+        ? req.cookies.refreshToken
+        : req.body.refreshToken;
     if (!refreshToken) {
-      res.status(204).send('null');
+      res.status(204).send("null");
       return;
     }
     const user = await User.findAll({
@@ -138,7 +154,7 @@ const logout = async (req, res) => {
       },
     });
     if (!user[0]) {
-      res.status(204).send('notfound');
+      res.status(204).send("notfound");
       return;
     }
     const userId = user[0].id;
@@ -148,12 +164,12 @@ const logout = async (req, res) => {
         where: {
           id: userId,
         },
-      },
+      }
     );
-    res.clearCookie('refreshToken');
-    res.status(200).json('Log out success');
+    res.clearCookie("refreshToken");
+    res.status(200).json("Log out success");
   } catch (error) {
-    res.status(400).json({ msg: 'Something went wrong' });
+    res.status(400).json({ msg: "Something went wrong" });
   }
 };
 
@@ -179,9 +195,7 @@ const refreshToken = async (req, res) => {
         return;
       }
       const userId = user.id;
-      const {
-        email, createdAt, updatedAt, role_id,
-      } = user;
+      const { email, createdAt, updatedAt, role_id } = user;
       const accessToken = jwt.sign(
         {
           user_id: user.id,
@@ -192,8 +206,8 @@ const refreshToken = async (req, res) => {
         },
         process.env.ACCESS_TOKEN_SECRET,
         {
-          expiresIn: '6h',
-        },
+          expiresIn: "6h",
+        }
       );
       res.json({
         user_id: userId,
@@ -208,39 +222,30 @@ const refreshToken = async (req, res) => {
     res.status(422).json({
       error: {
         name: err.name,
-        message: err.message,
+        msg: err.msg,
       },
     });
   }
 };
 
-
 module.exports = {
-  handleRegisterGoogle,
-  handleLoginGoogle,
-  handleGoogleAuthUrl,
-  handleGoogleAuthCb,
-  verifyIdToken,
-  handleEmailVerify,
   register,
-  registerTest,
-  registerAdmin,
   login,
   whoAmI,
   logout,
   refreshToken,
   onLost(_req, res) {
     res.status(404).json({
-      status: 'FAIL',
-      message: 'Route not found!',
+      status: "FAIL",
+      msg: "Route not found!",
     });
   },
   onError(err, _req, res, _next) {
     res.status(500).json({
-      status: 'ERROR',
+      status: "ERROR",
       error: {
         name: err.name,
-        message: err.message,
+        msg: err.message,
       },
     });
   },
