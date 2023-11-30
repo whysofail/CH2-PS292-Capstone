@@ -25,6 +25,18 @@ if (config.use_env_variable) {
     { define: { timestamps: false } };
 }
 
+sequelize.beforeConnect(async (config) => {
+    const connector = new Connector()
+    const clientOpts = await connector.getOptions({
+      instanceConnectionName: process.env.CLOUDSQL_INSTANCE_CONNECTION_NAME,
+    //   authType: "IAM",
+      ipType: "PUBLIC",
+    });
+    if (process.env.NODE_ENV === "test") {
+      config = { ...config, ...clientOpts };
+    }
+    console.log(config);
+  });
 
 fs.readdirSync(__dirname)
   .filter((file) => {
