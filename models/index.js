@@ -11,9 +11,9 @@ const db = {};
 
 let sequelize;
 if (config.use_env_variable) {
-  sequelize = new Sequelize(process.env[config.use_env_variable], config, {define : { timestamps: false}});
+  sequelize = new Sequelize(process.env[config.use_env_variable], config, { define: { timestamps: false } });
 } else {
-  sequelize = new Sequelize(config.database, config.username, config.password, config), {define : { timestamps: false}};
+  sequelize = new Sequelize(config.database, config.username, config.password, config, { define: { timestamps: false } });
 }
 
 fs
@@ -41,3 +41,22 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 module.exports = db;
+
+// Tambahan kode
+const dbConfig = require("../config/db.config.js");
+
+const sequelizeInstance = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
+  host: dbConfig.HOST,
+  dialect: dbConfig.dialect,
+  port: dbConfig.port,
+  operatorsAliases: false,
+
+  pool: {
+    max: dbConfig.pool.max,
+    min: dbConfig.pool.min,
+    acquire: dbConfig.pool.acquire,
+    idle: dbConfig.pool.idle
+  }
+});
+
+module.exports = sequelizeInstance;
