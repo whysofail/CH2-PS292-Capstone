@@ -1,19 +1,16 @@
-const { User, Role, LawyerTags, Tags } = require('../../models');
+const { User, LawyerTags, Tags } = require('../models');
 
-const getLawyers = async (req, res) => {
+const getUsersByRole = async (req, res) => {
   try {
-    // Cari role dengan id 3 (dianggap sebagai role untuk lawyer)
-    const lawyerRole = await Role.findOne({
-      where: { id: 3 },
-    });
+    const { role_id } = req.query;
 
-    if (!lawyerRole) {
-      return res.status(404).json({ message: 'Role for lawyers not found' });
+    if (!role_id) {
+      return res.status(400).json({ message: 'Role ID is required in the query parameters' });
     }
 
-    // Cari pengguna dengan role_id 3 (lawyer)
-    const lawyers = await User.findAll({
-      where: { role_id: lawyerRole.id },
+    // Cari pengguna dengan role_id yang diberikan
+    const users = await User.findAll({
+      where: { role_id },
       include: [
         {
           model: LawyerTags,
@@ -28,13 +25,20 @@ const getLawyers = async (req, res) => {
       ],
     });
 
-    return res.status(200).json({ lawyers });
+    if (users.length === 0) {
+      return res.status(404).json({ message: 'No users found with the specified role_id' });
+    }
+
+    return res.status(200).json({ 
+      message: 'Users found successfully', 
+      users 
+    });
   } catch (error) {
-    console.error('Error retrieving lawyers:', error);
+    console.error('Error retrieving users:', error);
     return res.status(500).json({ message: 'Internal Server Error' });
   }
 };
 
 module.exports = {
-  getLawyers,
+  getUsersByRole,
 };
