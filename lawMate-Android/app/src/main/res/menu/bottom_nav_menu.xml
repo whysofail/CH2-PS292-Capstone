@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/navigation_konsul"
+        android:icon="@drawable/ic_balance"
+        android:title="konsul" />
+    <item
+        android:id="@+id/navigation_lawyer"
+        android:icon="@drawable/ic_account_balance"
+        android:title="Lawyer" />
+    <item
+        android:id="@+id/navigation_chat"
+        android:icon="@drawable/ic_chat"
+        android:title="Chat" />
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_account_circle"
+        android:title="Profile" />
+
+</menu>
