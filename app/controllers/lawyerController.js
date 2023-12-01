@@ -1,4 +1,4 @@
-const { User, LawyerTags, Tags } = require('../models');
+const { User, LawyerTags, Tags } = require('../../models');
 
 const getUsersByRole = async (req, res) => {
   try {
