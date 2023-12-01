@@ -1,396 +1,424 @@
 {
-  "intents":[
- {
-   "tag": "greeting",
-   "question": [
-      "Hi",
-      "How are you?",
-      "Is anyone there?",
-      "Hello",
-      "Good day",
-      "What's up",
-      "how are ya",
-      "heyy",
-      "whatsup",
-      "??? ??? ??",
-      "Hei",
-      "Halo",
-      "Hay",
-      "Hai",
-      "Apa Kabar?",
-      "Apa Kabar Dirimu?",
-      "Apa Kabar Denganmu?",
-      "Bagaimana Kabarmu?",
-      "Apakah Ada Orang?"
-   ],
-   "answer": [
-      "Halo!, ada yang bisa saya bantu?",
-      "Senang Melihatmu Kembali!, apa yang saya bisa bantu?",
-      "Hai!, Apa yang kamu butuhkan hari ini?",
-      "Aku baik baik saja, semoga kamu juga ya.",
-      "Hello there!, how can i help you?",
-      "Good to see you again!, what can i help you today?",
-      "Hi there!, how can i help you?",
-      "Aku disini!, ada yang bisa kubantu?"
-   ]
-},
-  {
-   "tag": "goodbye",
-   "question": [
-      "cya",
-      "see you",
-      "bye bye",
-      "See you later",
-      "Goodbye",
-      "I am Leaving",
-      "Bye",
-      "Have a Good day",
-      "talk to you later",
-      "ttyl",
-      "i got to go",
-      "sampai jumpa",
-      "sepertinya itu saja",
-      "sepertinya cukup",
-      "sudah cukup",
-      "cukup",
-      "Senang berbicara denganmu"
-   ],
-   "answer": [
-      "Sad to see you go :(, i hope the best for your problem.",
-      "Talk to you later.",
-      "Goodbye!",
-      "Come back soon!",
-      "sampai bertemu kembali!",
-      "sampai jumpa!",
-      "baiklah, semoga jawabanku bermanfaat ya.",
-      "Senang bisa membantu.",
-      "Semoga masalahmu cepat terselesaikan ya."
-   ]
-},
- {
-   "tag": "creator",
-   "question": [
-      "what is the name of your developers",
-      "what is the name of your creators",
-      "what is the name of the developers",
-      "what is the name of the creators",
-      "who created you",
-      "your developers",
-      "your creators",
-      "who are your developers",
-      "developers",
-      "you are made by",
-      "you are made by whom",
-      "who created you",
-      "who create you",
-      "creators",
-      "who made you",
-      "Siapa yang mengembangkanmu?",
-      "Siapa yang membuatmu",
-      "Siapa nama pengembangmu",
-      "Siapa pengembangmu",
-      "Siapa penciptamu",
-      "yang mengembangkanmu",
-      "yang membuatmu",
-      "pembuat",
-      "pengembang",
-      "kamu dibuat oleh siapa",
-      "siapa yang membuat kamu?",
-      "siapa yang mengembangkan kamu?"
-   ],
-   "answer": [
-      "Pengembangku adalah Cohort Bangkit Academy 2023 Kelompok CH2-PS292",
-      "Pembuatku adalah Cohort Bangkit Academy 2023 Kelompok CH2-PS292",
-      "Cohort Bangkit Academy 2023 Kelompok CH2-PS292 lah yang membuat aku",
-      "Cohort Bangkit Academy 2023 Kelompok CH2-PS292 lah yang mengembangkan aku",
-      "My Developer are Cohort Bangkit Academy 2023 from CH2-PS292 Capstone Project Group",
-      "My Creator are Cohort Bangkit Academy 2023 from CH2-PS292 Capstone Project Group",
-      "Cohort Bangkit Academy 2023 from CH2-PS292 Capstone Project Group made me",
-      "Cohort Bangkit Academy 2023 from CH2-PS292 Capstone Project Group developed me"
-   ]
-},
- {
-   "tag": "name",
-   "question": [
-      "name",
-      "your name",
-      "do you have a name",
-      "what are you called",
-      "what is your name",
-      "what should I call you",
-      "whats your name?",
-      "what are you",
-      "who are you",
-      "who is this",
-      "what am i chatting to",
-      "who am i taking to",
-      "what are you",
-      "nama",
-      "namamu",
-      "nama kamu",
-      "apakah kamu punya nama",
-      "kamu punya nama",
-      "apa nama panggilanmu",
-      "kamu dipanggil apa",
-      "kamu dipanggil siapa",
-      "bagaimana aku memanggilmu",
-      "siapa kamu",
-      "kamu ini siapa",
-      "dengan siapa aku berbicara",
-      "aku berbicara dengan siapa",
-      "kamu ini apa",
-      "siapa ini"
-   ],
-   "answer": [
-      "You can call me LawMate.",
-      "I'm LawMate, you can ask me anything related to law",
-      "I am LawMate, and i am a Chatbot to help you about your legal problems",
-      "You are currently chatting LawMate, your friend in law",
-      "My Name is LawMate, and im happy to help you regarding your legal problems",
-      "Namaku LawMate, aku adalah chatbot yang bisa membantumu menyelesaikan permasalahan hukum kamu.",
-      "Aku LawMate, Kamu bisa bertanya apapun kepadaku terkait hukum",
-      "Kamu Bisa Memanggilku LawMate",
-      "Sekarang kamu sedang menghubungi LawMate, temanmu dalam hukum"
-   ]
-},
- {
-  "question": ["saya sebagai pelaku usaha ingin menerapkan kebijakan anti-pelecehan seksual di tempat kerja. apa panduan hukum yang sebaiknya saya ikuti?",
-  "saya sebagai pelaku usaha khawatir tentang tanggung jawab hukum jika pelecehan seksual terjadi di tempat kerja. apa langkah-langkah yang sebaiknya saya ambil untuk melindungi perusahaan?",
-  "sebagai HRD, saya ingin mencegah adanya kejahatan seksual di tempat kerja, apa yang harus saya lakukan?",
-  "saya tidak ingin pelecehan seksual terjadi di tempat kerja saya, apa langkah-langkah yang harus saya lakukan?",
-  "bagaimana cara mencegah pelecehan seksual terjadi di lingkungan kerja?",
-  "bagaimana cara mencegah pelecehan seksual terjadi di tempat kerja?",
-  "cara mencegah pelecehan seksual di tempat kerja",
-  "gimana cara mengantisipasi pelecehan seksual di lingkungan kerja",
-  "gimana cara mengantisipasi pelecehan seksual di kantor",
-  "cara mencegah pelecehan seksual di kantor"
-  ],
-  "answer": ["terapkan kebijakan anti-pelecehan seksual di tempat kerja sesuai dengan undang-undang ketenagakerjaan (UU no. 13 tahun 2003) dan peraturan pemerintah terkait. hukum mewajibkan perusahaan untuk melindungi karyawan dari pelecehan seksual. ",
-  "terapkan kebijakan anti-pelecehan seksual di tempat kerja, lakukan pelatihan kepada karyawan, dan tanggapi laporan pelecehan secara serius. hukum mewajibkan perusahaan untuk melindungi karyawan dari pelecehan seksual. dasar hukum: undang-undang ketenagakerjaan (UU no. 13 tahun 2003) dan peraturan anti-pelecehan di tempat kerja.",
-  "perusahaan/pemberi kerja atau institusi kantor harus membuat aturan atau kebijakan terkait pelecehan seksual dan mengesahkan atau mengumukan peraturan tersebut sejak penerimaan pegawai. membuat langkah-langkah penyelesaian, perbaikan dan pemulihan bagi korban apabila terjadi kasus pelecehan seksual, serta sanksi yang dikenakan kepada pelaku.",
-  "upaya pencegahan pelecehan seksual harus dilakukan oleh semua pihak, baik oleh pekerja itu sendiri maupun oleh institusi/kantor atau perusahaan pemberi kerja. para pekerja perlu melakukan edukasi dan sosialisasi terhadap rekan-rekannya terkait kebijakan perusahaan, tata tertib, peraturan dan kode etik yang berlaku di perusahaan tersebut. pembekalan mengenai cara menolak tindakan pelecehan seksual dan bagaimana cara melaporkan atau mengadukan peristiwa tersebut juga penting diberikan kepada setiap pekerja.",
-  "Tindakan pencegahan harus dilakukan oleh setiap perusahaan untuk menghapuskan rantai tindakan pelecehan seksual. Berikut adalah tips mencegah pelecehan seksual di tempat kerja : \n\n1. Melakukan sosialisasi dan edukasi tentang pelecehan seksual\nSeorang pengusaha melalui HRD harus melakukan sosialisasi dan edukasi terhadap isu pelecehan seksual bagi setiap karyawan. Hal ini dapat dilakukan melalui memuat informasi, selebaran atau pengumuman mengenai pencegahan pelecehan seksual yang terjadi di tempat kerja.\n\n2. Membuat program pencegahan pelecehan seksual\nPerusahaan dapat melakukan sebuah program tentang penanganan pencegahan pelecehan seksual melalui kegiatan orientasi secara langsung kepada karyawan untuk mengenali isu pelecehan seksual. Memberikan pelatihan terhadap karyawan untuk mengenali masalah-masalah yang ada di tempat kerja.\n\n3. Membentuk tim respon terhadap pelecehan seksual\nPelecehan seksual menjadi salah satu permasalahan serius yang ada di tempat kerja. Oleh karena itu, membentuk tim respon dalam mengorganisir tindakan pencegahan pelecehan seksual harus dilakukan untuk menekan terjadinya pelecehan seksual di tempat kerja. Karyawan dapat melaporkan seluruh permasalahannya melalui tim tersebut.\n\n4. Kebijakan Perusahaan\nPerusahaan harus mendorong karyawan untuk melaksanakan tindakan pencegahan pelecehan seksual dan mengambil tindakan disiplin dalam bentuk ketatnya kebijakan perusahaan dalam pelanggaran pelecehan seksual ini. Hal ini untuk membentuk kedisiplinan karyawan dalam isu pelecehan seksual ini.",
-  "Selain pihak HRD dan manajemen, karyawan juga harus ikut serta dan bertindak guna mencegah pelecehan seksual di tempat kerja. Berikut ini adalah beberapa hal yang bisa dilakukan karyawan untuk mencegah pelecehan seksual di kantor.\n\n1. Gabung Program Sosialisasi Anti Pelecehan Seksual\nPertama-tama, para pekerja bisa bergabung dalam program sosialisasi anti pelecehan seksual. Di program tersebut, karyawan akan diberikan materi seputar jenis-jenis pelecehan seksual beserta tindakan preventifnya. Macam-macam program ini bisa ditemukan secara online dan biasanya disediakan oleh NGO atau badan riset yang bergerak di bidang gender. Atau, karyawan juga bisa mengikuti pelatihan yang akan diluncurkan perusahaan guna menghapus tindakan pelecehan seksual di tempat kerja. Dengan mengikuti rangkaian program ini, dijamin kamu sebagai karyawan akan lebih memahami bahaya dari pelecehan seksual.\n\n2. Ikut serta dalam Langkah Investigasi dan Tindakan Disipliner\nCara lainnya yang bisa dilakukan karyawan untuk mencegah pelecehan seksual di tempat kerja adalah ikut serta dalam langkah investigasi dan tindakan disipliner. Langkah investigasi dan disipliner biasanya akan dilakukan perusahaan pada oknum yang dicurigai melakukan tindak pelecehan. Namun, tak ada salahnya bagi karyawan untuk ikut serta dan membantu pihak HRD untuk menuntaskan isu tersebut. Sebagai contoh, karyawan bisa mendorong pihak manajemen untuk segera memberi sanksi pada oknum tersebut. Meskipun demikian, jangan sampai karyawan melewati batas dan melanggar hak manajemen untuk melakukan investigasi secara menyeluruh. Dukungan moral pada korban serta menuang ide untuk tindakan preventif sudah cukup untuk mencegah pelecehan seksual di kantor.\n\n3. Pelajari dan Ikuti Regulasi Perusahaan terkait Pelecehan Seksual\nCara terakhir yang bisa dilakukan karyaan untuk mencegah pelecehan seksual di tempat kerja adalah mengikuti regulasi perusahaan. Umumnya, perusahaan akan merancang SOP serta aturan mengenai pelecehan seksual di kantor. Nah, karyawan bisa mencegah tindak pelecehan dengan memahami semua regulasi yang sudah disediakan tersebut. Selain itu, karyawan juga bisa memberikan saran apabila ada bagian dari regulasi yang dirasa kurang sesuai.Misalnya, apabila sanksi dirasa terlalu ringan, karyawan bisa mengajukan perubahan yang secara tak langsung akan membuat efek jera dalam kantor.",
-  "Anda bisa mencegah pelecehan seksual di tempat kerja dengan beberapa cara berikut :\n1. Edukasi\nkesadaran dan pemahaman bersama mengenai kekerasan seksual dan bentuk kekerasan seksual merupakan langkah awal untuk mengidentifikasi dan mencegah terjadinya kekerasan yang dapat terjadi di tempat kerja.\n\n2. SOP yang jelas\nSecara spesifik, mengenai upaya preventif terjadinya pelecehan seksual di lingkungan kerja, Surat Edaran Menteri Tenaga Kerja dan Transmigrasi No. SE.03/MEN/IV/2011 tentang Pedoman Pencegahan Pelecehan Seksual di Tempat Kerja. Dari aturan di atas terlihat jelas bahwa Negara telah membebankan tanggung jawab besar bagi perusahaan untuk melakukan upaya preventif guna menciptakan lingkungan kerja yang aman dan kondusif bagi keselamatan pekerjanya. Maka dari itu penting sekali bagi tempat kerja memiliki SOP penanganan kekerasan seksual.\n\n3. Pelatihan\nMenurut Vina A. Muliana, seorang Career Content Creator mengatakan setiap pekerja memiliki hak untuk bisa bekerja di lingkungan yang aman dan jauh dari kekerasan sekual. Perlu diadakan pemahaman dan pelatihan secara berkala bagi pegawai untuk memahami pentingnya dalam memerangi pelecehan seksual. Selain itu menumbuhkan budaya organisasi yang baik juga sama pentingnya. Kita perlu menghormati dan mendengarkan satu sama lain agar hal ini tidak terjadi.",
-  "Anda dapat mengurangi risiko pelecehan seksual di tempat kerja dengan mengimplementasikan langkah-langkah berikut:\n\n1. Pendidikan dan Kesadaran:\nMemberikan edukasi kepada seluruh anggota organisasi tentang kekerasan seksual dan jenis-jenisnya merupakan langkah awal penting. Kesadaran bersama akan membantu mengidentifikasi dan mencegah kekerasan tersebut di lingkungan kerja.\n\n2. SOP yang Jelas:\nImplementasi Surat Edaran Menteri Tenaga Kerja dan Transmigrasi No. SE.03/MEN/IV/2011 tentang Pedoman Pencegahan Pelecehan Seksual di Tempat Kerja dapat membantu membentuk prosedur operasional standar (SOP) yang jelas. Perusahaan harus memiliki panduan yang spesifik untuk mencegah pelecehan seksual dan menciptakan lingkungan kerja yang aman.\n\n3. Pelatihan Berkala:\nMenyelenggarakan pelatihan rutin untuk meningkatkan pemahaman pekerja tentang pentingnya mencegah pelecehan seksual. Pelatihan ini dapat mencakup pengetahuan tentang hak-hak pekerja, tindakan pencegahan, dan bagaimana melaporkan kejadian yang mencurigakan. Penting juga untuk membangun budaya organisasi yang menghargai dan mendukung satu sama lain untuk mencegah pelecehan seksual.",
-  "Ini adalah beberapa hal yang dapat Anda lakukan untuk mengantisipasi pelecehan seksual di kantor :\n1. Melatih karyawan\nSesi ini harus mengajari karyawan apa itu pelecehan seksual, menjelaskan bahwa karyawan memiliki hak atas tempat kerja yang bebas dari pelecehan seksual, meninjau prosedur pengaduan Anda, dan mendorong karyawan untuk menggunakannya.\n\n2. Latih supervisor dan manajer. \nSekurang-kurangnya sekali dalam setahun, adakan sesi pelatihan untuk supervisor dan manajer yang terpisah dari sesi karyawan.Sesi-sesi tersebut juga untuk mendidik para manajer dan supervisor tentang pelecehan seksual dan menjelaskan cara menangani pengaduan.\n\n3. Membuat Kebijakan pelecehan seksual yang jelas.\nDalam peraturan tertulis perusahaan yang harus dipahami karyawan, Anda harus memiliki kebijakan yang dikhususkan untuk memitigasi dan mencegah pelecehan seksual terjadi.",
-  "Berikut adalah beberapa langkah yang dapat diambil untuk mengantisipasi pelecehan seksual di lingkungan kantor:\n\nPelatihan Karyawan:\nSesi pelatihan perlu diselenggarakan untuk memberikan pemahaman kepada karyawan mengenai definisi pelecehan seksual. Selain itu, mereka harus diberitahu tentang hak-hak mereka untuk bekerja di lingkungan yang bebas dari pelecehan seksual. Proses pengaduan juga harus dijelaskan secara rinci, dan karyawan perlu didorong untuk memanfaatkannya.\n\nPelatihan untuk Supervisor dan Manajer:\nSesi pelatihan terpisah perlu diadakan setidaknya sekali dalam setahun untuk para supervisor dan manajer. Pelatihan ini ditujukan untuk memberikan pemahaman yang lebih mendalam kepada mereka tentang pelecehan seksual dan memberikan panduan tentang cara menangani pengaduan dengan profesional.\n\nPembuatan Kebijakan yang Jelas:\nDalam dokumen peraturan perusahaan yang dapat diakses oleh semua karyawan, penting untuk memiliki kebijakan yang secara khusus menangani upaya mitigasi dan pencegahan pelecehan seksual. Kebijakan ini harus dirinci agar mudah dipahami oleh semua anggota organisasi."
-  ],
-  "tag": "antisipasi tempat kerja"
-},
-{
-  "question": ["aplikasi mirip deepfake",
-  "aplikasi mirip deepfake",
-  "adakah aplikasi yang mirip dengan deepfake?",
-  "aplikasi serupa dengan deepfake",
-  "apakah ada aplikasi yang mirip dengan deepfake?",
-  "contoh aplikasi deepfake",
-  "berikan saya contoh aplikasi deepfake",
-  "aplikasi deepfake",
-  "deepfake aplikasi",
-  "deepfake contoh",
-  "aplikasi yang mirip dengan deepfake"
-  ],
-  "answer": ["Berikut adalah beberapa contoh aplikasi mirip dengan deepfake : \n1. Lensa AI\n2. Deepfakes web\n3. Wombo\n4. Reface\n5. MyHeritage\n6. DeepFaceLab\n7. Deep Art\n8. Face Swap Live\n9. FaceApp\n10. Jiggy\n11. FaceMagic\n12. DALL-E Mini",
-  "berikut merupakan beberapa aplikasi yang mirip dengan deepfake :\n1. Wombo\n2. Reface\n3. MyHeritage\n4. Deep Art\n5. Face Swap Live\n6. Jiggy\n7. Deepfake Studio\n8. Zao\n9. FaceApp\n10. Reflect",
-  "berikut merupakan beberapa aplikasi yang serupa dengan deepfake :\n1. DeepFaceLab\n2. Zao\n3. Face Swap\n4. Deep Art Effects\n5. Reface\n6. Morphin\n7. Jiggy",
-  "Tentu ada, berikut adalah beberapa apikasi yang mirip dengan deepfake :\n1. Lensa AI\n2. Deepfakes Web\n3. Reface\n4. MyHeritage\n5. Face Swap Live\n6. FaceApp\n7. FakeYou\n8. Synthesis AI",
-  "Berikut ini adalah beberapa aplikasi deepfake:\n1. Reface\n2. Jiggy\n3. Impressions",
-  "Berikut adalah beberapa contoh aplikasi mirip dengan deepfake : \n1. Wombo\n2. Reface\n3. DeepFaceLab\n4. Face Swap Live\n5. FaceApp\n6. Jiggy\n7. Deepfakes web\n8. Lensa AI\n9. FaceMagic\n10. DALL-E Mini\n11. Deep Art\n12. MyHeritage",
-  "Berikut adalah beberapa aplikasi yang menggunakan teknologi deepfake : \n1. Zao\n2. Web Deepfake\n3. AvengeThem \n4. MachineTube\n5. DeepFaceLab\n6. Deep Art\n7. Face Swap",
-  "Tentu, berikut adalah beberapa apikasi deepfake :\n1. Lensa AI\n2. Reface\n3. MyHeritage\n4. Face Swap Live\n5. FaceApp\n6. Deepfakes Web\n7. Synthesis AI\n8. FakeYou",
-  "Berikut ini adalah beberapa contoh aplikasi deepfake:\n1. Reface\n2. Jiggy\n3. Impressions\n4. Fake You \n5. MyHeritage\n6. Reface\n7. Face Swap",
-  "berikut merupakan beberapa aplikasi yang mirip dengan deepfake :\n1. Wombo\n2. Reface\n3. MyHeritage\n4. Deep Art\n5. Face Swap Live\n6. Jiggy\n7. Deepfake Studio\n8. Zao\n9. FaceApp"
-  ],
-  "tag": "contoh-deepfake"
-},
-{
-  "question": ["saya ditipu dengan pemalsuan foto telanjang saya. bagaimana hukum mengatasi hal ini?",
-  "apa yang harus saya lakukan jika menemukan foto telanjang saya yang dihasilkan oleh AI?",
-  "saya melihat foto saya diedit telanjang di sosial media, apa yang harus saya lakukan?",
-  "saya menemukan foto saya yang sudah diedit menjadi bugil di sosial media, apa yang harus saya lakukan?",
-  "apa yang harus saya lakukan jika ada yang mengedit foto saya menjadi foto telanjang di sosial media?",
-  "foto saya diedit telanjang"
-  ],
-  "answer": ["Penyebaran foto telanjang merupakan pelanggaran kesusilaan yang melanggar norma dan dapat dihukum berdasarkan Undang-Undang Nomor 44 Tahun 2008 tentang Pornografi dan Undang-Undang Nomor 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik sebagaimana yang telah diubah oleh Undang-Undang Nomor 19 Tahun 2016 tentang Perubahan Atas Undang-Undang Nomor 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik. Perbuatan melanggar kesusilaan dengan pencemaran nama baik merupakan dua hal yang berbeda. Dalam kasus ini, tindakan menyebarkan foto telanjang secara normatif dapat dipidana karena melanggar kesusilaan. Tetapi pelaku berkemungkinan juga dapat dipidana karena mencemarkan nama baik dari orang yang fotonya disebarkan jika orang tersebut merasa malu dan dicemarkan sehingga melaporkan pelaku.",
-  "Laporkan ke pihak berwenang dan jangan sebarkan konten tersebut untuk mencegah penyebaran yang lebih luas karena terkadang ada orang yang meminta bantuan publik untuk ramai-ramai me-report sebuah akun. Beberapa orang akan secara sukarela membantu, tapi beberapa orang mungkin malah akan menyimpannya dan menyebarkannya lagi nanti. Jangan ragu juga untuk meminta bantuan dari ahli hukum atau pakar keamanan cyber.",
-  "Penyebaran gambar telanjang adalah suatu pelanggaran terhadap norma kesusilaan yang dapat dituntut secara hukum berdasarkan Undang-Undang Nomor 44 Tahun 2008 tentang Pornografi dan Undang-Undang Nomor 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik yang telah mengalami perubahan melalui Undang-Undang Nomor 19 Tahun 2016. Penting untuk dicatat bahwa tindakan ini secara khusus dapat dikenai sanksi hukum karena melanggar prinsip-prinsip kesusilaan. Selain itu, perbuatan menyebarkan gambar tersebut juga dapat dianggap sebagai pencemaran nama baik, yang merupakan pelanggaran terpisah. Dalam situasi ini, pelaku mungkin akan dihadapkan pada dua kemungkinan tuduhan hukum, yakni pelanggaran kesusilaan dan pencemaran nama baik, tergantung pada dampak yang ditimbulkan terhadap orang yang menjadi korban.",
-  "Laporkan kepada otoritas yang berwenang dan hindari menyebarkan konten tersebut guna mencegah penyebaran lebih lanjut. Terkadang, seseorang dapat meminta dukungan publik untuk melaporkan suatu akun dengan harapan mendapatkan perhatian massal. Meskipun beberapa orang bersedia membantu dengan sukarela, sebaiknya dihindari untuk menyebarkannya sendiri karena hal ini dapat memperbesar dampak negatif. Saran yang diberikan mencakup meminta bantuan dari ahli hukum atau pakar keamanan siber untuk menangani situasi tersebut dengan lebih efektif.",
-  "Laporkan ke pihak berwenang dan jangan sebarkan konten tersebut untuk mencegah penyebaran yang lebih luas karena terkadang ada orang yang meminta bantuan publik untuk ramai-ramai me-report sebuah akun. Beberapa orang akan secara sukarela membantu, tapi beberapa orang mungkin malah akan menyimpannya dan menyebarkannya lagi nanti. Jangan ragu juga untuk meminta bantuan dari ahli hukum atau pakar keamanan cyber.",
-  "Segera laporkan kepada otoritas yang berwenang dan hindari menyebarkan konten tersebut untuk mencegah penyebaran yang lebih luas. Terkadang, seseorang meminta dukungan publik untuk melaporkan suatu akun, dan meskipun beberapa orang bersedia membantu, yang lain mungkin akan menyimpan dan menyebarkannya kembali. Jangan ragu untuk mencari bantuan dari ahli hukum atau pakar keamanan cyber."
-  ],
-  "tag": "eksploitasi seksual"
-},
-{
-  "question": ["saya sebagai korban pelecehan seksual ingin menuntut pelaku, apa yang bisa saya lakukan?",
-  "saya sebagai korban pelecehan seksual ingin mengajukan tuntutan terhadap pelaku. bagaimana prosedurnya secara hukum?",
-  "bagaimana cara menuntut pelaku pelecehan seksual?",
-  "gimana cara menuntut pelaku pelecehan seksual?",
-  "saya sebagai korban pelecehan seksual ingin menuntut pelaku",
-  "saya ingin menuntut pelaku pelecehan seksual",
-  "saya ingin melaporkan pelaku pelecehan seksual",
-  "saya ingin melaporkan pelaku pelecehan seksual, apa yang harus saya lakukan?",
-  "saya ingin melaporkan pelaku pelecehan seksual, apa yang bisa saya lakukan?",
-  "saya ingin menuntut pelaku pelecehan seksual, apa yang bisa saya lakukan?"
-  ],
-  "answer": ["Anda bisa mengunjungi kantor polisi terdekat di sekitar lokasi tempat tinggal Anda, dan disarankan membawa keluarga atau kerabat yang mengetahui secara rinci kronologi kejadian. Jika pelecehan seksual melibatkan kontak fisik, segera laporkan kasus tersebut karena hal ini terkait dengan proses Visum et Repertum yang penting sebagai bukti. Pelaporan dini membantu dalam pengumpulan bukti dan mempercepat proses hukum. Pelaku pelecehan seksual dapat dituntut hukum jika terdapat bukti yang memenuhi unsur perbuatan, sesuai dengan pasal-pasal yang mengatur tindak pidana percabulan seperti yang diatur dalam Pasal 289 hingga 296 KUHP atau Pasal 414 hingga 422 UU 1/2023.",
-  "Anda dapat mendatangi kantor kepolisian terdekat di sekitar tempat tinggal, anda juga bisa membawa kerabat maupun keluarga yang sebelumnya telah mengetahui kronologi kejadian secara lengkap. Jika pelecehan seksual berupa tindakan fisik, maka anda wajib melaporkan kasus tersebut sesegera mungkin karena berkaitan dengan proses Visum et Repertum untuk alat bukti.Pelaku pelecehan seksual dapat dijerat asalkan terdapat bukti dan pemenuhan unsur perbuatan dalam hal memenuhi pasal percabulan sebagaimana diatur dalam Pasal 289 s.d. 296 KUHP atau Pasal 414 s.d. 422 UU 1/2023.",
-  "Anda dapat mendatangi kantor kepolisian terdekat di sekitar tempat tinggal, anda juga bisa membawa kerabat maupun keluarga yang sebelumnya telah mengetahui kronologi kejadian secara lengkap. Jika pelecehan seksual berupa tindakan fisik, maka anda wajib melaporkan kasus tersebut sesegera mungkin karena berkaitan dengan proses Visum et Repertum untuk alat bukti.Pelaku pelecehan seksual dapat dijerat asalkan terdapat bukti dan pemenuhan unsur perbuatan dalam hal memenuhi pasal percabulan sebagaimana diatur dalam Pasal 289 s.d. 296 KUHP atau Pasal 414 s.d. 422 UU 1/2023.",
-  "Keberanian untuk menindaklanjuti kasus pelecehan seksual merupakan hal yang sangat penting, agar kasus tersebut dapat terselesaikan. Sebelum mengajukan laporan terhadap tindakan kekerasan seksual, sebaiknya lakukanlah pengumpulan bukti selengkap dan sedetail mungkin (screenshot chat, rekaman audio/video, kesaksian orang lain ataupun alat bukti elektronik yang telah diakui sebagai alat bukti yang sah berdasarkan Pasal 5 dan 6 UU ITE. Laporkanlah kasus kekerasan seksual kepada pihak kepolisian atau mendatangi pusat layanan terdekat seperti Pusat Pelayanan Terpadu Pemberdayaan Perempuan (P2TP2A), Lembaga Bantuan Hukum, Lembaga Perlindungan Saksi dan Korban, dan Organisasi Layanan Konseling",
-  "Anda bisa mendatangi kantor polisi terdekat, bisa juga  membawa teman dekat atau keluarga yang  mengetahui sepenuhnya waktu kejadian. Jika pelecehan seksual berbentuk tindakan fisik, Anda mempunyai kewajiban untuk melaporkan kejadian tersebut sesegera mungkin karena relevan dengan prosedur pembuktian Visum et Repertum. Pelaku pelecehan seksual dapat didakwa jika terdapat bukti dan  unsur perbuatan mengenai pelaksanaan ketentuan tindak pidana percabulan yang diatur dalam pasal 289 s.d. 296 KUHP atau pasal 414 sampai 422 UU 1/2023.",
-  "Sebelum melaporkan kasus pelecehan seksual, sangat penting untuk memiliki keberanian dalam menindaklanjuti agar kasus tersebut dapat diselesaikan dengan baik. Sebaiknya, kumpulkan bukti sejelas mungkin, termasuk tangkapan layar percakapan, rekaman audio/video, kesaksian dari saksi, dan bukti elektronik yang diakui sah berdasarkan Pasal 5 dan 6 UU ITE. Laporkan insiden kekerasan seksual kepada pihak berwajib, seperti kepolisian, atau kunjungi pusat layanan terdekat seperti Pusat Pelayanan Terpadu Pemberdayaan Perempuan (P2TP2A), lembaga bantuan hukum, Lembaga Perlindungan Saksi dan Korban, serta organisasi layanan konseling.",
-  "Sebelum melaporkan suatu kejadian pelecehan seksual, sangat penting untuk memiliki keberanian untuk menindaklanjuti kejadian tersebut agar  dapat diselesaikan dengan baik. Yang terbaik adalah mengumpulkan bukti-bukti sejelas mungkin, termasuk tangkapan layar percakapan, rekaman audio/video, keterangan saksi, bukti elektronik, dan sebagainya, yang diakui sah berdasarkan pasal 5 dan 6 UU ITE.Laporkan kejadian kekerasan seksual kepada pihak berwajib seperti polisi atau kunjungi pusat layanan terdekat seperti Pusat Pusat Pelayanan Terpadu Pemberdayaan Perempuan (P2TP2A),  Lembaga Bantuan Hukum, Lembaga Perlindungan Saksi dan Korban, atau Organisasi Layanan Konseling.",
-  "Sebelum melaporkan suatu insiden pelecehan seksual, sangat krusial untuk memiliki keberanian dalam menindaklanjuti agar kasus tersebut dapat diselesaikan dengan baik. Disarankan untuk mengumpulkan bukti sejelas mungkin, mencakup tangkapan layar percakapan, rekaman audio/video, keterangan saksi, bukti elektronik, dan lainnya, yang diakui sebagai sah sesuai dengan pasal 5 dan 6 UU ITE. Segera laporkan kejadian kekerasan seksual kepada pihak berwajib seperti polisi atau kunjungi pusat layanan terdekat, seperti Pusat Pelayanan Terpadu Pemberdayaan Perempuan (P2TP2A), Lembaga Bantuan Hukum, Lembaga Perlindungan Saksi dan Korban, atau Organisasi Layanan Konseling."
-  ],
-  "tag": "menuntut pelaku"
-},
-{
-  "question": "Apakah ada perlindungan hukum bagi korban pelecehan seksual?",
-  "answer": "Perlindungan hukum yang diberikan terhadap korban pelecehan seksual diatur dalam Pasal 5 dan Pasal 6 Undang-Undang Nomor 31 Tahun 2014 tentang Perubahan Atas Undang-Undang Nomor 13 Tahun 2006 tentang Perlindungan Saksi dan korban.",
-  "tag": "perlindungan terhadap korban"
-},
-{
-  "question": ["apa yang harus saya lakukan apabila saya mendapat ancaman pemerkosaan?",
-  "saya diancam oleh orang yang melecehkan saya, apa yang harus saya lakukan",
-  "saya mendapat ancaman dari orang yang melakukan pelecehan kepada saya, apa yang harus saya lakukan",
-  "orang yang melecehkan saya mengancam saya untuk tidak melapor, apa hal yang harus dilakukan"
-  ],
-  "answer": [ "Langkah-langkah berikut dapat membantu Anda menjaga keamanan dan mendapatkan bantuan:\n1. Beritahu Orang Terdekat:\nSampaikan informasi kepada orang terdekat, teman, atau keluarga Anda agar mereka mengetahui situasi dan dapat memberikan dukungan emosional.\n\n2. Jangan Pergi Sendirian:\nHindari pergi ke tempat-tempat terpencil atau gelap sendirian. Cobalah untuk selalu bersama teman atau keluarga, terutama pada saat-saat yang dianggap berisiko.\nPertimbangkan Perlindungan Hukum:\n\n3. Hubungi Pihak Berwajib:\nSegera hubungi pihak kepolisian untuk melaporkan ancaman pemerkosaan. Berikan informasi sejelas mungkin, termasuk identitas pelaku jika Anda mengenalnya, serta detail mengenai ancaman yang diterima.\n\n4. Pertimbangkan perlindungan hukum\nKonsultasikan dengan pengacara atau lembaga perlindungan korban untuk mendiskusikan opsi hukum dan perlindungan yang mungkin tersedia bagi Anda.",
-  "jangan khawatir, tetap tenang dan lakukan beberapa langkah berikut : \n1. Pastikan keamanan diri terlebih dahulu \nmemastikan terlebih dahulu keamanan dan keselamatan diri. Segera jauhi tempat kejadian kekerasan seksual dan minta bantuan pertolongan. Jika kekerasan terjadi di rumah, cobalah mencari perlindungan di rumah keluarga lainnya. Bila kasus kekerasan seksual terjadi di lingkungan sekolah, segera melarikan diri dari tempat kejadian dan meminta pertolongan kepada guru.\n2. Simpan bukti\nSetelah merasa aman, segera simpan seluruh bukti-bukti kekerasan seksual. Misalnya seperti pakaian, foto, video, rekaman percakapan, atau bisa juga saksi-saksi yang melihat kekerasan seksual. Bukti-bukti tersebut sangat membantu dalam proses penanganan kasus.\n3. ceritakan ke orang orang terdekat\nHindari untuk memendam permasalahan yang dialami. Memendam masalah justru bisa memperburuk keadaan. Berusahalah untuk terbuka dan menceritakan masalah yang dialami kepada orang yang tepat. Dengan menceritakan masalah, orang tersebut juga bisa membantu mencarikan bantuan dan solusi untuk masalah kekerasan seksual yang dialami.\n4. Cari informasi dari lembaga yang memberikan bantuan\nPenting untuk korban kekerasan seksual mencari informasi dari lembaga-lembaga terkait yang bisa memberikan bantuan kepada korban kekerasan seksual.  Sebagai referensi, beberapa lembaga yang memberikan layanan adalah Pusat Pelayanan Terpadu Pemberdayaan Perempuan dan Anak (P2TP2A), Komisi Perlindungan Anak Indonesia (KPAI), Kementerian Pemberdayaan Perempuan dan Perlindungan Anak, dan sebagainya.",
-  "Jangan cemas, tetaplah tenang, dan ikuti langkah-langkah berikut ini:\n1.Utamakan keselamatan diri terlebih dahulu\nPastikan untuk mengamankan diri dan memastikan keselamatan. Secepat mungkin, jauhi lokasi kejadian kekerasan seksual dan minta pertolongan. Jika insiden terjadi di rumah, cari perlindungan di tempat lain, misalnya di rumah keluarga lain. Jika kejadian terjadi di lingkungan sekolah, segera tinggalkan tempat tersebut dan minta bantuan dari seorang guru.\n2.Kumpulkan bukti\nSetelah merasa aman, segera kumpulkan semua bukti terkait kekerasan seksual. Ini bisa mencakup pakaian, foto, video, rekaman percakapan, atau saksi-saksi yang dapat memberikan keterangan terkait kejadian. Bukti-bukti ini sangat penting dalam proses penanganan kasus.\nBagikan pengalaman dengan orang terdekat\n3.Hindari menahan perasaan dan pengalaman yang dialami. Berbicaralah dengan seseorang yang dapat dipercaya dan berkomunikasi terbuka mengenai masalah ini. Dengan berbagi pengalaman, orang tersebut dapat membantu mencari solusi dan memberikan dukungan terhadap kasus kekerasan seksual yang dialami.\n4.Temukan informasi dari lembaga bantuan\nKorban kekerasan seksual perlu mencari informasi dari lembaga-lembaga yang menyediakan bantuan. Beberapa referensi lembaga yang dapat memberikan layanan termasuk Pusat Pelayanan Terpadu Pemberdayaan Perempuan dan Anak (P2TP2A), Komisi Perlindungan Anak Indonesia (KPAI), Kementerian Pemberdayaan Perempuan dan Perlindungan Anak, dan sebagainya.",
-  "Jangan khawatir, tetaplah tenang, dan ikuti langkah-langkah berikut:\n1. Utamakan keselamatan diri terlebih dahulu\nPastikan untuk memastikan keamanan dan keselamatan diri dengan segera menjauh dari tempat kejadian kekerasan seksual dan meminta bantuan. Jika insiden terjadi di rumah, carilah perlindungan di rumah keluarga lain. Jika kekerasan seksual terjadi di lingkungan sekolah, segera melarikan diri dan minta bantuan kepada guru.\n2. Simpan bukti\nSetelah merasa aman, segera simpan semua bukti kekerasan seksual, seperti pakaian, foto, video, rekaman percakapan, atau saksi-saksi yang menyaksikan kejadian. Bukti-bukti ini akan sangat berguna dalam proses penanganan kasus.\n3. Ceritakan kepada orang terdekat\nHindari menahan permasalahan yang dialami dan berusaha untuk terbuka dengan menceritakan masalah kepada orang yang dapat dipercaya. Dengan berbagi pengalaman, orang tersebut dapat membantu mencari bantuan dan solusi untuk mengatasi kekerasan seksual.\n4. Cari informasi dari lembaga bantuan\nKorban kekerasan seksual perlu mencari informasi dari lembaga-lembaga yang menyediakan bantuan, seperti Pusat Pelayanan Terpadu Pemberdayaan Perempuan dan Anak (P2TP2A), Komisi Perlindungan Anak Indonesia (KPAI), Kementerian Pemberdayaan Perempuan dan Perlindungan Anak, dan lain sebagainya."
-  ],
-  "tag": "intimidasi seksual"
-},
-{
-  "question": ["bagaimana saya bisa mendukung korban pelecehan seksual?",
-  "apa yang bisa saya lakukan untuk mendukung korban pelecehan seksual?",
-  "saya sebagai individu mendukung kampanye anti-pelecehan seksual. apakah ada dasar hukum yang mengatur kampanye semacam ini?",
-  "saya sebagai individu ingin mendukung korban pelecehan seksual. apa langkah-langkah yang dapat saya ambil dan apakah ada dasar hukumnya?",
-  "bagaimana cara mensupport korban pelecehan seksual?",
-  "gimana cara mensupport korban pelecehan seksual?",
-  "cara untuk mendukung korban pelecehan seksual?",
-  "bagaimana cara menenangkan korban pelecehan seksual?"
-  ],
-  "answer": ["Anda bisa memulai dengan tidak menyalahkan korban. Jangan pernah menyalahkah korban atas penyerangan seksual tersebut. Penyerangan seksual tidak bisa dibiarkan. Apa yang dipakai oleh seseorang, budaya, usia, penggunaan obat-obatan atau alkohol, atau hubungan mereka dengan pelaku tidak pernah menjadi penyebab bagi seseorang untuk melakukan penyerangan secara seksual kepada orang lain.",
-  "Ketika seseorang memberi tahu Anda bahwa mereka telah mengalami pelecehan seksual, yang Anda bisa lakukan adalah memercayai, mendukung dan membantu mereka menjajaki pilihan tentang hal yang harus dilakukan selanjutnya. dengan mempercayai korban, maka korban akan merasa didukung dan dapat membantu dalam proses pemulihan.",
-  "aktivitas kampanye anti-pelecehan seksual diakui dan dihormati dalam hukum. hukum memberikan kebebasan berekspresi dan mendukung upaya masyarakat untuk memerangi kekerasan seksual. dasar hukum: undang-undang dasar negara republik indonesia tahun 1945.",
-  "dukung korban pelecehan seksual dengan memberikan dukungan moral dan melibatkan diri dalam kampanye anti-pelecehan seksual. hukum memberikan dukungan terhadap kegiatan yang bertujuan melawan kekerasan seksual. dasar hukum: undang-undang pemberantasan tindak pidana kekerasan seksual (uu no. 17 tahun 2016).",
-  "Anda bisa memulai dengan tidak menyalahkan korban. Jangan pernah menyalahkah korban atas penyerangan seksual tersebut. Penyerangan seksual tidak bisa dibiarkan. Apa yang dipakai oleh seseorang, budaya, usia, penggunaan obat-obatan atau alkohol, atau hubungan mereka dengan pelaku tidak pernah menjadi penyebab bagi seseorang untuk melakukan penyerangan secara seksual kepada orang lain.",
-  "Berikut adalah beberapa langkah untuk mensupport korban pelecehan seksual : \n1. Berikan Support dan dengarkan ceritanya\nDekati korban dan buat suasana yang nyaman agar korban mau bercerita tentang kejadiannya, namun perlu diingat untuk tidak memaksa mereka bercerita apabila korban masih enggan bercerita.\n\n2. Ajak korban melapor dan konsultasi\nMendampingi korban ke psikiater dan melaporkan kejadian tersebut ke pihak berwenang adalah hal supportif kedua yang bisa kita lakukan untuk korban.",
-  "Berikut adalah beberapa langkah untuk memberikan dukungan kepada korban pelecehan seksual:\n1. Tunjukkan Dukungan dan Dengarkan Pengalaman Mereka:\nMendekati korban dengan menciptakan suasana yang nyaman untuk berbicara tentang pengalaman mereka adalah langkah pertama. Namun, penting untuk menghormati ketidaknyamanan mereka dan tidak memaksa bercerita jika mereka belum siap.\n\n2. Ajak Korban untuk Melaporkan dan Konsultasi:\nMemberikan dukungan dengan mengajak korban untuk melaporkan kejadian tersebut dan berkonsultasi dengan pihak yang berkompeten, seperti psikiater atau lembaga yang dapat memberikan bantuan. Langkah ini mendukung korban dalam mencari pertolongan dan mengambil tindakan yang sesuai.",
-  "Berikut adalah cara menenangkan korban pelecehan seksual :\n1. Jangan terus-menerus membicarakan kejadian pelecehan seksual. \nDengan terus bertanya tentang kejadian tersebut, korban akan terus mengingat dan mengulang-ulang gambaran tentang apa yang telah terjadi. Hal ini dapat mengganggu proses pemulihan yang sedang berlangsung\n\n2. Ciptakan suasana yang nyaman\nSuasana nyaman diperlukan agar dapat berpikir jernih sehingga proses pemulihan dapat berlangsung dengan baik\n\n3. Ajak untuk berkonseling ke psikolog\nPara ahli tentu memiliki pengetahuan yang lebih untuk menangani korban pelecehan seksual, sehingga korban mendapatkan terapi yang benar dan sesuai dengan keadaannya. Selain itu, untuk mempercepat proses pemulihan dan mencegah korban mengalami gangguan lainnya, datang kepada ahli yang sesuai merupakan sebuah keputusan yang tepat"
-  ],
-  "tag": "mensupport"
-},
-{
-  "question": ["saya mengalami pelecehan seksual di lingkungan kampus. apa yang sebaiknya saya lakukan?",
-  "saya mengalami pelecehan seksual di lingkungan kampus. apa yang bisa saya lakukan?",
-  "apa yang harus saya lakukan jika mengalami pelecehan seksual di kampus?",
-  "apa yang harus saya lakukan jika mengalami pelecehan seksual di lingkungan kampus?"
-  ],
-  "answer": ["laporkan pelecehan seksual kepada pihak kampus dan, jika perlu, ke pihak berwajib. hukum memberikan perlindungan terhadap kekerasan seksual di lingkungan pendidikan. dasar hukum: undang-undang perlindungan anak dan peraturan anti-pelecehan di lingkungan pendidikan.",
-  "laporkan pelecehan seksual kepada pihak kampus dan, jika perlu, ke pihak berwajib. hukum memberikan perlindungan terhadap kekerasan seksual di lingkungan pendidikan. dasar hukum: undang-undang perlindungan anak (UUno. 35 tahun 2014) dan peraturan anti-pelecehan di lingkungan pendidikan.",
-  "Kekerasan seksual dapat dialami oleh siapapun dan terjadi dimanapun. Termasuk kepada diri kita sendiri. Maka, mulai berani melaporkan tindakan pelaku. Jika mendapati seorang teman yang mengalami hal tersebut, hal yang dapat dilakukan dengan mendengarkan dan berempati. Memang terlihat sepele, namun dapat menjadi bentuk dukungan kita terhadao korban yang sedang merasa trauma. Mulai mendengarkan dan tidak menghakimi korban. Biarkan korban bercerita dan meluapkan emosinya. Menanyakan kebutuhan korban dan menyediakan informasi, apakah ingin mengakses layanan konseling atau melaporkan kepada pihak berwenang. Mendesak kampus agar membuat regulasi tentang pencegahan dan penanganan kasus kekerasan seksual yang berpihak pada korban.",
-  "Kekerasan seksual dapat menimpa siapa saja dan terjadi di berbagai tempat, termasuk pada diri kita sendiri. Oleh karena itu, kita perlu memiliki keberanian untuk melaporkan pelaku tindakan tersebut. Jika kita menemui teman yang mengalami kekerasan seksual, tindakan yang dapat diambil adalah mendengarkan dengan penuh empati. Meskipun terlihat sederhana, hal ini bisa menjadi bentuk dukungan bagi korban yang sedang mengalami trauma. Penting untuk memberikan perhatian tanpa menghakimi, memberi kesempatan korban untuk bercerita dan mengeluarkan perasaannya. Selain itu, menanyakan kebutuhan korban dan memberikan informasi, seperti kemungkinan akses ke layanan konseling atau pelaporan kepada pihak berwajib. Dorong pula kampus untuk menyusun regulasi yang fokus pada pencegahan dan penanganan kekerasan seksual, yang memberikan dukungan kepada korban."
-  ],
-  "tag": "pelecehan seksual kampus"
-},
-{
-  "question": ["bagaimana cara mencegah pelecehan seksual di kampus?",
-  "gimana cara mencegah pelecehan seksual di kampus?",
-  "cara mencegah pelecehan seksual di kampus?",
-  "cara mengantisipasi pelecehan seksual di kampus?"
-  ],
-  "answer": ["Anda dapat mencegah pelecehan seksual di kampus dengan beberapa cara berikut : \n1. Pembentukan Satgas Pelecehan Seksual\nSaat ini, mulai banyak kampus yang membentuk Satgas Pencegahan dan Penanganan Kekeresan Seksual (PPKS) dengan memperhatikan Permendikbudristek Nomor 30 Tahun 2021 tentang Pencegahan dan Penanganan Pelecehan Seksual di Lingkungan Perguruan Tinggi. Dengan pembentukan tersebut, kasus kekerasan seksual di lingkungan kampus dapat berkurang. Pastinya penanganan pelecehan seksual dilakukan sesuai prosedur sehingga tidak ada kejadian saling menghakimi.\n\n2. Memperketat Pertemuan antara Dosen dan Mahasiswa\nSeringkali kasus pelecehan seksual dilakukan oleh dosen dan/atau mahasiswa. Untuk itu, pihak kampus harus memperketat pertemuan antara mahasiswa dengan dosen dan tenaga kependidikan tanpa persetuuan ketua prodi. Ditambah, apabila pertemuan tersebut dilakukan di luar area kampus atau jam operasional kampus, maka persetujuan dari pihak kampus sangat penting.\n\n3. Kampanye Pencegahan Pelecehan Seksual\nLakukan kampanye adalah cara baik untuk mencegah pelecehan seksual. Dewasa ini, banyak organisasi di kampus yang menyelenggarakan program kerja berupa kampanye pencegahan kekerasan seksual di kampus.Kampanye bisa berupa sosialisasi terkait penanganan pelecehan seksual, pemberian kontak bantuan, dan zero tolerance untuk pelaku pelecehan seksual di kampus. Dengan kampanye, pihak kampus dapat memantik para korban untuk melapor kasus kekerasan seksualnya.",
-  "Anda dapat mencegah kejadian pelecehan seksual di lingkungan kampus dengan mengambil langkah-langkah berikut:\n1. Pembentukan Tim Pencegahan dan Penanganan Pelecehan Seksual:\nBeberapa kampus saat ini membentuk Tim Pencegahan dan Penanganan Kekerasan Seksual (PPKS) sesuai dengan Permendikbudristek Nomor 30 Tahun 2021. Melalui pembentukan tim ini, kasus kekerasan seksual di kampus dapat diminimalkan. Penanganan pelecehan seksual dilakukan sesuai dengan prosedur yang ditetapkan untuk menghindari sikap saling menghakimi.\n\n2. Pertemuan antara Dosen dan Mahasiswa:\nPerlu ditingkatkan pengawasan terhadap pertemuan antara dosen dan mahasiswa, karena pelecehan seksual seringkali melibatkan pihak ini. Pihak kampus harus mengawasi pertemuan tersebut, terutama jika dilakukan di luar area kampus atau di luar jam operasional, dengan memperoleh persetujuan dari pihak kampus.\n\n3. Kampanye Pencegahan Pelecehan Seksual:\nMelakukan kampanye pencegahan pelecehan seksual merupakan cara efektif untuk mencegah kejadian tersebut. Banyak organisasi di kampus yang mengadakan kampanye, termasuk kegiatan sosialisasi mengenai penanganan pelecehan seksual, memberikan informasi kontak bantuan, dan menegaskan kebijakan nol toleransi terhadap pelaku pelecehan seksual di lingkungan kampus. Melalui kampanye ini, kampus dapat mendorong korban untuk melaporkan kasus kekerasan seksual yang mereka alami.",
-  "Pencegahan terjadinya pelecehan seksual di  kampus dapat dilakukan dengan melakukan langkah-langkah sebagai berikut: \n1.Membentuk tim pencegahan dan tanggap pelecehan seksual \nBeberapa kampus saat ini belum memiliki tim pencegahan dan tanggap pelecehan seksual yang memadai.\nDengan terbentuknya tim ini diharapkan dapat meminimalisir kejadian pelecehan seksual di kampus.\n\n2.Pertemuan antara Dosen dan Mahasiswa: \nPertemuan antara instruktur dan siswa perlu lebih sering diawasi karena pelecehan seksual sering terjadi diluar kampus. Pihak kampus wajib mengawasi rapat atas persetujuan kampus, apalagi jika rapat diadakan di luar kampus atau di luar jam kerja.\n \n3.Kampanye Pencegahan Pelecehan Seksual: \nMelaksanakan kampanye pencegahan pelecehan seksual merupakan cara yang efektif untuk mencegah kejadian tersebut. Banyak organisasi di kampus melakukan kampanye yang mencakup upaya pendidikan untuk mengatasi pelecehan seksual, memberikan informasi kontak untuk bantuan, dan menekankan kebijakan nol toleransi bagi pelaku pelecehan seksual di kampus. Melalui kampanye ini, perguruan tinggi dapat mendorong korban untuk melaporkan kejadian pelecehan seksual yang mereka alami.",
-  "Berikut tips agar terhindar dari tindak pelecehan seksual khususnya di lingkungan kampus : \n1. Bersikap Tegas dan Berani Menegur\nJika terdapat indikasi pelecehan seksual seperti catcallingatau kata-kata tidak senonoh yang dilontarkan kepada kita, mulailah bersikap tegas. Artinya, kita harus melakukan teguran atau menunjukkan rasa tidak suka terhadap perlakuan tersebut.\n\n2. Dapatkan Perhatian\nSaat mengalami pelecehan seksual di tempat umum, jangan ragu untuk berteriak atau menarik perhatian orang di sekitar, seperti meminta bantuan, memberikan kode, atau yang lainnya.Dengan melakukan upaya pencegahan di atas, setidaknya akan membantu kita terhindar dari aksi pelecehan.\n\n3. Rekam, Lihat, Foto\nJangan takut untuk memvideokan memfoto, atau merekam orang yang kita curigai akan atau telah melakukan tindak kekerasan seksual. Hal tersebut bisa dijadikan bukti jika pihak berwenang menindak kasus yang kita alami. Selain itu, jangan takut menatap orang yang mencurigakan. Cara tersebut bisa membuat pelaku merasa diawasi dan diharapkan akan berhenti.\n"
-  ],
-  "tag": "antisipasi kampus"
-},
-{
-  "question": ["saya adalah korban pelecehan seksual oleh anggota keluarga. bagaimana saya bisa mendapatkan perlindungan hukum?",
-  "saya dilecehkan secara seksual oleh salah seorang anggota keluarga sendiri,  apa yang bisa saya lakukan?",
-  "seorang perempuan di lingkungan keluarga mengalami pemerkosaan namun ragu untuk melaporkannya karena pelaku adalah anggota keluarga.",
-  "saya sering dilecehkan oleh ayah saya, apa yang harus saya lakukan?",
-  "saya pernah mengalami pelecehan seksual oleh kerabat saya sendiri",
-  "saat saya berumur 5 tahun, om saya sring meraba raba alat kelamin saya"
-  ],
-  "answer": ["laporkan pelecehan seksual dalam keluarga kepada pihak berwajib dan ajukan perlindungan hukum. undang-undang perlindungan korban tindak pidana kekerasan seksual memberikan dasar hukum. dasar hukum: undang-undang perlindungan korban tindak pidana kekerasan seksual.",
-  "Anda bisa menceritakan kejadian tersebut kepada orang orang terdekat anda dan memintanya untuk mendampingi anda untuk mengumpulkan bukti dan melapor kepada pihak yang berwajib.",
-  "dalam kasus pemerkosaan di lingkungan keluarga, korban dapat melaporkan ke polisi atau lembaga yang berwenang. undang-undang perlindungan korban dan saksi (uu no. 13 tahun 2006) memberikan perlindungan terhadap korban agar bisa memberikan kesaksian tanpa tekanan.",
-  "Pertama, anda bisa menceritakan kejadian tersebut kepada orang orang terdekat seperti Ibu, Kakak/Adik tentang kejadian tersebut. lalu memintanya untuk mendampingi anda untuk mengumpulkan bukti dan melapor kepada pihak yang berwajib.",
-  "saya sangat terpukul mendengar pengalaman yang anda alami. apa yang terjadi pada anda adalah bentuk pelecehan seksual yang sangat serius dan tidak dapat diterima. tindakan tersebut adalah melanggar batas-batas privasi dan hak anda sebagai seorang anak.dalam hukum, kasus pelecehan seksual seperti ini sangat serius. di indonesia, pasal 289 kuhp (kitab undang-undang hukum pidana) mengatur tentang pelecehan seksual. pasal ini menyebutkan bahwa siapapun yang dengan sengaja melakukan perbuatan tidak senonoh atau memaksa orang lain melakukan perbuatan tidak senonoh, dipidana dengan pidana penjara paling lama dua tahun delapan bulan.meskipun peristiwa itu terjadi beberapa waktu yang lalu, anda masih memiliki hak untuk melaporkannya kepada pihak berwenang, seperti kepolisian. menceritakan pengalaman anda kepada orang tua, atau mencari bantuan dari sumber daya seperti konselor atau organisasi yang fokus pada kasus pelecehan seksual juga bisa menjadi langkah yang membantu. pelecehan seksual terhadap anak adalah pelanggaran serius, dan mempengaruhi kesehatan mental dan emosional seseorang dalam jangka waktu yang panjang. mendapatkan bantuan dan dukungan dari sumber daya yang tepat sangat penting untuk proses pemulihan dan keadilan. anda tidak sendirian, dan ada banyak orang dan lembaga yang siap membantu anda melewati situasi ini.",
-  "sangat menyedihkan mendengar tentang pengalaman traumatis yang anda alami. tindakan pelecehan seksual, terutama terhadap anak-anak, adalah tindakan serius yang dilarang dan merupakan pelanggaran hukum yang serius.di indonesia, tindakan pelecehan seksual diatur dalam pasal 289 kuhp (kitab undang-undang hukum pidana). pasal ini menyatakan bahwa siapapun yang dengan sengaja melakukan perbuatan tidak senonoh atau memaksa orang lain melakukan perbuatan tidak senonoh, dapat dipidana dengan pidana penjara paling lama dua tahun delapan bulan. jika anda merasa nyaman untuk melaporkan kejadian ini kepada pihak berwenang, seperti polisi atau lembaga yang berwenang, langkah tersebut bisa dilakukan untuk memulai proses hukum dan menjaga keamanan anda serta mencegah terulangnya kejadian serupa pada anak lain. selain itu, sangat penting untuk mendapatkan dukungan psikologis. bantuan dari konselor, psikolog, atau organisasi yang fokus pada korban kekerasan seksual dapat membantu anda mengatasi dampak emosional dan psikologis dari pengalaman traumatis ini.  anda tidak sendiri dalam menghadapi situasi ini. ada sumber daya dan bantuan yang tersedia untuk membantu anda melalui proses pemulihan dan memberikan dukungan selama masa sulit ini."
-  ],
-  "tag": "pelecehan seksual keluarga"
-},
-{
-  "question": ["cat calling",
-  "cat calling adalah",
-  "apa itu cat calling",
-  "cat-calling merupakan",
-  "jelaskan apa itu cat calling",
-  "apa yang dimaksud dengan cat calling",
-  "jelaskan apa yang dimaksud dengan cat calling",
-  "jelaskan mengenai cat calling",
-  "definisi cat calling"
-  ],
-  "answer": ["cat calling adalah suatu bentuk pelecehan, terutama pelecehan seksual yang terdiri dari komentar seksual yang tidak diinginkan, gerakan provokatif, membunyikan klakson, bersiul serigala, paparan tidak senonoh, menguntit, rayuan seksual terus-menerus, dan sentuhan oleh orang asing, di tempat umum seperti jalan raya, pusat perbelanjaan, dan transportasi umum",
-  "Catcalling artinya pelecehan seksual yang dilakukan di ruang publik dengan memberikan kata-kata tidak senonoh kepada korban.",
-  "Catcalling adalah tindakan mengganggu atau melecehkan seseorang dengan cara memberikan komentar atau perlakuan tidak senonoh secara verbal ketika berada di ruang umum seperti jalan raya, trotoar, atau tempat umum lainnya.",
-  "cat calling merupakan suatu tindakan yang dimaksudkan untuk menggoda lawan jenis. Lebih dari itu, catcalling adalah tindakan yang biasa mengarah pada pelecehan seksual. Salah satu contoh tindakan dari catcalling adalah bersiul untuk menggoda lawan jenis yang melintas, atau memberikan kata-kata yang tidak senonoh.",
-  "catcalling adalah tindakan berkomentar yang melecehkan dan sering kali menjurus ke tindakan seksual, mengancam, atau menghina seseorang di depan umum.",
-  "catcalling berarti siulan, panggilan, dan komentar bersifat seksual dari laki-laki terhadap perempuan. Catcalling ini termasuk street harassment atau kekerasan yang terjadi di tempat umum.",
-  "Cat calling adalah istilah yang digunakan untuk merujuk pada perilaku verbal yang bersifat seksual atau merendahkan, yang sering terjadi di tempat umum, seperti di jalan atau di tempat keramaian.",
-  "Cat calling adalah bentuk pelecehan, khususnya pelecehan seksual, yang melibatkan komentar seksual yang tidak diinginkan, gerakan provokatif, klakson berisik, bersiul layaknya serigala, paparan perilaku tidak senonoh, tindakan menguntit, rayuan seksual yang berulang-ulang, dan sentuhan oleh orang yang tidak dikenal. Perilaku ini umumnya terjadi di tempat umum seperti jalan raya, pusat perbelanjaan, dan sarana transportasi umum."
-  ],
-  "tag": "cat calling"
-},
-{
-  "question": ["apakah pelaku cat calling bisa dituntut",
-    "apakah cat calling bisa dipidana",
-    "berapa lama hukuman cat calling",
-    "cat calling masuk pasal berapa",
-    "pasal cat calling",
-    "pasal untuk menuntut pelaku cat calling"
-  ],
-  "answer": ["Dalam Kitab Undang-undang Hukum Pidana (KUHP) catcalling di kaitkan dengan perbuatan asusila dan pencabulan. Dan jelas melanggar peraturan perundang – undangan Pasal 8 Jo Pasal 34 dan Pasal 9 Jo Pasal 35 UU No. 44/2008 tentang Pornografi, dan Pasal 5 UU No. 12/2022 tentang Tindak Pidana Kekerasan Seksual.",
-  "Menurut Pasal 5 UU TPKS, pelecehan verbal dan pelecehan nonfisik lainnya dipidana dengan pidana penjara paling lama 9 bulan dan/atau pidana denda paling banyak Rp10 juta.",
-  "Berdasar Pasal 5 UU TPKS, pelaku perbuatan seksual nonfisik dapat dipidana hingga 9 bulan penjara. Pelaku juga bisa terkena pidana denda paling banyak Rp 10 juta."
-  ],
-  "tag": "dasar hukum cat calling"
-},
-{
-  "question": ["eksibisionis adalah",
-    "eksibisionis",
-    "apa yang dimaksud dengan eksibisionis",
-    "eksibionis merupakan",
-    "jelaskan mengenai eksibisionis",
-    "apa itu eksibisionis",
-    "definisi eksibisionis",
-    "jelaskan apa yang dimaksud dengan eksibisionis",
-    "jelaskan apa itu eksibisionis"
-  ],
-  "answer": ["eksibisionis adalah gangguan mental di mana penderitanya suka memamerkan alat kelaminnya kepada orang lain. Penderita kondisi ini mendapatkan kepuasan seksual dari memperlihatkan alat vitalnya kepada orang yang tidak dikenal. Eksibisionis tergolong dalam kelainan seksual.",
-  "eksibisionis merupakan gangguan kesehatan berupa dorongan, fantasi, atau tindakan mengekspose alat kelamin seseorang kepada orang yang tidak menginginkannya, terutama orang asing.",
-  "Eksibisionis adalah istilah yang digunakan untuk menggambarkan seseorang yang mendapatkan kepuasan atau kegembiraan dengan memperlihatkan diri mereka sendiri secara terbuka atau melakukan tindakan eksibisionis. Tindakan ini sering kali melibatkan tindakan-tindakan seksual atau tindakan yang dianggap tidak senonoh, dan biasanya dilakukan di depan orang lain tanpa izin atau persetujuan mereka. Eksibisionisme dapat termanifestasi dalam berbagai bentuk, termasuk tindakan seksual terbuka, pameran tubuh, atau perilaku seksual yang mencolok di tempat umum.",
-  "Eksibisionisme adalah jenis penyimpangan seksual yang membuat seseorang memiliki dorongan seksual untuk menunjukkan organ intimnya kepada orang lain tanpa persetujuan orang tersebut. Orang dengan eksibisionisme atau eksibisionis akan mendapatkan kesenangan dan kepuasan ketika mempertontonkan bagian tubuhnya pada orang lain. Eksibisionis bahkan bisa makin bergairah ketika orang tersebut menunjukkan reaksi jijik dan takut. ",
-  "Gangguan eksibisionis adalah suatu kondisi yang ditandai oleh dorongan, fantasi, atau tindakan mengekspos alat kelamin seseorang, kepada orang yang tidak menginginkannya, terutama orang asing."
-  ],
-  "tag": "eksibisionis"
-},
-{
-  "question": ["apakah pelaku eksibisionis bisa dituntut",
-    "apakah eksibisionis bisa dipidana",
-    "berapa lama hukuman eksibisionis",
-    "eksibisionis masuk pasal berapa",
-    "pasal eksibisionis",
-    "pasal untuk menuntut pelaku eksibisionis"
-  ],
-  "answer": ["seseorang yang memiliki kelainan eksibisionisme hakim harus merujuk pada pendapat seorang ahli kesehatan jiwa dan hasil pemeriksaan medis untuk mengetahui apakah kelainan tersebut dapat dipersamakan dengan sakit jiwa atau penyakit gangguan kejiwaan. Jika ternyata pelaku eksibisionisme tersebut betul dinilai tidak dapat bertanggung jawab atas perbuatannya, maka berlaku alasan pemaaf bagi pelaku, sehingga menurut KUHP ia tidak dapat dipidana atau dimasukkan ke rumah sakit sebagai waktu percobaan.",
-  "perilaku eksibisionis seperti melakukan masturbasi di muka umum atau mempertontonkan alat kelamin di muka umum dapat dipidana penjara paling lama 10 tahun dan/atau pidana denda paling banyak Rp5 miliar."
-  ],
-  "tag": "dasar hukum eksibisionis"
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "How are you?",
+        "Is anyone there?",
+        "Hello",
+        "Good day",
+        "What's up",
+        "how are ya",
+        "heyy",
+        "whatsup",
+        "??? ??? ??",
+        "Hei",
+        "Halo",
+        "Hay",
+        "Hai",
+        "Apa Kabar?",
+        "Apa Kabar Dirimu?",
+        "Apa Kabar Denganmu?",
+        "Bagaimana Kabarmu?",
+        "Apakah Ada Orang?"
+      ],
+      "responses": [
+        "Halo!, ada yang bisa saya bantu?",
+        "Senang Melihatmu Kembali!, apa yang saya bisa bantu?",
+        "Hai!, Apa yang kamu butuhkan hari ini?",
+        "Aku baik baik saja, semoga kamu juga ya.",
+        "Hello there!, how can i help you?",
+        "Good to see you again!, what can i help you today?",
+        "Hi there!, how can i help you?",
+        "Aku disini!, ada yang bisa kubantu?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "cya",
+        "see you",
+        "bye bye",
+        "See you later",
+        "Goodbye",
+        "I am Leaving",
+        "Bye",
+        "Have a Good day",
+        "talk to you later",
+        "ttyl",
+        "i got to go",
+        "sampai jumpa",
+        "sepertinya itu saja",
+        "sepertinya cukup",
+        "sudah cukup",
+        "cukup",
+        "Senang berbicara denganmu"
+      ],
+      "responses": [
+        "Sad to see you go :(, i hope the best for your problem.",
+        "Talk to you later.",
+        "Goodbye!",
+        "Come back soon!",
+        "sampai bertemu kembali!",
+        "sampai jumpa!",
+        "baiklah, semoga jawabanku bermanfaat ya.",
+        "Senang bisa membantu.",
+        "Semoga masalahmu cepat terselesaikan ya."
+      ]
+    },
+    {
+      "tag": "creator",
+      "patterns": [
+        "what is the name of your developers",
+        "what is the name of your creators",
+        "what is the name of the developers",
+        "what is the name of the creators",
+        "who created you",
+        "your developers",
+        "your creators",
+        "who are your developers",
+        "developers",
+        "you are made by",
+        "you are made by whom",
+        "who created you",
+        "who create you",
+        "creators",
+        "who made you",
+        "Siapa yang mengembangkanmu?",
+        "Siapa yang membuatmu",
+        "Siapa nama pengembangmu",
+        "Siapa pengembangmu",
+        "Siapa penciptamu",
+        "yang mengembangkanmu",
+        "yang membuatmu",
+        "pembuat",
+        "pengembang",
+        "kamu dibuat oleh siapa",
+        "siapa yang membuat kamu?",
+        "siapa yang mengembangkan kamu?"
+      ],
+      "responses": [
+        "Pengembangku adalah Cohort Bangkit Academy 2023 Kelompok CH2-PS292",
+        "Pembuatku adalah Cohort Bangkit Academy 2023 Kelompok CH2-PS292",
+        "Cohort Bangkit Academy 2023 Kelompok CH2-PS292 lah yang membuat aku",
+        "Cohort Bangkit Academy 2023 Kelompok CH2-PS292 lah yang mengembangkan aku",
+        "My Developer are Cohort Bangkit Academy 2023 from CH2-PS292 Capstone Project Group",
+        "My Creator are Cohort Bangkit Academy 2023 from CH2-PS292 Capstone Project Group",
+        "Cohort Bangkit Academy 2023 from CH2-PS292 Capstone Project Group made me",
+        "Cohort Bangkit Academy 2023 from CH2-PS292 Capstone Project Group developed me"
+      ]
+    },
+    {
+      "tag": "name",
+      "patterns": [
+        "name",
+        "your name",
+        "do you have a name",
+        "what are you called",
+        "what is your name",
+        "what should I call you",
+        "whats your name?",
+        "what are you",
+        "who are you",
+        "who is this",
+        "what am i chatting to",
+        "who am i taking to",
+        "what are you",
+        "nama",
+        "namamu",
+        "nama kamu",
+        "apakah kamu punya nama",
+        "kamu punya nama",
+        "apa nama panggilanmu",
+        "kamu dipanggil apa",
+        "kamu dipanggil siapa",
+        "bagaimana aku memanggilmu",
+        "siapa kamu",
+        "kamu ini siapa",
+        "dengan siapa aku berbicara",
+        "aku berbicara dengan siapa",
+        "kamu ini apa",
+        "siapa ini"
+      ],
+      "responses": [
+        "You can call me LawMate.",
+        "I'm LawMate, you can ask me anything related to law",
+        "I am LawMate, and i am a Chatbot to help you about your legal problems",
+        "You are currently chatting LawMate, your friend in law",
+        "My Name is LawMate, and im happy to help you regarding your legal problems",
+        "Namaku LawMate, aku adalah chatbot yang bisa membantumu menyelesaikan permasalahan hukum kamu.",
+        "Aku LawMate, Kamu bisa bertanya apapun kepadaku terkait hukum",
+        "Kamu Bisa Memanggilku LawMate",
+        "Sekarang kamu sedang menghubungi LawMate, temanmu dalam hukum"
+      ]
+    },
+    {
+      "patterns": [
+        "saya sebagai pelaku usaha ingin menerapkan kebijakan anti-pelecehan seksual di tempat kerja. apa panduan hukum yang sebaiknya saya ikuti?",
+        "saya sebagai pelaku usaha khawatir tentang tanggung jawab hukum jika pelecehan seksual terjadi di tempat kerja. apa langkah-langkah yang sebaiknya saya ambil untuk melindungi perusahaan?",
+        "sebagai HRD, saya ingin mencegah adanya kejahatan seksual di tempat kerja, apa yang harus saya lakukan?",
+        "saya tidak ingin pelecehan seksual terjadi di tempat kerja saya, apa langkah-langkah yang harus saya lakukan?",
+        "bagaimana cara mencegah pelecehan seksual terjadi di lingkungan kerja?",
+        "bagaimana cara mencegah pelecehan seksual terjadi di tempat kerja?",
+        "cara mencegah pelecehan seksual di tempat kerja",
+        "gimana cara mengantisipasi pelecehan seksual di lingkungan kerja",
+        "gimana cara mengantisipasi pelecehan seksual di kantor",
+        "cara mencegah pelecehan seksual di kantor"
+      ],
+      "responses": [
+        "terapkan kebijakan anti-pelecehan seksual di tempat kerja sesuai dengan undang-undang ketenagakerjaan (UU no. 13 tahun 2003) dan peraturan pemerintah terkait. hukum mewajibkan perusahaan untuk melindungi karyawan dari pelecehan seksual. ",
+        "terapkan kebijakan anti-pelecehan seksual di tempat kerja, lakukan pelatihan kepada karyawan, dan tanggapi laporan pelecehan secara serius. hukum mewajibkan perusahaan untuk melindungi karyawan dari pelecehan seksual. dasar hukum: undang-undang ketenagakerjaan (UU no. 13 tahun 2003) dan peraturan anti-pelecehan di tempat kerja.",
+        "perusahaan/pemberi kerja atau institusi kantor harus membuat aturan atau kebijakan terkait pelecehan seksual dan mengesahkan atau mengumukan peraturan tersebut sejak penerimaan pegawai. membuat langkah-langkah penyelesaian, perbaikan dan pemulihan bagi korban apabila terjadi kasus pelecehan seksual, serta sanksi yang dikenakan kepada pelaku.",
+        "upaya pencegahan pelecehan seksual harus dilakukan oleh semua pihak, baik oleh pekerja itu sendiri maupun oleh institusi/kantor atau perusahaan pemberi kerja. para pekerja perlu melakukan edukasi dan sosialisasi terhadap rekan-rekannya terkait kebijakan perusahaan, tata tertib, peraturan dan kode etik yang berlaku di perusahaan tersebut. pembekalan mengenai cara menolak tindakan pelecehan seksual dan bagaimana cara melaporkan atau mengadukan peristiwa tersebut juga penting diberikan kepada setiap pekerja.",
+        "Tindakan pencegahan harus dilakukan oleh setiap perusahaan untuk menghapuskan rantai tindakan pelecehan seksual. Berikut adalah tips mencegah pelecehan seksual di tempat kerja : \n\n1. Melakukan sosialisasi dan edukasi tentang pelecehan seksual\nSeorang pengusaha melalui HRD harus melakukan sosialisasi dan edukasi terhadap isu pelecehan seksual bagi setiap karyawan. Hal ini dapat dilakukan melalui memuat informasi, selebaran atau pengumuman mengenai pencegahan pelecehan seksual yang terjadi di tempat kerja.\n\n2. Membuat program pencegahan pelecehan seksual\nPerusahaan dapat melakukan sebuah program tentang penanganan pencegahan pelecehan seksual melalui kegiatan orientasi secara langsung kepada karyawan untuk mengenali isu pelecehan seksual. Memberikan pelatihan terhadap karyawan untuk mengenali masalah-masalah yang ada di tempat kerja.\n\n3. Membentuk tim respon terhadap pelecehan seksual\nPelecehan seksual menjadi salah satu permasalahan serius yang ada di tempat kerja. Oleh karena itu, membentuk tim respon dalam mengorganisir tindakan pencegahan pelecehan seksual harus dilakukan untuk menekan terjadinya pelecehan seksual di tempat kerja. Karyawan dapat melaporkan seluruh permasalahannya melalui tim tersebut.\n\n4. Kebijakan Perusahaan\nPerusahaan harus mendorong karyawan untuk melaksanakan tindakan pencegahan pelecehan seksual dan mengambil tindakan disiplin dalam bentuk ketatnya kebijakan perusahaan dalam pelanggaran pelecehan seksual ini. Hal ini untuk membentuk kedisiplinan karyawan dalam isu pelecehan seksual ini.",
+        "Selain pihak HRD dan manajemen, karyawan juga harus ikut serta dan bertindak guna mencegah pelecehan seksual di tempat kerja. Berikut ini adalah beberapa hal yang bisa dilakukan karyawan untuk mencegah pelecehan seksual di kantor.\n\n1. Gabung Program Sosialisasi Anti Pelecehan Seksual\nPertama-tama, para pekerja bisa bergabung dalam program sosialisasi anti pelecehan seksual. Di program tersebut, karyawan akan diberikan materi seputar jenis-jenis pelecehan seksual beserta tindakan preventifnya. Macam-macam program ini bisa ditemukan secara online dan biasanya disediakan oleh NGO atau badan riset yang bergerak di bidang gender. Atau, karyawan juga bisa mengikuti pelatihan yang akan diluncurkan perusahaan guna menghapus tindakan pelecehan seksual di tempat kerja. Dengan mengikuti rangkaian program ini, dijamin kamu sebagai karyawan akan lebih memahami bahaya dari pelecehan seksual.\n\n2. Ikut serta dalam Langkah Investigasi dan Tindakan Disipliner\nCara lainnya yang bisa dilakukan karyawan untuk mencegah pelecehan seksual di tempat kerja adalah ikut serta dalam langkah investigasi dan tindakan disipliner. Langkah investigasi dan disipliner biasanya akan dilakukan perusahaan pada oknum yang dicurigai melakukan tindak pelecehan. Namun, tak ada salahnya bagi karyawan untuk ikut serta dan membantu pihak HRD untuk menuntaskan isu tersebut. Sebagai contoh, karyawan bisa mendorong pihak manajemen untuk segera memberi sanksi pada oknum tersebut. Meskipun demikian, jangan sampai karyawan melewati batas dan melanggar hak manajemen untuk melakukan investigasi secara menyeluruh. Dukungan moral pada korban serta menuang ide untuk tindakan preventif sudah cukup untuk mencegah pelecehan seksual di kantor.\n\n3. Pelajari dan Ikuti Regulasi Perusahaan terkait Pelecehan Seksual\nCara terakhir yang bisa dilakukan karyaan untuk mencegah pelecehan seksual di tempat kerja adalah mengikuti regulasi perusahaan. Umumnya, perusahaan akan merancang SOP serta aturan mengenai pelecehan seksual di kantor. Nah, karyawan bisa mencegah tindak pelecehan dengan memahami semua regulasi yang sudah disediakan tersebut. Selain itu, karyawan juga bisa memberikan saran apabila ada bagian dari regulasi yang dirasa kurang sesuai.Misalnya, apabila sanksi dirasa terlalu ringan, karyawan bisa mengajukan perubahan yang secara tak langsung akan membuat efek jera dalam kantor.",
+        "Anda bisa mencegah pelecehan seksual di tempat kerja dengan beberapa cara berikut :\n1. Edukasi\nkesadaran dan pemahaman bersama mengenai kekerasan seksual dan bentuk kekerasan seksual merupakan langkah awal untuk mengidentifikasi dan mencegah terjadinya kekerasan yang dapat terjadi di tempat kerja.\n\n2. SOP yang jelas\nSecara spesifik, mengenai upaya preventif terjadinya pelecehan seksual di lingkungan kerja, Surat Edaran Menteri Tenaga Kerja dan Transmigrasi No. SE.03/MEN/IV/2011 tentang Pedoman Pencegahan Pelecehan Seksual di Tempat Kerja. Dari aturan di atas terlihat jelas bahwa Negara telah membebankan tanggung jawab besar bagi perusahaan untuk melakukan upaya preventif guna menciptakan lingkungan kerja yang aman dan kondusif bagi keselamatan pekerjanya. Maka dari itu penting sekali bagi tempat kerja memiliki SOP penanganan kekerasan seksual.\n\n3. Pelatihan\nMenurut Vina A. Muliana, seorang Career Content Creator mengatakan setiap pekerja memiliki hak untuk bisa bekerja di lingkungan yang aman dan jauh dari kekerasan sekual. Perlu diadakan pemahaman dan pelatihan secara berkala bagi pegawai untuk memahami pentingnya dalam memerangi pelecehan seksual. Selain itu menumbuhkan budaya organisasi yang baik juga sama pentingnya. Kita perlu menghormati dan mendengarkan satu sama lain agar hal ini tidak terjadi.",
+        "Anda dapat mengurangi risiko pelecehan seksual di tempat kerja dengan mengimplementasikan langkah-langkah berikut:\n\n1. Pendidikan dan Kesadaran:\nMemberikan edukasi kepada seluruh anggota organisasi tentang kekerasan seksual dan jenis-jenisnya merupakan langkah awal penting. Kesadaran bersama akan membantu mengidentifikasi dan mencegah kekerasan tersebut di lingkungan kerja.\n\n2. SOP yang Jelas:\nImplementasi Surat Edaran Menteri Tenaga Kerja dan Transmigrasi No. SE.03/MEN/IV/2011 tentang Pedoman Pencegahan Pelecehan Seksual di Tempat Kerja dapat membantu membentuk prosedur operasional standar (SOP) yang jelas. Perusahaan harus memiliki panduan yang spesifik untuk mencegah pelecehan seksual dan menciptakan lingkungan kerja yang aman.\n\n3. Pelatihan Berkala:\nMenyelenggarakan pelatihan rutin untuk meningkatkan pemahaman pekerja tentang pentingnya mencegah pelecehan seksual. Pelatihan ini dapat mencakup pengetahuan tentang hak-hak pekerja, tindakan pencegahan, dan bagaimana melaporkan kejadian yang mencurigakan. Penting juga untuk membangun budaya organisasi yang menghargai dan mendukung satu sama lain untuk mencegah pelecehan seksual.",
+        "Ini adalah beberapa hal yang dapat Anda lakukan untuk mengantisipasi pelecehan seksual di kantor :\n1. Melatih karyawan\nSesi ini harus mengajari karyawan apa itu pelecehan seksual, menjelaskan bahwa karyawan memiliki hak atas tempat kerja yang bebas dari pelecehan seksual, meninjau prosedur pengaduan Anda, dan mendorong karyawan untuk menggunakannya.\n\n2. Latih supervisor dan manajer. \nSekurang-kurangnya sekali dalam setahun, adakan sesi pelatihan untuk supervisor dan manajer yang terpisah dari sesi karyawan.Sesi-sesi tersebut juga untuk mendidik para manajer dan supervisor tentang pelecehan seksual dan menjelaskan cara menangani pengaduan.\n\n3. Membuat Kebijakan pelecehan seksual yang jelas.\nDalam peraturan tertulis perusahaan yang harus dipahami karyawan, Anda harus memiliki kebijakan yang dikhususkan untuk memitigasi dan mencegah pelecehan seksual terjadi.",
+        "Berikut adalah beberapa langkah yang dapat diambil untuk mengantisipasi pelecehan seksual di lingkungan kantor:\n\nPelatihan Karyawan:\nSesi pelatihan perlu diselenggarakan untuk memberikan pemahaman kepada karyawan mengenai definisi pelecehan seksual. Selain itu, mereka harus diberitahu tentang hak-hak mereka untuk bekerja di lingkungan yang bebas dari pelecehan seksual. Proses pengaduan juga harus dijelaskan secara rinci, dan karyawan perlu didorong untuk memanfaatkannya.\n\nPelatihan untuk Supervisor dan Manajer:\nSesi pelatihan terpisah perlu diadakan setidaknya sekali dalam setahun untuk para supervisor dan manajer. Pelatihan ini ditujukan untuk memberikan pemahaman yang lebih mendalam kepada mereka tentang pelecehan seksual dan memberikan panduan tentang cara menangani pengaduan dengan profesional.\n\nPembuatan Kebijakan yang Jelas:\nDalam dokumen peraturan perusahaan yang dapat diakses oleh semua karyawan, penting untuk memiliki kebijakan yang secara khusus menangani upaya mitigasi dan pencegahan pelecehan seksual. Kebijakan ini harus dirinci agar mudah dipahami oleh semua anggota organisasi."
+      ],
+      "tag": "antisipasi tempat kerja"
+    },
+    {
+      "patterns": [
+        "aplikasi mirip deepfake",
+        "aplikasi mirip deepfake",
+        "adakah aplikasi yang mirip dengan deepfake?",
+        "aplikasi serupa dengan deepfake",
+        "apakah ada aplikasi yang mirip dengan deepfake?",
+        "contoh aplikasi deepfake",
+        "berikan saya contoh aplikasi deepfake",
+        "aplikasi deepfake",
+        "deepfake aplikasi",
+        "deepfake contoh",
+        "aplikasi yang mirip dengan deepfake"
+      ],
+      "responses": [
+        "Berikut adalah beberapa contoh aplikasi mirip dengan deepfake : \n1. Lensa AI\n2. Deepfakes web\n3. Wombo\n4. Reface\n5. MyHeritage\n6. DeepFaceLab\n7. Deep Art\n8. Face Swap Live\n9. FaceApp\n10. Jiggy\n11. FaceMagic\n12. DALL-E Mini",
+        "berikut merupakan beberapa aplikasi yang mirip dengan deepfake :\n1. Wombo\n2. Reface\n3. MyHeritage\n4. Deep Art\n5. Face Swap Live\n6. Jiggy\n7. Deepfake Studio\n8. Zao\n9. FaceApp\n10. Reflect",
+        "berikut merupakan beberapa aplikasi yang serupa dengan deepfake :\n1. DeepFaceLab\n2. Zao\n3. Face Swap\n4. Deep Art Effects\n5. Reface\n6. Morphin\n7. Jiggy",
+        "Tentu ada, berikut adalah beberapa apikasi yang mirip dengan deepfake :\n1. Lensa AI\n2. Deepfakes Web\n3. Reface\n4. MyHeritage\n5. Face Swap Live\n6. FaceApp\n7. FakeYou\n8. Synthesis AI",
+        "Berikut ini adalah beberapa aplikasi deepfake:\n1. Reface\n2. Jiggy\n3. Impressions",
+        "Berikut adalah beberapa contoh aplikasi mirip dengan deepfake : \n1. Wombo\n2. Reface\n3. DeepFaceLab\n4. Face Swap Live\n5. FaceApp\n6. Jiggy\n7. Deepfakes web\n8. Lensa AI\n9. FaceMagic\n10. DALL-E Mini\n11. Deep Art\n12. MyHeritage",
+        "Berikut adalah beberapa aplikasi yang menggunakan teknologi deepfake : \n1. Zao\n2. Web Deepfake\n3. AvengeThem \n4. MachineTube\n5. DeepFaceLab\n6. Deep Art\n7. Face Swap",
+        "Tentu, berikut adalah beberapa apikasi deepfake :\n1. Lensa AI\n2. Reface\n3. MyHeritage\n4. Face Swap Live\n5. FaceApp\n6. Deepfakes Web\n7. Synthesis AI\n8. FakeYou",
+        "Berikut ini adalah beberapa contoh aplikasi deepfake:\n1. Reface\n2. Jiggy\n3. Impressions\n4. Fake You \n5. MyHeritage\n6. Reface\n7. Face Swap",
+        "berikut merupakan beberapa aplikasi yang mirip dengan deepfake :\n1. Wombo\n2. Reface\n3. MyHeritage\n4. Deep Art\n5. Face Swap Live\n6. Jiggy\n7. Deepfake Studio\n8. Zao\n9. FaceApp"
+      ],
+      "tag": "contoh-deepfake"
+    },
+    {
+      "patterns": [
+        "saya ditipu dengan pemalsuan foto telanjang saya. bagaimana hukum mengatasi hal ini?",
+        "apa yang harus saya lakukan jika menemukan foto telanjang saya yang dihasilkan oleh AI?",
+        "saya melihat foto saya diedit telanjang di sosial media, apa yang harus saya lakukan?",
+        "saya menemukan foto saya yang sudah diedit menjadi bugil di sosial media, apa yang harus saya lakukan?",
+        "apa yang harus saya lakukan jika ada yang mengedit foto saya menjadi foto telanjang di sosial media?",
+        "foto saya diedit telanjang"
+      ],
+      "responses": [
+        "Penyebaran foto telanjang merupakan pelanggaran kesusilaan yang melanggar norma dan dapat dihukum berdasarkan Undang-Undang Nomor 44 Tahun 2008 tentang Pornografi dan Undang-Undang Nomor 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik sebagaimana yang telah diubah oleh Undang-Undang Nomor 19 Tahun 2016 tentang Perubahan Atas Undang-Undang Nomor 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik. Perbuatan melanggar kesusilaan dengan pencemaran nama baik merupakan dua hal yang berbeda. Dalam kasus ini, tindakan menyebarkan foto telanjang secara normatif dapat dipidana karena melanggar kesusilaan. Tetapi pelaku berkemungkinan juga dapat dipidana karena mencemarkan nama baik dari orang yang fotonya disebarkan jika orang tersebut merasa malu dan dicemarkan sehingga melaporkan pelaku.",
+        "Laporkan ke pihak berwenang dan jangan sebarkan konten tersebut untuk mencegah penyebaran yang lebih luas karena terkadang ada orang yang meminta bantuan publik untuk ramai-ramai me-report sebuah akun. Beberapa orang akan secara sukarela membantu, tapi beberapa orang mungkin malah akan menyimpannya dan menyebarkannya lagi nanti. Jangan ragu juga untuk meminta bantuan dari ahli hukum atau pakar keamanan cyber.",
+        "Penyebaran gambar telanjang adalah suatu pelanggaran terhadap norma kesusilaan yang dapat dituntut secara hukum berdasarkan Undang-Undang Nomor 44 Tahun 2008 tentang Pornografi dan Undang-Undang Nomor 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik yang telah mengalami perubahan melalui Undang-Undang Nomor 19 Tahun 2016. Penting untuk dicatat bahwa tindakan ini secara khusus dapat dikenai sanksi hukum karena melanggar prinsip-prinsip kesusilaan. Selain itu, perbuatan menyebarkan gambar tersebut juga dapat dianggap sebagai pencemaran nama baik, yang merupakan pelanggaran terpisah. Dalam situasi ini, pelaku mungkin akan dihadapkan pada dua kemungkinan tuduhan hukum, yakni pelanggaran kesusilaan dan pencemaran nama baik, tergantung pada dampak yang ditimbulkan terhadap orang yang menjadi korban.",
+        "Laporkan kepada otoritas yang berwenang dan hindari menyebarkan konten tersebut guna mencegah penyebaran lebih lanjut. Terkadang, seseorang dapat meminta dukungan publik untuk melaporkan suatu akun dengan harapan mendapatkan perhatian massal. Meskipun beberapa orang bersedia membantu dengan sukarela, sebaiknya dihindari untuk menyebarkannya sendiri karena hal ini dapat memperbesar dampak negatif. Saran yang diberikan mencakup meminta bantuan dari ahli hukum atau pakar keamanan siber untuk menangani situasi tersebut dengan lebih efektif.",
+        "Laporkan ke pihak berwenang dan jangan sebarkan konten tersebut untuk mencegah penyebaran yang lebih luas karena terkadang ada orang yang meminta bantuan publik untuk ramai-ramai me-report sebuah akun. Beberapa orang akan secara sukarela membantu, tapi beberapa orang mungkin malah akan menyimpannya dan menyebarkannya lagi nanti. Jangan ragu juga untuk meminta bantuan dari ahli hukum atau pakar keamanan cyber.",
+        "Segera laporkan kepada otoritas yang berwenang dan hindari menyebarkan konten tersebut untuk mencegah penyebaran yang lebih luas. Terkadang, seseorang meminta dukungan publik untuk melaporkan suatu akun, dan meskipun beberapa orang bersedia membantu, yang lain mungkin akan menyimpan dan menyebarkannya kembali. Jangan ragu untuk mencari bantuan dari ahli hukum atau pakar keamanan cyber."
+      ],
+      "tag": "eksploitasi seksual"
+    },
+    {
+      "patterns": [
+        "saya sebagai korban pelecehan seksual ingin menuntut pelaku, apa yang bisa saya lakukan?",
+        "saya sebagai korban pelecehan seksual ingin mengajukan tuntutan terhadap pelaku. bagaimana prosedurnya secara hukum?",
+        "bagaimana cara menuntut pelaku pelecehan seksual?",
+        "gimana cara menuntut pelaku pelecehan seksual?",
+        "saya sebagai korban pelecehan seksual ingin menuntut pelaku",
+        "saya ingin menuntut pelaku pelecehan seksual",
+        "saya ingin melaporkan pelaku pelecehan seksual",
+        "saya ingin melaporkan pelaku pelecehan seksual, apa yang harus saya lakukan?",
+        "saya ingin melaporkan pelaku pelecehan seksual, apa yang bisa saya lakukan?",
+        "saya ingin menuntut pelaku pelecehan seksual, apa yang bisa saya lakukan?"
+      ],
+      "responses": [
+        "Anda bisa mengunjungi kantor polisi terdekat di sekitar lokasi tempat tinggal Anda, dan disarankan membawa keluarga atau kerabat yang mengetahui secara rinci kronologi kejadian. Jika pelecehan seksual melibatkan kontak fisik, segera laporkan kasus tersebut karena hal ini terkait dengan proses Visum et Repertum yang penting sebagai bukti. Pelaporan dini membantu dalam pengumpulan bukti dan mempercepat proses hukum. Pelaku pelecehan seksual dapat dituntut hukum jika terdapat bukti yang memenuhi unsur perbuatan, sesuai dengan pasal-pasal yang mengatur tindak pidana percabulan seperti yang diatur dalam Pasal 289 hingga 296 KUHP atau Pasal 414 hingga 422 UU 1/2023.",
+        "Anda dapat mendatangi kantor kepolisian terdekat di sekitar tempat tinggal, anda juga bisa membawa kerabat maupun keluarga yang sebelumnya telah mengetahui kronologi kejadian secara lengkap. Jika pelecehan seksual berupa tindakan fisik, maka anda wajib melaporkan kasus tersebut sesegera mungkin karena berkaitan dengan proses Visum et Repertum untuk alat bukti.Pelaku pelecehan seksual dapat dijerat asalkan terdapat bukti dan pemenuhan unsur perbuatan dalam hal memenuhi pasal percabulan sebagaimana diatur dalam Pasal 289 s.d. 296 KUHP atau Pasal 414 s.d. 422 UU 1/2023.",
+        "Anda dapat mendatangi kantor kepolisian terdekat di sekitar tempat tinggal, anda juga bisa membawa kerabat maupun keluarga yang sebelumnya telah mengetahui kronologi kejadian secara lengkap. Jika pelecehan seksual berupa tindakan fisik, maka anda wajib melaporkan kasus tersebut sesegera mungkin karena berkaitan dengan proses Visum et Repertum untuk alat bukti.Pelaku pelecehan seksual dapat dijerat asalkan terdapat bukti dan pemenuhan unsur perbuatan dalam hal memenuhi pasal percabulan sebagaimana diatur dalam Pasal 289 s.d. 296 KUHP atau Pasal 414 s.d. 422 UU 1/2023.",
+        "Keberanian untuk menindaklanjuti kasus pelecehan seksual merupakan hal yang sangat penting, agar kasus tersebut dapat terselesaikan. Sebelum mengajukan laporan terhadap tindakan kekerasan seksual, sebaiknya lakukanlah pengumpulan bukti selengkap dan sedetail mungkin (screenshot chat, rekaman audio/video, kesaksian orang lain ataupun alat bukti elektronik yang telah diakui sebagai alat bukti yang sah berdasarkan Pasal 5 dan 6 UU ITE. Laporkanlah kasus kekerasan seksual kepada pihak kepolisian atau mendatangi pusat layanan terdekat seperti Pusat Pelayanan Terpadu Pemberdayaan Perempuan (P2TP2A), Lembaga Bantuan Hukum, Lembaga Perlindungan Saksi dan Korban, dan Organisasi Layanan Konseling",
+        "Anda bisa mendatangi kantor polisi terdekat, bisa juga  membawa teman dekat atau keluarga yang  mengetahui sepenuhnya waktu kejadian. Jika pelecehan seksual berbentuk tindakan fisik, Anda mempunyai kewajiban untuk melaporkan kejadian tersebut sesegera mungkin karena relevan dengan prosedur pembuktian Visum et Repertum. Pelaku pelecehan seksual dapat didakwa jika terdapat bukti dan  unsur perbuatan mengenai pelaksanaan ketentuan tindak pidana percabulan yang diatur dalam pasal 289 s.d. 296 KUHP atau pasal 414 sampai 422 UU 1/2023.",
+        "Sebelum melaporkan kasus pelecehan seksual, sangat penting untuk memiliki keberanian dalam menindaklanjuti agar kasus tersebut dapat diselesaikan dengan baik. Sebaiknya, kumpulkan bukti sejelas mungkin, termasuk tangkapan layar percakapan, rekaman audio/video, kesaksian dari saksi, dan bukti elektronik yang diakui sah berdasarkan Pasal 5 dan 6 UU ITE. Laporkan insiden kekerasan seksual kepada pihak berwajib, seperti kepolisian, atau kunjungi pusat layanan terdekat seperti Pusat Pelayanan Terpadu Pemberdayaan Perempuan (P2TP2A), lembaga bantuan hukum, Lembaga Perlindungan Saksi dan Korban, serta organisasi layanan konseling.",
+        "Sebelum melaporkan suatu kejadian pelecehan seksual, sangat penting untuk memiliki keberanian untuk menindaklanjuti kejadian tersebut agar  dapat diselesaikan dengan baik. Yang terbaik adalah mengumpulkan bukti-bukti sejelas mungkin, termasuk tangkapan layar percakapan, rekaman audio/video, keterangan saksi, bukti elektronik, dan sebagainya, yang diakui sah berdasarkan pasal 5 dan 6 UU ITE.Laporkan kejadian kekerasan seksual kepada pihak berwajib seperti polisi atau kunjungi pusat layanan terdekat seperti Pusat Pusat Pelayanan Terpadu Pemberdayaan Perempuan (P2TP2A),  Lembaga Bantuan Hukum, Lembaga Perlindungan Saksi dan Korban, atau Organisasi Layanan Konseling.",
+        "Sebelum melaporkan suatu insiden pelecehan seksual, sangat krusial untuk memiliki keberanian dalam menindaklanjuti agar kasus tersebut dapat diselesaikan dengan baik. Disarankan untuk mengumpulkan bukti sejelas mungkin, mencakup tangkapan layar percakapan, rekaman audio/video, keterangan saksi, bukti elektronik, dan lainnya, yang diakui sebagai sah sesuai dengan pasal 5 dan 6 UU ITE. Segera laporkan kejadian kekerasan seksual kepada pihak berwajib seperti polisi atau kunjungi pusat layanan terdekat, seperti Pusat Pelayanan Terpadu Pemberdayaan Perempuan (P2TP2A), Lembaga Bantuan Hukum, Lembaga Perlindungan Saksi dan Korban, atau Organisasi Layanan Konseling."
+      ],
+      "tag": "menuntut pelaku"
+    },
+    {
+      "patterns": "Apakah ada perlindungan hukum bagi korban pelecehan seksual?",
+      "responses": "Perlindungan hukum yang diberikan terhadap korban pelecehan seksual diatur dalam Pasal 5 dan Pasal 6 Undang-Undang Nomor 31 Tahun 2014 tentang Perubahan Atas Undang-Undang Nomor 13 Tahun 2006 tentang Perlindungan Saksi dan korban.",
+      "tag": "perlindungan terhadap korban"
+    },
+    {
+      "patterns": [
+        "apa yang harus saya lakukan apabila saya mendapat ancaman pemerkosaan?",
+        "saya diancam oleh orang yang melecehkan saya, apa yang harus saya lakukan",
+        "saya mendapat ancaman dari orang yang melakukan pelecehan kepada saya, apa yang harus saya lakukan",
+        "orang yang melecehkan saya mengancam saya untuk tidak melapor, apa hal yang harus dilakukan"
+      ],
+      "responses": [
+        "Langkah-langkah berikut dapat membantu Anda menjaga keamanan dan mendapatkan bantuan:\n1. Beritahu Orang Terdekat:\nSampaikan informasi kepada orang terdekat, teman, atau keluarga Anda agar mereka mengetahui situasi dan dapat memberikan dukungan emosional.\n\n2. Jangan Pergi Sendirian:\nHindari pergi ke tempat-tempat terpencil atau gelap sendirian. Cobalah untuk selalu bersama teman atau keluarga, terutama pada saat-saat yang dianggap berisiko.\nPertimbangkan Perlindungan Hukum:\n\n3. Hubungi Pihak Berwajib:\nSegera hubungi pihak kepolisian untuk melaporkan ancaman pemerkosaan. Berikan informasi sejelas mungkin, termasuk identitas pelaku jika Anda mengenalnya, serta detail mengenai ancaman yang diterima.\n\n4. Pertimbangkan perlindungan hukum\nKonsultasikan dengan pengacara atau lembaga perlindungan korban untuk mendiskusikan opsi hukum dan perlindungan yang mungkin tersedia bagi Anda.",
+        "jangan khawatir, tetap tenang dan lakukan beberapa langkah berikut : \n1. Pastikan keamanan diri terlebih dahulu \nmemastikan terlebih dahulu keamanan dan keselamatan diri. Segera jauhi tempat kejadian kekerasan seksual dan minta bantuan pertolongan. Jika kekerasan terjadi di rumah, cobalah mencari perlindungan di rumah keluarga lainnya. Bila kasus kekerasan seksual terjadi di lingkungan sekolah, segera melarikan diri dari tempat kejadian dan meminta pertolongan kepada guru.\n2. Simpan bukti\nSetelah merasa aman, segera simpan seluruh bukti-bukti kekerasan seksual. Misalnya seperti pakaian, foto, video, rekaman percakapan, atau bisa juga saksi-saksi yang melihat kekerasan seksual. Bukti-bukti tersebut sangat membantu dalam proses penanganan kasus.\n3. ceritakan ke orang orang terdekat\nHindari untuk memendam permasalahan yang dialami. Memendam masalah justru bisa memperburuk keadaan. Berusahalah untuk terbuka dan menceritakan masalah yang dialami kepada orang yang tepat. Dengan menceritakan masalah, orang tersebut juga bisa membantu mencarikan bantuan dan solusi untuk masalah kekerasan seksual yang dialami.\n4. Cari informasi dari lembaga yang memberikan bantuan\nPenting untuk korban kekerasan seksual mencari informasi dari lembaga-lembaga terkait yang bisa memberikan bantuan kepada korban kekerasan seksual.  Sebagai referensi, beberapa lembaga yang memberikan layanan adalah Pusat Pelayanan Terpadu Pemberdayaan Perempuan dan Anak (P2TP2A), Komisi Perlindungan Anak Indonesia (KPAI), Kementerian Pemberdayaan Perempuan dan Perlindungan Anak, dan sebagainya.",
+        "Jangan cemas, tetaplah tenang, dan ikuti langkah-langkah berikut ini:\n1.Utamakan keselamatan diri terlebih dahulu\nPastikan untuk mengamankan diri dan memastikan keselamatan. Secepat mungkin, jauhi lokasi kejadian kekerasan seksual dan minta pertolongan. Jika insiden terjadi di rumah, cari perlindungan di tempat lain, misalnya di rumah keluarga lain. Jika kejadian terjadi di lingkungan sekolah, segera tinggalkan tempat tersebut dan minta bantuan dari seorang guru.\n2.Kumpulkan bukti\nSetelah merasa aman, segera kumpulkan semua bukti terkait kekerasan seksual. Ini bisa mencakup pakaian, foto, video, rekaman percakapan, atau saksi-saksi yang dapat memberikan keterangan terkait kejadian. Bukti-bukti ini sangat penting dalam proses penanganan kasus.\nBagikan pengalaman dengan orang terdekat\n3.Hindari menahan perasaan dan pengalaman yang dialami. Berbicaralah dengan seseorang yang dapat dipercaya dan berkomunikasi terbuka mengenai masalah ini. Dengan berbagi pengalaman, orang tersebut dapat membantu mencari solusi dan memberikan dukungan terhadap kasus kekerasan seksual yang dialami.\n4.Temukan informasi dari lembaga bantuan\nKorban kekerasan seksual perlu mencari informasi dari lembaga-lembaga yang menyediakan bantuan. Beberapa referensi lembaga yang dapat memberikan layanan termasuk Pusat Pelayanan Terpadu Pemberdayaan Perempuan dan Anak (P2TP2A), Komisi Perlindungan Anak Indonesia (KPAI), Kementerian Pemberdayaan Perempuan dan Perlindungan Anak, dan sebagainya.",
+        "Jangan khawatir, tetaplah tenang, dan ikuti langkah-langkah berikut:\n1. Utamakan keselamatan diri terlebih dahulu\nPastikan untuk memastikan keamanan dan keselamatan diri dengan segera menjauh dari tempat kejadian kekerasan seksual dan meminta bantuan. Jika insiden terjadi di rumah, carilah perlindungan di rumah keluarga lain. Jika kekerasan seksual terjadi di lingkungan sekolah, segera melarikan diri dan minta bantuan kepada guru.\n2. Simpan bukti\nSetelah merasa aman, segera simpan semua bukti kekerasan seksual, seperti pakaian, foto, video, rekaman percakapan, atau saksi-saksi yang menyaksikan kejadian. Bukti-bukti ini akan sangat berguna dalam proses penanganan kasus.\n3. Ceritakan kepada orang terdekat\nHindari menahan permasalahan yang dialami dan berusaha untuk terbuka dengan menceritakan masalah kepada orang yang dapat dipercaya. Dengan berbagi pengalaman, orang tersebut dapat membantu mencari bantuan dan solusi untuk mengatasi kekerasan seksual.\n4. Cari informasi dari lembaga bantuan\nKorban kekerasan seksual perlu mencari informasi dari lembaga-lembaga yang menyediakan bantuan, seperti Pusat Pelayanan Terpadu Pemberdayaan Perempuan dan Anak (P2TP2A), Komisi Perlindungan Anak Indonesia (KPAI), Kementerian Pemberdayaan Perempuan dan Perlindungan Anak, dan lain sebagainya."
+      ],
+      "tag": "intimidasi seksual"
+    },
+    {
+      "patterns": [
+        "bagaimana saya bisa mendukung korban pelecehan seksual?",
+        "apa yang bisa saya lakukan untuk mendukung korban pelecehan seksual?",
+        "saya sebagai individu mendukung kampanye anti-pelecehan seksual. apakah ada dasar hukum yang mengatur kampanye semacam ini?",
+        "saya sebagai individu ingin mendukung korban pelecehan seksual. apa langkah-langkah yang dapat saya ambil dan apakah ada dasar hukumnya?",
+        "bagaimana cara mensupport korban pelecehan seksual?",
+        "gimana cara mensupport korban pelecehan seksual?",
+        "cara untuk mendukung korban pelecehan seksual?",
+        "bagaimana cara menenangkan korban pelecehan seksual?"
+      ],
+      "responses": [
+        "Anda bisa memulai dengan tidak menyalahkan korban. Jangan pernah menyalahkah korban atas penyerangan seksual tersebut. Penyerangan seksual tidak bisa dibiarkan. Apa yang dipakai oleh seseorang, budaya, usia, penggunaan obat-obatan atau alkohol, atau hubungan mereka dengan pelaku tidak pernah menjadi penyebab bagi seseorang untuk melakukan penyerangan secara seksual kepada orang lain.",
+        "Ketika seseorang memberi tahu Anda bahwa mereka telah mengalami pelecehan seksual, yang Anda bisa lakukan adalah memercayai, mendukung dan membantu mereka menjajaki pilihan tentang hal yang harus dilakukan selanjutnya. dengan mempercayai korban, maka korban akan merasa didukung dan dapat membantu dalam proses pemulihan.",
+        "aktivitas kampanye anti-pelecehan seksual diakui dan dihormati dalam hukum. hukum memberikan kebebasan berekspresi dan mendukung upaya masyarakat untuk memerangi kekerasan seksual. dasar hukum: undang-undang dasar negara republik indonesia tahun 1945.",
+        "dukung korban pelecehan seksual dengan memberikan dukungan moral dan melibatkan diri dalam kampanye anti-pelecehan seksual. hukum memberikan dukungan terhadap kegiatan yang bertujuan melawan kekerasan seksual. dasar hukum: undang-undang pemberantasan tindak pidana kekerasan seksual (uu no. 17 tahun 2016).",
+        "Anda bisa memulai dengan tidak menyalahkan korban. Jangan pernah menyalahkah korban atas penyerangan seksual tersebut. Penyerangan seksual tidak bisa dibiarkan. Apa yang dipakai oleh seseorang, budaya, usia, penggunaan obat-obatan atau alkohol, atau hubungan mereka dengan pelaku tidak pernah menjadi penyebab bagi seseorang untuk melakukan penyerangan secara seksual kepada orang lain.",
+        "Berikut adalah beberapa langkah untuk mensupport korban pelecehan seksual : \n1. Berikan Support dan dengarkan ceritanya\nDekati korban dan buat suasana yang nyaman agar korban mau bercerita tentang kejadiannya, namun perlu diingat untuk tidak memaksa mereka bercerita apabila korban masih enggan bercerita.\n\n2. Ajak korban melapor dan konsultasi\nMendampingi korban ke psikiater dan melaporkan kejadian tersebut ke pihak berwenang adalah hal supportif kedua yang bisa kita lakukan untuk korban.",
+        "Berikut adalah beberapa langkah untuk memberikan dukungan kepada korban pelecehan seksual:\n1. Tunjukkan Dukungan dan Dengarkan Pengalaman Mereka:\nMendekati korban dengan menciptakan suasana yang nyaman untuk berbicara tentang pengalaman mereka adalah langkah pertama. Namun, penting untuk menghormati ketidaknyamanan mereka dan tidak memaksa bercerita jika mereka belum siap.\n\n2. Ajak Korban untuk Melaporkan dan Konsultasi:\nMemberikan dukungan dengan mengajak korban untuk melaporkan kejadian tersebut dan berkonsultasi dengan pihak yang berkompeten, seperti psikiater atau lembaga yang dapat memberikan bantuan. Langkah ini mendukung korban dalam mencari pertolongan dan mengambil tindakan yang sesuai.",
+        "Berikut adalah cara menenangkan korban pelecehan seksual :\n1. Jangan terus-menerus membicarakan kejadian pelecehan seksual. \nDengan terus bertanya tentang kejadian tersebut, korban akan terus mengingat dan mengulang-ulang gambaran tentang apa yang telah terjadi. Hal ini dapat mengganggu proses pemulihan yang sedang berlangsung\n\n2. Ciptakan suasana yang nyaman\nSuasana nyaman diperlukan agar dapat berpikir jernih sehingga proses pemulihan dapat berlangsung dengan baik\n\n3. Ajak untuk berkonseling ke psikolog\nPara ahli tentu memiliki pengetahuan yang lebih untuk menangani korban pelecehan seksual, sehingga korban mendapatkan terapi yang benar dan sesuai dengan keadaannya. Selain itu, untuk mempercepat proses pemulihan dan mencegah korban mengalami gangguan lainnya, datang kepada ahli yang sesuai merupakan sebuah keputusan yang tepat"
+      ],
+      "tag": "mensupport"
+    },
+    {
+      "patterns": [
+        "saya mengalami pelecehan seksual di lingkungan kampus. apa yang sebaiknya saya lakukan?",
+        "saya mengalami pelecehan seksual di lingkungan kampus. apa yang bisa saya lakukan?",
+        "apa yang harus saya lakukan jika mengalami pelecehan seksual di kampus?",
+        "apa yang harus saya lakukan jika mengalami pelecehan seksual di lingkungan kampus?"
+      ],
+      "responses": [
+        "laporkan pelecehan seksual kepada pihak kampus dan, jika perlu, ke pihak berwajib. hukum memberikan perlindungan terhadap kekerasan seksual di lingkungan pendidikan. dasar hukum: undang-undang perlindungan anak dan peraturan anti-pelecehan di lingkungan pendidikan.",
+        "laporkan pelecehan seksual kepada pihak kampus dan, jika perlu, ke pihak berwajib. hukum memberikan perlindungan terhadap kekerasan seksual di lingkungan pendidikan. dasar hukum: undang-undang perlindungan anak (UUno. 35 tahun 2014) dan peraturan anti-pelecehan di lingkungan pendidikan.",
+        "Kekerasan seksual dapat dialami oleh siapapun dan terjadi dimanapun. Termasuk kepada diri kita sendiri. Maka, mulai berani melaporkan tindakan pelaku. Jika mendapati seorang teman yang mengalami hal tersebut, hal yang dapat dilakukan dengan mendengarkan dan berempati. Memang terlihat sepele, namun dapat menjadi bentuk dukungan kita terhadao korban yang sedang merasa trauma. Mulai mendengarkan dan tidak menghakimi korban. Biarkan korban bercerita dan meluapkan emosinya. Menanyakan kebutuhan korban dan menyediakan informasi, apakah ingin mengakses layanan konseling atau melaporkan kepada pihak berwenang. Mendesak kampus agar membuat regulasi tentang pencegahan dan penanganan kasus kekerasan seksual yang berpihak pada korban.",
+        "Kekerasan seksual dapat menimpa siapa saja dan terjadi di berbagai tempat, termasuk pada diri kita sendiri. Oleh karena itu, kita perlu memiliki keberanian untuk melaporkan pelaku tindakan tersebut. Jika kita menemui teman yang mengalami kekerasan seksual, tindakan yang dapat diambil adalah mendengarkan dengan penuh empati. Meskipun terlihat sederhana, hal ini bisa menjadi bentuk dukungan bagi korban yang sedang mengalami trauma. Penting untuk memberikan perhatian tanpa menghakimi, memberi kesempatan korban untuk bercerita dan mengeluarkan perasaannya. Selain itu, menanyakan kebutuhan korban dan memberikan informasi, seperti kemungkinan akses ke layanan konseling atau pelaporan kepada pihak berwajib. Dorong pula kampus untuk menyusun regulasi yang fokus pada pencegahan dan penanganan kekerasan seksual, yang memberikan dukungan kepada korban."
+      ],
+      "tag": "pelecehan seksual kampus"
+    },
+    {
+      "patterns": [
+        "bagaimana cara mencegah pelecehan seksual di kampus?",
+        "gimana cara mencegah pelecehan seksual di kampus?",
+        "cara mencegah pelecehan seksual di kampus?",
+        "cara mengantisipasi pelecehan seksual di kampus?"
+      ],
+      "responses": [
+        "Anda dapat mencegah pelecehan seksual di kampus dengan beberapa cara berikut : \n1. Pembentukan Satgas Pelecehan Seksual\nSaat ini, mulai banyak kampus yang membentuk Satgas Pencegahan dan Penanganan Kekeresan Seksual (PPKS) dengan memperhatikan Permendikbudristek Nomor 30 Tahun 2021 tentang Pencegahan dan Penanganan Pelecehan Seksual di Lingkungan Perguruan Tinggi. Dengan pembentukan tersebut, kasus kekerasan seksual di lingkungan kampus dapat berkurang. Pastinya penanganan pelecehan seksual dilakukan sesuai prosedur sehingga tidak ada kejadian saling menghakimi.\n\n2. Memperketat Pertemuan antara Dosen dan Mahasiswa\nSeringkali kasus pelecehan seksual dilakukan oleh dosen dan/atau mahasiswa. Untuk itu, pihak kampus harus memperketat pertemuan antara mahasiswa dengan dosen dan tenaga kependidikan tanpa persetuuan ketua prodi. Ditambah, apabila pertemuan tersebut dilakukan di luar area kampus atau jam operasional kampus, maka persetujuan dari pihak kampus sangat penting.\n\n3. Kampanye Pencegahan Pelecehan Seksual\nLakukan kampanye adalah cara baik untuk mencegah pelecehan seksual. Dewasa ini, banyak organisasi di kampus yang menyelenggarakan program kerja berupa kampanye pencegahan kekerasan seksual di kampus.Kampanye bisa berupa sosialisasi terkait penanganan pelecehan seksual, pemberian kontak bantuan, dan zero tolerance untuk pelaku pelecehan seksual di kampus. Dengan kampanye, pihak kampus dapat memantik para korban untuk melapor kasus kekerasan seksualnya.",
+        "Anda dapat mencegah kejadian pelecehan seksual di lingkungan kampus dengan mengambil langkah-langkah berikut:\n1. Pembentukan Tim Pencegahan dan Penanganan Pelecehan Seksual:\nBeberapa kampus saat ini membentuk Tim Pencegahan dan Penanganan Kekerasan Seksual (PPKS) sesuai dengan Permendikbudristek Nomor 30 Tahun 2021. Melalui pembentukan tim ini, kasus kekerasan seksual di kampus dapat diminimalkan. Penanganan pelecehan seksual dilakukan sesuai dengan prosedur yang ditetapkan untuk menghindari sikap saling menghakimi.\n\n2. Pertemuan antara Dosen dan Mahasiswa:\nPerlu ditingkatkan pengawasan terhadap pertemuan antara dosen dan mahasiswa, karena pelecehan seksual seringkali melibatkan pihak ini. Pihak kampus harus mengawasi pertemuan tersebut, terutama jika dilakukan di luar area kampus atau di luar jam operasional, dengan memperoleh persetujuan dari pihak kampus.\n\n3. Kampanye Pencegahan Pelecehan Seksual:\nMelakukan kampanye pencegahan pelecehan seksual merupakan cara efektif untuk mencegah kejadian tersebut. Banyak organisasi di kampus yang mengadakan kampanye, termasuk kegiatan sosialisasi mengenai penanganan pelecehan seksual, memberikan informasi kontak bantuan, dan menegaskan kebijakan nol toleransi terhadap pelaku pelecehan seksual di lingkungan kampus. Melalui kampanye ini, kampus dapat mendorong korban untuk melaporkan kasus kekerasan seksual yang mereka alami.",
+        "Pencegahan terjadinya pelecehan seksual di  kampus dapat dilakukan dengan melakukan langkah-langkah sebagai berikut: \n1.Membentuk tim pencegahan dan tanggap pelecehan seksual \nBeberapa kampus saat ini belum memiliki tim pencegahan dan tanggap pelecehan seksual yang memadai.\nDengan terbentuknya tim ini diharapkan dapat meminimalisir kejadian pelecehan seksual di kampus.\n\n2.Pertemuan antara Dosen dan Mahasiswa: \nPertemuan antara instruktur dan siswa perlu lebih sering diawasi karena pelecehan seksual sering terjadi diluar kampus. Pihak kampus wajib mengawasi rapat atas persetujuan kampus, apalagi jika rapat diadakan di luar kampus atau di luar jam kerja.\n \n3.Kampanye Pencegahan Pelecehan Seksual: \nMelaksanakan kampanye pencegahan pelecehan seksual merupakan cara yang efektif untuk mencegah kejadian tersebut. Banyak organisasi di kampus melakukan kampanye yang mencakup upaya pendidikan untuk mengatasi pelecehan seksual, memberikan informasi kontak untuk bantuan, dan menekankan kebijakan nol toleransi bagi pelaku pelecehan seksual di kampus. Melalui kampanye ini, perguruan tinggi dapat mendorong korban untuk melaporkan kejadian pelecehan seksual yang mereka alami.",
+        "Berikut tips agar terhindar dari tindak pelecehan seksual khususnya di lingkungan kampus : \n1. Bersikap Tegas dan Berani Menegur\nJika terdapat indikasi pelecehan seksual seperti catcallingatau kata-kata tidak senonoh yang dilontarkan kepada kita, mulailah bersikap tegas. Artinya, kita harus melakukan teguran atau menunjukkan rasa tidak suka terhadap perlakuan tersebut.\n\n2. Dapatkan Perhatian\nSaat mengalami pelecehan seksual di tempat umum, jangan ragu untuk berteriak atau menarik perhatian orang di sekitar, seperti meminta bantuan, memberikan kode, atau yang lainnya.Dengan melakukan upaya pencegahan di atas, setidaknya akan membantu kita terhindar dari aksi pelecehan.\n\n3. Rekam, Lihat, Foto\nJangan takut untuk memvideokan memfoto, atau merekam orang yang kita curigai akan atau telah melakukan tindak kekerasan seksual. Hal tersebut bisa dijadikan bukti jika pihak berwenang menindak kasus yang kita alami. Selain itu, jangan takut menatap orang yang mencurigakan. Cara tersebut bisa membuat pelaku merasa diawasi dan diharapkan akan berhenti.\n"
+      ],
+      "tag": "antisipasi kampus"
+    },
+    {
+      "patterns": [
+        "saya adalah korban pelecehan seksual oleh anggota keluarga. bagaimana saya bisa mendapatkan perlindungan hukum?",
+        "saya dilecehkan secara seksual oleh salah seorang anggota keluarga sendiri,  apa yang bisa saya lakukan?",
+        "seorang perempuan di lingkungan keluarga mengalami pemerkosaan namun ragu untuk melaporkannya karena pelaku adalah anggota keluarga.",
+        "saya sering dilecehkan oleh ayah saya, apa yang harus saya lakukan?",
+        "saya pernah mengalami pelecehan seksual oleh kerabat saya sendiri",
+        "saat saya berumur 5 tahun, om saya sring meraba raba alat kelamin saya"
+      ],
+      "responses": [
+        "laporkan pelecehan seksual dalam keluarga kepada pihak berwajib dan ajukan perlindungan hukum. undang-undang perlindungan korban tindak pidana kekerasan seksual memberikan dasar hukum. dasar hukum: undang-undang perlindungan korban tindak pidana kekerasan seksual.",
+        "Anda bisa menceritakan kejadian tersebut kepada orang orang terdekat anda dan memintanya untuk mendampingi anda untuk mengumpulkan bukti dan melapor kepada pihak yang berwajib.",
+        "dalam kasus pemerkosaan di lingkungan keluarga, korban dapat melaporkan ke polisi atau lembaga yang berwenang. undang-undang perlindungan korban dan saksi (uu no. 13 tahun 2006) memberikan perlindungan terhadap korban agar bisa memberikan kesaksian tanpa tekanan.",
+        "Pertama, anda bisa menceritakan kejadian tersebut kepada orang orang terdekat seperti Ibu, Kakak/Adik tentang kejadian tersebut. lalu memintanya untuk mendampingi anda untuk mengumpulkan bukti dan melapor kepada pihak yang berwajib.",
+        "saya sangat terpukul mendengar pengalaman yang anda alami. apa yang terjadi pada anda adalah bentuk pelecehan seksual yang sangat serius dan tidak dapat diterima. tindakan tersebut adalah melanggar batas-batas privasi dan hak anda sebagai seorang anak.dalam hukum, kasus pelecehan seksual seperti ini sangat serius. di indonesia, pasal 289 kuhp (kitab undang-undang hukum pidana) mengatur tentang pelecehan seksual. pasal ini menyebutkan bahwa siapapun yang dengan sengaja melakukan perbuatan tidak senonoh atau memaksa orang lain melakukan perbuatan tidak senonoh, dipidana dengan pidana penjara paling lama dua tahun delapan bulan.meskipun peristiwa itu terjadi beberapa waktu yang lalu, anda masih memiliki hak untuk melaporkannya kepada pihak berwenang, seperti kepolisian. menceritakan pengalaman anda kepada orang tua, atau mencari bantuan dari sumber daya seperti konselor atau organisasi yang fokus pada kasus pelecehan seksual juga bisa menjadi langkah yang membantu. pelecehan seksual terhadap anak adalah pelanggaran serius, dan mempengaruhi kesehatan mental dan emosional seseorang dalam jangka waktu yang panjang. mendapatkan bantuan dan dukungan dari sumber daya yang tepat sangat penting untuk proses pemulihan dan keadilan. anda tidak sendirian, dan ada banyak orang dan lembaga yang siap membantu anda melewati situasi ini.",
+        "sangat menyedihkan mendengar tentang pengalaman traumatis yang anda alami. tindakan pelecehan seksual, terutama terhadap anak-anak, adalah tindakan serius yang dilarang dan merupakan pelanggaran hukum yang serius.di indonesia, tindakan pelecehan seksual diatur dalam pasal 289 kuhp (kitab undang-undang hukum pidana). pasal ini menyatakan bahwa siapapun yang dengan sengaja melakukan perbuatan tidak senonoh atau memaksa orang lain melakukan perbuatan tidak senonoh, dapat dipidana dengan pidana penjara paling lama dua tahun delapan bulan. jika anda merasa nyaman untuk melaporkan kejadian ini kepada pihak berwenang, seperti polisi atau lembaga yang berwenang, langkah tersebut bisa dilakukan untuk memulai proses hukum dan menjaga keamanan anda serta mencegah terulangnya kejadian serupa pada anak lain. selain itu, sangat penting untuk mendapatkan dukungan psikologis. bantuan dari konselor, psikolog, atau organisasi yang fokus pada korban kekerasan seksual dapat membantu anda mengatasi dampak emosional dan psikologis dari pengalaman traumatis ini.  anda tidak sendiri dalam menghadapi situasi ini. ada sumber daya dan bantuan yang tersedia untuk membantu anda melalui proses pemulihan dan memberikan dukungan selama masa sulit ini."
+      ],
+      "tag": "pelecehan seksual keluarga"
+    },
+    {
+      "patterns": [
+        "cat calling",
+        "cat calling adalah",
+        "apa itu cat calling",
+        "cat-calling merupakan",
+        "jelaskan apa itu cat calling",
+        "apa yang dimaksud dengan cat calling",
+        "jelaskan apa yang dimaksud dengan cat calling",
+        "jelaskan mengenai cat calling",
+        "definisi cat calling"
+      ],
+      "responses": [
+        "cat calling adalah suatu bentuk pelecehan, terutama pelecehan seksual yang terdiri dari komentar seksual yang tidak diinginkan, gerakan provokatif, membunyikan klakson, bersiul serigala, paparan tidak senonoh, menguntit, rayuan seksual terus-menerus, dan sentuhan oleh orang asing, di tempat umum seperti jalan raya, pusat perbelanjaan, dan transportasi umum",
+        "Catcalling artinya pelecehan seksual yang dilakukan di ruang publik dengan memberikan kata-kata tidak senonoh kepada korban.",
+        "Catcalling adalah tindakan mengganggu atau melecehkan seseorang dengan cara memberikan komentar atau perlakuan tidak senonoh secara verbal ketika berada di ruang umum seperti jalan raya, trotoar, atau tempat umum lainnya.",
+        "cat calling merupakan suatu tindakan yang dimaksudkan untuk menggoda lawan jenis. Lebih dari itu, catcalling adalah tindakan yang biasa mengarah pada pelecehan seksual. Salah satu contoh tindakan dari catcalling adalah bersiul untuk menggoda lawan jenis yang melintas, atau memberikan kata-kata yang tidak senonoh.",
+        "catcalling adalah tindakan berkomentar yang melecehkan dan sering kali menjurus ke tindakan seksual, mengancam, atau menghina seseorang di depan umum.",
+        "catcalling berarti siulan, panggilan, dan komentar bersifat seksual dari laki-laki terhadap perempuan. Catcalling ini termasuk street harassment atau kekerasan yang terjadi di tempat umum.",
+        "Cat calling adalah istilah yang digunakan untuk merujuk pada perilaku verbal yang bersifat seksual atau merendahkan, yang sering terjadi di tempat umum, seperti di jalan atau di tempat keramaian.",
+        "Cat calling adalah bentuk pelecehan, khususnya pelecehan seksual, yang melibatkan komentar seksual yang tidak diinginkan, gerakan provokatif, klakson berisik, bersiul layaknya serigala, paparan perilaku tidak senonoh, tindakan menguntit, rayuan seksual yang berulang-ulang, dan sentuhan oleh orang yang tidak dikenal. Perilaku ini umumnya terjadi di tempat umum seperti jalan raya, pusat perbelanjaan, dan sarana transportasi umum."
+      ],
+      "tag": "cat calling"
+    },
+    {
+      "patterns": [
+        "apakah pelaku cat calling bisa dituntut",
+        "apakah cat calling bisa dipidana",
+        "berapa lama hukuman cat calling",
+        "cat calling masuk pasal berapa",
+        "pasal cat calling",
+        "pasal untuk menuntut pelaku cat calling"
+      ],
+      "responses": [
+        "Dalam Kitab Undang-undang Hukum Pidana (KUHP) catcalling di kaitkan dengan perbuatan asusila dan pencabulan. Dan jelas melanggar peraturan perundang – undangan Pasal 8 Jo Pasal 34 dan Pasal 9 Jo Pasal 35 UU No. 44/2008 tentang Pornografi, dan Pasal 5 UU No. 12/2022 tentang Tindak Pidana Kekerasan Seksual.",
+        "Menurut Pasal 5 UU TPKS, pelecehan verbal dan pelecehan nonfisik lainnya dipidana dengan pidana penjara paling lama 9 bulan dan/atau pidana denda paling banyak Rp10 juta.",
+        "Berdasar Pasal 5 UU TPKS, pelaku perbuatan seksual nonfisik dapat dipidana hingga 9 bulan penjara. Pelaku juga bisa terkena pidana denda paling banyak Rp 10 juta."
+      ],
+      "tag": "dasar hukum cat calling"
+    },
+    {
+      "patterns": [
+        "eksibisionis adalah",
+        "eksibisionis",
+        "apa yang dimaksud dengan eksibisionis",
+        "eksibionis merupakan",
+        "jelaskan mengenai eksibisionis",
+        "apa itu eksibisionis",
+        "definisi eksibisionis",
+        "jelaskan apa yang dimaksud dengan eksibisionis",
+        "jelaskan apa itu eksibisionis"
+      ],
+      "responses": [
+        "eksibisionis adalah gangguan mental di mana penderitanya suka memamerkan alat kelaminnya kepada orang lain. Penderita kondisi ini mendapatkan kepuasan seksual dari memperlihatkan alat vitalnya kepada orang yang tidak dikenal. Eksibisionis tergolong dalam kelainan seksual.",
+        "eksibisionis merupakan gangguan kesehatan berupa dorongan, fantasi, atau tindakan mengekspose alat kelamin seseorang kepada orang yang tidak menginginkannya, terutama orang asing.",
+        "Eksibisionis adalah istilah yang digunakan untuk menggambarkan seseorang yang mendapatkan kepuasan atau kegembiraan dengan memperlihatkan diri mereka sendiri secara terbuka atau melakukan tindakan eksibisionis. Tindakan ini sering kali melibatkan tindakan-tindakan seksual atau tindakan yang dianggap tidak senonoh, dan biasanya dilakukan di depan orang lain tanpa izin atau persetujuan mereka. Eksibisionisme dapat termanifestasi dalam berbagai bentuk, termasuk tindakan seksual terbuka, pameran tubuh, atau perilaku seksual yang mencolok di tempat umum.",
+        "Eksibisionisme adalah jenis penyimpangan seksual yang membuat seseorang memiliki dorongan seksual untuk menunjukkan organ intimnya kepada orang lain tanpa persetujuan orang tersebut. Orang dengan eksibisionisme atau eksibisionis akan mendapatkan kesenangan dan kepuasan ketika mempertontonkan bagian tubuhnya pada orang lain. Eksibisionis bahkan bisa makin bergairah ketika orang tersebut menunjukkan reaksi jijik dan takut. ",
+        "Gangguan eksibisionis adalah suatu kondisi yang ditandai oleh dorongan, fantasi, atau tindakan mengekspos alat kelamin seseorang, kepada orang yang tidak menginginkannya, terutama orang asing."
+      ],
+      "tag": "eksibisionis"
+    },
+    {
+      "patterns": [
+        "apakah pelaku eksibisionis bisa dituntut",
+        "apakah eksibisionis bisa dipidana",
+        "berapa lama hukuman eksibisionis",
+        "eksibisionis masuk pasal berapa",
+        "pasal eksibisionis",
+        "pasal untuk menuntut pelaku eksibisionis"
+      ],
+      "responses": [
+        "seseorang yang memiliki kelainan eksibisionisme hakim harus merujuk pada pendapat seorang ahli kesehatan jiwa dan hasil pemeriksaan medis untuk mengetahui apakah kelainan tersebut dapat dipersamakan dengan sakit jiwa atau penyakit gangguan kejiwaan. Jika ternyata pelaku eksibisionisme tersebut betul dinilai tidak dapat bertanggung jawab atas perbuatannya, maka berlaku alasan pemaaf bagi pelaku, sehingga menurut KUHP ia tidak dapat dipidana atau dimasukkan ke rumah sakit sebagai waktu percobaan.",
+        "perilaku eksibisionis seperti melakukan masturbasi di muka umum atau mempertontonkan alat kelamin di muka umum dapat dipidana penjara paling lama 10 tahun dan/atau pidana denda paling banyak Rp5 miliar."
+      ],
+      "tag": "dasar hukum eksibisionis"
+    }
+  ]
 }
