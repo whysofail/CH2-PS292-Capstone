@@ -1,8 +1,8 @@
 const authController = require('./authController')
-const lawyerController = require('./lawyerController')
+const userController = require('./userController')
 
 module.exports = 
 { 
     authController,
-    lawyerController
+    userController
  }

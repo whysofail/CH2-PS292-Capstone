@@ -1,14 +1,14 @@
+// lawyerController.js
 const { User, LawyerTags, Tags } = require('../../models');
 
 const getUsersByRole = async (req, res) => {
   try {
-    const { role_id } = req.query;
+    const { role_id } = req.body; // Mengambil nilai role_id dari body
 
     if (!role_id) {
-      return res.status(400).json({ message: 'Role ID is required in the query parameters' });
+      return res.status(400).json({ message: 'Role ID is required in the request body' });
     }
 
-    // Cari pengguna dengan role_id yang diberikan
     const users = await User.findAll({
       where: { role_id },
       include: [
@@ -31,7 +31,7 @@ const getUsersByRole = async (req, res) => {
 
     return res.status(200).json({ 
       message: 'Users found successfully', 
-      users 
+      data: users 
     });
   } catch (error) {
     console.error('Error retrieving users:', error);
