@@ -44,8 +44,8 @@ module.exports = {
         const tagId = tagRows[randomTagIndex].id;
 
         userTagsData.push({
-          UserId: user.id,
-          TagId: tagId,
+          user_id: user.id,
+          tags_id: tagId,
         });
       }
     });
