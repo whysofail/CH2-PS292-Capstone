@@ -20,7 +20,7 @@ with open(file_path, 'r') as file:
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
     sentence_words = [lemmatizer.lemmatize(word) for word in sentence_words]
-    return sentence_words  # Fix typo: 'return sentence_word' to 'return sentence_words'
+    return sentence_words
 
 def bag_of_words(sentence):
     sentence_words = clean_up_sentence(sentence)
@@ -56,6 +56,6 @@ while True:
         break
 
     intents = predict_class(user_input)
-    response = get_response(intents, intents_json)  # Assuming you have an intents_json variable
+    response = get_response(intents, intents_json)
 
     print("ChatBot:", response)
