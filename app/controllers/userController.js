@@ -13,7 +13,7 @@ const getUsersByRole = async (req, res) => {
 
     const users = await User.findAll({
       where: { role_id },
-      attributes: ["id", "first_name", "email"],
+      attributes: ["id", "first_name","last_name", "email"],
       include: [
         {
           model: Role,
