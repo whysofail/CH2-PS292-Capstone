@@ -41,9 +41,9 @@ const getLawyer = async (req, res) => {
 
 const searchLawyerByTag = async (req, res) => {
   try {
-    const { tag_name } = req.query;
+    const { tag } = req.query;
 
-    if (!tag_name) {
+    if (!tag) {
       return res.status(400).json({
         message: "Tag name is required in the request query parameters",
       });
@@ -63,7 +63,7 @@ const searchLawyerByTag = async (req, res) => {
           as: "lawyerTags",
           attributes: ["name", "description"],
           through: { attributes: [] },
-          where: { name: tag_name },
+          where: { name: tag },
         },
       ],
     });
