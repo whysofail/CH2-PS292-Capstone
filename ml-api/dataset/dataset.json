@@ -1,0 +1,901 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "How are you?",
+        "Is anyone there?",
+        "Hello",
+        "Good day",
+        "What's up",
+        "how are ya",
+        "heyy",
+        "whatsup",
+        "??? ??? ??",
+        "Hei",
+        "Halo",
+        "Hay",
+        "Hai",
+        "Apa Kabar?",
+        "Apa Kabar Dirimu?",
+        "Apa Kabar Denganmu?",
+        "Bagaimana Kabarmu?",
+        "Apakah Ada Orang?"
+      ],
+      "responses": [
+        "Halo!, ada yang bisa saya bantu?",
+        "Senang Melihatmu Kembali!, apa yang saya bisa bantu?",
+        "Hai!, Apa yang kamu butuhkan hari ini?",
+        "Aku baik baik saja, semoga kamu juga ya.",
+        "Hello there!, how can i help you?",
+        "Good to see you again!, what can i help you today?",
+        "Hi there!, how can i help you?",
+        "Aku disini!, ada yang bisa kubantu?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "cya",
+        "see you",
+        "bye bye",
+        "See you later",
+        "Goodbye",
+        "I am Leaving",
+        "Bye",
+        "Have a Good day",
+        "talk to you later",
+        "ttyl",
+        "i got to go",
+        "sampai jumpa",
+        "sepertinya itu saja",
+        "sepertinya cukup",
+        "sudah cukup",
+        "cukup",
+        "Senang berbicara denganmu"
+      ],
+      "responses": [
+        "Sad to see you go :(, i hope the best for your problem.",
+        "Talk to you later.",
+        "Goodbye!",
+        "Come back soon!",
+        "sampai bertemu kembali!",
+        "sampai jumpa!",
+        "baiklah, semoga jawabanku bermanfaat ya.",
+        "Senang bisa membantu.",
+        "Semoga masalahmu cepat terselesaikan ya."
+      ]
+    },
+    {
+      "tag": "creator",
+      "patterns": [
+        "what is the name of your developers",
+        "what is the name of your creators",
+        "what is the name of the developers",
+        "what is the name of the creators",
+        "who created you",
+        "your developers",
+        "your creators",
+        "who are your developers",
+        "developers",
+        "you are made by",
+        "you are made by whom",
+        "who created you",
+        "who create you",
+        "creators",
+        "who made you",
+        "Siapa yang mengembangkanmu?",
+        "Siapa yang membuatmu",
+        "Siapa nama pengembangmu",
+        "Siapa pengembangmu",
+        "Siapa penciptamu",
+        "yang mengembangkanmu",
+        "yang membuatmu",
+        "pembuat",
+        "pengembang",
+        "kamu dibuat oleh siapa",
+        "siapa yang membuat kamu?",
+        "siapa yang mengembangkan kamu?"
+      ],
+      "responses": [
+        "Pengembangku adalah Cohort Bangkit Academy 2023 Kelompok CH2-PS292",
+        "Pembuatku adalah Cohort Bangkit Academy 2023 Kelompok CH2-PS292",
+        "Cohort Bangkit Academy 2023 Kelompok CH2-PS292 lah yang membuat aku",
+        "Cohort Bangkit Academy 2023 Kelompok CH2-PS292 lah yang mengembangkan aku",
+        "My Developer are Cohort Bangkit Academy 2023 from CH2-PS292 Capstone Project Group",
+        "My Creator are Cohort Bangkit Academy 2023 from CH2-PS292 Capstone Project Group",
+        "Cohort Bangkit Academy 2023 from CH2-PS292 Capstone Project Group made me",
+        "Cohort Bangkit Academy 2023 from CH2-PS292 Capstone Project Group developed me"
+      ]
+    },
+    {
+      "tag": "name",
+      "patterns": [
+        "name",
+        "your name",
+        "do you have a name",
+        "what are you called",
+        "what is your name",
+        "what should I call you",
+        "whats your name?",
+        "what are you",
+        "who are you",
+        "who is this",
+        "what am i chatting to",
+        "who am i taking to",
+        "what are you",
+        "nama",
+        "namamu",
+        "nama kamu",
+        "apakah kamu punya nama",
+        "kamu punya nama",
+        "apa nama panggilanmu",
+        "kamu dipanggil apa",
+        "kamu dipanggil siapa",
+        "bagaimana aku memanggilmu",
+        "siapa kamu",
+        "kamu ini siapa",
+        "dengan siapa aku berbicara",
+        "aku berbicara dengan siapa",
+        "kamu ini apa",
+        "siapa ini"
+      ],
+      "responses": [
+        "You can call me LawMate.",
+        "I'm LawMate, you can ask me anything related to law",
+        "I am LawMate, and i am a Chatbot to help you about your legal problems",
+        "You are currently chatting LawMate, your friend in law",
+        "My Name is LawMate, and im happy to help you regarding your legal problems",
+        "Namaku LawMate, aku adalah chatbot yang bisa membantumu menyelesaikan permasalahan hukum kamu.",
+        "Aku LawMate, Kamu bisa bertanya apapun kepadaku terkait hukum",
+        "Kamu Bisa Memanggilku LawMate",
+        "Sekarang kamu sedang menghubungi LawMate, temanmu dalam hukum"
+      ]
+    },
+    {
+      "patterns": [
+        "saya sebagai pelaku usaha ingin menerapkan kebijakan anti-pelecehan seksual di tempat kerja. apa panduan hukum yang sebaiknya saya ikuti?",
+        "saya sebagai pelaku usaha khawatir tentang tanggung jawab hukum jika pelecehan seksual terjadi di tempat kerja. apa langkah-langkah yang sebaiknya saya ambil untuk melindungi perusahaan?",
+        "sebagai HRD, saya ingin mencegah adanya kejahatan seksual di tempat kerja, apa yang harus saya lakukan?",
+        "saya tidak ingin pelecehan seksual terjadi di tempat kerja saya, apa langkah-langkah yang harus saya lakukan?",
+        "bagaimana cara mencegah pelecehan seksual terjadi di lingkungan kerja?",
+        "bagaimana cara mencegah pelecehan seksual terjadi di tempat kerja?",
+        "cara mencegah pelecehan seksual di tempat kerja",
+        "gimana cara mengantisipasi pelecehan seksual di lingkungan kerja",
+        "gimana cara mengantisipasi pelecehan seksual di kantor",
+        "cara mencegah pelecehan seksual di kantor"
+      ],
+      "responses": [
+        "terapkan kebijakan anti-pelecehan seksual di tempat kerja sesuai dengan undang-undang ketenagakerjaan (UU no. 13 tahun 2003) dan peraturan pemerintah terkait. hukum mewajibkan perusahaan untuk melindungi karyawan dari pelecehan seksual. ",
+        "terapkan kebijakan anti-pelecehan seksual di tempat kerja, lakukan pelatihan kepada karyawan, dan tanggapi laporan pelecehan secara serius. hukum mewajibkan perusahaan untuk melindungi karyawan dari pelecehan seksual. dasar hukum: undang-undang ketenagakerjaan (UU no. 13 tahun 2003) dan peraturan anti-pelecehan di tempat kerja.",
+        "perusahaan/pemberi kerja atau institusi kantor harus membuat aturan atau kebijakan terkait pelecehan seksual dan mengesahkan atau mengumukan peraturan tersebut sejak penerimaan pegawai. membuat langkah-langkah penyelesaian, perbaikan dan pemulihan bagi korban apabila terjadi kasus pelecehan seksual, serta sanksi yang dikenakan kepada pelaku.",
+        "upaya pencegahan pelecehan seksual harus dilakukan oleh semua pihak, baik oleh pekerja itu sendiri maupun oleh institusi/kantor atau perusahaan pemberi kerja. para pekerja perlu melakukan edukasi dan sosialisasi terhadap rekan-rekannya terkait kebijakan perusahaan, tata tertib, peraturan dan kode etik yang berlaku di perusahaan tersebut. pembekalan mengenai cara menolak tindakan pelecehan seksual dan bagaimana cara melaporkan atau mengadukan peristiwa tersebut juga penting diberikan kepada setiap pekerja.",
+        "Tindakan pencegahan harus dilakukan oleh setiap perusahaan untuk menghapuskan rantai tindakan pelecehan seksual. Berikut adalah tips mencegah pelecehan seksual di tempat kerja : \n\n1. Melakukan sosialisasi dan edukasi tentang pelecehan seksual\nSeorang pengusaha melalui HRD harus melakukan sosialisasi dan edukasi terhadap isu pelecehan seksual bagi setiap karyawan. Hal ini dapat dilakukan melalui memuat informasi, selebaran atau pengumuman mengenai pencegahan pelecehan seksual yang terjadi di tempat kerja.\n\n2. Membuat program pencegahan pelecehan seksual\nPerusahaan dapat melakukan sebuah program tentang penanganan pencegahan pelecehan seksual melalui kegiatan orientasi secara langsung kepada karyawan untuk mengenali isu pelecehan seksual. Memberikan pelatihan terhadap karyawan untuk mengenali masalah-masalah yang ada di tempat kerja.\n\n3. Membentuk tim respon terhadap pelecehan seksual\nPelecehan seksual menjadi salah satu permasalahan serius yang ada di tempat kerja. Oleh karena itu, membentuk tim respon dalam mengorganisir tindakan pencegahan pelecehan seksual harus dilakukan untuk menekan terjadinya pelecehan seksual di tempat kerja. Karyawan dapat melaporkan seluruh permasalahannya melalui tim tersebut.\n\n4. Kebijakan Perusahaan\nPerusahaan harus mendorong karyawan untuk melaksanakan tindakan pencegahan pelecehan seksual dan mengambil tindakan disiplin dalam bentuk ketatnya kebijakan perusahaan dalam pelanggaran pelecehan seksual ini. Hal ini untuk membentuk kedisiplinan karyawan dalam isu pelecehan seksual ini.",
+        "Selain pihak HRD dan manajemen, karyawan juga harus ikut serta dan bertindak guna mencegah pelecehan seksual di tempat kerja. Berikut ini adalah beberapa hal yang bisa dilakukan karyawan untuk mencegah pelecehan seksual di kantor.\n\n1. Gabung Program Sosialisasi Anti Pelecehan Seksual\nPertama-tama, para pekerja bisa bergabung dalam program sosialisasi anti pelecehan seksual. Di program tersebut, karyawan akan diberikan materi seputar jenis-jenis pelecehan seksual beserta tindakan preventifnya. Macam-macam program ini bisa ditemukan secara online dan biasanya disediakan oleh NGO atau badan riset yang bergerak di bidang gender. Atau, karyawan juga bisa mengikuti pelatihan yang akan diluncurkan perusahaan guna menghapus tindakan pelecehan seksual di tempat kerja. Dengan mengikuti rangkaian program ini, dijamin kamu sebagai karyawan akan lebih memahami bahaya dari pelecehan seksual.\n\n2. Ikut serta dalam Langkah Investigasi dan Tindakan Disipliner\nCara lainnya yang bisa dilakukan karyawan untuk mencegah pelecehan seksual di tempat kerja adalah ikut serta dalam langkah investigasi dan tindakan disipliner. Langkah investigasi dan disipliner biasanya akan dilakukan perusahaan pada oknum yang dicurigai melakukan tindak pelecehan. Namun, tak ada salahnya bagi karyawan untuk ikut serta dan membantu pihak HRD untuk menuntaskan isu tersebut. Sebagai contoh, karyawan bisa mendorong pihak manajemen untuk segera memberi sanksi pada oknum tersebut. Meskipun demikian, jangan sampai karyawan melewati batas dan melanggar hak manajemen untuk melakukan investigasi secara menyeluruh. Dukungan moral pada korban serta menuang ide untuk tindakan preventif sudah cukup untuk mencegah pelecehan seksual di kantor.\n\n3. Pelajari dan Ikuti Regulasi Perusahaan terkait Pelecehan Seksual\nCara terakhir yang bisa dilakukan karyaan untuk mencegah pelecehan seksual di tempat kerja adalah mengikuti regulasi perusahaan. Umumnya, perusahaan akan merancang SOP serta aturan mengenai pelecehan seksual di kantor. Nah, karyawan bisa mencegah tindak pelecehan dengan memahami semua regulasi yang sudah disediakan tersebut. Selain itu, karyawan juga bisa memberikan saran apabila ada bagian dari regulasi yang dirasa kurang sesuai.Misalnya, apabila sanksi dirasa terlalu ringan, karyawan bisa mengajukan perubahan yang secara tak langsung akan membuat efek jera dalam kantor.",
+        "Anda bisa mencegah pelecehan seksual di tempat kerja dengan beberapa cara berikut :\n1. Edukasi\nkesadaran dan pemahaman bersama mengenai kekerasan seksual dan bentuk kekerasan seksual merupakan langkah awal untuk mengidentifikasi dan mencegah terjadinya kekerasan yang dapat terjadi di tempat kerja.\n\n2. SOP yang jelas\nSecara spesifik, mengenai upaya preventif terjadinya pelecehan seksual di lingkungan kerja, Surat Edaran Menteri Tenaga Kerja dan Transmigrasi No. SE.03/MEN/IV/2011 tentang Pedoman Pencegahan Pelecehan Seksual di Tempat Kerja. Dari aturan di atas terlihat jelas bahwa Negara telah membebankan tanggung jawab besar bagi perusahaan untuk melakukan upaya preventif guna menciptakan lingkungan kerja yang aman dan kondusif bagi keselamatan pekerjanya. Maka dari itu penting sekali bagi tempat kerja memiliki SOP penanganan kekerasan seksual.\n\n3. Pelatihan\nMenurut Vina A. Muliana, seorang Career Content Creator mengatakan setiap pekerja memiliki hak untuk bisa bekerja di lingkungan yang aman dan jauh dari kekerasan sekual. Perlu diadakan pemahaman dan pelatihan secara berkala bagi pegawai untuk memahami pentingnya dalam memerangi pelecehan seksual. Selain itu menumbuhkan budaya organisasi yang baik juga sama pentingnya. Kita perlu menghormati dan mendengarkan satu sama lain agar hal ini tidak terjadi.",
+        "Anda dapat mengurangi risiko pelecehan seksual di tempat kerja dengan mengimplementasikan langkah-langkah berikut:\n\n1. Pendidikan dan Kesadaran:\nMemberikan edukasi kepada seluruh anggota organisasi tentang kekerasan seksual dan jenis-jenisnya merupakan langkah awal penting. Kesadaran bersama akan membantu mengidentifikasi dan mencegah kekerasan tersebut di lingkungan kerja.\n\n2. SOP yang Jelas:\nImplementasi Surat Edaran Menteri Tenaga Kerja dan Transmigrasi No. SE.03/MEN/IV/2011 tentang Pedoman Pencegahan Pelecehan Seksual di Tempat Kerja dapat membantu membentuk prosedur operasional standar (SOP) yang jelas. Perusahaan harus memiliki panduan yang spesifik untuk mencegah pelecehan seksual dan menciptakan lingkungan kerja yang aman.\n\n3. Pelatihan Berkala:\nMenyelenggarakan pelatihan rutin untuk meningkatkan pemahaman pekerja tentang pentingnya mencegah pelecehan seksual. Pelatihan ini dapat mencakup pengetahuan tentang hak-hak pekerja, tindakan pencegahan, dan bagaimana melaporkan kejadian yang mencurigakan. Penting juga untuk membangun budaya organisasi yang menghargai dan mendukung satu sama lain untuk mencegah pelecehan seksual.",
+        "Ini adalah beberapa hal yang dapat Anda lakukan untuk mengantisipasi pelecehan seksual di kantor :\n1. Melatih karyawan\nSesi ini harus mengajari karyawan apa itu pelecehan seksual, menjelaskan bahwa karyawan memiliki hak atas tempat kerja yang bebas dari pelecehan seksual, meninjau prosedur pengaduan Anda, dan mendorong karyawan untuk menggunakannya.\n\n2. Latih supervisor dan manajer. \nSekurang-kurangnya sekali dalam setahun, adakan sesi pelatihan untuk supervisor dan manajer yang terpisah dari sesi karyawan.Sesi-sesi tersebut juga untuk mendidik para manajer dan supervisor tentang pelecehan seksual dan menjelaskan cara menangani pengaduan.\n\n3. Membuat Kebijakan pelecehan seksual yang jelas.\nDalam peraturan tertulis perusahaan yang harus dipahami karyawan, Anda harus memiliki kebijakan yang dikhususkan untuk memitigasi dan mencegah pelecehan seksual terjadi.",
+        "Berikut adalah beberapa langkah yang dapat diambil untuk mengantisipasi pelecehan seksual di lingkungan kantor:\n\nPelatihan Karyawan:\nSesi pelatihan perlu diselenggarakan untuk memberikan pemahaman kepada karyawan mengenai definisi pelecehan seksual. Selain itu, mereka harus diberitahu tentang hak-hak mereka untuk bekerja di lingkungan yang bebas dari pelecehan seksual. Proses pengaduan juga harus dijelaskan secara rinci, dan karyawan perlu didorong untuk memanfaatkannya.\n\nPelatihan untuk Supervisor dan Manajer:\nSesi pelatihan terpisah perlu diadakan setidaknya sekali dalam setahun untuk para supervisor dan manajer. Pelatihan ini ditujukan untuk memberikan pemahaman yang lebih mendalam kepada mereka tentang pelecehan seksual dan memberikan panduan tentang cara menangani pengaduan dengan profesional.\n\nPembuatan Kebijakan yang Jelas:\nDalam dokumen peraturan perusahaan yang dapat diakses oleh semua karyawan, penting untuk memiliki kebijakan yang secara khusus menangani upaya mitigasi dan pencegahan pelecehan seksual. Kebijakan ini harus dirinci agar mudah dipahami oleh semua anggota organisasi."
+      ],
+      "tag": "antisipasi tempat kerja"
+    },
+    {
+      "patterns": [
+        "aplikasi mirip deepfake",
+        "aplikasi mirip deepfake",
+        "adakah aplikasi yang mirip dengan deepfake?",
+        "aplikasi serupa dengan deepfake",
+        "apakah ada aplikasi yang mirip dengan deepfake?",
+        "contoh aplikasi deepfake",
+        "berikan saya contoh aplikasi deepfake",
+        "aplikasi deepfake",
+        "deepfake aplikasi",
+        "deepfake contoh",
+        "aplikasi yang mirip dengan deepfake"
+      ],
+      "responses": [
+        "Berikut adalah beberapa contoh aplikasi mirip dengan deepfake : \n1. Lensa AI\n2. Deepfakes web\n3. Wombo\n4. Reface\n5. MyHeritage\n6. DeepFaceLab\n7. Deep Art\n8. Face Swap Live\n9. FaceApp\n10. Jiggy\n11. FaceMagic\n12. DALL-E Mini",
+        "berikut merupakan beberapa aplikasi yang mirip dengan deepfake :\n1. Wombo\n2. Reface\n3. MyHeritage\n4. Deep Art\n5. Face Swap Live\n6. Jiggy\n7. Deepfake Studio\n8. Zao\n9. FaceApp\n10. Reflect",
+        "berikut merupakan beberapa aplikasi yang serupa dengan deepfake :\n1. DeepFaceLab\n2. Zao\n3. Face Swap\n4. Deep Art Effects\n5. Reface\n6. Morphin\n7. Jiggy",
+        "Tentu ada, berikut adalah beberapa apikasi yang mirip dengan deepfake :\n1. Lensa AI\n2. Deepfakes Web\n3. Reface\n4. MyHeritage\n5. Face Swap Live\n6. FaceApp\n7. FakeYou\n8. Synthesis AI",
+        "Berikut ini adalah beberapa aplikasi deepfake:\n1. Reface\n2. Jiggy\n3. Impressions",
+        "Berikut adalah beberapa contoh aplikasi mirip dengan deepfake : \n1. Wombo\n2. Reface\n3. DeepFaceLab\n4. Face Swap Live\n5. FaceApp\n6. Jiggy\n7. Deepfakes web\n8. Lensa AI\n9. FaceMagic\n10. DALL-E Mini\n11. Deep Art\n12. MyHeritage",
+        "Berikut adalah beberapa aplikasi yang menggunakan teknologi deepfake : \n1. Zao\n2. Web Deepfake\n3. AvengeThem \n4. MachineTube\n5. DeepFaceLab\n6. Deep Art\n7. Face Swap",
+        "Tentu, berikut adalah beberapa apikasi deepfake :\n1. Lensa AI\n2. Reface\n3. MyHeritage\n4. Face Swap Live\n5. FaceApp\n6. Deepfakes Web\n7. Synthesis AI\n8. FakeYou",
+        "Berikut ini adalah beberapa contoh aplikasi deepfake:\n1. Reface\n2. Jiggy\n3. Impressions\n4. Fake You \n5. MyHeritage\n6. Reface\n7. Face Swap",
+        "berikut merupakan beberapa aplikasi yang mirip dengan deepfake :\n1. Wombo\n2. Reface\n3. MyHeritage\n4. Deep Art\n5. Face Swap Live\n6. Jiggy\n7. Deepfake Studio\n8. Zao\n9. FaceApp"
+      ],
+      "tag": "contoh-deepfake"
+    },
+    {
+      "patterns": [
+        "saya ditipu dengan pemalsuan foto telanjang saya. bagaimana hukum mengatasi hal ini?",
+        "apa yang harus saya lakukan jika menemukan foto telanjang saya yang dihasilkan oleh AI?",
+        "saya melihat foto saya diedit telanjang di sosial media, apa yang harus saya lakukan?",
+        "saya menemukan foto saya yang sudah diedit menjadi bugil di sosial media, apa yang harus saya lakukan?",
+        "apa yang harus saya lakukan jika ada yang mengedit foto saya menjadi foto telanjang di sosial media?",
+        "foto saya diedit telanjang"
+      ],
+      "responses": [
+        "Penyebaran foto telanjang merupakan pelanggaran kesusilaan yang melanggar norma dan dapat dihukum berdasarkan Undang-Undang Nomor 44 Tahun 2008 tentang Pornografi dan Undang-Undang Nomor 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik sebagaimana yang telah diubah oleh Undang-Undang Nomor 19 Tahun 2016 tentang Perubahan Atas Undang-Undang Nomor 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik. Perbuatan melanggar kesusilaan dengan pencemaran nama baik merupakan dua hal yang berbeda. Dalam kasus ini, tindakan menyebarkan foto telanjang secara normatif dapat dipidana karena melanggar kesusilaan. Tetapi pelaku berkemungkinan juga dapat dipidana karena mencemarkan nama baik dari orang yang fotonya disebarkan jika orang tersebut merasa malu dan dicemarkan sehingga melaporkan pelaku.",
+        "Laporkan ke pihak berwenang dan jangan sebarkan konten tersebut untuk mencegah penyebaran yang lebih luas karena terkadang ada orang yang meminta bantuan publik untuk ramai-ramai me-report sebuah akun. Beberapa orang akan secara sukarela membantu, tapi beberapa orang mungkin malah akan menyimpannya dan menyebarkannya lagi nanti. Jangan ragu juga untuk meminta bantuan dari ahli hukum atau pakar keamanan cyber.",
+        "Penyebaran gambar telanjang adalah suatu pelanggaran terhadap norma kesusilaan yang dapat dituntut secara hukum berdasarkan Undang-Undang Nomor 44 Tahun 2008 tentang Pornografi dan Undang-Undang Nomor 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik yang telah mengalami perubahan melalui Undang-Undang Nomor 19 Tahun 2016. Penting untuk dicatat bahwa tindakan ini secara khusus dapat dikenai sanksi hukum karena melanggar prinsip-prinsip kesusilaan. Selain itu, perbuatan menyebarkan gambar tersebut juga dapat dianggap sebagai pencemaran nama baik, yang merupakan pelanggaran terpisah. Dalam situasi ini, pelaku mungkin akan dihadapkan pada dua kemungkinan tuduhan hukum, yakni pelanggaran kesusilaan dan pencemaran nama baik, tergantung pada dampak yang ditimbulkan terhadap orang yang menjadi korban.",
+        "Laporkan kepada otoritas yang berwenang dan hindari menyebarkan konten tersebut guna mencegah penyebaran lebih lanjut. Terkadang, seseorang dapat meminta dukungan publik untuk melaporkan suatu akun dengan harapan mendapatkan perhatian massal. Meskipun beberapa orang bersedia membantu dengan sukarela, sebaiknya dihindari untuk menyebarkannya sendiri karena hal ini dapat memperbesar dampak negatif. Saran yang diberikan mencakup meminta bantuan dari ahli hukum atau pakar keamanan siber untuk menangani situasi tersebut dengan lebih efektif.",
+        "Laporkan ke pihak berwenang dan jangan sebarkan konten tersebut untuk mencegah penyebaran yang lebih luas karena terkadang ada orang yang meminta bantuan publik untuk ramai-ramai me-report sebuah akun. Beberapa orang akan secara sukarela membantu, tapi beberapa orang mungkin malah akan menyimpannya dan menyebarkannya lagi nanti. Jangan ragu juga untuk meminta bantuan dari ahli hukum atau pakar keamanan cyber.",
+        "Segera laporkan kepada otoritas yang berwenang dan hindari menyebarkan konten tersebut untuk mencegah penyebaran yang lebih luas. Terkadang, seseorang meminta dukungan publik untuk melaporkan suatu akun, dan meskipun beberapa orang bersedia membantu, yang lain mungkin akan menyimpan dan menyebarkannya kembali. Jangan ragu untuk mencari bantuan dari ahli hukum atau pakar keamanan cyber."
+      ],
+      "tag": "eksploitasi seksual"
+    },
+    {
+      "patterns": [
+        "saya sebagai korban pelecehan seksual ingin menuntut pelaku, apa yang bisa saya lakukan?",
+        "saya sebagai korban pelecehan seksual ingin mengajukan tuntutan terhadap pelaku. bagaimana prosedurnya secara hukum?",
+        "bagaimana cara menuntut pelaku pelecehan seksual?",
+        "gimana cara menuntut pelaku pelecehan seksual?",
+        "saya sebagai korban pelecehan seksual ingin menuntut pelaku",
+        "saya ingin menuntut pelaku pelecehan seksual",
+        "saya ingin melaporkan pelaku pelecehan seksual",
+        "saya ingin melaporkan pelaku pelecehan seksual, apa yang harus saya lakukan?",
+        "saya ingin melaporkan pelaku pelecehan seksual, apa yang bisa saya lakukan?",
+        "saya ingin menuntut pelaku pelecehan seksual, apa yang bisa saya lakukan?"
+      ],
+      "responses": [
+        "Anda bisa mengunjungi kantor polisi terdekat di sekitar lokasi tempat tinggal Anda, dan disarankan membawa keluarga atau kerabat yang mengetahui secara rinci kronologi kejadian. Jika pelecehan seksual melibatkan kontak fisik, segera laporkan kasus tersebut karena hal ini terkait dengan proses Visum et Repertum yang penting sebagai bukti. Pelaporan dini membantu dalam pengumpulan bukti dan mempercepat proses hukum. Pelaku pelecehan seksual dapat dituntut hukum jika terdapat bukti yang memenuhi unsur perbuatan, sesuai dengan pasal-pasal yang mengatur tindak pidana percabulan seperti yang diatur dalam Pasal 289 hingga 296 KUHP atau Pasal 414 hingga 422 UU 1/2023.",
+        "Anda dapat mendatangi kantor kepolisian terdekat di sekitar tempat tinggal, anda juga bisa membawa kerabat maupun keluarga yang sebelumnya telah mengetahui kronologi kejadian secara lengkap. Jika pelecehan seksual berupa tindakan fisik, maka anda wajib melaporkan kasus tersebut sesegera mungkin karena berkaitan dengan proses Visum et Repertum untuk alat bukti.Pelaku pelecehan seksual dapat dijerat asalkan terdapat bukti dan pemenuhan unsur perbuatan dalam hal memenuhi pasal percabulan sebagaimana diatur dalam Pasal 289 s.d. 296 KUHP atau Pasal 414 s.d. 422 UU 1/2023.",
+        "Anda dapat mendatangi kantor kepolisian terdekat di sekitar tempat tinggal, anda juga bisa membawa kerabat maupun keluarga yang sebelumnya telah mengetahui kronologi kejadian secara lengkap. Jika pelecehan seksual berupa tindakan fisik, maka anda wajib melaporkan kasus tersebut sesegera mungkin karena berkaitan dengan proses Visum et Repertum untuk alat bukti.Pelaku pelecehan seksual dapat dijerat asalkan terdapat bukti dan pemenuhan unsur perbuatan dalam hal memenuhi pasal percabulan sebagaimana diatur dalam Pasal 289 s.d. 296 KUHP atau Pasal 414 s.d. 422 UU 1/2023.",
+        "Keberanian untuk menindaklanjuti kasus pelecehan seksual merupakan hal yang sangat penting, agar kasus tersebut dapat terselesaikan. Sebelum mengajukan laporan terhadap tindakan kekerasan seksual, sebaiknya lakukanlah pengumpulan bukti selengkap dan sedetail mungkin (screenshot chat, rekaman audio/video, kesaksian orang lain ataupun alat bukti elektronik yang telah diakui sebagai alat bukti yang sah berdasarkan Pasal 5 dan 6 UU ITE. Laporkanlah kasus kekerasan seksual kepada pihak kepolisian atau mendatangi pusat layanan terdekat seperti Pusat Pelayanan Terpadu Pemberdayaan Perempuan (P2TP2A), Lembaga Bantuan Hukum, Lembaga Perlindungan Saksi dan Korban, dan Organisasi Layanan Konseling",
+        "Anda bisa mendatangi kantor polisi terdekat, bisa juga  membawa teman dekat atau keluarga yang  mengetahui sepenuhnya waktu kejadian. Jika pelecehan seksual berbentuk tindakan fisik, Anda mempunyai kewajiban untuk melaporkan kejadian tersebut sesegera mungkin karena relevan dengan prosedur pembuktian Visum et Repertum. Pelaku pelecehan seksual dapat didakwa jika terdapat bukti dan  unsur perbuatan mengenai pelaksanaan ketentuan tindak pidana percabulan yang diatur dalam pasal 289 s.d. 296 KUHP atau pasal 414 sampai 422 UU 1/2023.",
+        "Sebelum melaporkan kasus pelecehan seksual, sangat penting untuk memiliki keberanian dalam menindaklanjuti agar kasus tersebut dapat diselesaikan dengan baik. Sebaiknya, kumpulkan bukti sejelas mungkin, termasuk tangkapan layar percakapan, rekaman audio/video, kesaksian dari saksi, dan bukti elektronik yang diakui sah berdasarkan Pasal 5 dan 6 UU ITE. Laporkan insiden kekerasan seksual kepada pihak berwajib, seperti kepolisian, atau kunjungi pusat layanan terdekat seperti Pusat Pelayanan Terpadu Pemberdayaan Perempuan (P2TP2A), lembaga bantuan hukum, Lembaga Perlindungan Saksi dan Korban, serta organisasi layanan konseling.",
+        "Sebelum melaporkan suatu kejadian pelecehan seksual, sangat penting untuk memiliki keberanian untuk menindaklanjuti kejadian tersebut agar  dapat diselesaikan dengan baik. Yang terbaik adalah mengumpulkan bukti-bukti sejelas mungkin, termasuk tangkapan layar percakapan, rekaman audio/video, keterangan saksi, bukti elektronik, dan sebagainya, yang diakui sah berdasarkan pasal 5 dan 6 UU ITE.Laporkan kejadian kekerasan seksual kepada pihak berwajib seperti polisi atau kunjungi pusat layanan terdekat seperti Pusat Pusat Pelayanan Terpadu Pemberdayaan Perempuan (P2TP2A),  Lembaga Bantuan Hukum, Lembaga Perlindungan Saksi dan Korban, atau Organisasi Layanan Konseling.",
+        "Sebelum melaporkan suatu insiden pelecehan seksual, sangat krusial untuk memiliki keberanian dalam menindaklanjuti agar kasus tersebut dapat diselesaikan dengan baik. Disarankan untuk mengumpulkan bukti sejelas mungkin, mencakup tangkapan layar percakapan, rekaman audio/video, keterangan saksi, bukti elektronik, dan lainnya, yang diakui sebagai sah sesuai dengan pasal 5 dan 6 UU ITE. Segera laporkan kejadian kekerasan seksual kepada pihak berwajib seperti polisi atau kunjungi pusat layanan terdekat, seperti Pusat Pelayanan Terpadu Pemberdayaan Perempuan (P2TP2A), Lembaga Bantuan Hukum, Lembaga Perlindungan Saksi dan Korban, atau Organisasi Layanan Konseling."
+      ],
+      "tag": "menuntut pelaku"
+    },
+    {
+      "patterns": "Apakah ada perlindungan hukum bagi korban pelecehan seksual?",
+      "responses": "Perlindungan hukum yang diberikan terhadap korban pelecehan seksual diatur dalam Pasal 5 dan Pasal 6 Undang-Undang Nomor 31 Tahun 2014 tentang Perubahan Atas Undang-Undang Nomor 13 Tahun 2006 tentang Perlindungan Saksi dan korban.",
+      "tag": "perlindungan terhadap korban"
+    },
+    {
+      "patterns": [
+        "apa yang harus saya lakukan apabila saya mendapat ancaman pemerkosaan?",
+        "saya diancam oleh orang yang melecehkan saya, apa yang harus saya lakukan",
+        "saya mendapat ancaman dari orang yang melakukan pelecehan kepada saya, apa yang harus saya lakukan",
+        "orang yang melecehkan saya mengancam saya untuk tidak melapor, apa hal yang harus dilakukan"
+      ],
+      "responses": [
+        "Langkah-langkah berikut dapat membantu Anda menjaga keamanan dan mendapatkan bantuan:\n1. Beritahu Orang Terdekat:\nSampaikan informasi kepada orang terdekat, teman, atau keluarga Anda agar mereka mengetahui situasi dan dapat memberikan dukungan emosional.\n\n2. Jangan Pergi Sendirian:\nHindari pergi ke tempat-tempat terpencil atau gelap sendirian. Cobalah untuk selalu bersama teman atau keluarga, terutama pada saat-saat yang dianggap berisiko.\nPertimbangkan Perlindungan Hukum:\n\n3. Hubungi Pihak Berwajib:\nSegera hubungi pihak kepolisian untuk melaporkan ancaman pemerkosaan. Berikan informasi sejelas mungkin, termasuk identitas pelaku jika Anda mengenalnya, serta detail mengenai ancaman yang diterima.\n\n4. Pertimbangkan perlindungan hukum\nKonsultasikan dengan pengacara atau lembaga perlindungan korban untuk mendiskusikan opsi hukum dan perlindungan yang mungkin tersedia bagi Anda.",
+        "jangan khawatir, tetap tenang dan lakukan beberapa langkah berikut : \n1. Pastikan keamanan diri terlebih dahulu \nmemastikan terlebih dahulu keamanan dan keselamatan diri. Segera jauhi tempat kejadian kekerasan seksual dan minta bantuan pertolongan. Jika kekerasan terjadi di rumah, cobalah mencari perlindungan di rumah keluarga lainnya. Bila kasus kekerasan seksual terjadi di lingkungan sekolah, segera melarikan diri dari tempat kejadian dan meminta pertolongan kepada guru.\n2. Simpan bukti\nSetelah merasa aman, segera simpan seluruh bukti-bukti kekerasan seksual. Misalnya seperti pakaian, foto, video, rekaman percakapan, atau bisa juga saksi-saksi yang melihat kekerasan seksual. Bukti-bukti tersebut sangat membantu dalam proses penanganan kasus.\n3. ceritakan ke orang orang terdekat\nHindari untuk memendam permasalahan yang dialami. Memendam masalah justru bisa memperburuk keadaan. Berusahalah untuk terbuka dan menceritakan masalah yang dialami kepada orang yang tepat. Dengan menceritakan masalah, orang tersebut juga bisa membantu mencarikan bantuan dan solusi untuk masalah kekerasan seksual yang dialami.\n4. Cari informasi dari lembaga yang memberikan bantuan\nPenting untuk korban kekerasan seksual mencari informasi dari lembaga-lembaga terkait yang bisa memberikan bantuan kepada korban kekerasan seksual.  Sebagai referensi, beberapa lembaga yang memberikan layanan adalah Pusat Pelayanan Terpadu Pemberdayaan Perempuan dan Anak (P2TP2A), Komisi Perlindungan Anak Indonesia (KPAI), Kementerian Pemberdayaan Perempuan dan Perlindungan Anak, dan sebagainya.",
+        "Jangan cemas, tetaplah tenang, dan ikuti langkah-langkah berikut ini:\n1.Utamakan keselamatan diri terlebih dahulu\nPastikan untuk mengamankan diri dan memastikan keselamatan. Secepat mungkin, jauhi lokasi kejadian kekerasan seksual dan minta pertolongan. Jika insiden terjadi di rumah, cari perlindungan di tempat lain, misalnya di rumah keluarga lain. Jika kejadian terjadi di lingkungan sekolah, segera tinggalkan tempat tersebut dan minta bantuan dari seorang guru.\n2.Kumpulkan bukti\nSetelah merasa aman, segera kumpulkan semua bukti terkait kekerasan seksual. Ini bisa mencakup pakaian, foto, video, rekaman percakapan, atau saksi-saksi yang dapat memberikan keterangan terkait kejadian. Bukti-bukti ini sangat penting dalam proses penanganan kasus.\nBagikan pengalaman dengan orang terdekat\n3.Hindari menahan perasaan dan pengalaman yang dialami. Berbicaralah dengan seseorang yang dapat dipercaya dan berkomunikasi terbuka mengenai masalah ini. Dengan berbagi pengalaman, orang tersebut dapat membantu mencari solusi dan memberikan dukungan terhadap kasus kekerasan seksual yang dialami.\n4.Temukan informasi dari lembaga bantuan\nKorban kekerasan seksual perlu mencari informasi dari lembaga-lembaga yang menyediakan bantuan. Beberapa referensi lembaga yang dapat memberikan layanan termasuk Pusat Pelayanan Terpadu Pemberdayaan Perempuan dan Anak (P2TP2A), Komisi Perlindungan Anak Indonesia (KPAI), Kementerian Pemberdayaan Perempuan dan Perlindungan Anak, dan sebagainya.",
+        "Jangan khawatir, tetaplah tenang, dan ikuti langkah-langkah berikut:\n1. Utamakan keselamatan diri terlebih dahulu\nPastikan untuk memastikan keamanan dan keselamatan diri dengan segera menjauh dari tempat kejadian kekerasan seksual dan meminta bantuan. Jika insiden terjadi di rumah, carilah perlindungan di rumah keluarga lain. Jika kekerasan seksual terjadi di lingkungan sekolah, segera melarikan diri dan minta bantuan kepada guru.\n2. Simpan bukti\nSetelah merasa aman, segera simpan semua bukti kekerasan seksual, seperti pakaian, foto, video, rekaman percakapan, atau saksi-saksi yang menyaksikan kejadian. Bukti-bukti ini akan sangat berguna dalam proses penanganan kasus.\n3. Ceritakan kepada orang terdekat\nHindari menahan permasalahan yang dialami dan berusaha untuk terbuka dengan menceritakan masalah kepada orang yang dapat dipercaya. Dengan berbagi pengalaman, orang tersebut dapat membantu mencari bantuan dan solusi untuk mengatasi kekerasan seksual.\n4. Cari informasi dari lembaga bantuan\nKorban kekerasan seksual perlu mencari informasi dari lembaga-lembaga yang menyediakan bantuan, seperti Pusat Pelayanan Terpadu Pemberdayaan Perempuan dan Anak (P2TP2A), Komisi Perlindungan Anak Indonesia (KPAI), Kementerian Pemberdayaan Perempuan dan Perlindungan Anak, dan lain sebagainya."
+      ],
+      "tag": "intimidasi seksual"
+    },
+    {
+      "patterns": [
+        "bagaimana saya bisa mendukung korban pelecehan seksual?",
+        "apa yang bisa saya lakukan untuk mendukung korban pelecehan seksual?",
+        "saya sebagai individu mendukung kampanye anti-pelecehan seksual. apakah ada dasar hukum yang mengatur kampanye semacam ini?",
+        "saya sebagai individu ingin mendukung korban pelecehan seksual. apa langkah-langkah yang dapat saya ambil dan apakah ada dasar hukumnya?",
+        "bagaimana cara mensupport korban pelecehan seksual?",
+        "gimana cara mensupport korban pelecehan seksual?",
+        "cara untuk mendukung korban pelecehan seksual?",
+        "bagaimana cara menenangkan korban pelecehan seksual?"
+      ],
+      "responses": [
+        "Anda bisa memulai dengan tidak menyalahkan korban. Jangan pernah menyalahkah korban atas penyerangan seksual tersebut. Penyerangan seksual tidak bisa dibiarkan. Apa yang dipakai oleh seseorang, budaya, usia, penggunaan obat-obatan atau alkohol, atau hubungan mereka dengan pelaku tidak pernah menjadi penyebab bagi seseorang untuk melakukan penyerangan secara seksual kepada orang lain.",
+        "Ketika seseorang memberi tahu Anda bahwa mereka telah mengalami pelecehan seksual, yang Anda bisa lakukan adalah memercayai, mendukung dan membantu mereka menjajaki pilihan tentang hal yang harus dilakukan selanjutnya. dengan mempercayai korban, maka korban akan merasa didukung dan dapat membantu dalam proses pemulihan.",
+        "aktivitas kampanye anti-pelecehan seksual diakui dan dihormati dalam hukum. hukum memberikan kebebasan berekspresi dan mendukung upaya masyarakat untuk memerangi kekerasan seksual. dasar hukum: undang-undang dasar negara republik indonesia tahun 1945.",
+        "dukung korban pelecehan seksual dengan memberikan dukungan moral dan melibatkan diri dalam kampanye anti-pelecehan seksual. hukum memberikan dukungan terhadap kegiatan yang bertujuan melawan kekerasan seksual. dasar hukum: undang-undang pemberantasan tindak pidana kekerasan seksual (uu no. 17 tahun 2016).",
+        "Anda bisa memulai dengan tidak menyalahkan korban. Jangan pernah menyalahkah korban atas penyerangan seksual tersebut. Penyerangan seksual tidak bisa dibiarkan. Apa yang dipakai oleh seseorang, budaya, usia, penggunaan obat-obatan atau alkohol, atau hubungan mereka dengan pelaku tidak pernah menjadi penyebab bagi seseorang untuk melakukan penyerangan secara seksual kepada orang lain.",
+        "Berikut adalah beberapa langkah untuk mensupport korban pelecehan seksual : \n1. Berikan Support dan dengarkan ceritanya\nDekati korban dan buat suasana yang nyaman agar korban mau bercerita tentang kejadiannya, namun perlu diingat untuk tidak memaksa mereka bercerita apabila korban masih enggan bercerita.\n\n2. Ajak korban melapor dan konsultasi\nMendampingi korban ke psikiater dan melaporkan kejadian tersebut ke pihak berwenang adalah hal supportif kedua yang bisa kita lakukan untuk korban.",
+        "Berikut adalah beberapa langkah untuk memberikan dukungan kepada korban pelecehan seksual:\n1. Tunjukkan Dukungan dan Dengarkan Pengalaman Mereka:\nMendekati korban dengan menciptakan suasana yang nyaman untuk berbicara tentang pengalaman mereka adalah langkah pertama. Namun, penting untuk menghormati ketidaknyamanan mereka dan tidak memaksa bercerita jika mereka belum siap.\n\n2. Ajak Korban untuk Melaporkan dan Konsultasi:\nMemberikan dukungan dengan mengajak korban untuk melaporkan kejadian tersebut dan berkonsultasi dengan pihak yang berkompeten, seperti psikiater atau lembaga yang dapat memberikan bantuan. Langkah ini mendukung korban dalam mencari pertolongan dan mengambil tindakan yang sesuai.",
+        "Berikut adalah cara menenangkan korban pelecehan seksual :\n1. Jangan terus-menerus membicarakan kejadian pelecehan seksual. \nDengan terus bertanya tentang kejadian tersebut, korban akan terus mengingat dan mengulang-ulang gambaran tentang apa yang telah terjadi. Hal ini dapat mengganggu proses pemulihan yang sedang berlangsung\n\n2. Ciptakan suasana yang nyaman\nSuasana nyaman diperlukan agar dapat berpikir jernih sehingga proses pemulihan dapat berlangsung dengan baik\n\n3. Ajak untuk berkonseling ke psikolog\nPara ahli tentu memiliki pengetahuan yang lebih untuk menangani korban pelecehan seksual, sehingga korban mendapatkan terapi yang benar dan sesuai dengan keadaannya. Selain itu, untuk mempercepat proses pemulihan dan mencegah korban mengalami gangguan lainnya, datang kepada ahli yang sesuai merupakan sebuah keputusan yang tepat"
+      ],
+      "tag": "mensupport"
+    },
+    {
+      "patterns": [
+        "saya mengalami pelecehan seksual di lingkungan kampus. apa yang sebaiknya saya lakukan?",
+        "saya mengalami pelecehan seksual di lingkungan kampus. apa yang bisa saya lakukan?",
+        "apa yang harus saya lakukan jika mengalami pelecehan seksual di kampus?",
+        "apa yang harus saya lakukan jika mengalami pelecehan seksual di lingkungan kampus?"
+      ],
+      "responses": [
+        "laporkan pelecehan seksual kepada pihak kampus dan, jika perlu, ke pihak berwajib. hukum memberikan perlindungan terhadap kekerasan seksual di lingkungan pendidikan. dasar hukum: undang-undang perlindungan anak dan peraturan anti-pelecehan di lingkungan pendidikan.",
+        "laporkan pelecehan seksual kepada pihak kampus dan, jika perlu, ke pihak berwajib. hukum memberikan perlindungan terhadap kekerasan seksual di lingkungan pendidikan. dasar hukum: undang-undang perlindungan anak (UUno. 35 tahun 2014) dan peraturan anti-pelecehan di lingkungan pendidikan.",
+        "Kekerasan seksual dapat dialami oleh siapapun dan terjadi dimanapun. Termasuk kepada diri kita sendiri. Maka, mulai berani melaporkan tindakan pelaku. Jika mendapati seorang teman yang mengalami hal tersebut, hal yang dapat dilakukan dengan mendengarkan dan berempati. Memang terlihat sepele, namun dapat menjadi bentuk dukungan kita terhadao korban yang sedang merasa trauma. Mulai mendengarkan dan tidak menghakimi korban. Biarkan korban bercerita dan meluapkan emosinya. Menanyakan kebutuhan korban dan menyediakan informasi, apakah ingin mengakses layanan konseling atau melaporkan kepada pihak berwenang. Mendesak kampus agar membuat regulasi tentang pencegahan dan penanganan kasus kekerasan seksual yang berpihak pada korban.",
+        "Kekerasan seksual dapat menimpa siapa saja dan terjadi di berbagai tempat, termasuk pada diri kita sendiri. Oleh karena itu, kita perlu memiliki keberanian untuk melaporkan pelaku tindakan tersebut. Jika kita menemui teman yang mengalami kekerasan seksual, tindakan yang dapat diambil adalah mendengarkan dengan penuh empati. Meskipun terlihat sederhana, hal ini bisa menjadi bentuk dukungan bagi korban yang sedang mengalami trauma. Penting untuk memberikan perhatian tanpa menghakimi, memberi kesempatan korban untuk bercerita dan mengeluarkan perasaannya. Selain itu, menanyakan kebutuhan korban dan memberikan informasi, seperti kemungkinan akses ke layanan konseling atau pelaporan kepada pihak berwajib. Dorong pula kampus untuk menyusun regulasi yang fokus pada pencegahan dan penanganan kekerasan seksual, yang memberikan dukungan kepada korban."
+      ],
+      "tag": "pelecehan seksual kampus"
+    },
+    {
+      "patterns": [
+        "bagaimana cara mencegah pelecehan seksual di kampus?",
+        "gimana cara mencegah pelecehan seksual di kampus?",
+        "cara mencegah pelecehan seksual di kampus?",
+        "cara mengantisipasi pelecehan seksual di kampus?"
+      ],
+      "responses": [
+        "Anda dapat mencegah pelecehan seksual di kampus dengan beberapa cara berikut : \n1. Pembentukan Satgas Pelecehan Seksual\nSaat ini, mulai banyak kampus yang membentuk Satgas Pencegahan dan Penanganan Kekeresan Seksual (PPKS) dengan memperhatikan Permendikbudristek Nomor 30 Tahun 2021 tentang Pencegahan dan Penanganan Pelecehan Seksual di Lingkungan Perguruan Tinggi. Dengan pembentukan tersebut, kasus kekerasan seksual di lingkungan kampus dapat berkurang. Pastinya penanganan pelecehan seksual dilakukan sesuai prosedur sehingga tidak ada kejadian saling menghakimi.\n\n2. Memperketat Pertemuan antara Dosen dan Mahasiswa\nSeringkali kasus pelecehan seksual dilakukan oleh dosen dan/atau mahasiswa. Untuk itu, pihak kampus harus memperketat pertemuan antara mahasiswa dengan dosen dan tenaga kependidikan tanpa persetuuan ketua prodi. Ditambah, apabila pertemuan tersebut dilakukan di luar area kampus atau jam operasional kampus, maka persetujuan dari pihak kampus sangat penting.\n\n3. Kampanye Pencegahan Pelecehan Seksual\nLakukan kampanye adalah cara baik untuk mencegah pelecehan seksual. Dewasa ini, banyak organisasi di kampus yang menyelenggarakan program kerja berupa kampanye pencegahan kekerasan seksual di kampus.Kampanye bisa berupa sosialisasi terkait penanganan pelecehan seksual, pemberian kontak bantuan, dan zero tolerance untuk pelaku pelecehan seksual di kampus. Dengan kampanye, pihak kampus dapat memantik para korban untuk melapor kasus kekerasan seksualnya.",
+        "Anda dapat mencegah kejadian pelecehan seksual di lingkungan kampus dengan mengambil langkah-langkah berikut:\n1. Pembentukan Tim Pencegahan dan Penanganan Pelecehan Seksual:\nBeberapa kampus saat ini membentuk Tim Pencegahan dan Penanganan Kekerasan Seksual (PPKS) sesuai dengan Permendikbudristek Nomor 30 Tahun 2021. Melalui pembentukan tim ini, kasus kekerasan seksual di kampus dapat diminimalkan. Penanganan pelecehan seksual dilakukan sesuai dengan prosedur yang ditetapkan untuk menghindari sikap saling menghakimi.\n\n2. Pertemuan antara Dosen dan Mahasiswa:\nPerlu ditingkatkan pengawasan terhadap pertemuan antara dosen dan mahasiswa, karena pelecehan seksual seringkali melibatkan pihak ini. Pihak kampus harus mengawasi pertemuan tersebut, terutama jika dilakukan di luar area kampus atau di luar jam operasional, dengan memperoleh persetujuan dari pihak kampus.\n\n3. Kampanye Pencegahan Pelecehan Seksual:\nMelakukan kampanye pencegahan pelecehan seksual merupakan cara efektif untuk mencegah kejadian tersebut. Banyak organisasi di kampus yang mengadakan kampanye, termasuk kegiatan sosialisasi mengenai penanganan pelecehan seksual, memberikan informasi kontak bantuan, dan menegaskan kebijakan nol toleransi terhadap pelaku pelecehan seksual di lingkungan kampus. Melalui kampanye ini, kampus dapat mendorong korban untuk melaporkan kasus kekerasan seksual yang mereka alami.",
+        "Pencegahan terjadinya pelecehan seksual di  kampus dapat dilakukan dengan melakukan langkah-langkah sebagai berikut: \n1.Membentuk tim pencegahan dan tanggap pelecehan seksual \nBeberapa kampus saat ini belum memiliki tim pencegahan dan tanggap pelecehan seksual yang memadai.\nDengan terbentuknya tim ini diharapkan dapat meminimalisir kejadian pelecehan seksual di kampus.\n\n2.Pertemuan antara Dosen dan Mahasiswa: \nPertemuan antara instruktur dan siswa perlu lebih sering diawasi karena pelecehan seksual sering terjadi diluar kampus. Pihak kampus wajib mengawasi rapat atas persetujuan kampus, apalagi jika rapat diadakan di luar kampus atau di luar jam kerja.\n \n3.Kampanye Pencegahan Pelecehan Seksual: \nMelaksanakan kampanye pencegahan pelecehan seksual merupakan cara yang efektif untuk mencegah kejadian tersebut. Banyak organisasi di kampus melakukan kampanye yang mencakup upaya pendidikan untuk mengatasi pelecehan seksual, memberikan informasi kontak untuk bantuan, dan menekankan kebijakan nol toleransi bagi pelaku pelecehan seksual di kampus. Melalui kampanye ini, perguruan tinggi dapat mendorong korban untuk melaporkan kejadian pelecehan seksual yang mereka alami.",
+        "Berikut tips agar terhindar dari tindak pelecehan seksual khususnya di lingkungan kampus : \n1. Bersikap Tegas dan Berani Menegur\nJika terdapat indikasi pelecehan seksual seperti catcallingatau kata-kata tidak senonoh yang dilontarkan kepada kita, mulailah bersikap tegas. Artinya, kita harus melakukan teguran atau menunjukkan rasa tidak suka terhadap perlakuan tersebut.\n\n2. Dapatkan Perhatian\nSaat mengalami pelecehan seksual di tempat umum, jangan ragu untuk berteriak atau menarik perhatian orang di sekitar, seperti meminta bantuan, memberikan kode, atau yang lainnya.Dengan melakukan upaya pencegahan di atas, setidaknya akan membantu kita terhindar dari aksi pelecehan.\n\n3. Rekam, Lihat, Foto\nJangan takut untuk memvideokan memfoto, atau merekam orang yang kita curigai akan atau telah melakukan tindak kekerasan seksual. Hal tersebut bisa dijadikan bukti jika pihak berwenang menindak kasus yang kita alami. Selain itu, jangan takut menatap orang yang mencurigakan. Cara tersebut bisa membuat pelaku merasa diawasi dan diharapkan akan berhenti.\n"
+      ],
+      "tag": "antisipasi kampus"
+    },
+    {
+      "patterns": [
+        "saya adalah korban pelecehan seksual oleh anggota keluarga. bagaimana saya bisa mendapatkan perlindungan hukum?",
+        "saya dilecehkan secara seksual oleh salah seorang anggota keluarga sendiri,  apa yang bisa saya lakukan?",
+        "seorang perempuan di lingkungan keluarga mengalami pemerkosaan namun ragu untuk melaporkannya karena pelaku adalah anggota keluarga.",
+        "saya sering dilecehkan oleh ayah saya, apa yang harus saya lakukan?",
+        "saya pernah mengalami pelecehan seksual oleh kerabat saya sendiri",
+        "saat saya berumur 5 tahun, om saya sring meraba raba alat kelamin saya"
+      ],
+      "responses": [
+        "laporkan pelecehan seksual dalam keluarga kepada pihak berwajib dan ajukan perlindungan hukum. undang-undang perlindungan korban tindak pidana kekerasan seksual memberikan dasar hukum. dasar hukum: undang-undang perlindungan korban tindak pidana kekerasan seksual.",
+        "Anda bisa menceritakan kejadian tersebut kepada orang orang terdekat anda dan memintanya untuk mendampingi anda untuk mengumpulkan bukti dan melapor kepada pihak yang berwajib.",
+        "dalam kasus pemerkosaan di lingkungan keluarga, korban dapat melaporkan ke polisi atau lembaga yang berwenang. undang-undang perlindungan korban dan saksi (uu no. 13 tahun 2006) memberikan perlindungan terhadap korban agar bisa memberikan kesaksian tanpa tekanan.",
+        "Pertama, anda bisa menceritakan kejadian tersebut kepada orang orang terdekat seperti Ibu, Kakak/Adik tentang kejadian tersebut. lalu memintanya untuk mendampingi anda untuk mengumpulkan bukti dan melapor kepada pihak yang berwajib.",
+        "saya sangat terpukul mendengar pengalaman yang anda alami. apa yang terjadi pada anda adalah bentuk pelecehan seksual yang sangat serius dan tidak dapat diterima. tindakan tersebut adalah melanggar batas-batas privasi dan hak anda sebagai seorang anak.dalam hukum, kasus pelecehan seksual seperti ini sangat serius. di indonesia, pasal 289 kuhp (kitab undang-undang hukum pidana) mengatur tentang pelecehan seksual. pasal ini menyebutkan bahwa siapapun yang dengan sengaja melakukan perbuatan tidak senonoh atau memaksa orang lain melakukan perbuatan tidak senonoh, dipidana dengan pidana penjara paling lama dua tahun delapan bulan.meskipun peristiwa itu terjadi beberapa waktu yang lalu, anda masih memiliki hak untuk melaporkannya kepada pihak berwenang, seperti kepolisian. menceritakan pengalaman anda kepada orang tua, atau mencari bantuan dari sumber daya seperti konselor atau organisasi yang fokus pada kasus pelecehan seksual juga bisa menjadi langkah yang membantu. pelecehan seksual terhadap anak adalah pelanggaran serius, dan mempengaruhi kesehatan mental dan emosional seseorang dalam jangka waktu yang panjang. mendapatkan bantuan dan dukungan dari sumber daya yang tepat sangat penting untuk proses pemulihan dan keadilan. anda tidak sendirian, dan ada banyak orang dan lembaga yang siap membantu anda melewati situasi ini.",
+        "sangat menyedihkan mendengar tentang pengalaman traumatis yang anda alami. tindakan pelecehan seksual, terutama terhadap anak-anak, adalah tindakan serius yang dilarang dan merupakan pelanggaran hukum yang serius.di indonesia, tindakan pelecehan seksual diatur dalam pasal 289 kuhp (kitab undang-undang hukum pidana). pasal ini menyatakan bahwa siapapun yang dengan sengaja melakukan perbuatan tidak senonoh atau memaksa orang lain melakukan perbuatan tidak senonoh, dapat dipidana dengan pidana penjara paling lama dua tahun delapan bulan. jika anda merasa nyaman untuk melaporkan kejadian ini kepada pihak berwenang, seperti polisi atau lembaga yang berwenang, langkah tersebut bisa dilakukan untuk memulai proses hukum dan menjaga keamanan anda serta mencegah terulangnya kejadian serupa pada anak lain. selain itu, sangat penting untuk mendapatkan dukungan psikologis. bantuan dari konselor, psikolog, atau organisasi yang fokus pada korban kekerasan seksual dapat membantu anda mengatasi dampak emosional dan psikologis dari pengalaman traumatis ini.  anda tidak sendiri dalam menghadapi situasi ini. ada sumber daya dan bantuan yang tersedia untuk membantu anda melalui proses pemulihan dan memberikan dukungan selama masa sulit ini."
+      ],
+      "tag": "pelecehan seksual keluarga"
+    },
+    {
+      "patterns": [
+        "cat calling",
+        "cat calling adalah",
+        "apa itu cat calling",
+        "cat-calling merupakan",
+        "jelaskan apa itu cat calling",
+        "apa yang dimaksud dengan cat calling",
+        "jelaskan apa yang dimaksud dengan cat calling",
+        "jelaskan mengenai cat calling",
+        "definisi cat calling"
+      ],
+      "responses": [
+        "cat calling adalah suatu bentuk pelecehan, terutama pelecehan seksual yang terdiri dari komentar seksual yang tidak diinginkan, gerakan provokatif, membunyikan klakson, bersiul serigala, paparan tidak senonoh, menguntit, rayuan seksual terus-menerus, dan sentuhan oleh orang asing, di tempat umum seperti jalan raya, pusat perbelanjaan, dan transportasi umum",
+        "Catcalling artinya pelecehan seksual yang dilakukan di ruang publik dengan memberikan kata-kata tidak senonoh kepada korban.",
+        "Catcalling adalah tindakan mengganggu atau melecehkan seseorang dengan cara memberikan komentar atau perlakuan tidak senonoh secara verbal ketika berada di ruang umum seperti jalan raya, trotoar, atau tempat umum lainnya.",
+        "cat calling merupakan suatu tindakan yang dimaksudkan untuk menggoda lawan jenis. Lebih dari itu, catcalling adalah tindakan yang biasa mengarah pada pelecehan seksual. Salah satu contoh tindakan dari catcalling adalah bersiul untuk menggoda lawan jenis yang melintas, atau memberikan kata-kata yang tidak senonoh.",
+        "catcalling adalah tindakan berkomentar yang melecehkan dan sering kali menjurus ke tindakan seksual, mengancam, atau menghina seseorang di depan umum.",
+        "catcalling berarti siulan, panggilan, dan komentar bersifat seksual dari laki-laki terhadap perempuan. Catcalling ini termasuk street harassment atau kekerasan yang terjadi di tempat umum.",
+        "Cat calling adalah istilah yang digunakan untuk merujuk pada perilaku verbal yang bersifat seksual atau merendahkan, yang sering terjadi di tempat umum, seperti di jalan atau di tempat keramaian.",
+        "Cat calling adalah bentuk pelecehan, khususnya pelecehan seksual, yang melibatkan komentar seksual yang tidak diinginkan, gerakan provokatif, klakson berisik, bersiul layaknya serigala, paparan perilaku tidak senonoh, tindakan menguntit, rayuan seksual yang berulang-ulang, dan sentuhan oleh orang yang tidak dikenal. Perilaku ini umumnya terjadi di tempat umum seperti jalan raya, pusat perbelanjaan, dan sarana transportasi umum."
+      ],
+      "tag": "cat calling"
+    },
+    {
+      "patterns": [
+        "apakah pelaku cat calling bisa dituntut",
+        "apakah cat calling bisa dipidana",
+        "berapa lama hukuman cat calling",
+        "cat calling masuk pasal berapa",
+        "pasal cat calling",
+        "pasal untuk menuntut pelaku cat calling"
+      ],
+      "responses": [
+        "Dalam Kitab Undang-undang Hukum Pidana (KUHP) catcalling di kaitkan dengan perbuatan asusila dan pencabulan. Dan jelas melanggar peraturan perundang – undangan Pasal 8 Jo Pasal 34 dan Pasal 9 Jo Pasal 35 UU No. 44/2008 tentang Pornografi, dan Pasal 5 UU No. 12/2022 tentang Tindak Pidana Kekerasan Seksual.",
+        "Menurut Pasal 5 UU TPKS, pelecehan verbal dan pelecehan nonfisik lainnya dipidana dengan pidana penjara paling lama 9 bulan dan/atau pidana denda paling banyak Rp10 juta.",
+        "Berdasar Pasal 5 UU TPKS, pelaku perbuatan seksual nonfisik dapat dipidana hingga 9 bulan penjara. Pelaku juga bisa terkena pidana denda paling banyak Rp 10 juta."
+      ],
+      "tag": "dasar hukum cat calling"
+    },
+    {
+      "patterns": [
+        "eksibisionis adalah",
+        "eksibisionis",
+        "apa yang dimaksud dengan eksibisionis",
+        "eksibionis merupakan",
+        "jelaskan mengenai eksibisionis",
+        "apa itu eksibisionis",
+        "definisi eksibisionis",
+        "jelaskan apa yang dimaksud dengan eksibisionis",
+        "jelaskan apa itu eksibisionis"
+      ],
+      "responses": [
+        "eksibisionis adalah gangguan mental di mana penderitanya suka memamerkan alat kelaminnya kepada orang lain. Penderita kondisi ini mendapatkan kepuasan seksual dari memperlihatkan alat vitalnya kepada orang yang tidak dikenal. Eksibisionis tergolong dalam kelainan seksual.",
+        "eksibisionis merupakan gangguan kesehatan berupa dorongan, fantasi, atau tindakan mengekspose alat kelamin seseorang kepada orang yang tidak menginginkannya, terutama orang asing.",
+        "Eksibisionis adalah istilah yang digunakan untuk menggambarkan seseorang yang mendapatkan kepuasan atau kegembiraan dengan memperlihatkan diri mereka sendiri secara terbuka atau melakukan tindakan eksibisionis. Tindakan ini sering kali melibatkan tindakan-tindakan seksual atau tindakan yang dianggap tidak senonoh, dan biasanya dilakukan di depan orang lain tanpa izin atau persetujuan mereka. Eksibisionisme dapat termanifestasi dalam berbagai bentuk, termasuk tindakan seksual terbuka, pameran tubuh, atau perilaku seksual yang mencolok di tempat umum.",
+        "Eksibisionisme adalah jenis penyimpangan seksual yang membuat seseorang memiliki dorongan seksual untuk menunjukkan organ intimnya kepada orang lain tanpa persetujuan orang tersebut. Orang dengan eksibisionisme atau eksibisionis akan mendapatkan kesenangan dan kepuasan ketika mempertontonkan bagian tubuhnya pada orang lain. Eksibisionis bahkan bisa makin bergairah ketika orang tersebut menunjukkan reaksi jijik dan takut. ",
+        "Gangguan eksibisionis adalah suatu kondisi yang ditandai oleh dorongan, fantasi, atau tindakan mengekspos alat kelamin seseorang, kepada orang yang tidak menginginkannya, terutama orang asing."
+      ],
+      "tag": "eksibisionis"
+    },
+    {
+      "patterns": [
+        "apakah pelaku eksibisionis bisa dituntut",
+        "apakah eksibisionis bisa dipidana",
+        "berapa lama hukuman eksibisionis",
+        "eksibisionis masuk pasal berapa",
+        "pasal eksibisionis",
+        "pasal untuk menuntut pelaku eksibisionis"
+      ],
+      "responses": [
+        "seseorang yang memiliki kelainan eksibisionisme hakim harus merujuk pada pendapat seorang ahli kesehatan jiwa dan hasil pemeriksaan medis untuk mengetahui apakah kelainan tersebut dapat dipersamakan dengan sakit jiwa atau penyakit gangguan kejiwaan. Jika ternyata pelaku eksibisionisme tersebut betul dinilai tidak dapat bertanggung jawab atas perbuatannya, maka berlaku alasan pemaaf bagi pelaku, sehingga menurut KUHP ia tidak dapat dipidana atau dimasukkan ke rumah sakit sebagai waktu percobaan.",
+        "perilaku eksibisionis seperti melakukan masturbasi di muka umum atau mempertontonkan alat kelamin di muka umum dapat dipidana penjara paling lama 10 tahun dan/atau pidana denda paling banyak Rp5 miliar."
+      ],
+      "tag": "dasar hukum eksibisionis"
+    },
+    {
+      "patterns": "Seorang pemberi utang yang memiliki piutang dari pelanggan ingin menggunakan lembaga arbitrase untuk menyelesaikan perselisihan. Bagaimana hukum mengatur peran lembaga arbitrase dalam utang piutang?",
+      "responses": "Peran lembaga arbitrase diatur oleh Undang-Undang Nomor 30 Tahun 1999 tentang Arbitrase dan Alternatif Penyelesaian Sengketa. Pihak yang terlibat dalam perselisihan utang piutang dapat memilih untuk menyelesaikan sengketanya melalui proses arbitrase untuk mendapatkan keputusan yang final dan mengikat.",
+      "tag": "Arbitrase Utang Piutang"
+    },
+    {
+      "patterns": ["Seorang pemberi utang ingin mengetahui apa yang diatur oleh hukum terkait perjanjian utang piutang dengan jaminan hipotek. Apa yang diatur oleh hukum?",
+      "Bapak saya utang Rp3,5 juta kepada temannya dengan jaminan sertifikat tanah. Kemudian temannya menyerahkan sertifikat itu diserahkan kepada adiknya. Ternyata, sertifikat itu dibalik nama oleh adiknya (dengan syarat-syarat sebagaimana mestinya/pakai akta notaris juga tapi tanpa persetujuan Bapak dan Ibu saya) dan digunakan jaminan untuk mengajukan kredit sebesar Rp90 juta kepada bank pemerintah, masuk pengadilan tapi dihentikan tanpa keputusan apapun (dibekukan). Pertanyaannya: (1) Bagaimana kami dapat memperoleh sertifikat kembali yang telah dibalik nama, sementara adik dari teman bapak saya dan Bapak saya udah meninggal? (2) Bank mau melepas sertifikat atas nama adik teman bapak saya tersebut dengan minta imbalan sebesar Rp45 juta, apakah tindakan ini benar? Tindakan apa yang harus kami ambil?"
+      ],
+      "responses": ["Hukum terkait perjanjian utang piutang dengan jaminan hipotek diatur oleh ketentuan-ketentuan yang mencakup pendaftaran hipotek, hak dan kewajiban pihak-pihak yang terlibat, serta prosedur pelaksanaan jaminan hipotek jika terjadi wanprestasi.",
+      "Perlu diketahui dahulu bila memberikan jaminan bagi pembayaran/penulasan utang dengan sertifikat tanah sebaiknya dilakukan berdasarkan pembebanan hak tanggungan sesuai dengan Undang-Undang No.4 Tahun 1996. Dengan begini, selain ada akta pembebanan hak tanggungan, pembebanan (penyerahan) hak kebendaan atas tanah dicatat pada buku tanah (yang melekat pada sertifikat tanah), sehingga ini menghindari transaksi yang dilakukan oleh B dan juga C.\nKarena Bapak anda sudah terlanjur memberikan sertifikat tanah (notabene, bukti fisik) kepada C dan ternyata C telah melakukan balik namanya serta telah menjaminkannya kepada bank pemerintah, maka perlu memperhatikan hal-hal sebagai berikut:\na. Mengingat Bapak anda sudah meninggal, maka anda harus membuktikan bahwa anda adalah ahli waris yang sah. Bukti tertulis dapat berupa keterangan ahli waris dari lurah/camat setempat atau penetapan pengadilan.\nb. Setelah memperoleh bukti ahli waris, anda dapat meminta pembatalan balik nama atas sertifikat tanah kepada pengadilan. Namun sebelumnya, anda perlu mengumpulkan bukti-bukti tertulis termasuk fotokopi sertifikat tanah atas nama Bapak anda atau selain itu yang dapat menunjukkan kepemilikan tanah tersebut.\nPerlu anda ketahui bagaimana balik nama ke C atas sertifikat tanah tersebut, karena setiap balik nama dilakukan atas dasar perolehan hak tertentu, termasuk berdasarkan transaksi jual beli atau pengalihan hak lainnya. Termasuk pula untuk mengetahui (bila ada) apakah isi perjanjian atau kesepakatan apapun antara B dan C.Mengenai status hutang Bapak anda kepada B dapat menjadi satu opsi membantu upaya pembatalan sertifikat tanah atas nama C. Yaitu, dengan cara melunasi hutang tersebut.\nc.           Apabila anda telah mengetahui atau bahkan memiliki bukti-bukti di atas, maka anda dapat sebaiknya meminta konsultasi lebih mendalam dengan pengacara yang kompeten mengenai pembatalan sertifikat tanah tersebut dan hal-hal terkait lainnya upaya hukum apakah yang perlu dilakukan oleh anda."
+      ],
+      "tag": "jaminan hipotek"
+    },
+    {
+      "patterns": ["Seorang individu memiliki utang yang dijamin dengan jaminan hipotek atas rumahnya. Jika individu tersebut mengalami kesulitan keuangan, bagaimana hukum mengatur proses penjualan aset yang dijaminkan?",
+      "Seorang penerima utang yang dinyatakan pailit ingin mengetahui hak-hak dan kewajibannya selama proses kepailitan. Apa yang diatur oleh hukum terkait kepailitan?",
+      "Seorang pemberi utang mengalami kesulitan dalam pembayaran utang dan ingin mengetahui apa yang diatur oleh hukum kepailitan. Apa yang diatur oleh hukum terkait kepailitan?",
+      "PT Harmoni Jaya, sebuah perusahaan kecil di bidang manufaktur furnitur, mengalami kendala keuangan dan berusaha mendapatkan pembiayaan melalui perjanjian kredit usaha dengan Bank Utama. Perjanjian tersebut mencakup persyaratan pembayaran kredit selama 24 bulan dengan suku bunga tetap. Setelah 12 bulan, PT Harmoni Jaya mulai menghadapi kesulitan keuangan dan tidak dapat membayar angsuran kredit secara tepat waktu. Bank Utama mengirimkan pemberitahuan keterlambatan pembayaran, tetapi PT Harmoni Jaya masih kesulitan memenuhi kewajibannya.",
+      "Saya penyewa kamar indekos dengan biaya sewa Rp1.5 juta per bulan tanpa ada perjanjian tertulis, hanya lewat lisan. Bulan Oktober, November dan Desember ini saya ada masalah keuangan dan dalam jangka waktu 3 bulan tersebut saya hanya menempati kamar indekos beberapa hari saja. Di bulan Oktober, saya bayar penuh tapi tidak tepat waktu. Di bulan November dan Desember, saya sudah tidak ada pemasukan untuk bayar sewa. Akhirnya, di bulan Desember saya minta keringanan ke pemilik indekos karena hanya sanggup bayar Rp1 juta. Tapi, pemilik meminta 2 juta dan saya sudah transfer 1 juta dengan maksud agar barang-barang saya yang ada di kamar kos tersebut bisa diambil. Tapi pemilik tidak mengizinkan dan malah menahan barang saya, yaitu masih ada laptop, pakaian dan barang berharga lainnya. Pemilik tetap meminta Rp1 juta rupiah lagi untuk bulan Desember, agar saya bisa mengambil barang-barang saya. Langkah hukum apa yang bisa saya lakukan agar barang-barang saya kembali?"
+      ],
+      "responses": ["Proses penjualan aset yang dijaminkan diatur oleh Undang-Undang Nomor 4 Tahun 1996 tentang Hak Tanggungan Atas Tanah Beserta Benda-Benda yang Berkaitan dengan Tanah. Kreditur dapat mengajukan permohonan eksekusi jaminan hipotek ke pengadilan untuk menjual aset yang dijaminkan jika pihak berutang tidak dapat melunasi utang.",
+      "Hukum kepailitan diatur oleh Undang-Undang Nomor 37 Tahun 2004 tentang Kepailitan dan Penundaan Kewajiban Pembayaran Utang. Selama proses kepailitan, penerima utang memiliki kewajiban untuk bekerja sama dengan kurator dan pengadilan untuk menyelesaikan kewajibannya kepada kreditur.",
+      "Hukum kepailitan diatur oleh Undang-Undang Nomor 37 Tahun 2004 tentang Kepailitan dan Penundaan Kewajiban Pembayaran Utang. Jika pemberi utang tidak mampu membayar utangnya, pihak kreditur dapat mengajukan permohonan kepailitan ke pengadilan untuk melindungi kepentingan mereka.",
+      "Dalam kasus ini, perjanjian kredit usaha antara PT Harmoni Jaya dan Bank Utama merupakan dasar hukum yang mengatur kewajiban pembayaran angsuran kredit. Biasanya, perjanjian kredit usaha memiliki ketentuan tentang pembayaran angsuran, suku bunga, dan konsekuensi dari keterlambatan pembayaran.\n\nPada umumnya, jika pihak yang meminjam (PT Harmoni Jaya) tidak dapat membayar angsuran kredit secara tepat waktu, Bank sebagai pemberi kredit memiliki hak untuk mengambil tindakan. Dasar hukum terkait ini bisa ditemukan dalam perjanjian kredit usaha dan juga dalam peraturan hukum yang mengatur transaksi perbankan, seperti UU No. 10 Tahun 1998 tentang Perbankan.\n\nPasal 15 UU Perbankan tersebut, antara lain, menyatakan bahwa debitur (peminjam) wajib membayar angsuran tepat waktu sesuai dengan perjanjian kredit. Selain itu, Pasal 18 juga memberikan kewenangan kepada bank untuk menetapkan bunga, serta mengatur tentang konsekuensi dari keterlambatan pembayaran.\n\nDalam skenario ini, Bank Utama memiliki hak untuk mengambil langkah-langkah tertentu sesuai dengan perjanjian kredit usaha dan ketentuan hukum yang berlaku. Ini bisa termasuk menagih pembayaran tunggakan, menetapkan bunga keterlambatan, atau bahkan memulai proses penyelesaian secara hukum jika PT Harmoni Jaya terus gagal membayar angsuran.\n\nPT Harmoni Jaya sebaiknya berusaha untuk berkomunikasi secara aktif dengan Bank Utama dan menjelaskan situasi keuangan yang dihadapinya. Memiliki komunikasi terbuka dan jelas dapat membantu dalam mencari solusi seperti restrukturisasi kredit atau perundingan untuk mengatasi kesulitan keuangan.\n\nNamun demikian, jika PT Harmoni Jaya tetap tidak mampu memenuhi kewajibannya, Bank Utama memiliki hak hukum untuk mengambil tindakan sesuai dengan perjanjian kredit dan ketentuan hukum yang berlaku. Penting untuk mendapatkan nasihat dari ahli hukum atau konsultan keuangan yang berpengalaman dalam masalah perbankan untuk mengetahui opsi terbaik yang tersedia dalam situasi spesifik ini.",
+      "Sewa menyewa diatur dalam Kitab Undang-Undang Hukum Perdata. Meskipun hanya secara lisan, perjanjian sewa menyewa antara Anda dengan pemilik kos tetap sah dan berlaku sebagai undang-undang bagi kedua belah pihak yang membuatnya.\n\nPerbuatan tidak membayar sewa tersebut dapat dikategorikan sebagai wanprestasi. Atas dasar pasal di atas, si pemilik indekos dapat mengajukan gugatan wanprestasi dengan terlebih dahulu memberi somasi kepada Anda sebagai peringatan atas kelalaian pembayaran uang sewa.\n\nLalu kami asumsikan penahanan barang tersebut dimaksudkan sebagai penyitaan akibat belum melunasi pembayaran sewa.\n\nJika kita mengacu Mengenal Berbagai Jenis Sita dalam Hukum Acara Perdata, M. Yahya Harahap dalam buku Hukum Acara Perdata tentang Gugatan, Persidangan, Penyitaan, Pembuktian, dan Putusan Pengadilan menguraikan pengertian penyitaan sebagai (hal. 282):\n\nTindakan menempatkan harta kekayaan tergugat secara paksa berada ke dalam keadaan penjagaan;\nTindakan paksa penjagaan yang dilakukan secara resmi berdasarkan perintah pengadilan atau hakim;\nBarang yang ditempatkan dalam penjagaan tersebut berupa barang yang disengketakan dan bisa juga barang yang akan dijadikan sebagai alat pembayaran atas pelunasan utang debitur atau tergugat dengan cara menjual lelang barang yang disita tersebut;\nPenetapan dan penjagaan barang yang disita berlangsung selama proses pemeriksaan sampai dikeluarkannya putusan pengadilan yang berkekuatan hukum tetap yang menyatakan sah atau tidak tindakan penyitaan itu.\nMasih dari sumber yang sama, Yahya menjelaskan undang-undang memberikan wewenang pada hakim untuk meletakkan sita sebagai tindakan eksepsional (hal. 283):\n\nHakim dapat menghukum tergugat berupa tindakan menempatkan harta kekayannya di bawah penjagaan, meskipun putusan tentang kesalahannya belum dijatuhkan;\nMaka sebelum putusan dijatuhkan, tergugat telah dijatuhi hukuman berupa penyitaan harta sengketa atau harta kekayaan tergugat.\nLebih lanjut, dikutip dari Debt Collector Menyita Barang Milik Debitur Alexander Lay dari Pusat Bantuan Hukum (PBH) Peradi menyatakan pada prinsipnya penyitaan barang-barang milik debitur yang wanprestasi hanya bisa dilakukan atas dasar putusan pengadilan.\n\nMaka, kami berpendapat tindakan pemilik indekos (pemberi sewa) yang menahan (menyita) barang-barang milik Anda (penyewa) adalah bertentangan dengan hukum karena tidak dilakukan berdasarkan prosedur hukum yang tepat.\n\nLangkah penyelesaian dari kami adala pertama-tama kami sarankan Anda untuk menyelesaikan permasalahan pembayaran sewa indekos ini secara kekeluargaan terlebih dahulu. Anda dapat membicarakan kembali dengan pemilik indekos terkait alasan keterlambatan atau alasan mengapa tidak mampu membayar sewa untuk menemukan solusi terbaik bagi kedua pihak.\n\nSelain itu, Anda dan pemilik indekos dapat menyepakati bersama untuk memundurkan tenggat waktu pembayaran sewa atau memberi kemudahan pembayaran sewa dengan mekanisme cicilan, yang kami sarankan untuk dituangkan secara tertulis."
+      ],
+      "tag": "kepailitan"
+    },
+    {
+      "patterns": ["Seorang individu mengajukan permohonan restrukturisasi utang kepada kreditur-krediturnya karena mengalami kesulitan keuangan. Bagaimana proses hukumnya?",
+      "Seorang pemberi utang mengajukan restrukturisasi utang kepada bank karena mengalami kesulitan ekonomi akibat pandemi. Apa dasar hukum dan prosedur restrukturisasi utang yang berlaku?",
+      "Saya memiliki utang, tapi saya sedang kesulitan membayar. Akhirnya kami sepakat secara verbal untuk melunasi dengan cara mencicil utang tersebut. Namun, tiba-tiba saya diancam segera melunasi semua utangnya. Apa yang sebaiknya dilakukan? Sebab memang tidak ada bukti fisik kalau pembayarannya jadi boleh dicicil."
+      ],
+      "responses": ["Proses restrukturisasi utang dapat diatur oleh peraturan kepailitan dan penundaan kewajiban pembayaran utang, seperti yang dijelaskan dalam Undang-Undang Nomor 37 Tahun 2004 tentang Kepailitan dan Penundaan Kewajiban Pembayaran Utang.",
+      "Dasar hukum restrukturisasi utang dapat ditemukan dalam Undang-Undang Nomor 37 Tahun 2004 tentang Kepailitan dan Penundaan Kewajiban Pembayaran Utang. Proses restrukturisasi utang melibatkan negosiasi antara pemberi utang dan kreditur, dengan pengawasan pengadilan jika diperlukan.",
+      "Kesepakatan secara verbal dapat diklasifikasikan sebagai perjanjian lisan. Adapun syarat sahnya perjanjian menurut Pasal 1320 KUH Perdata adalah:\n\nSupaya terjadi persetujuan yang sah, perlu dipenuhi empat syarat:\n\nkesepakatan mereka yang mengikatkan dirinya;\nkecakapan untuk membuat suatu perikatan;\nsuatu pokok persoalan tertentu;\nsuatu sebab yang tidak terlarang.\nDari ketentuan tersebut, dapat ditegaskan bahwa perjanjian tidak diharuskan dibuat dalam bentuk tertulis. Oleh karena itu, perjanjian yang dibuat secara lisan tetap sah dan mengikat secara hukum bagi para pihak yang membuatnya.\n\nMenjawab pertanyaan Anda, kesepakatan verbal untuk mencicil utang merupakan suatu perjanjian lisan atau tidak tertulis yang sah dan mengikat secara hukum\n\nuntuk ancaman segera melunasi utang, perlu kami informasikan bahwa jika ancaman itu disertai kekerasan atau merupakan ancaman kekerasan, pelakunya dapat dipidana sebagaimana yang diatur dalam Pasal 335 ayat (1) KUHP jo. Putusan MK No. 1/PUU-XI/2013 yaitu:\n\n(1) Diancam dengan pidana penjara paling lama satu tahun atau denda paling banyak empat ribu lima ratus rupiah:\n\nBarang siapa secara melawan hukum memaksa orang lain supaya melakukan, tidak melakukan atau membiarkan sesuatu, dengan memakai kekerasan, atau dengan memakai ancaman kekerasan, baik terhadap orang itu sendiri maupun orang lain.\nAdapun ketentuan Pasal 3 Perma 2/2012 menegaskan bahwa jumlah maksimum hukuman denda dalam KUHP, termasuk Pasal 335 ayat (1), dilipatgandakan menjadi 1.000 kali. Dengan demikian, untuk ketentuan denda di atas disesuaikan menjadi Rp4,5 juta.\n\nLebih lanjut, yang harus dibuktikan dalam Pasal 335 ayat (1) KUHP tersebut menurut R. Soesilo dalam Kitab Undang-Undang Hukum Pidana (KUHP) Serta Komentar-Komentarnya Lengkap Pasal Demi Pasal adalah (hal. 238):\n\nbahwa ada orang yang dengan melawan hak dipaksa untuk melakukan sesuatu, tidak melakukan sesuatu atau membiarkan sesuatu; dan\npaksaan itu dilakukan dengan memakai kekerasan ataupun ancaman kekerasan, terhadap orang itu, maupun terhadap orang lain.\nDengan demikian, ancaman disertai kekerasan yang ditujukan kepada Anda tersebut dapat dilaporkan ke kepolisian. Akan tetapi, kami menyarankan Anda untuk menyelesaikan persoalan utang piutang dan kesepakatan mencicil utang ini lebih lanjut secara kekeluargaan dengan pihak pemberi pinjaman terlebih dahulu. Anda bisa menyampaikan secara baik-baik bahwa saat ini Anda sedang kesulitan membayar dan tetap akan mencicil utang sebagaimana disepakati di awal. Sebagai iktikad baik, Anda bisa membuat surat perjanjian mencicil utang atau kesepakatan utang dan pembayarannya secara tertulis."
+      ],
+      "tag": "restrukturisasi kredit"
+    },
+    {
+      "patterns": "Sebuah transaksi utang piutang di sektor e-commerce mengalami perselisihan terkait dengan pengembalian barang. Bagaimana hukum mengatasi perselisihan ini dalam konteks e-commerce?",
+      "responses": "Perselisihan terkait pengembalian barang dalam e-commerce diatur oleh Undang-Undang Nomor 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik (UU ITE) serta peraturan perlindungan konsumen. Hukum memberikan hak kepada konsumen untuk mengembalikan barang sesuai dengan ketentuan yang berlaku.",
+      "tag": "Sengketa E-commerce"
+    },
+    {
+      "patterns": ["Sebuah perusahaan mengalami sengketa utang piutang dengan mitra bisnisnya yang berlokasi di luar negeri. Bagaimana hukum internasional dapat memengaruhi penyelesaian sengketa ini?",
+      "Seorang pelaku usaha terlibat dalam transaksi utang piutang dengan perusahaan multinasional. Bagaimana hukum internasional dapat memengaruhi transaksi ini?"
+      ],
+      "responses": ["Hukum internasional dapat memengaruhi penyelesaian sengketa melalui mekanisme arbitrase internasional atau perjanjian bilateral. Pihak yang terlibat dapat memutuskan untuk menyelesaikan sengketa di luar pengadilan nasional, sesuai dengan ketentuan yang diatur oleh hukum internasional.",
+      "Hukum internasional dapat memengaruhi transaksi utang piutang dengan perusahaan multinasional melalui peraturan-peraturan internasional dan perjanjian bilateral antara negara-negara yang terlibat."
+      ],
+      "tag": "Sengketa Internasional"
+    },
+    {
+      "patterns": ["Seorang konsumen mengalami perselisihan dengan pemberi utang terkait pelunasan utang piutang. Apa yang diatur oleh hukum perlindungan konsumen dalam konteks ini?",
+      "Saya mendapat tekanan melalui surat dari pihak leasing X. Saya diminta melunasi sisa utang kredit mobil saya, padahal mobil tersebut sudah saya serahkan/ditarik oleh pihak leasing X tersebut.",
+      "Saya sedang terlilit banyak utang namun saya tidak mampu melunasi utang tersebut beserta bunganya pada tenggat waktu yang telah disepakati. Kemudian, rentenir yang meminjamkan uang kepada saya memaksa saya untuk menandatangani surat pernyataan yang berisi kesediaan saya untuk memberikan salah satu ginjal saya kepada rentenir yang bersangkutan jika saya tidak melunasi utang-utang saya bulan depan. Jika saya terpaksa menandatangani surat itu, apakah perjanjian itu sah di mata hukum?",
+      "Jadi begini, si A punya utang kepada si B. Hubungan antara si A dan B ini hanya terkait masalah utang saja, tidak ada yang lain. Masalah 1: Si B membeli barang dengan metode cicilan, perbuatan si B ini tidak ada kaitannya sama sekali dengan si A. Barang si B tersebut dipakai 100% untuk keperluan pribadinya. Masalah 2: Seperti yang saya jelaskan di atas, si A punya utang ke si B. Namun, si A sedang punya masalah yakni belum bisa membayar utang yang ia miliki kepada si B. Masalah 3: Si B menjelaskan bahwa barang yang ia beli dengan cicilan menjadi terhambat pembayarannya karena si A belum membayar utangnya, alhasil cicilan si B tersebut dikenakan denda. Masalah utama: Karena masalah-masalah yang timbul di atas, si B secara sepihak membuat keputusan agar semua denda terkait cicilan barang tersebut menjadi tanggung jawab si A (menjadi utang si A). Bagaimana pandangan hukum terkit masalah di atas? Apakah si B berhak secara sepihak untuk melakukan hal tersebut?",
+      "pada tahun 2016 ada teman dekat saya yang meminjam kartu kredit saya untuk membeli berbagai macam kebutuhannya, awalnya setiap bulan dia selalu membayar tagihannya tapi, pada tahun 2017 sampai sekarang (Desember 2018) dia sudah tidak membayar tagihannya. Saya sudah tagih berkali-kali tapi dia selalu mengulur waktu, saya tagih ke orang tuanya tapi tidak mau tahu dan pada bulan Juli 2018 dia mengambil laptop saya tanpa izin dan tidak dikembalikan sampai sekarang (bisa dikatakan mencuri). Apakah saya bisa melaporkannya ke pihak berwajib? Karena saya sangat dirugikan tapi sayangnya saya tidak punya bukti hanya punya saksi."
+      ],
+      "responses": ["Hukum perlindungan konsumen, seperti Undang-Undang Nomor 8 Tahun 1999, memberikan hak kepada konsumen untuk dilayani dengan jujur dan adil. Jika terjadi perselisihan terkait pelunasan utang piutang, konsumen dapat menggunakan mekanisme penyelesaian sengketa konsumen yang diatur oleh hukum tersebut.",
+      "Pada dasarnya, suatu perjanjian tidak boleh dibuat atas suatu paksaan dan isi perjanjian tersebut tidak boleh bertentangan dengan undang-undang, kesusilaan, dan ketertiban umum.\n\nDalam hal perjanjian ditandatangani atas dasar paksaan, maka unsur sepakat tidak terpenuhi. Konsekuensinya, perjanjian tersebut menjadi batal sebagaimana disebut dalam Pasal 1323 Kitab Undang-Undang Hukum Perdata. Namun, adanya paksaan tersebut harus dapat dibuktikan.",
+      "Suatu perjanjian menimbulkan suatu perikatan, yang mana dalam hal ini suatu hubungan hukum antara 2 (dua) pihak. Jika salah satu pihak tidak memenuhi kewajibannya dalam perjanjian, maka ia wajib memberikan penggantian biaya, rugi, dan bunga, yang mulai berlaku pada saat pihak tersebut tetap lalai untuk memenuhi perikatan meskipun telah dinyatakan lalai.",
+      "Penggunaan kartu kredit oleh teman Anda dilakukan atas dasar kesepakatan dan pengetahuan Anda. Teman Anda pada tahun 2016 sampai 2017 membayar tagihan pemakaian kartu kepada Anda, namun sejak tahun 2017 sampai 2018 ia masih menggunakan kartu kredit tapi tidak membayar tagihannya kepada Anda. Hal itu berarti teman Anda telah melakukan wanprestasi perjanjian (tidak membayar tagihan kartu kredit yang ia pakai pada Anda) dan Anda berhak memperoleh ganti kerugian.\n \nAtas tindakan teman Anda tersebut, Anda tidak dapat melaporkan perbuatannya ini ke polisi melainkan menggugatnya melalui pengadilan atas dasar perbuatan wanprestasi. Tetapi, tindakan teman Anda yang mengambil laptop Anda dapat dilaporkan ke polisi atas dasar tindak pidana pencurian."
+      ],
+      "tag": "sengketa pelunasan"
+    },
+    {
+      "patterns": "Sebuah perusahaan yang menerima utang piutang dari pelanggan ingin melibatkan lembaga penyelesaian sengketa konsumen. Apakah ini memungkinkan?",
+      "responses": "Ya, lembaga penyelesaian sengketa konsumen, seperti Badan Penyelesaian Sengketa Konsumen (BPSK), dapat digunakan sebagai mekanisme penyelesaian sengketa antara perusahaan dan konsumen sesuai dengan ketentuan Undang-Undang Nomor 8 Tahun 1999 tentang Perlindungan Konsumen.",
+      "tag": "Sengketa Piutang"
+    },
+    {
+      "patterns": ["Sebuah transaksi utang piutang antara dua perusahaan Indonesia melibatkan mata uang asing. Bagaimana penyelesaian hukumnya?",
+      "Dua pihak terlibat dalam transaksi utang piutang di sektor e-commerce, namun terjadi perselisihan terkait pelaksanaan perjanjian. Bagaimana penyelesaian hukumnya?",
+      "Seorang perusahaan yang memberikan utang piutang ingin mengetahui kewajibannya terkait pelaporan kredit kepada lembaga pemantau kredit. Apa yang diatur oleh hukum terkait pelaporan kredit?",
+      "Seorang pemberi utang ingin mengetahui bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan mata uang asing. Apa yang diatur oleh hukum terkait transaksi valuta asing?",
+      "Seorang konsumen tidak puas dengan pelayanan pemberi utang terkait transaksi utang piutang. Bagaimana hukum mengatasi perselisihan ini?"
+      ],
+      "responses": ["Penyelesaian hukumnya dapat melibatkan regulasi Otoritas Jasa Keuangan (OJK) dan peraturan Bank Indonesia terkait transaksi valuta asing. Kontrak utang piutang harus memperhatikan fluktuasi kurs mata uang asing dan ketentuan hukum yang berlaku.",
+      "Penyelesaian hukumnya dapat melibatkan Undang-Undang Nomor 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik (UU ITE) serta peraturan perlindungan konsumen yang berlaku. Pihak dapat menggunakan mekanisme penyelesaian sengketa konsumen atau, jika diperlukan, pengadilan.",
+      "Hukum terkait pelaporan kredit diatur oleh Otoritas Jasa Keuangan (OJK) dan mungkin mencakup kewajiban lembaga keuangan untuk menyampaikan informasi kredit kepada lembaga pemantau kredit atau pihak yang berwenang.",
+      "Hukum mengatasi perjanjian utang piutang yang melibatkan mata uang asing mencakup regulasi transaksi valuta asing dan ketentuan-ketentuan yang mengatur kewajiban pembayaran dalam mata uang asing. Bank Indonesia juga memiliki peran dalam mengawasi transaksi valuta asing.",
+      "Hukum perlindungan konsumen mengatur hak konsumen terkait pelayanan pemberi utang. Konsumen dapat menggunakan mekanisme penyelesaian sengketa konsumen atau, jika diperlukan, mengajukan gugatan ke pengadilan sesuai dengan Undang-Undang Nomor 8 Tahun 1999."
+      ],
+      "tag": "Sengketa Transaksi"
+    },
+    {
+      "patterns": ["Seorang kreditur ingin mengetahui prosedur penyitaan aset jika pihak yang berutang tidak dapat melunasi utangnya. Bagaimana prosedur tersebut diatur oleh hukum?",
+      "Seorang individu ingin mengetahui hak-haknya sebagai konsumen terkait pelunasan utang piutang. Apa yang diatur oleh hukum perlindungan konsumen terkait hak-hak ini?",
+      "Seorang pemberi utang ingin mengetahui bagaimana hukum mengatasi ketidaksetujuan atas nilai utang dalam perjanjian. Apa mekanisme yang dapat digunakan untuk menyelesaikan ketidaksetujuan ini?",
+      "Seorang petani mengalami masalah dalam penyelesaian utang piutang yang melibatkan pertanian. Bagaimana hukum mengatasi penyelesaian utang piutang di sektor pertanian?",
+      "Pada tahun 2022, paman saya meminjam uang sebesar Rp1 miliar dari saya dengan perjanjian akan digunakan untuk keperluan usaha. Namun, setelah menerima uang tersebut, paman saya tidak menggunakan uang tersebut untuk usaha dan justru menggunakan uang tersebut untuk keperluan pribadi. Apa yang harus dilakukan?",
+      "Pada tahun 2023, ada seseorang yang meminjam uang sebesar Rp5 juta kepada dengan mengatakan bahwa uang tersebut akan digunakan untuk keperluan usaha. Namun, setelah menerima uang tersebut, orang tersebut tidak pernah menggunakan uang tersebut untuk usaha dan justru digunakan untuk keperluan pribadi. Apa yang harus saya lakukan?",
+      "Bolehkah bayar utang yang berbentuk barang diganti dengan uang? Misalnya, saya dulu meminjam beras ke tetangga. Kemudian beras tersebut nantinya saya ganti dengan uang.",
+      "Saya membeli kendaraan secara kredit dalam jangka waktu 5 tahun sejak November 2019. Perusahaan tempat saya membeli tersebut berbasis syariah di mana pembayaran cicilan langsung ke perusahaan tersebut. Nama dalam STNK masih merupakan nama perusahaan tersebut hingga lunas, lalu barulah balik nama. Ada surat perjanjian balik nama di kontrak jual beli. Namun pertengahan tahun ini perusahaan tersebut digugat pailit oleh para investornya. Apabila perusahaan tersebut pailit, bagaimanakah nasib unit kendaraan yang sedang saya cicil? Sementara record cicilan saya bagus dan sudah masuk 24 bulan. Terima kasih.",
+      "Apakah benda yang kita beli secara kredit sudah termasuk menjadi hak milik yang sah?",
+      "Dalam Hukum Perdata diatur mengenai gugatan. Apakah seorang suami bisa menggugat istrinya atas dasar Perbuatan Melawan Hukum? Dalam Kasus ini hubungan suami istri masih sah dan masih memiliki ikatan suami istri. Duduk perkara: istri melakukan penandatanganan perjanjian kredit tanpa izin suami yang mengakibatkan timbulnya kerugian seiring perjanjian tersebut berjalan.",
+      "Jika seorang melakukan perbuatan melawan hukum, kemudian pengadilan negeri memutuskan agar tergugat membayar sejumlah uang kepada penggugat, apakah sejumlah uang tersebut dapat dianggap sebagai utang?",
+      "Saya bekerja di perusahaan swasta sebagai sales dan saat ini saya mempunyai masalah dengan salah satu customer saya yang lokasinya di kota Tegal, sedangkan saya kerja di Surabaya. Customer saya punya tunggakan hutang. Saya sudah hubungi nomor HP dan BBMnya tetapi tidak bisa. Saya juga sudah kirimkan surat tagihan ke-2 dan belum ada tanggapan. Pertanyaan saya adalah apakah hutang customer tersebut menjadi tanggung jawab saya sepenuhnya? Sedangkan mulai dari awal saya masuk kerja di perusahaan tidak ada perjanjian mengenai hutang customer menjadi tanggung jawab sales.",
+      "Apakah bisa dipidana untuk orang yang berhutang kepada saya?",
+      "Siapa yang dapat diajukan sebagai saksi dalam perkara perdata?",
+      "Saya menggadaikan BPKB motor. Kemudian motor saya hilang dicuri (menurut pihak bank motor saya tersebut tidak diasuransikan) Pertanyaanya : Apakah saya harus terus menyicil sisa utang saya?"
+      ],
+      "responses": ["Prosedur penyitaan aset diatur oleh KUHPerdata dan Undang-Undang Nomor 4 Tahun 1996 tentang Hak Tanggungan Atas Tanah Beserta Benda-Benda yang Berkaitan dengan Tanah. Kreditur dapat mengajukan permohonan penyitaan aset ke pengadilan jika terdapat wanprestasi dalam pelunasan utang.",
+      "Hak-hak konsumen terkait pelunasan utang piutang diatur oleh Undang-Undang Nomor 8 Tahun 1999 tentang Perlindungan Konsumen. Konsumen memiliki hak untuk mendapatkan informasi yang jelas mengenai utang piutang, termasuk hak untuk dilayani dengan jujur dan adil.",
+      "Ketidaksetujuan atas nilai utang dalam perjanjian utang piutang dapat diselesaikan melalui negosiasi antara pihak-pihak yang terlibat atau melalui mekanisme alternatif penyelesaian sengketa seperti mediasi. Jika tidak ada kesepakatan, nilai utang dapat ditentukan oleh pengadilan berdasarkan fakta dan bukti yang ada.",
+      "Penyelesaian utang piutang di sektor pertanian diatur oleh hukum agraria dan peraturan-peraturan terkait pertanian. Proses penyelesaian ini dapat melibatkan aspek-aspek seperti pendaftaran tanah, agunan, dan mekanisme penyelesaian sengketa agraria."
+      ],
+      "tag": "studi kasus hutang piutang"
+    },
+    {
+      "patterns": ["Seorang pengusaha (Pemberi Utang) memberikan pinjaman kepada rekan bisnisnya (Penerima Utang) untuk pengembangan usaha. Setelah beberapa bulan, Penerima Utang tidak dapat membayar kembali pinjaman tersebut. Bagaimana penyelesaian hukumnya?",
+      "Seorang konsumen melakukan pembelian barang secara kredit namun gagal membayar cicilan sesuai jadwal. Bagaimana penyelesaian hukumnya?",
+      "Sebuah perusahaan meminjam uang dari bank untuk ekspansi bisnis, namun mengalami kesulitan keuangan dan tidak dapat melunasi kewajiban pembayaran. Bagaimana penanganan hukumnya?",
+      "Dua perusahaan melakukan transaksi utang piutang yang melibatkan penggunaan jaminan hipotek atas tanah. Jika salah satu pihak wanprestasi, apa konsekuensi hukumnya?",
+      "Seorang konsumen tidak setuju dengan jumlah utang yang tercantum dalam tagihan dan menolak untuk membayarnya. Bagaimana hukum mengatasi ketidaksetujuan ini?",
+      "Seorang pemberi utang meninggalkan negara tanpa membayar utangnya. Bagaimana penyelesaian hukumnya?",
+      "Seorang pelaku usaha menjual barang secara kredit kepada pelanggan tetapi mengalami kesulitan dalam melakukan penagihan. Bagaimana langkah hukum yang dapat diambil oleh pelaku usaha?",
+      "Seorang konsumen tidak puas dengan kualitas barang yang dibelinya secara kredit dan ingin mengajukan gugatan. Apa dasar hukum yang dapat digunakan oleh konsumen?",
+      "Seorang pihak yang berutang meninggalkan negara tanpa membayar utangnya. Bagaimana hukum mengatasi situasi ini dan melakukan pengejaran hukum internasional?"
+      ],
+      "responses": ["Jika Penerima Utang tidak dapat membayar pinjaman, Pemberi Utang dapat mengambil langkah-langkah hukum seperti mengajukan gugatan di pengadilan berdasarkan ketentuan perjanjian pinjaman dan Kitab Undang-Undang Hukum Perdata (KUHPerdata).",
+      "Dalam kasus ini, penyelesaian hukum dapat melibatkan Undang-Undang Nomor 8 Tahun 1999 tentang Perlindungan Konsumen. Pemberi Utang dapat mengajukan tuntutan hukum terkait wanprestasi dan memiliki hak untuk menuntut pembayaran sesuai dengan perjanjian.",
+      "Penanganan hukumnya dapat melibatkan Undang-Undang Nomor 21 Tahun 2011 tentang Otoritas Jasa Keuangan (OJK). Bank memiliki hak untuk mengambil tindakan, termasuk pengajuan gugatan untuk penyelesaian utang piutang berdasarkan perjanjian kredit.",
+      "Konsekuensi hukumnya dapat diatur dalam Kitab Undang-Undang Hukum Perdata (KUHPerdata) dan Undang-Undang Nomor 4 Tahun 1996 tentang Hak Tanggungan Atas Tanah Beserta Benda-Benda yang Berkaitan dengan Tanah. Pihak yang terkena wanprestasi dapat dikenai sanksi, termasuk penyitaan aset yang dijamin hipotek.",
+      "Hukum mengatasi ketidaksetujuan dapat melibatkan proses negosiasi antara pihak-pihak yang terlibat atau penyelesaian sengketa melalui mekanisme alternatif seperti mediasi. Jika tidak ada kesepakatan, pengadilan dapat menentukan jumlah utang berdasarkan fakta dan bukti yang ada.",
+      "Penyelesaian hukumnya dapat melibatkan proses hukum internasional dan pengadilan di negara pemberi utang atau proses pengejaran hukum untuk memulihkan utang dari luar negeri sesuai dengan hukum yang berlaku.",
+      "Hukum mengatur bahwa pelaku usaha dapat mengambil langkah-langkah penagihan utang, seperti mengirimkan peringatan tertulis dan, jika perlu, mengajukan gugatan di pengadilan berdasarkan perjanjian jual beli dan ketentuan KUHPerdata.",
+      "Konsumen dapat menggunakan dasar hukum Undang-Undang Nomor 8 Tahun 1999 tentang Perlindungan Konsumen. Konsumen memiliki hak untuk mengajukan gugatan terkait dengan barang yang tidak sesuai dengan standar atau kualitas yang dijanjikan.",
+      "Hukum mengatasi situasi di mana pihak yang berutang meninggalkan negara tanpa membayar utangnya melibatkan proses pengejaran hukum internasional. Ini dapat melibatkan kerjasama antarnegara dan proses hukum untuk memulihkan utang sesuai dengan hukum yang berlaku."
+      ],
+      "tag": "wanprestasi"
+    },
+    {
+      "patterns": "Bagaimana hukum melibatkan perjanjian utang piutang yang melibatkan perdagangan internasional?",
+      "responses": "Perjanjian utang piutang yang melibatkan perdagangan internasional diatur oleh hukum internasional perdagangan dan perjanjian internasional yang mengatur perdagangan antar negara-negara.",
+      "tag": "hukum internasional"
+    },
+    {
+      "patterns": ["Bagaimana hukum mengatur penanganan informasi pribadi dalam kasus utang piutang?",
+        "Apakah ada undang-undang khusus untuk perlindungan konsumen dalam utang piutang?",
+        "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan klausul privasi dan perlindungan data?",
+        "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan kewajiban informasi dan pemberitahuan?",
+        "Bagaimana hukum melibatkan perjanjian utang piutang yang melibatkan kewajiban audit atau pemeriksaan?",
+        "Bagaimana hukum melibatkan perjanjian utang piutang yang melibatkan kewajiban pengungkapan informasi keuangan?",
+        "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan kewajiban kerahasiaan?",
+        "Bagaimana hukum melibatkan perjanjian utang piutang yang melibatkan kewajiban pengungkapan konflik kepentingan?"
+      ],
+      "responses": ["Penanganan informasi pribadi dalam kasus utang piutang diatur oleh Undang-Undang Nomor 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik yang melibatkan perlindungan data pribadi.",
+      "Ya Undang-Undang Nomor 8 Tahun 1999 tentang Perlindungan Konsumen memberikan dasar hukum untuk perlindungan konsumen dalam transaksi utang piutang termasuk aturan terkait informasi dan hak konsumen.",
+      "Klausul privasi dan perlindungan data dalam perjanjian utang piutang diatur oleh hukum yang mengatur privasi dan perlindungan data, dan dapat mencakup ketentuan-ketentuan terkait pengumpulan, penggunaan, dan pengungkapan informasi pribadi.",
+      "Perjanjian utang piutang yang melibatkan kewajiban informasi dan pemberitahuan diatur oleh hukum yang mengatur kontrak, dan dapat mencakup ketentuan-ketentuan terkait isi, waktu, dan cara pemberian informasi dan pemberitahuan antara pihak.",
+      "Hukum mengatur perjanjian utang piutang yang melibatkan kewajiban audit atau pemeriksaan, termasuk ketentuan-ketentuan yang mengatur hak dan kewajiban pihak yang diaudit, ruang lingkup audit, dan pelaksanaan hasil audit.",
+      "Hukum mengatur perjanjian utang piutang yang melibatkan kewajiban pengungkapan informasi keuangan, termasuk ketentuan-ketentuan yang mengatur jenis informasi yang harus diungkapkan, waktu pengungkapan, dan dampak hukum dari pelanggaran kewajiban pengungkapan.",
+      "Perjanjian utang piutang yang melibatkan kewajiban kerahasiaan diatur oleh hukum yang mengatur konfidensialitas, dan dapat mencakup ketentuan-ketentuan terkait informasi yang harus dirahasiakan, durasi kewajiban kerahasiaan, dan sanksi atas pelanggaran kerahasiaan.",
+      "Hukum mengatur perjanjian utang piutang yang melibatkan kewajiban pengungkapan konflik kepentingan, termasuk ketentuan-ketentuan yang mengatur situasi-situasi yang memerlukan pengungkapan, isi pengungkapan, dan konsekuensi hukum dari pelanggaran kewajiban pengungkapan konflik kepentingan."
+      ],
+      "tag": "identitas"
+    },
+    {
+      "patterns": ["Bagaimana prosedur penyitaan aset dalam penyelesaian utang piutang?",
+      "Bagaimana peran dokumen jaminan dalam utang piutang?",
+      "Bagaimana hukum mengatasi utang piutang yang melibatkan pemberian jaminan dari pihak ketiga?",
+      "Apa yang diatur oleh hukum terkait perjanjian utang piutang dengan jaminan hipotek?",
+      "Bagaimana hukum mengatasi utang piutang yang melibatkan pemberian jaminan dari pihak ketiga?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan barang milik pihak ketiga sebagai jaminan?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan jaminan asuransi?",
+      "Bagaimana hukum melibatkan perjanjian utang piutang yang melibatkan pemberian hak tanggungan atau hipotek?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan jaminan keamanan atau collateral?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan penjaminan?",
+      "Bagaimana hukum melibatkan perjanjian utang piutang yang melibatkan kewajiban pemberian jaminan performa?"
+      ],
+      "responses": ["Prosedur penyitaan aset melibatkan langkah-langkah hukum untuk menyita aset penerima utang sebagai jaminan atau untuk melunasi utang. Proses ini dapat diatur oleh undang-undang kepailitan atau perjanjian kredit.",
+      "Dokumen jaminan seperti surat pernyataan atau agunan dapat digunakan sebagai bentuk jaminan atas pelunasan utang. Dalam kasus wanprestasi dokumen ini dapat menjadi dasar hukum untuk penyitaan aset atau pelaksanaan paksa.",
+      "Jika utang piutang melibatkan pemberian jaminan dari pihak ketiga hukum mengatur prosedur dan hak-hak pihak-pihak yang terlibat. Dokumen-dokumen jaminan harus disusun dengan cermat sesuai ketentuan hukum yang berlaku.",
+      "Perjanjian utang piutang dengan jaminan hipotek diatur oleh hukum yang mencakup ketentuan-ketentuan mengenai pendaftaran hipotek hak dan kewajiban pihak-pihak yang terlibat serta prosedur pelaksanaan jaminan hipotek jika terjadi wanprestasi.",
+      "Jika utang piutang melibatkan pemberian jaminan dari pihak ketiga, hukum mengatur prosedur dan hak-hak pihak-pihak yang terlibat. Dokumen-dokumen jaminan harus disusun dengan cermat sesuai ketentuan hukum yang berlaku.",
+      "Jika perjanjian utang piutang melibatkan barang milik pihak ketiga sebagai jaminan, hukum mengatur hak dan kewajiban pihak-pihak terkait serta prosedur penyelesaian jika terjadi penyitaan jaminan.",
+      "Perjanjian utang piutang yang melibatkan jaminan asuransi diatur oleh hukum yang mengatur asuransi, dan dapat mencakup ketentuan mengenai klaim asuransi dan prosedur penyelesaian sengketa terkait jaminan asuransi.",
+      "Perjanjian utang piutang yang melibatkan pemberian hak tanggungan atau hipotek diatur oleh hukum yang mengatur hak tanggungan atau hipotek, dan dapat mencakup ketentuan-ketentuan mengenai hak dan kewajiban pihak-pihak terkait hak tanggungan atau hipotek tersebut.",
+      "Perjanjian utang piutang yang melibatkan jaminan keamanan atau collateral diatur oleh hukum yang mengatur jaminan keamanan, dan dapat mencakup ketentuan-ketentuan terkait jenis jaminan, pendaftaran jaminan, dan hak-hak pihak yang terkait dengan jaminan tersebut.",
+      "Perjanjian utang piutang yang melibatkan penjaminan diatur oleh hukum yang mengatur transaksi penjaminan, dan dapat mencakup ketentuan-ketentuan terkait hak dan kewajiban penjamin, serta kondisi-kondisi yang memicu tanggung jawab penjamin.",
+      "Perjanjian utang piutang yang melibatkan kewajiban pemberian jaminan performa diatur oleh hukum yang mengatur jaminan performa, dan dapat mencakup ketentuan-ketentuan terkait jenis jaminan, persyaratan pemberian, dan hak-hak pihak yang terkait dengan jaminan performa."
+      ],
+      "tag": "jaminan"
+    },
+    {
+      "patterns": ["Bagaimana proses penagihan utang diatur jika penerima utang dinyatakan pailit?",
+      "Apa tindakan hukum yang dapat diambil dalam kasus kebangkrutan penerima utang?",
+      "Apa konsekuensi hukum jika terdapat perubahan kondisi ekonomi yang signifikan dalam kasus utang piutang?"
+      ],
+      "responses": ["Jika penerima utang dinyatakan pailit proses penagihan utang dapat melibatkan proses kepailitan. Kreditor dapat mengajukan klaim sebagai pihak yang memiliki piutang dalam proses pailit untuk mendapatkan pembayaran sesuai dengan urutan prioritas yang diatur oleh undang-undang.",
+      "Dalam kasus kebangkrutan penerima utang tindakan hukum dapat melibatkan proses kepailitan yang diatur dalam Undang-Undang Nomor 37 Tahun 2004 tentang Kepailitan dan Penundaan Kewajiban Pembayaran Utang.",
+      "Perubahan kondisi ekonomi yang signifikan dapat memberikan dasar bagi pemberi utang atau penerima utang untuk mengajukan perubahan perjanjian utang piutang. Pengadilan juga dapat mempertimbangkan perubahan ini dalam menilai kasus wanprestasi atau restrukturisasi utang."
+      ],
+      "tag": "kepailitan"
+    },
+    {
+      "patterns": ["Apa yang diatur oleh hukum terkait pelaporan kredit dan penilaian risiko kredit dalam transaksi utang piutang?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan pembayaran dengan kartu kredit?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan kredit konsumen?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan pembayaran angsuran?",
+      "Bagaimana hukum melibatkan perjanjian utang piutang yang melibatkan penjualan kredit?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan pembayaran dengan kartu kredit?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan pembayaran dengan angsuran atau cicilan?"
+      ],
+      "responses": ["Hukum terkait pelaporan kredit dan penilaian risiko kredit dalam transaksi utang piutang diatur oleh Otoritas Jasa Keuangan (OJK) dan mungkin mencakup kewajiban lembaga keuangan untuk menyampaikan informasi kredit kepada lembaga pemantau kredit.",
+      "Perjanjian utang piutang yang melibatkan pembayaran dengan kartu kredit diatur oleh hukum yang mengatur transaksi kartu kredit, dan dapat mencakup ketentuan mengenai biaya bunga dan syarat-syarat penggunaan kartu kredit.",
+      "Perjanjian utang piutang yang melibatkan kredit konsumen diatur oleh hukum yang mengatur perlindungan konsumen dan transaksi kredit konsumen, dan dapat mencakup ketentuan-ketentuan terkait informasi yang harus disediakan kepada konsumen dan hak-hak konsumen.",
+      "Perjanjian utang piutang yang melibatkan pembayaran angsuran diatur oleh hukum yang mengatur transaksi kredit dan pembayaran angsuran, dan dapat mencakup ketentuan-ketentuan terkait jadwal pembayaran, denda keterlambatan, dan hak-hak kreditur dan debitur.",
+      "Perjanjian utang piutang yang melibatkan penjualan kredit diatur oleh hukum yang mengatur transaksi penjualan dan kredit, dan dapat mencakup ketentuan-ketentuan terkait syarat-syarat pembayaran, risiko kredit, dan hak-hak penjual dan pembeli.",
+      "Perjanjian utang piutang yang melibatkan pembayaran dengan kartu kredit diatur oleh hukum yang mengatur transaksi kartu kredit, dan dapat mencakup ketentuan-ketentuan terkait tingkat bunga, biaya kartu kredit, dan hak-hak pihak yang terlibat dalam transaksi kartu kredit.",
+      "Perjanjian utang piutang yang melibatkan pembayaran dengan angsuran atau cicilan diatur oleh hukum yang mengatur transaksi kredit, dan dapat mencakup ketentuan-ketentuan terkait jadwal pembayaran, besaran cicilan, dan konsekuensi keterlambatan pembayaran cicilan."
+      ],
+      "tag": "kredit"
+    },
+    {
+      "patterns": ["Bagaimana hukum mengatur pembayaran utang yang jatuh tempo?",
+      "Bagaimana aturan hukum terkait pembayaran bunga dalam kontrak hutang piutang?",
+      "Apa tindakan hukum yang dapat diambil jika pihak yang berhutang tidak membayar sesuai dengan perjanjian?",
+      "Bagaimana hukum melibatkan perjanjian utang piutang yang melibatkan kewajiban pembayaran bunga?",
+      "Bagaimana hukum melibatkan perjanjian utang piutang yang melibatkan risiko gagal bayar?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan pembayaran dengan surat berharga?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan pembayaran dengan uang tunai?",
+      "Bagaimana hukum melibatkan perjanjian utang piutang yang melibatkan pembayaran dengan transfer elektronik?"
+      ],
+      "responses": ["Hukum mengatur pembayaran utang yang jatuh tempo dengan menentukan waktu yang dianggap sebagai tenggang waktu yang wajar untuk melakukan pembayaran. Pembayaran yang dilakukan setelah batas waktu tersebut dapat dianggap sebagai wanprestasi.",
+      "Aturan pembayaran bunga diatur dalam perjanjian antara pihak-pihak yang terlibat dan dapat bervariasi.",
+      "Tindakan hukum dapat berupa gugatan hukum untuk memaksa pembayaran, penjualan hak tagih, atau proses penagihan lainnya sesuai dengan hukum.",
+      "Perjanjian utang piutang yang melibatkan kewajiban pembayaran bunga diatur oleh hukum yang mengatur transaksi keuangan dan kewajiban pembayaran bunga, dan dapat mencakup ketentuan-ketentuan terkait tingkat bunga, perhitungan bunga, dan waktu pembayaran bunga.",
+      "Perjanjian utang piutang yang melibatkan risiko gagal bayar diatur oleh hukum yang mengatur risiko kredit dan transaksi keuangan, dan dapat mencakup ketentuan-ketentuan terkait mitigasi risiko, pemberitahuan risiko, dan hak-hak pihak terkait risiko gagal bayar.",
+      "Hukum mengatur perjanjian utang piutang yang melibatkan pembayaran dengan surat berharga, termasuk ketentuan-ketentuan yang mengatur penyelesaian transaksi, hak pihak yang terlibat, dan implikasi hukum dari penggunaan surat berharga.",
+      "Perjanjian utang piutang yang melibatkan pembayaran dengan uang tunai diatur oleh hukum yang mengatur transaksi uang tunai, dan dapat mencakup ketentuan-ketentuan terkait penerimaan uang tunai, kewajiban pihak yang menerima uang tunai, dan rekam jejak transaksi uang tunai.",
+      "Hukum mengatur perjanjian utang piutang yang melibatkan pembayaran dengan transfer elektronik, termasuk ketentuan-ketentuan yang mengatur metode transfer, tanggung jawab pihak yang terlibat, dan keamanan transaksi elektronik."
+      ],
+      "tag": "masalah pelunasan"
+    },
+    {
+      "patterns": "Bagaimana proses penyelidikan fraud terkait utang piutang?",
+      "responses": "Proses penyelidikan fraud melibatkan pengumpulan bukti terkait dugaan kecurangan dalam kasus utang piutang. Penyelidikan tersebut dapat melibatkan pihak berwenang seperti kepolisian dan harus dilakukan sesuai dengan hukum acara pidana yang berlaku di Indonesia.",
+      "tag": "penipuan"
+    },
+    {
+      "patterns": ["Bagaimana hukum melibatkan lembaga keuangan non-bank dalam utang piutang?",
+      "Apakah ada ketentuan hukum khusus untuk utang piutang di sektor perbankan?",
+      "Apa peran Bank Indonesia dalam mengatur utang piutang?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan pembayaran dengan cek atau bilyet giro?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan lembaga keuangan syariah?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan pembayaran dengan cek bank?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan pembayaran dengan transfer antarbank?"
+      ],
+      "responses": ["Lembaga keuangan non-bank diatur oleh Otoritas Jasa Keuangan (OJK) dan hukum-hukum terkait. Mereka harus mematuhi regulasi OJK dalam memberikan kredit atau terlibat dalam transaksi utang piutang.",
+      "Ya sektor perbankan diatur oleh Undang-Undang Nomor 21 Tahun 2011 tentang Otoritas Jasa Keuangan (OJK) yang mencakup aturan khusus terkait kredit dan utang piutang.",
+      "Bank Indonesia memiliki peran dalam mengatur aspek-aspek tertentu utang piutang yang melibatkan lembaga keuangan. Regulasi-regulasi yang dikeluarkan oleh Bank Indonesia dapat memengaruhi tata cara pemberian kredit dan penanganan utang piutang di sektor keuangan.",
+      "Hukum mengatur perjanjian utang piutang yang melibatkan pembayaran dengan cek atau bilyet giro, termasuk ketentuan-ketentuan yang mengatur kewajiban pembayaran dan konsekuensi ketika cek atau giro tersebut tidak dapat diuangkan.",
+      "Perjanjian utang piutang yang melibatkan lembaga keuangan syariah diatur oleh prinsip-prinsip hukum ekonomi syariah, dan dapat mencakup ketentuan-ketentuan yang sesuai dengan prinsip-prinsip tersebut.",
+      "Hukum mengatur perjanjian utang piutang yang melibatkan pembayaran dengan cek bank, termasuk ketentuan-ketentuan yang mengatur penerbitan cek, tanggung jawab penarikan, dan sanksi hukum atas cek tanpa cukup dana.",
+      "Perjanjian utang piutang yang melibatkan pembayaran dengan transfer antarbank diatur oleh hukum yang mengatur transaksi perbankan, dan dapat mencakup ketentuan-ketentuan terkait prosedur transfer, biaya transfer, dan tanggung jawab pihak yang terlibat dalam transaksi tersebut."
+      ],
+      "tag": "perbankan"
+    },
+    {
+      "patterns": ["Bagaimana tata cara pelaporan utang piutang antara perusahaan kepada Otoritas Jasa Keuangan (OJK)?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan perusahaan multinasional?"
+      ],
+      "responses": ["Perusahaan keuangan atau lembaga yang diawasi oleh OJK harus melaporkan utang piutang mereka sesuai dengan ketentuan yang berlaku.",
+      "Perjanjian utang piutang dengan perusahaan multinasional dapat melibatkan aspek-aspek hukum internasional dan perjanjian bilateral antara negara-negara yang terlibat. Penyelesaian sengketa dapat melibatkan mekanisme internasional seperti arbitrase internasional."
+      ],
+      "tag": "perusahaan"
+    },
+    {
+      "patterns": ["Bagaimana hukum mengatur perjanjian restrukturisasi utang?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan klausul pembatalan atau pengakhiran kontrak?",
+      "Bagaimana hukum melibatkan perjanjian utang piutang yang melibatkan perubahan syarat pembayaran?"
+      ],
+      "responses": ["Perjanjian restrukturisasi utang diatur oleh hukum yang mencakup negosiasi kembali ketentuan utang pembayaran dan syarat-syarat lainnya antara pemberi utang dan penerima utang untuk mengatasi kesulitan keuangan.",
+      "Klausul pembatalan atau pengakhiran kontrak dalam perjanjian utang piutang diatur oleh hukum yang mengatur kontrak dan dapat mencakup ketentuan-ketentuan terkait prosedur pembatalan, sanksi, dan hak-hak pihak yang terkena dampak pembatalan atau pengakhiran.",
+      "Perjanjian utang piutang yang melibatkan perubahan syarat pembayaran diatur oleh hukum yang mengatur kontrak, dan dapat mencakup ketentuan-ketentuan terkait persetujuan pihak, pemberitahuan perubahan, dan implikasi hukum dari perubahan syarat pembayaran."
+      ],
+      "tag": "restrukturisasi"
+    },
+    {
+      "patterns": ["Bagaimana hukum mengatur utang piutang dalam transaksi online?",
+      "Apa yang diatur oleh hukum terkait perjanjian utang piutang dalam sektor e-commerce?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan penggunaan escrow?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan pembayaran dengan uang elektronik atau digital?"
+      ],
+      "responses": ["Utang piutang dalam transaksi online diatur oleh Undang-Undang Nomor 19 Tahun 2016 tentang Perdagangan Elektronik dan Transaksi Elektronik (UU ITE) yang mencakup aspek-aspek seperti keabsahan perjanjian dan perlindungan konsumen.",
+      "Perjanjian utang piutang dalam sektor e-commerce diatur oleh Undang-Undang Nomor 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik (UU ITE) serta peraturan perundang-undangan lain yang berkaitan dengan perlindungan konsumen dan transaksi online.",
+      "Penggunaan escrow dalam perjanjian utang piutang diatur oleh hukum yang mengatur perjanjian escrow, dan dapat mencakup ketentuan-ketentuan mengenai pengelolaan dana escrow dan kondisi pengeluaran dana kepada pihak yang berhak.",
+      "Perjanjian utang piutang yang melibatkan pembayaran dengan uang elektronik atau digital diatur oleh hukum yang mengatur transaksi keuangan digital, dan dapat mencakup ketentuan-ketentuan terkait keamanan, otorisasi, dan tanggung jawab pihak yang terlibat dalam pembayaran tersebut."
+      ],
+      "tag": "sengketa e-commerce"
+    },
+    {
+      "patterns": ["Bagaimana proses pendaftaran hak atas tanah dalam kasus utang piutang?",
+      "Bagaimana proses penagihan utang diatur oleh hukum?",
+      "Bagaimana prosedur penagihan hutang secara hukum di Indonesia?",
+      "Bagaimana penyelesaian utang piutang di sektor pertanian diatur oleh hukum?",
+      "Bagaimana penyelesaian alternatif sengketa utang piutang dapat dilakukan?",
+      "Bagaimana pelibatan pemerintah dalam penyelesaian kasus utang piutang?",
+      "Bagaimana hukum mengatur utang piutang yang melibatkan pihak yang meninggal?",
+      "Bagaimana hukum mengatur reklamasi utang piutang?",
+      "Bagaimana hukum mengatasi ketidaksetujuan atas perjanjian utang piutang?",
+      "Bagaimana hukum mengatasi ketidaksetujuan atas nilai utang dalam perjanjian utang piutang?",
+      "Bagaimana hukum melibatkan penanganan utang piutang yang melibatkan pihak asing?",
+      "Apakah utang piutang dapat diselesaikan melalui mediasi?",
+      "Apakah ada perbedaan hukum utang piutang di Indonesia dan negara lain?",
+      "Apakah ada perbedaan dalam penanganan hukum hutang piutang antara perusahaan dan individu?",
+      "Apakah ada batas waktu tertentu untuk mengejar klaim hukum terkait hutang piutang di Indonesia?",
+      "Apa yang menjadi dasar hukum utama terkait perjanjian hutang piutang di Indonesia?",
+      "Apa yang dimaksud dengan utang piutang?",
+      "Apa yang dimaksud dengan putusan eksekusi dalam kasus utang piutang?",
+      "Apa yang diatur oleh hukum terkait transaksi utang piutang dengan instrumen keuangan derivatif?",
+      "Apa yang diatur oleh hukum terkait penanganan utang piutang yang melibatkan pihak yang tidak cakap hukum?",
+      "Apa perbedaan antara utang dan piutang?",
+      "Apa perbedaan antara surat perjanjian hutang piutang yang notarial dan yang tidak?",
+      "Apa peran OJK dalam kasus utang piutang?",
+      "Apa peran notaris dalam pembuatan akta utang piutang?",
+      "Apa peran lembaga penyelesaian sengketa konsumen dalam kasus utang piutang?",
+      "Apa peran Badan Arbitrase Konsumen Indonesia (BANI) dalam penyelesaian sengketa utang piutang?",
+      "Apa peran agen penagih utang?",
+      "Apa kewajiban penerima utang dalam merespons upaya penagihan utang?",
+      "Apa kewajiban pemberi utang dalam kasus utang piutang?",
+      "Apa itu Pinjaman Online?",
+      "Apa implikasi hukum jika terdapat ketidakjelasan dalam perjanjian utang piutang?",
+      "Apakah orang tua bertanggung jawab atas hutang anaknya?",
+      "Bagaimana hukum mengatur utang piutang yang melibatkan pihak yang meninggal?",
+      "Bagaimana hukum mengatasi ketidaksetujuan atas perjanjian utang piutang?",
+      "Bagaimana hukum mengatasi ketidaksetujuan atas nilai utang dalam perjanjian utang piutang?",
+      "Bagaimana hukum mengatasi default pembayaran dalam perjanjian utang piutang?",
+      "Bagaimana hukum mengatur perjanjian utang piutang yang melibatkan pembayaran angsuran?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan klausul pengakhiran secara sepihak?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan pemberian diskon atau potongan harga?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan klausul penyelesaian sengketa di luar pengadilan?",
+      "Bagaimana hukum melibatkan perjanjian utang piutang yang melibatkan pembiayaan peer-to-peer (P2P) lending?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan penggunaan jasa perantara keuangan?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan pembayaran dengan wesel bayar?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan kewajiban pembayaran biaya keterlambatan?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan penyelesaian sengketa di pengadilan?",
+      "Bagaimana hukum melibatkan perjanjian utang piutang yang melibatkan kewajiban pembayaran pajak?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan kewajiban penyimpanan catatan transaksi?",
+      "Bagaimana hukum melibatkan perjanjian utang piutang yang melibatkan penggunaan agen atau perantara?",
+      "Bagaimana hukum melibatkan perjanjian utang piutang yang melibatkan kewajiban asuransi?",
+      "Bagaimana hukum melibatkan perjanjian utang piutang yang melibatkan kewajiban keberlanjutan?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan kewajiban pembayaran bunga?",
+      "Bagaimana hukum melibatkan perjanjian utang piutang yang melibatkan penyelesaian sengketa?",
+      "Bagaimana hukum melibatkan perjanjian utang piutang yang melibatkan kewajiban pemberian izin?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan kewajiban pemeliharaan dan perbaikan?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan kewajiban penggantian rugi?",
+      "Bagaimana hukum melibatkan perjanjian utang piutang yang melibatkan kewajiban pembayaran pajak?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan kewajiban pemenuhan regulasi?",
+      "Bagaimana hukum melibatkan perjanjian utang piutang yang melibatkan kewajiban pemeliharaan dan perbaikan?"
+      ],
+      "responses": ["Proses pendaftaran hak atas tanah dalam kasus utang piutang diatur oleh Peraturan Pemerintah Republik Indonesia Nomor 24 Tahun 1997 tentang Pendaftaran Hak. Pendaftaran ini dapat melibatkan notaris untuk pembuatan akta yang sesuai dengan peraturan tersebut.",
+      "Proses penagihan utang diatur oleh hukum yang melibatkan peringatan tertulis upaya negosiasi dan jika diperlukan pengajuan gugatan di pengadilan.",
+      "Proses penagihan hutang melibatkan pemberian pemberitahuan tunggakan, upaya penyelesaian damai, dan jika perlu, pengajuan gugatan ke pengadilan.",
+      "Penyelesaian utang piutang di sektor pertanian diatur oleh hukum agraria dan peraturan-peraturan terkait pertanian. Proses penyelesaian ini dapat melibatkan aspek-aspek seperti pendaftaran tanah agunan dan mekanisme penyelesaian sengketa agraria.",
+      "Penyelesaian alternatif sengketa utang piutang dapat melibatkan mekanisme seperti arbitrase atau mediasi sesuai dengan Undang-Undang Nomor 30 Tahun 1999 tentang Arbitrase dan Alternatif Penyelesaian Sengketa.",
+      "Pemerintah dapat terlibat dalam menyelesaikan kasus utang piutang melalui lembaga-lembaga seperti Kementerian Keuangan atau BPKP untuk kasus yang melibatkan keuangan negara.",
+      "Ketika pihak yang berutang meninggal utang piutang dapat diwariskan kepada ahli warisnya. Proses penyelesaian dapat melibatkan prosedur hukum untuk penanganan warisan dan pembayaran utang dengan melibatkan pewaris.",
+      "Reklamasi utang piutang mengacu pada upaya pemulihan aset atau pembayaran utang melalui proses hukum. Hukum acara perdata diatur dalam Kitab Undang-Undang Hukum Perdata (KUHPerdata) dan dapat melibatkan proses peradilan untuk menentukan gugatan reklamasi.",
+      "Jika terdapat ketidaksetujuan atas perjanjian utang piutang hukum memberikan mekanisme penyelesaian sengketa. Pihak yang tidak setuju dapat menggunakan jalur hukum seperti mediasi atau arbitrase atau mengajukan gugatan di pengadilan untuk menyelesaikan perselisihan.",
+      "Ketidaksetujuan atas nilai utang dalam perjanjian utang piutang dapat diatasi melalui negosiasi antara pihak-pihak yang terlibat atau melalui mekanisme alternatif penyelesaian sengketa seperti mediasi. Jika tidak ada kesepakatan nilai utang dapat ditentukan oleh pengadilan berdasarkan fakta dan bukti yang ada.",
+      "Penanganan utang piutang yang melibatkan pihak asing diatur oleh hukum internasional dan perjanjian bilateral atau multilateral yang mungkin ada antara Indonesia dan negara pihak asing tersebut.",
+      "Ya utang piutang dapat diselesaikan melalui mediasi yang melibatkan pihak ketiga netral untuk membantu mencapai kesepakatan antara pemberi utang dan penerima utang tanpa melibatkan pengadilan.",
+      "Penanganan hukum dapat berbeda tergantung pada struktur hukum dan kontrak yang terlibat, namun prinsip-prinsip dasar hukum tetap berlaku.",
+      "Batas waktu untuk mengajukan klaim hukum dapat bervariasi tergantung pada jenis klaim dan peraturan yang berlaku. Namun, dalam KUHPerdata, batas waktu umumnya adalah lima tahun.",
+      "Dasar hukum utama adalah Kitab Undang-Undang Hukum Perdata (KUHPerdata), terutama dalam Bab IX mengenai Hutang Piutang.",
+      "Utang piutang adalah hubungan keuangan antara pemberi utang dan penerima utang di mana pemberi utang memiliki kewajiban untuk membayar dan penerima utang memiliki hak untuk menerima pembayaran.",
+      "Putusan eksekusi adalah keputusan pengadilan yang memerintahkan pelaksanaan paksa untuk menagih utang atau menjalankan keputusan pengadilan terkait utang piutang.",
+      "Hukum yang mengatur transaksi utang piutang dengan instrumen keuangan derivatif melibatkan peraturan-peraturan dari Otoritas Jasa Keuangan (OJK) dan ketentuan-ketentuan terkait pasar modal dan derivatif yang diatur oleh Bursa Efek Indonesia (BEI).",
+      "Hukum mengatur perlindungan khusus untuk pihak yang tidak cakap hukum seperti anak di bawah umur atau orang dengan gangguan mental. Penanganan utang piutang dengan pihak ini memerlukan pertimbangan khusus untuk melindungi kepentingan mereka.",
+      "Utang adalah kewajiban untuk membayar sementara piutang adalah hak untuk menerima pembayaran.",
+      "Surat perjanjian notarial dibuat di hadapan notaris dan memiliki kekuatan pembuktian yang tinggi, sementara surat perjanjian non-notarial tidak memerlukan notaris dan memiliki kekuatan pembuktian yang lebih rendah.",
+      "OJK mengatur lembaga keuangan termasuk bank dan memiliki peran dalam mengawasi transaksi keuangan termasuk perjanjian kredit dan utang piutang yang melibatkan lembaga keuangan.",
+      "Notaris memiliki peran penting dalam pembuatan akta utang piutang yang mencatat perjanjian secara resmi dan sah sesuai dengan Undang-Undang Nomor 2 Tahun 2014 tentang Perubahan Atas Undang-Undang Nomor 30 Tahun 2004 tentang Jabatan Notaris.",
+      "Lembaga penyelesaian sengketa konsumen memiliki peran dalam menyelesaikan perselisihan antara konsumen dan pemberi utang tanpa melibatkan pengadilan. Di Indonesia Badan Penyelesaian Sengketa Konsumen (BPSK) adalah salah satu lembaga yang menangani hal ini.",
+      "BANI dapat menjadi lembaga penyelesaian sengketa alternatif yang diakui untuk menyelesaikan sengketa utang piutang melalui proses arbitrase memberikan alternatif penyelesaian yang lebih cepat daripada pengadilan konvensional.",
+      "Agen penagih utang adalah pihak atau lembaga yang dipekerjakan untuk menagih utang atas nama pemberi utang. Mereka dapat memberikan layanan penagihan atau menegosiasikan pembayaran dengan penerima utang.",
+      "Penerima utang memiliki kewajiban untuk merespons upaya penagihan utang memberikan informasi yang diperlukan dan jika perlu bernegosiasi untuk menemukan solusi pembayaran yang memadai.",
+      "Kewajiban pemberi utang melibatkan pembayaran tepat waktu sesuai dengan perjanjian memberikan informasi yang akurat terkait utang dan mematuhi ketentuan kontrak atau hukum yang berlaku",
+      "Pinjaman online merupakan bantuan finansial yang dikeluarkan oleh lembaga keuangan secara dalam jaringan (daring). Biasanya, pengajuan pinjaman dilakukan melalui aplikasi milik lembaga keuangan tersebut. Kehadiran pinjaman online membuat proses peminjaman menjadi lebih praktis dan cepat serta tidak memerlukan usaha banyak.",
+      "Ketidakjelasan dalam perjanjian utang piutang dapat menyebabkan penafsiran yang berbeda. Pengadilan biasanya akan menafsirkan perjanjian tersebut berdasarkan niat pihak-pihak yang terlibat dan prinsip-prinsip kontraktual.",
+      "Utang selamanya tetap menjadi tanggungan orang tuanya kecuali anak-anaknya memang ridha untuk menanggungnya.",
+      "Ketika pihak yang berutang meninggal, utang piutang dapat diwariskan kepada ahli warisnya. Proses penyelesaian dapat melibatkan prosedur hukum untuk penanganan warisan dan pembayaran utang dengan melibatkan pewaris.",
+      "Jika terdapat ketidaksetujuan atas perjanjian utang piutang, hukum memberikan mekanisme penyelesaian sengketa. Pihak yang tidak setuju dapat menggunakan jalur hukum seperti mediasi atau arbitrase atau mengajukan gugatan di pengadilan untuk menyelesaikan perselisihan.",
+      "Ketidaksetujuan atas nilai utang dalam perjanjian utang piutang dapat diatasi melalui negosiasi antara pihak-pihak yang terlibat atau melalui mekanisme alternatif penyelesaian sengketa seperti mediasi. Jika tidak ada kesepakatan, nilai utang dapat ditentukan oleh pengadilan berdasarkan fakta dan bukti yang ada.",
+      "Hukum mengatasi default pembayaran dalam perjanjian utang piutang dengan menyediakan ketentuan mengenai konsekuensi dari wanprestasi, termasuk kemungkinan tindakan hukum yang dapat diambil oleh pihak yang dirugikan.",
+      "Perjanjian utang piutang yang melibatkan pembayaran angsuran diatur oleh ketentuan dalam perjanjian tersebut, yang mencakup jumlah angsuran, jadwal pembayaran, dan konsekuensi ketika pembayaran angsuran tidak dilakukan tepat waktu.",
+      "Klausul pengakhiran secara sepihak dalam perjanjian utang piutang diatur oleh hukum yang mengatur kontrak, dan dapat memuat persyaratan dan prosedur yang harus diikuti oleh pihak yang ingin mengakhiri perjanjian tersebut.",
+      "Perjanjian utang piutang yang melibatkan pemberian diskon atau potongan harga diatur oleh hukum yang mengatur kontrak, dan dapat mencakup ketentuan-ketentuan yang mengatur syarat-syarat pemberian diskon dan potongan harga.",
+      "Klausul penyelesaian sengketa di luar pengadilan dalam perjanjian utang piutang diatur oleh hukum yang mengatur arbitrase atau mekanisme alternatif penyelesaian sengketa lainnya, dan dapat mencakup ketentuan-ketentuan terkait proses penyelesaian sengketa.",
+      "Perjanjian utang piutang yang melibatkan pembiayaan peer-to-peer (P2P) lending diatur oleh hukum yang mengatur transaksi keuangan dan perjanjian P2P lending, dan dapat mencakup ketentuan-ketentuan terkait suku bunga dan syarat-syarat pembayaran.",
+      "Perjanjian utang piutang yang melibatkan penggunaan jasa perantara keuangan diatur oleh hukum yang mengatur transaksi keuangan dan peran perantara keuangan, dan dapat mencakup ketentuan-ketentuan terkait biaya perantara dan tanggung jawab perantara keuangan.",
+      "Hukum mengatur perjanjian utang piutang yang melibatkan pembayaran dengan wesel bayar, termasuk ketentuan-ketentuan yang mengatur penerbitan wesel bayar, waktu pembayaran, dan kewajiban pihak yang terlibat dalam transaksi wesel bayar.",
+      "Perjanjian utang piutang yang melibatkan kewajiban pembayaran biaya keterlambatan diatur oleh hukum yang mengatur transaksi kredit dan dapat mencakup ketentuan-ketentuan terkait besaran biaya keterlambatan, waktu pembayaran, dan konsekuensi keterlambatan.",
+      "Penyelesaian sengketa di pengadilan dalam perjanjian utang piutang diatur oleh hukum acara perdata, dan dapat mencakup ketentuan-ketentuan terkait yurisdiksi, prosedur pengadilan, dan pelaksanaan putusan pengadilan.",
+      "Perjanjian utang piutang yang melibatkan kewajiban pembayaran pajak diatur oleh hukum pajak yang berlaku, dan dapat mencakup ketentuan-ketentuan terkait tanggung jawab pihak yang harus membayar pajak, perhitungan pajak, dan waktu pembayaran pajak.",
+      "Perjanjian utang piutang yang melibatkan kewajiban penyimpanan catatan transaksi diatur oleh hukum yang mengatur rekam jejak transaksi keuangan, dan dapat mencakup ketentuan-ketentuan terkait periode penyimpanan, privasi informasi, dan akses otoritas regulasi terhadap catatan transaksi.",
+      "Perjanjian utang piutang yang melibatkan penggunaan agen atau perantara diatur oleh hukum yang mengatur agensi dan perantara, dan dapat mencakup ketentuan-ketentuan terkait wewenang agen, tanggung jawab perantara, dan pembagian komisi atau biaya agensi.",
+      "Perjanjian utang piutang yang melibatkan kewajiban asuransi diatur oleh hukum yang mengatur transaksi asuransi, dan dapat mencakup ketentuan-ketentuan terkait jenis asuransi yang harus diadakan, jumlah pertanggungan, dan hak dan kewajiban pihak yang terlibat dalam transaksi asuransi.",
+      "Hukum mengatur perjanjian utang piutang yang melibatkan kewajiban keberlanjutan, termasuk ketentuan-ketentuan yang mengatur masa berlaku kewajiban, konsekuensi pelanggaran kewajiban, dan hak-hak pihak yang terlibat dalam kewajiban keberlanjutan.",
+      "Perjanjian utang piutang yang melibatkan kewajiban pembayaran bunga diatur oleh hukum yang mengatur transaksi pinjaman dan suku bunga, dan dapat mencakup ketentuan-ketentuan terkait tingkat suku bunga, perhitungan bunga, dan hak-hak pihak yang terlibat dalam pembayaran bunga.",
+      "Hukum mengatur perjanjian utang piutang yang melibatkan penyelesaian sengketa, termasuk ketentuan-ketentuan yang mengatur mekanisme penyelesaian sengketa, yurisdiksi yang berlaku, dan dampak hukum dari ketidaksetujuan dalam penyelesaian sengketa.",
+      "Hukum mengatur perjanjian utang piutang yang melibatkan kewajiban pemberian izin, termasuk ketentuan-ketentuan yang mengatur syarat-syarat pemberian izin, batas waktu izin berlaku, dan konsekuensi hukum dari penggunaan tanpa izin.",
+      "Perjanjian utang piutang yang melibatkan kewajiban pemeliharaan dan perbaikan diatur oleh hukum yang mengatur kontrak pemeliharaan, dan dapat mencakup ketentuan-ketentuan terkait jenis pemeliharaan, tanggung jawab pemeliharaan, dan waktu pelaksanaan perbaikan.",
+      "Perjanjian utang piutang yang melibatkan kewajiban penggantian rugi diatur oleh hukum yang mengatur konsep penggantian rugi, dan dapat mencakup ketentuan-ketentuan terkait batas tanggung jawab, prosedur klaim, dan jenis kerugian yang dapat digantikan.",
+      "Hukum mengatur perjanjian utang piutang yang melibatkan kewajiban pembayaran pajak, termasuk ketentuan-ketentuan yang mengatur pembagian tanggung jawab pajak, waktu pembayaran pajak, dan konsekuensi hukum dari ketidakpatuhan pajak.",
+      "Perjanjian utang piutang yang melibatkan kewajiban pemenuhan regulasi diatur oleh hukum yang mengatur sektor atau industri yang terkena regulasi, dan dapat mencakup ketentuan-ketentuan terkait kewajiban pemenuhan regulasi, perubahan peraturan, dan dampak hukum dari pelanggaran regulasi.",
+      "Perjanjian utang piutang yang melibatkan kewajiban pemeliharaan dan perbaikan diatur oleh hukum yang mengatur kontrak pemeliharaan, dan dapat mencakup ketentuan-ketentuan terkait jenis pemeliharaan, tanggung jawab pemeliharaan, dan waktu pelaksanaan perbaikan."
+      ],
+      "tag": "teknis hutang piutang"
+    },
+    {
+      "patterns": ["Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan mata uang asing?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan pertukaran mata uang atau valuta asing?",
+      "Bagaimana hukum melibatkan perjanjian utang piutang yang melibatkan pembayaran dengan mata uang kripto?",
+      "Bagaimana hukum melibatkan perjanjian utang piutang yang melibatkan pembayaran dengan mata uang asing?",
+      "Bagaimana hukum melibatkan perjanjian utang piutang yang melibatkan perubahan kurs mata uang?",
+      "Bagaimana hukum mengatasi perjanjian utang piutang yang melibatkan pembayaran dengan mata uang asing?"
+      ],
+      "responses": ["Hukum mengatasi perjanjian utang piutang yang melibatkan mata uang asing mencakup regulasi terkait transaksi valuta asing dan ketentuan-ketentuan yang mengatur kewajiban pembayaran dalam mata uang asing. Bank Indonesia juga memiliki peran dalam mengawasi transaksi valuta asing.",
+      "Perjanjian utang piutang yang melibatkan pertukaran mata uang atau valuta asing diatur oleh hukum yang mengatur transaksi valuta asing, dan dapat mencakup ketentuan mengenai risiko kurs mata uang.",
+      "Perjanjian utang piutang yang melibatkan pembayaran dengan mata uang kripto diatur oleh hukum yang mengatur aspek hukum mata uang kripto, termasuk ketentuan-ketentuan yang mengatur konversi nilai dan risiko-risiko terkait penggunaan mata uang kripto.",
+      "Perjanjian utang piutang yang melibatkan pembayaran dengan mata uang asing diatur oleh hukum yang mengatur transaksi mata uang asing, dan dapat mencakup ketentuan-ketentuan terkait kurs valuta asing, risiko mata uang, dan konsekuensi hukum dari pembayaran dengan mata uang asing.",
+      "Hukum mengatur perjanjian utang piutang yang melibatkan perubahan kurs mata uang, termasuk ketentuan-ketentuan yang mengatur risiko mata uang, konsekuensi perubahan kurs, dan hak-hak pihak yang terlibat dalam transaksi mata uang asing.",
+      "Perjanjian utang piutang yang melibatkan pembayaran dengan mata uang asing diatur oleh hukum yang mengatur transaksi valuta asing, dan dapat mencakup ketentuan-ketentuan terkait kurs valuta asing, risiko mata uang, dan konsekuensi hukum dari pembayaran dengan mata uang asing."
+      ],
+      "tag": "transaksi konvensional"
+    },
+    {
+      "patterns": ["Apa yang diatur oleh Undang-Undang Perlindungan Konsumen terkait dengan transaksi hutang piutang?",
+      "Apa yang diatur oleh Undang-Undang Nomor 8 Tahun 1999 tentang Perlindungan Konsumen terkait utang piutang?",
+      "Apa yang diatur oleh Undang-Undang Nomor 4 Tahun 1996 tentang Hak Tanggungan Atas Tanah Beserta Benda-Benda yang Berkaitan dengan Tanah?",
+      "Apa yang diatur oleh Undang-Undang Nomor 37 Tahun 2004 tentang Kepailitan dan Penundaan Kewajiban Pembayaran Utang?",
+      "Apa yang diatur oleh Undang-Undang Nomor 24 Tahun 2009 tentang Bendera Negara",
+      "Apa yang diatur oleh hukum terkait perjanjian utang piutang konsumen?",
+      "Apa yang diatur dalam KUHPerdata terkait utang piutang?",
+      "Apa peran hukum Islam dalam utang piutang?",
+      "Apa dasar hukum yang mengatur tentang hutang piutang di Indonesia?",
+      "Apa dasar hukum utang piutang di Indonesia?",
+      "Bagaimana hukum melibatkan perjanjian utang piutang yang melibatkan pembayaran dengan cek kosong?"
+      ],
+      "responses": ["Undang-Undang Perlindungan Konsumen memberikan hak-hak perlindungan kepada konsumen, termasuk dalam transaksi hutang piutang.",
+      "Undang-Undang ini melibatkan perlindungan konsumen dalam transaksi konsumen termasuk aturan mengenai informasi yang diberikan kepada konsumen dan hak-hak konsumen dalam kasus utang piutang.",
+      "UU tersebut mengatur tentang hak tanggungan atas tanah dan benda-benda yang berkaitan dengan tanah. Dalam konteks utang piutang hak tanggungan ini sering digunakan sebagai jaminan dalam perjanjian kredit atau utang piutang.",
+      "UU ini mengatur proses kepailitan dan penundaan kewajiban pembayaran utang. Jika pemberi utang tidak mampu membayar utangnya pihak kreditur dapat mengajukan permohonan kepailitan ke pengadilan untuk melindungi kepentingan mereka.",
+      "Bahasa Negara dan Lambang Negara? UU tersebut tidak secara langsung berkaitan dengan utang piutang karena fokusnya adalah pada aspek-aspek bendera bahasa dan lambang negara Indonesia.",
+      "Hukum terkait perjanjian utang piutang konsumen diatur oleh Undang-Undang Nomor 8 Tahun 1999 tentang Perlindungan Konsumen. Hukum ini mencakup aspek-aspek seperti hak konsumen kewajiban pemberi utang dan prosedur penyelesaian sengketa konsumen.",
+      "KUHPerdata mengatur mengenai perjanjian wanprestasi dan ganti rugi yang relevan dalam konteks utang piutang. Pasal-pasal dalam KUHPerdata dapat digunakan sebagai dasar hukum dalam penyelesaian kasus utang piutang.",
+      "Hukum Islam atau syariah dapat memainkan peran dalam penyelesaian utang piutang",
+      "Dasar hukum utang piutang di Indonesia mencakup Undang-Undang Nomor 5 Tahun 1960 tentang Peraturan Dasar Pokok-Pokok Agraria Undang-Undang Nomor 21 Tahun 2011 tentang Otoritas Jasa Keuangan Kitab Undang-Undang Hukum Perdata (KUHPerdata) dan lainnya.",
+      "Perjanjian utang piutang yang melibatkan pembayaran dengan cek kosong diatur oleh hukum yang mengatur transaksi keuangan dan penggunaan cek, dan dapat mencakup ketentuan-ketentuan terkait konsekuensi hukum dan perdata dari penggunaan cek kosong.",
+      "Dasar hukum khusus yang mengatur hutang piutang di Indonesia terdapat dalam Pasal 1754 KUH Perdara (Kitab Undang-Undang Hukum Perdata). Sedangkan syarat perjanjian pinjam meminjam, dijelaskan lebih rinci di Pasal 1320 KUH Perdata.\nDalam pasal tersebut dijelaskan setidaknya harus ada 4 syarat saat melakukan perjanjian pinjam meminjam sah di mata hukum. Di antaranya adalah:\nKedua belah pihak sepakat untuk mengikatkan dirinya pada perjanjian tersebut dengan berkomitmen menepati janji.\nMemiliki kecakapan membuat perikatan yang resmi. Sebab pada beberapa contoh kasus hukum perdata hutang piutang di Indonesia, perikatan atau perjanjian yang dibuat masih banyak celah.\nMengenai suatu hal tertentu.\nMemiliki sebab yang halal."
+      ],
+      "tag": "undang-undang"
+    },
+    {
+      "patterns": ["Bagaimana pengadilan menilai wanprestasi dalam kasus utang piutang?",
+      "Bagaimana pengadilan menentukan jumlah ganti rugi dalam kasus wanprestasi utang?",
+      "Bagaimana penanganan hukum terhadap wanprestasi dalam kontrak hutang piutang?",
+      "Apa konsekuensi hukum jika seseorang tidak membayar utangnya?",
+      "Apa konsekuensi hukum jika pihak yang berutang meninggalkan negara?",
+      "Tolong jelaskan mengenai perbuatan melawan hukum dan wanprestasi, dan perbedaannya."
+      ],
+      "responses": ["Pengadilan akan menilai wanprestasi berdasarkan ketentuan perjanjian dan hukum yang berlaku termasuk apakah pihak yang berutang telah melanggar kewajibannya dengan tidak membayar sesuai perjanjian.",
+      "Pengadilan menentukan jumlah ganti rugi dalam kasus wanprestasi utang berdasarkan kerugian yang diakibatkan oleh pelanggaran kontrak yang dapat mencakup kerugian langsung kerugian tidak langsung atau kerugian konsekuensial.",
+      "Wanprestasi dapat mengakibatkan tindakan hukum seperti gugatan ganti rugi, pemutusan kontrak, atau tindakan lain sesuai ketentuan kontrak.",
+      "Konsekuensi hukum dapat mencakup tindakan penagihan penyitaan aset atau pengajuan gugatan hukum sesuai dengan ketentuan perjanjian atau undang-undang yang berlaku.",
+      "Jika pihak yang berutang meninggalkan negara konsekuensinya dapat beragam. Pihak yang dirugikan dapat mengajukan gugatan di pengadilan dan dalam beberapa kasus proses hukum internasional dapat terlibat untuk menyelesaikan utang piutang tersebut.",
+      "Hukum acara perdata mengenal 2 bentuk pengajuan gugatan, yakni gugatan perbuatan melawan hukum dan gugatan wanprestasi. Wanprestasi diatur dalam Pasal 1243 KUH Perdata, sedangkan perbuatan melawan hukum diatur dalam Pasal 1365 KUH Perdata.\n\nWanprestasi adalah istilah yang diambil dari bahasa Belanda wanprestatie dengan arti tidak dipenuhinya prestasi atau kewajiban dalam suatu perjanjian. Berdasarkan arti dalam KBBI, wanprestasi adalah keadaan salah satu pihak (biasanya perjanjian) berprestasi buruk karena kelalaian.\n\nDalam hukum, wanprestasi berarti kegagalan dalam memenuhi prestasi yang sudah ditetapkan. Prestasi merupakan suatu hal yang dapat dituntut. Dalam sebuah perjanjian, umumnya ada satu pihak yang menuntut prestasi kepada pihak lain.\n\nSedangkan Perbuatan Melawan Hukum (“PMH”) adalah perbuatan melawan undang-undang yang menimbulkan kerugian, pelanggaran hukum, perbuatan yang bertentangan dengan hak-hak orang lain, perbuatan yang dilakukan di luar kewenangan, dan melanggar nilai kesusilaan serta asas umum hukum"
+      ],
+      "tag": "wanprestasi"
+    }
+  ]
+}
