@@ -140,34 +140,8 @@ const whoAmI = async (req, res) => {
 
 const logout = async (req, res) => {
   try {
-    const refreshToken =
-      req.body.refreshToken === undefined || req.body.refreshToken === null
-        ? req.cookies.refreshToken
-        : req.body.refreshToken;
-    if (!refreshToken) {
-      res.status(204).send("null");
-      return;
-    }
-    const user = await User.findAll({
-      where: {
-        refreshToken,
-      },
-    });
-    if (!user[0]) {
-      res.status(204).send("notfound");
-      return;
-    }
-    const userId = user[0].id;
-    await User.update(
-      { refreshToken: null },
-      {
-        where: {
-          id: userId,
-        },
-      }
-    );
     res.clearCookie("refreshToken");
-    res.status(200).json("Log out success");
+    res.status(200).json({ msg: "Log out success" });
   } catch (error) {
     res.status(400).json({ msg: "Something went wrong" });
   }

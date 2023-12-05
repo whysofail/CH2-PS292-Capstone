@@ -1,4 +1,5 @@
 const { User, Role, LawyerTags, Tags, sequelize } = require("../../models");
+const { Op } = require("@sequelize/core");
 
 const getLawyer = async (req, res) => {
   try {
@@ -6,13 +7,13 @@ const getLawyer = async (req, res) => {
 
     const users = await User.findAll({
       where: { role_id },
-      attributes: ["id", "first_name","last_name", "email"],
+      attributes: ["id", "first_name", "last_name", "email"],
       include: [
         {
           model: Role,
           as: "role",
           where: { id: role_id },
-          attributes: ['name']
+          attributes: ["name"],
         },
         {
           model: Tags,
@@ -56,15 +57,21 @@ const searchLawyerByTag = async (req, res) => {
           model: Role,
           as: "role",
           where: { id: 3 },
-          attributes: ['name'],
+          attributes: ["name"],
+        },
+        {
+          model: Tags,
+          as: "filterLawyerTags",
+          attributes: [],
+          where: { name: { [Op.like]: `%${tag}%` } },
         },
         {
           model: Tags,
           as: "lawyerTags",
           attributes: ["name", "description"],
           through: { attributes: [] },
-          where: { name: tag },
-        },
+          seperate: true
+        }
       ],
     });
 
