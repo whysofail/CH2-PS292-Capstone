@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("*", (req, res) => {
-  res.status(404).json({ msg: "Not found" });
+  res.status(404).json({ msg: "Address Not found" });
 });
 
 

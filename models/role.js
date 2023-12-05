@@ -16,6 +16,11 @@ module.exports = (sequelize, DataTypes) => {
   Role.init({
     name: DataTypes.STRING
   }, {
+    scopes: {
+      getUser : {
+        attributes: ['name']
+      }
+    },
     timestamps: false,
     sequelize,
     modelName: 'Role',
