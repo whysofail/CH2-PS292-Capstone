@@ -35,7 +35,7 @@ const getChat = async (req, res) => {
   const idToken = req.idToken;
   console.log(user_input)
   try {
-    const response = await axios.post("/chat", {
+    const response = await axios.post(`${ML_URI}/chat`, {
       ...requestOptions(idToken),
       data: {user_input},
     });
