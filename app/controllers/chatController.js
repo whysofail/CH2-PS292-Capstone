@@ -22,15 +22,8 @@ const chat = async (req, res) => {
 
     res.status(result.statusCode).json(result);
   } catch (error) {
-    console.error("Error in the try-catch block:", error);
-
-    if (error.statusCode) {
-      // Handle non-2xx status codes
-      res.status(error.statusCode).json(error.error);
-    } else {
-      // Handle other errors
-      res.status(500).json({ error: "Internal Server Error" });
-    }
+    console.error(error);
+    res.status(500).json(error)
   }
 };
 

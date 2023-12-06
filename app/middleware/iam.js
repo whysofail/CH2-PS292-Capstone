@@ -9,7 +9,6 @@ async function getIdTokenFromMetadataServer(req, res, next) {
     const client = await googleAuth.getIdTokenClient(targetAudience);
     const idToken = await client.idTokenProvider.fetchIdToken(targetAudience);
     req.idToken = idToken;
-    console.log("Generated ID token:", idToken);
     next();
   } catch (error) {
     console.error("Error generating ID token:", error);
