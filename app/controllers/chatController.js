@@ -3,7 +3,6 @@ const axios = require("axios");
 const { ML_URI } = process.env;
 
 const requestOptions = (idToken) => ({
-  baseURL: ML_URI,
   headers: {
     "Metadata-Flavor": "Google",
     "Content-Type": "application/json",
@@ -14,7 +13,7 @@ const requestOptions = (idToken) => ({
 const getServerStatus = async (req, res) => {
   const idToken = req.idToken;
   try {
-    const response = await axios.get(`/`, {
+    const response = await axios.get(`${ML_URI}/`, {
       ...requestOptions(idToken),
     });
     if (response.status === 200) {
@@ -37,7 +36,7 @@ const getChat = async (req, res) => {
   const idToken = req.idToken;
   console.log(user_input);
   try {
-    const response = await axios.post(`/chat`, {
+    const response = await axios.post(`${ML_URI}/chat`, {
       ...requestOptions(idToken),
       data: { user_input },
     });
