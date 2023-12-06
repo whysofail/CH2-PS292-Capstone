@@ -34,13 +34,11 @@ const getServerStatus = async (req, res) => {
 const getChat = async (req, res) => {
   const { user_input } = req.body;
   const idToken = req.idToken;
-  console.log(user_input);
-  console.log({...requestOptions(idToken),
-    data: { user_input }})
+
   try {
     const response = await axios.post(`${ML_URI}/chat`, {
       ...requestOptions(idToken),
-      data: { user_input },
+      user_input : user_input,
     });
     if (response.status === 200) {
       return res.status(200).json({ msg: response.data });
