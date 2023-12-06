@@ -37,14 +37,14 @@ const getChat = async (req, res) => {
   try {
     const response = await axios.post("/chat", {
       ...requestOptions(idToken),
-      data: user_input,
+      data: {user_input},
     });
     if (response.status === 200) {
       return res.status(200).json({ msg: response.data });
     } else {
       return res
         .status(response.status)
-        .json({ status: "Error", messamsgge: "Unexpected status code" });
+        .json({ status: "Error", msg: "Unexpected status code" });
     }
   } catch (error) {
     console.error("Error making HTTP request:", error.message);
