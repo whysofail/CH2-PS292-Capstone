@@ -2,24 +2,29 @@ const axios = require("axios");
 
 const { ML_URI } = process.env;
 
+const requestOptions = (idToken) => ({
+  baseURL: ML_URI,
+  headers: {
+    'X-Serverless-Authorization' : `Bearer ${idToken}`
+  }
+})
+
 const getServerStatus = async (req, res) => {
   const idToken = req.idToken;
   try {
-    const response = await axios.get(`${ML_URI}/`, {
-      headers: {
-        'X-Serverless-Authorization' : `Bearer ${idToken}`
-      }
+    const response = await axios.get(`/`, {
+      ...requestOptions(idToken),
     });
     if (response.status === 200) {
-      return res.status(200).json({ status: "OK", data: response.data });
+      return res.status(200).json({msg: response.data });
     } else {
       return res
         .status(response.status)
-        .json({ status: "Error", message: "Unexpected status code" });
+        .json({ status: "Error", messamsgge: "Unexpected status code" });
     }
   } catch (error) {
     console.error("Error making HTTP request:", error.message);
-    return res.status(500).json({ status: "Error", message: "Internal Server Error" });
+    return res.status(500).json({ status: "Error", msg: "Internal Server Error" });
   }
 };
 
