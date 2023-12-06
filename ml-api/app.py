@@ -26,7 +26,11 @@ model = load_model(model_path)
 with open(file_path, 'r', encoding='utf-8') as file:
   intents_json = json.load(file)
 
-@app.route('/predict', methods=['POST'])
+@app.route('/', methods=['GET'])
+def index():
+    return jsonify({"msg": "LawMate Chatbot status : up"}, 200)
+
+@app.route('/chat', methods=['POST'])
 def predict():
     data = request.get_json()
     user_input = data['user_input']
@@ -78,5 +82,5 @@ def get_response(intents_list, intents_json):
             break
     return result
 
-if __name__ == '__main__':
-    app.run()
+if __name__ == "__main__":
+    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
