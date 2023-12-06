@@ -5,6 +5,7 @@ const { ML_URI } = process.env;
 const requestOptions = (idToken) => ({
   baseURL: ML_URI,
   headers: {
+    "Content-Type" : "application/json",
     "X-Serverless-Authorization": `Bearer ${idToken}`,
   },
 });
@@ -35,10 +36,8 @@ const getChat = async (req, res) => {
   const idToken = req.idToken;
   console.log(user_input)
   try {
-    const response = await axios.post(`${ML_URI}/chat`, {
-      headers: {
-        "X-Serverless-Authorization": `Bearer ${idToken}`,
-      },
+    const response = await axios.post(`/chat`, {
+      ...requestOptions(idToken),
       data: {user_input},
     });
     if (response.status === 200) {
