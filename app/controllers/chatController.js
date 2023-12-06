@@ -33,7 +33,7 @@ const getServerStatus = async (req, res) => {
 const getChat = async (req, res) => {
   const { user_input } = req.body;
   const idToken = req.idToken;
-
+  console.log(user_input)
   try {
     const response = await axios.post("/chat", {
       ...requestOptions(idToken),
