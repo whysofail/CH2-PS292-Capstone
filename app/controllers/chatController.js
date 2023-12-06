@@ -18,12 +18,13 @@ const options = (path, method, bodyData, idToken) => {
 
 const getServerStatus = async (req, res) => {
   const idToken = req.idToken;
+  console.log(idToken)
   try {
     const response = await axios(options("", "GET", "", idToken));
     return res.status(200).json(response.data);
   } catch (error) {
     console.error("Error getting server status:", error);
-    return res.status(500).json({ error: "Internal Server Error" });
+    return res.status(500).json(error);
   }
 };
 
