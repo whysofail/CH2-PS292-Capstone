@@ -17,7 +17,19 @@ const options = (path, method, bodyData, idToken) => {
   return requestOptions;
 };
 
-const chat = async (req, res) => {
+const getServerStatus = async (req, res) => {
+  const idToken = req.idToken
+  try {
+    const response = await axios(
+      options('', "GET", '', idToken)
+    )  
+    return res.status(response.status).json(response.data)
+  } catch (error) {
+    return res.status(response.status).json(response.data);
+  }
+}
+
+const getChat = async (req, res) => {
   const { user_input } = req.body;
   const idToken = req.idToken; // Move idToken retrieval here
 
@@ -35,5 +47,6 @@ const chat = async (req, res) => {
 };
 
 module.exports = {
-  chat,
+  getServerStatus,
+  getChat,
 };
