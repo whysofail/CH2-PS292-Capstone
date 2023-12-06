@@ -24,14 +24,9 @@ const idToken = req.idToken;
 
 const chat = async (req, res) => {
   const { user_input } = req.body;
-
-  try {
+    console.log(`Id Token : ${idToken}`)
     const result = await request(options("/chat", "POST", user_input));
     return res.status(200).json(result);
-  } catch (error) {
-    console.error(error);
-    return res.status(500).json(error);
-  }
 };
 
 module.exports = {
