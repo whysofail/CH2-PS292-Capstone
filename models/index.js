@@ -29,7 +29,6 @@ sequelize.beforeConnect(async (config) => {
     const connector = new Connector()
     const clientOpts = await connector.getOptions({
       instanceConnectionName: process.env.CLOUDSQL_INSTANCE_CONNECTION_NAME,
-    //   authType: "IAM",
       ipType: "PUBLIC",
     });
     if (process.env.NODE_ENV === "test") {
