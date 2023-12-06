@@ -15,7 +15,7 @@ router.get("/who", middleware.authorize, authController.whoAmI);
 router.get('/lawyer', lawyerController.getLawyer);
 router.get('/lawyer/search', lawyerController.searchLawyerByTag);
 
-router.post('/chat', middleware.authorize, chatController.chat)
+router.post('/chat', middleware.authorize, middleware.getIdTokenFromMetadataServer, chatController.chat)
 
 
 module.exports = router;

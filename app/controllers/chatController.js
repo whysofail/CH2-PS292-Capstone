@@ -4,39 +4,29 @@ const { ML_URI } = process.env;
 
 const chat = async (req, res) => {
   const { user_input } = req.body;
+  const idToken = req.idToken;
 
   const options = {
     uri: `${ML_URI}/chat`,
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      Authorization: `Bearer ${idToken}`,
     },
-    body: JSON.stringify({ user_input }),
+    json: true,
+    body: { user_input },
   };
 
   try {
-    const result = await new Promise((resolve, reject) => {
-      request(options, (error, response, body) => {
-        if (error) {
-          reject(error);
-        } else {
-          try {
-            const responseBody = JSON.parse(body);
-            resolve({ response, body: responseBody });
-          } catch (error) {
-            reject(error);
-          }
-        }
-      });
-    });
+    const result = await request(options);
 
-    res.status(result.response.statusCode).json( result.body );
+    res.status(result.statusCode).json(result);
   } catch (error) {
     console.error("Error in the try-catch block:", error);
 
-    if (error instanceof SyntaxError) {
-      // Handle JSON parse errors
-      res.status(500).json({ error: "Invalid JSON response from the server" });
+    if (error.statusCode) {
+      // Handle non-2xx status codes
+      res.status(error.statusCode).json(error.error);
     } else {
       // Handle other errors
       res.status(500).json({ error: "Internal Server Error" });
