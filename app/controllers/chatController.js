@@ -11,38 +11,34 @@ const options = (path, method, bodyData, idToken) => {
       "X-Serverless-Authorization": `Bearer ${idToken}`,
     },
     data: bodyData,
-    json: true,
   };
 
   return requestOptions;
 };
 
 const getServerStatus = async (req, res) => {
-  const idToken = req.idToken
+  const idToken = req.idToken;
   try {
-    const response = await axios(
-      options('', "GET", '', idToken)
-    )  
-    return res.status(200).json(response.data)
+    const response = await axios(options("", "GET", "", idToken));
+    return res.status(200).json(response.data);
   } catch (error) {
-    return res.status(500).json(error);
+    console.error("Error getting server status:", error.message);
+    return res.status(500).json({ error: "Internal Server Error" });
   }
-}
+};
 
 const getChat = async (req, res) => {
   const { user_input } = req.body;
-  const idToken = req.idToken; // Move idToken retrieval here
+  const idToken = req.idToken;
 
   console.log(`Id Token: ${idToken}`);
 
   try {
-    const response = await axios(
-      options("chat", "POST", { user_input }, idToken)
-    );
-    console.log(response)
+    const response = await axios(options("chat", "POST", { user_input }, idToken));
+    console.log(response.data);
     return res.status(200).json(response.data);
   } catch (error) {
-    console.error("Error making request:", error.message);
+    console.error("Error getting chat:", error.message);
     return res.status(500).json({ error: "Internal Server Error" });
   }
 };
