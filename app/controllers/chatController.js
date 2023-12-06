@@ -23,9 +23,9 @@ const getServerStatus = async (req, res) => {
     const response = await axios(
       options('', "GET", '', idToken)
     )  
-    return res.status(response.status).json(response.data)
+    return res.status(200).json(response.data)
   } catch (error) {
-    return res.status(response.status).json(response.data);
+    return res.status(500).json(response.data);
   }
 }
 
@@ -39,7 +39,8 @@ const getChat = async (req, res) => {
     const response = await axios(
       options("chat", "POST", { user_input }, idToken)
     );
-    return res.status(response.status).json(response.data);
+    console.log(response)
+    return res.status(200).json(response.data);
   } catch (error) {
     console.error("Error making request:", error.message);
     return res.status(500).json({ error: "Internal Server Error" });

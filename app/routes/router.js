@@ -10,6 +10,11 @@ const {
 
 const middleware = require("../middleware");
 
+router.get(
+  "/bots",
+  middleware.getIdTokenFromMetadataServer,
+  chatController.getServerStatus
+);
 router.get("/databasestatus", databaseController.checkDatabaseConn);
 
 router.post("/login", authController.login);
@@ -20,11 +25,7 @@ router.get("/who", middleware.authorize, authController.whoAmI);
 router.get("/lawyer", lawyerController.getLawyer);
 router.get("/lawyer/search", lawyerController.searchLawyerByTag);
 
-router.get(
-  "/bots",
-  middleware.getIdTokenFromMetadataServer,
-  chatController.getServerStatus
-);
+
 router.post(
   "/chat",
   middleware.authorize,
