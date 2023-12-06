@@ -4,7 +4,7 @@ const { ML_URI } = process.env;
 
 const options = (path, method, bodyData, idToken) => {
   const requestOptions = {
-    url: `${ML_URI}/${path}`,
+    url: `${ML_URI}/`+path,
     method,
     headers: {
       "Content-Type": "application/json",
@@ -22,7 +22,7 @@ const getServerStatus = async (req, res) => {
     const response = await axios(options("", "GET", "", idToken));
     return res.status(200).json(response.data);
   } catch (error) {
-    console.error("Error getting server status:", error.message);
+    console.error("Error getting server status:", error);
     return res.status(500).json({ error: "Internal Server Error" });
   }
 };
