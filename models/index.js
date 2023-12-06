@@ -35,7 +35,6 @@ sequelize.beforeConnect(async (config) => {
     if (process.env.NODE_ENV === "test") {
       config = { ...config, ...clientOpts };
     }
-    console.log(config);
   });
 
 fs.readdirSync(__dirname)
