@@ -2,28 +2,35 @@ const request = require("request");
 
 const { ML_URI } = process.env;
 
-const chat = async (req, res) => {
-  const { user_input } = req.body;
-  const idToken = req.idToken;
-
-  const options = {
-    uri: `${ML_URI}/chat`,
-    method: "POST",
+const options = (path, method, bodyData) => {
+  const requestOptions = {
+    uri: `${ML_URI}/${path}`,
+    method,
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${idToken}`,
     },
     json: true,
-    body: { user_input },
   };
 
-  try {
-    const result = await request(options);
+  if (bodyData) {
+    requestOptions.body = bodyData;
+  }
 
-    res.status(result.statusCode).json(result);
+  return requestOptions;
+};
+
+const idToken = req.idToken;
+
+const chat = async (req, res) => {
+  const { user_input } = req.body;
+
+  try {
+    const result = await request(options("/chat", "POST", user_input));
+    return res.status(200).json(result);
   } catch (error) {
     console.error(error);
-    res.status(500).json(error)
+    return res.status(500).json(error);
   }
 };
 
