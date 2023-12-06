@@ -9,6 +9,11 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'tags_id',
         as: 'users',
       });
+      this.belongsToMany(models.User, {
+        through: 'LawyerTags',
+        foreignKey: 'tags_id',
+        as: 'filterUser'
+      })
     }
   }
 
