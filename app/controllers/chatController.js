@@ -1,32 +1,37 @@
-const request = require("request");
+const axios = require("axios");
 
 const { ML_URI } = process.env;
 
-const options = (path, method, bodyData) => {
+const options = (path, method, bodyData, idToken) => {
   const requestOptions = {
-    uri: `${ML_URI}/${path}`,
+    url: `${ML_URI}/${path}`,
     method,
     headers: {
       "Content-Type": "application/json",
       "X-Serverless-Authorization": `Bearer ${idToken}`,
     },
+    data: bodyData,
     json: true,
   };
-
-  if (bodyData) {
-    requestOptions.body = bodyData;
-  }
 
   return requestOptions;
 };
 
-const idToken = req.idToken;
-
 const chat = async (req, res) => {
   const { user_input } = req.body;
-    console.log(`Id Token : ${idToken}`)
-    const result = await request(options("/chat", "POST", user_input));
-    return res.status(200).json(result);
+  const idToken = req.idToken; // Move idToken retrieval here
+
+  console.log(`Id Token: ${idToken}`);
+
+  try {
+    const response = await axios(
+      options("chat", "POST", { user_input }, idToken)
+    );
+    return res.status(response.status).json(response.data);
+  } catch (error) {
+    console.error("Error making request:", error.message);
+    return res.status(500).json({ error: "Internal Server Error" });
+  }
 };
 
 module.exports = {
