@@ -5,7 +5,8 @@ const { ML_URI } = process.env;
 const requestOptions = (idToken) => ({
   baseURL: ML_URI,
   headers: {
-    "Content-Type" : "application/json",
+    "Metadata-Flavor": "Google",
+    "Content-Type": "application/json",
     "X-Serverless-Authorization": `Bearer ${idToken}`,
   },
 });
@@ -34,11 +35,11 @@ const getServerStatus = async (req, res) => {
 const getChat = async (req, res) => {
   const { user_input } = req.body;
   const idToken = req.idToken;
-  console.log(user_input)
+  console.log(user_input);
   try {
     const response = await axios.post(`/chat`, {
       ...requestOptions(idToken),
-      data: {user_input},
+      data: { user_input },
     });
     if (response.status === 200) {
       return res.status(200).json({ msg: response.data });
@@ -48,7 +49,6 @@ const getChat = async (req, res) => {
         .json({ status: "Error", msg: "Unexpected status code" });
     }
   } catch (error) {
-    console.error(error)
     console.error("Error making HTTP request:", error.message);
     return res
       .status(500)
