@@ -48,6 +48,7 @@ const getChat = async (req, res) => {
         .json({ status: "Error", msg: "Unexpected status code" });
     }
   } catch (error) {
+    console.error(error)
     console.error("Error making HTTP request:", error.message);
     return res
       .status(500)
