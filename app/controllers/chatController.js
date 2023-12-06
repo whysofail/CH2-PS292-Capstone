@@ -36,7 +36,9 @@ const getChat = async (req, res) => {
   console.log(user_input)
   try {
     const response = await axios.post(`${ML_URI}/chat`, {
-      ...requestOptions(idToken),
+      headers: {
+        "X-Serverless-Authorization": `Bearer ${idToken}`,
+      },
       data: {user_input},
     });
     if (response.status === 200) {
