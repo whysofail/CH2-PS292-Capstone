@@ -8,7 +8,7 @@ const options = (path, method, bodyData) => {
     method,
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${idToken}`,
+      "X-Serverless-Authorization": `Bearer ${idToken}`,
     },
     json: true,
   };
