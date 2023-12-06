@@ -15,7 +15,7 @@ file_path = '../Dataset/Dataset.json'
 words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))
 model = load_model('model_chatbot.h5')
-with open(file_path, 'r') as file:
+with open(file_path, 'r', encoding='utf-8') as file:
   intents_json = json.load(file)
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
@@ -48,7 +48,7 @@ def get_response(intents_list, intents_json):
         if i['tag'] == tag:
             result = random.choice(i['responses'])
             break
-    return result
+    return tag, result
 
 while True:
     user_input = input("You: ")
@@ -56,6 +56,7 @@ while True:
         break
 
     intents = predict_class(user_input)
-    response = get_response(intents, intents_json)
+    response = get_response(intents, intents_json)[1]
+    tag = get_response(intents, intents_json)[0]
 
-    print("ChatBot:", response)
+    print(f"ChatBot: {response} \n Tag: {tag}")

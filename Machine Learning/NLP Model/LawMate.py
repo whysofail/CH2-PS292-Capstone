@@ -23,9 +23,14 @@ classes = []
 documents = []
 ignore_words = ['?', '!', '.', ',']
 file_path = '../Dataset/Dataset.json'
+stop_words = '../Dataset/combined_stop_words.txt'
 
-with open(file_path, 'r') as file:
+with open(stop_words, 'r', encoding='utf-8') as file:
+  stop_word = file.read().splitlines()
+
+with open(file_path, 'r', encoding='utf-8') as file:
   data_json = json.load(file)
+
 
 for intent in data_json['intents']:
   for pattern in intent['patterns']:
