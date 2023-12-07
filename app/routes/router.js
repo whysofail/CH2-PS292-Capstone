@@ -14,6 +14,6 @@ router.get("/search-lawyer-by-tag", lawyerController.searchLawyerByTag);
 
 router.get("/databasestatus", databaseController.checkDatabaseConn)
 
-router.post("/ocr", middleware.authorize, ocrController.uploadImage, ocrController.ocrImage);
+router.post("/ocr", ocrController.upload.single("file"), ocrController.uploadImage, ocrController.ocrImage);
 
 module.exports = router;
