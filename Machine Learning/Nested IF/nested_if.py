@@ -34,6 +34,7 @@ sh_tags = (sh_teori, sh_studi_kasus)
 # passing user tags accordding the input in this variable
 user_tags = []
 
+# Checking either the tags are on debts  or sexual harrasment
 found = False
 
 for tags in sh_tags:
