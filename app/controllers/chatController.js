@@ -41,7 +41,7 @@ const getChat = async (req, res) => {
       user_input : user_input,
     });
     if (response.status === 200) {
-      return res.status(200).json({ msg: response.data });
+      return res.status(200).json(response.data);
     } else {
       return res
         .status(response.status)
