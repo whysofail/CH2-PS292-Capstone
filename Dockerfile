@@ -4,7 +4,7 @@ ENV PYTHONUNBUFFERED True
 
 ENV APP_HOME /app
 WORKDIR $APP_HOME
-COPY . ./
+COPY . .
 
 RUN pip install --no-cache-dir -r requirements.txt
 RUN [ "python3", "-c", "import nltk; nltk.download('punkt', download_dir='/usr/local/nltk_data')" ]
