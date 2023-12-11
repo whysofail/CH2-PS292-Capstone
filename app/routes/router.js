@@ -6,6 +6,7 @@ const {
   lawyerController,
   databaseController,
   chatController,
+  imageController,
 } = require("../controllers");
 
 const middleware = require("../middleware");
@@ -25,7 +26,6 @@ router.get("/who", middleware.authorize, authController.whoAmI);
 router.get("/lawyer", lawyerController.getLawyer);
 router.get("/lawyer/search", lawyerController.searchLawyerByTag);
 
-
 router.post(
   "/chat",
   middleware.authorize,
@@ -33,4 +33,7 @@ router.post(
   chatController.getChat
 );
 
+router.post('/testimage', middleware.uploadImage, imageController.catchImageURI)
+
+router.post('/consultation', middleware.authorize, )
 module.exports = router;

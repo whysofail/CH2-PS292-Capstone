@@ -24,9 +24,10 @@ if (config.use_env_variable) {
   )),
     { define: { timestamps: false } };
 }
-
-sequelize.beforeConnect(async (config) => {
-    const connector = new Connector()
+console.log(process.env.NODE_ENV === 'test')
+if (process.env.NODE_ENV === "test") {
+  sequelize.beforeConnect(async (config) => {
+    const connector = new Connector();
     const clientOpts = await connector.getOptions({
       instanceConnectionName: process.env.CLOUDSQL_INSTANCE_CONNECTION_NAME,
       ipType: "PUBLIC",
@@ -35,6 +36,7 @@ sequelize.beforeConnect(async (config) => {
       config = { ...config, ...clientOpts };
     }
   });
+}
 
 fs.readdirSync(__dirname)
   .filter((file) => {

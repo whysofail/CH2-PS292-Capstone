@@ -18,6 +18,8 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "user_id",
         as: "filterLawyerTags",
       });
+      this.hasMany(models.Consultation, { foreignKey: 'user_id' });
+      this.hasMany(models.Consultation, { foreignKey: 'lawyer_id' });
     }
   }
 

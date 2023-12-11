@@ -25,9 +25,6 @@ const authorize = async (req, res, next) => {
   }
 };
 
-module.exports = authorize;
-
-
 const isAdmin = async (req, res, next) => {
   const auth = req.user.roleId;
   if (auth !== 1) {
