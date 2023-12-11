@@ -27,7 +27,7 @@ with open(file_path, 'r', encoding='utf-8') as file:
 
 @app.route('/', methods=['GET'])
 def index():
-    return jsonify({"msg": "LawMate Chatbot status : up"}, 200)
+    return jsonify({"msg": "LawMate Chatbot status : up"})
 
 @app.route('/chat', methods=['POST'])
 def predict():
