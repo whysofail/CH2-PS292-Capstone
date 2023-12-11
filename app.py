@@ -17,10 +17,10 @@ app = Flask(__name__)
 
 
 lemmatizer = WordNetLemmatizer()
-file_path = os.path.join('.','dataset','dataset.json')
-words_path = os.path.join('.','models', 'words.pkl')
-classes_path = os.path.join('.','models', 'classes.pkl')
-model_path =  os.path.join('.','models', 'model_chatbot.h5')
+file_path = os.path.join('.','app','dataset','dataset.json')
+words_path = os.path.join('.','app','models', 'words.pkl')
+classes_path = os.path.join('.','app','models', 'classes.pkl')
+model_path =  os.path.join('.','app','models', 'model_chatbot.h5')
 
 words = pickle.load(open(words_path, 'rb'))
 classes = pickle.load(open(classes_path , 'rb'))
