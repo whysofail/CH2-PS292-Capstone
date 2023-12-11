@@ -10,6 +10,9 @@ from nltk.stem import WordNetLemmatizer
 from keras.models import load_model
 from flask import Flask, request, jsonify
 
+nltk.download('punkt')
+nltk.download('wordnet')
+
 app = Flask(__name__)
 
 
