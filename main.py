@@ -85,4 +85,8 @@ def get_response(intents_list, intents_json):
     return result
 
 if __name__ == "__main__":
+    print('app is main')
+    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
+else: 
+    print('app buka main')
     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
