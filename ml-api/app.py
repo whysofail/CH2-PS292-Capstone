@@ -10,17 +10,15 @@ from nltk.stem import WordNetLemmatizer
 from keras.models import load_model
 from flask import Flask, request, jsonify
 
-nltk.download('punkt')
-nltk.download('wordnet')
-
 app = Flask(__name__)
 
-
+nltk.download('punkt')
+nltk.download('wordnet')
 lemmatizer = WordNetLemmatizer()
-file_path = os.path.join('.','dataset.json')
-words_path = os.path.join('.', 'words.pkl')
-classes_path = os.path.join('.', 'classes.pkl')
-model_path =  os.path.join('.', 'model_chatbot.h5')
+file_path = os.path.join('.','dataset','dataset.json')
+words_path = os.path.join('.','models', 'words.pkl')
+classes_path = os.path.join('.','models', 'classes.pkl')
+model_path =  os.path.join('.','models', 'model_chatbot.h5')
 
 words = pickle.load(open(words_path, 'rb'))
 classes = pickle.load(open(classes_path , 'rb'))
@@ -30,7 +28,7 @@ with open(file_path, 'r', encoding='utf-8') as file:
 
 @app.route('/', methods=['GET'])
 def index():
-    return jsonify({"msg": "LawMate Chatbot status : up"})
+    return jsonify({"msg": "LawMate Chatbot status : up"}, 200)
 
 @app.route('/chat', methods=['POST'])
 def predict():
@@ -85,8 +83,4 @@ def get_response(intents_list, intents_json):
     return result
 
 if __name__ == "__main__":
-    print('app is main')
-    app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
-else: 
-    print('app buka main')
     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))

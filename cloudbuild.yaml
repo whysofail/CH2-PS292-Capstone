@@ -1,7 +1,0 @@
-steps:
-- name: 'gcr.io/cloud-builders/docker'
-  script: |
-    docker build -t asia-southeast2-docker.pkg.dev/lawmate-gcp/lawmate-chatbot/lawmate-chatbot:test .
-  automapSubstitutions: true
-images:
-- 'asia-southeast2-docker.pkg.dev/lawmate-gcp/lawmate-chatbot/lawmate-chatbot:test'
