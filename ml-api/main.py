@@ -12,8 +12,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-nltk.download('punkt')
-nltk.download('wordnet')
+
 lemmatizer = WordNetLemmatizer()
 file_path = os.path.join('.','dataset','dataset.json')
 words_path = os.path.join('.','models', 'words.pkl')
