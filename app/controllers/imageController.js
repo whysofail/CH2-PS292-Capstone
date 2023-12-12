@@ -1,5 +1,5 @@
 // const express = require("express");
-const processFile = require("../middleware/uploadFile");
+const processFile = require("../middleware/uploadFileGCS");
 const { format } = require("util");
 const { Storage } = require("@google-cloud/storage");
 const storage = new Storage();

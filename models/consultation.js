@@ -17,9 +17,10 @@ module.exports = (sequelize, DataTypes) => {
   Consultation.init({
     title: DataTypes.STRING,
     description: DataTypes.TEXT,
-    pictureUrl: DataTypes.STRING,
+    picture_URI: DataTypes.STRING,
     user_id: DataTypes.INTEGER,
-    lawyer_id: DataTypes.INTEGER
+    lawyer_id: DataTypes.INTEGER,
+    date_created: DataTypes.DATE,
   }, {
     sequelize,
     modelName: 'Consultation',

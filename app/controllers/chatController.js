@@ -17,7 +17,7 @@ const getServerStatus = async (req, res) => {
       ...requestOptions(idToken),
     });
     if (response.status === 200) {
-      return res.status(200).json({ msg: response.data });
+      return res.status(200).json(response.data);
     } else {
       return res
         .status(response.status)
@@ -38,7 +38,7 @@ const getChat = async (req, res) => {
   try {
     const response = await axios.post(`${ML_URI}/chat`, {
       ...requestOptions(idToken),
-      user_input : user_input,
+      user_input: user_input,
     });
     if (response.status === 200) {
       return res.status(200).json(response.data);
@@ -48,7 +48,7 @@ const getChat = async (req, res) => {
         .json({ status: "Error", msg: "Unexpected status code" });
     }
   } catch (error) {
-    console.error(error)
+    console.error(error);
     console.error("Error making HTTP request:", error.message);
     return res
       .status(500)

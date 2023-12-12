@@ -21,7 +21,8 @@ const uploadImage = async (req, res, next) => {
     await processFileMiddleware(req, res);
 
     if (!req.file) {
-      return res.status(400).json({ msg: "Please upload a file" });
+      res.status(400).json({ msg: "No file attached." });
+      next()
     }
 
     const fileName = generateRandomFileName(req.file.originalname)
