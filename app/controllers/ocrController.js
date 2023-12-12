@@ -2,6 +2,8 @@ const express = require("express");
 const { Storage } = require('@google-cloud/storage');
 const { ImageAnnotatorClient } = require('@google-cloud/vision');
 const multer = require('multer');
+const fs = require('fs');
+const path = require('path');
 
 // Inisialisasi Google Cloud Storage dan Google Cloud Vision client
 const storage = new Storage();
@@ -32,12 +34,19 @@ const uploadImage = async (req, res, next) => {
     // Menyimpan buffer file yang diunggah ke req untuk digunakan di middleware selanjutnya
     req.uploadedFileBuffer = file.buffer;
 
+    // Menulis file ke disk
+    const filePath = path.join(__dirname, file.originalname);
+    fs.writeFileSync(filePath, file.buffer);
+
     // Mengunggah file ke Google Cloud Storage
     const destination = `${folderName}${file.originalname}`;
-    await storage.bucket(bucketName).upload(file.buffer, {
+    await storage.bucket(bucketName).upload(filePath, {
       destination: destination,
       gzip: true,
     });
+
+    // Menghapus file dari disk
+    fs.unlinkSync(filePath);
 
     // Lanjut ke middleware selanjutnya
     next();
