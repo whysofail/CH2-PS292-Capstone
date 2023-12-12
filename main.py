@@ -36,9 +36,11 @@ def predict():
     user_input = data['user_input']
 
     intents = predict_class(user_input)
-    response = get_response(intents, intents_json)
+    response = get_response(intents, intents_json)[1]
+    tag = get_response(intents, intents_json)[0]
 
-    return jsonify({"msg": response})
+    return jsonify({"msg": response,
+                   "tag": tag})
   # nambah tags
 
 def clean_up_sentence(sentence):
@@ -81,7 +83,7 @@ def get_response(intents_list, intents_json):
         if i['tag'] == tag:
             result = random.choice(i['responses'])
             break
-    return result
+    return tag, result
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
