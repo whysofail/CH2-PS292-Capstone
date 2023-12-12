@@ -1,8 +1,7 @@
-// const express = require("express");
+const express = require("express");
 const { Storage } = require('@google-cloud/storage');
 const { ImageAnnotatorClient } = require('@google-cloud/vision');
 const multer = require('multer');
-const fs = require('fs');
 
 // Inisialisasi Google Cloud Storage dan Google Cloud Vision client
 const storage = new Storage();

@@ -6,6 +6,7 @@ const {
   lawyerController,
   databaseController,
   chatController,
+  ocrController,
 } = require("../controllers");
 
 const middleware = require("../middleware");
@@ -26,6 +27,7 @@ router.get("/who", middleware.authorize, authController.whoAmI);
 router.get("/lawyer", lawyerController.getLawyer);
 router.get("/lawyer/search", lawyerController.searchLawyerByTag);
 
+router.post("/ocr", ocrController.upload.single("file"), ocrController.uploadImage, ocrController.ocrImage);
 
 router.post(
   "/chat",
