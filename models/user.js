@@ -13,6 +13,11 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "user_id",
         as: "lawyerTags",
       });
+      this.belongsToMany(models.Tags, {
+        through: "LawyerTags",
+        foreignKey: "user_id",
+        as: "filterLawyerTags",
+      });
     }
   }
 

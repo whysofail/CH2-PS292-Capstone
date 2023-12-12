@@ -17,11 +17,9 @@ const authorize = async (req, res, next) => {
       return res.status(401).json({ error: 'Unauthorized: User not found' });
     }
 
-    // Attach the user to the request for future middleware/routes
     req.user = user;
     next();
   } catch (err) {
-    // Handle token verification errors
     console.error('Authorization error:', err);
     res.status(401).json({ error: 'Unauthorized: Invalid token' });
   }

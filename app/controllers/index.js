@@ -1,11 +1,11 @@
 const authController = require("./authController");
 const lawyerController = require("./lawyerController");
 const databaseController = require("./databaseController");
-const ocrController = require("./ocrController");
+const chatController = require("./chatController");
 
 module.exports = {
   authController,
   databaseController,
   lawyerController,
-  ocrController,
+  chatController,
 };
