@@ -39,6 +39,7 @@ def predict():
     response = get_response(intents, intents_json)
 
     return jsonify({"msg": response})
+  # nambah tags
 
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
