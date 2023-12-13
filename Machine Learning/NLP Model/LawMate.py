@@ -11,6 +11,13 @@ nltk.download('punkt')
 nltk.download('wordnet')
 from nltk.stem import WordNetLemmatizer
 
+import string
+nltk.download()
+from nltk.tokenize import word_tokenize 
+from nltk.corpus import stopwords
+from nltk.probability import FreqDist
+from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
+
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from keras.models import Sequential
@@ -31,10 +38,41 @@ with open(stop_words, 'r', encoding='utf-8') as file:
 with open(file_path, 'r', encoding='utf-8') as file:
   data_json = json.load(file)
 
+def preprocess_words(sentence):
+  lowercase_sentence = sentence.lower()
+  print("casefolding: ",lowercase_sentence)
+
+  lowercase_sentence = lowercase_sentence.translate(str.maketrans("","",string.punctuation))
+  lowercase_sentence = lowercase_sentence.strip()
+  tokens = nltk.tokenize.word_tokenize(lowercase_sentence)
+
+  # print("tokens result: " ,tokens)
+  freq_tokens = nltk.FreqDist(tokens)
+
+  # print('Frequency Tokens : \n') 
+  # print(freq_tokens.most_common())
+
+  list_stopwords = set(stopwords.words('indonesian'))
+
+  tokens_without_stopwords = [word for word in freq_tokens if not word in list_stopwords]
+
+  # print(tokens_without_stopwords)
+
+  factory = StemmerFactory()
+  stemmer = factory.create_stemmer()
+
+  list_tokens = tokens_without_stopwords
+
+  output   = [(token + " : " + stemmer.stem(token)) for token in list_tokens]
+
+  output
+
+  return tokens_without_stopwords
 
 for intent in data_json['intents']:
   for pattern in intent['patterns']:
-    w = nltk.word_tokenize(pattern)
+    # w = nltk.word_tokenize(pattern)
+    w = preprocess_words(pattern)
     words.extend(w)
     documents.append((w, intent['tag']))
 
