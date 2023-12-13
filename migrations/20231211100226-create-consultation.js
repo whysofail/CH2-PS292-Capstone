@@ -1,4 +1,5 @@
 'use strict';
+const MOMENT = require( 'moment' );
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
@@ -15,22 +16,24 @@ module.exports = {
       description: {
         type: Sequelize.TEXT
       },
-      pictureUrl: {
+      picture_URI: {
         type: Sequelize.STRING
       },
-      userId: {
+      user_id: {
         type: Sequelize.INTEGER
       },
-      lawyerId: {
+      lawyer_id: {
         type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue : MOMENT().format( 'YYYY-MM-DD  HH:mm:ss.000' )
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        defaultValue: MOMENT().format( 'YYYY-MM-DD  HH:mm:ss.000' )
       }
     });
   },

@@ -19,31 +19,34 @@ let processFileMiddleware = util.promisify(processFile);
 const uploadImage = async (req, res, next) => {
   try {
     await processFileMiddleware(req, res);
+    if (req.file === undefined) {
+      console.log('No file attached')
+      req.imagePublic_URI = null;
+      next();
+    } else {
+      console.log('file attached : ' + req.file.originalname)
 
-    if (!req.file) {
-      res.status(400).json({ msg: "No file attached." });
-      next()
+
+      const fileName = generateRandomFileName(req.file.originalname);
+      const blob = bucket.file(fileName);
+      const blobStream = blob.createWriteStream({
+        resumable: false,
+      });
+
+      blobStream.on("error", (err) => {
+        res.status(500).send({ message: err.message });
+      });
+
+      blobStream.on("finish", async () => {
+        const publicUrl = format(
+          `https://storage.googleapis.com/${bucket.name}/${blob.name}`
+        );
+        req.imagePublic_URI = encodeURI(publicUrl);
+        next(); // Move next() here to ensure it's called after the file upload is complete
+      });
+
+      blobStream.end(req.file.buffer);
     }
-
-    const fileName = generateRandomFileName(req.file.originalname)
-    const blob = bucket.file(fileName);
-    const blobStream = blob.createWriteStream({
-      resumable: false,
-    });
-
-    blobStream.on("error", (err) => {
-      res.status(500).send({ message: err.message });
-    });
-
-    blobStream.on("finish", async () => {
-      const publicUrl = format(
-        `https://storage.googleapis.com/${bucket.name}/${blob.name}`
-      );
-      req.imagePublic_URI = encodeURI(publicUrl);
-      next(); // Move next() here to ensure it's called after the file upload is complete
-    });
-
-    blobStream.end(req.file.buffer);
   } catch (error) {
     console.error("Error during image upload:", error);
     return res.status(500).json({ message: "Internal Server Error" });
