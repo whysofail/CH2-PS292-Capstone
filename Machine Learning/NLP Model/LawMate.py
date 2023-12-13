@@ -71,8 +71,8 @@ def preprocess_words(sentence):
 
 for intent in data_json['intents']:
   for pattern in intent['patterns']:
-    # w = nltk.word_tokenize(pattern)
-    w = preprocess_words(pattern)
+    w = nltk.word_tokenize(pattern)
+    # w = preprocess_words(pattern)
     words.extend(w)
     documents.append((w, intent['tag']))
 
