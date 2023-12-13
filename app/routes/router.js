@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
+const consultationRoute = require('./consultationRoute')
 const {
   authController,
   lawyerController,
@@ -44,21 +45,7 @@ router.post(
   middleware.uploadFileGCS.uploadImage,
   imageController.catchImageURI
 );
-router.get(
-  "/consultation",
-  middleware.authorization.authorize,
-  consultationController.getAllConsultation
-);
-router.post(
-  "/consultation",
-  middleware.authorization.authorize,
-  middleware.uploadFileGCS.uploadImage,
-  consultationController.createConsultation
-);
-router.post(
-  "/consultation",
-  middleware.authorization.authorize,
-  middleware.uploadFileGCS.uploadImage,
-  consultationController.updateConsultation
-);
+
+router.use('/consultation', consultationRoute)
+
 module.exports = router;

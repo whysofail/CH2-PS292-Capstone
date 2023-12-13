@@ -32,9 +32,9 @@ const getConsultationById = async (req, res) => {
     const { id } = req.query;
     const user = req.user;
 
-    // Fetch the consultation from your data source (replace this with your actual data retrieval logic)
-    const consultation = await Consultation.findByPK(id, {
+    const consultation = await Consultation.findOne(id, {
       where: {
+        id,
         user_id: user.id,
       },
     });
@@ -109,10 +109,10 @@ const updateConsultation = async (req, res) => {
       },
     });
 
-    res.status(200).json({ msg: consultation });
+    res.status(200).json({ msg: 'Update success', data: consultation });
   } catch (error) {
     console.error("Error updating consultation:", error);
-    res.status(500).json({ message: "Internal Server Error" });
+    res.status(500).json({ msg: "Internal Server Error" });
   }
 };
 
