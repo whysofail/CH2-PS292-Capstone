@@ -26,10 +26,10 @@ train_dir = os.path.join(base_dir, 'train')
 test_dir = os.path.join(base_dir, 'validation')
 
 train_chat_dir = os.path.join(train_dir, 'chat')
-train_image_dir = os.path.join(train_dir, 'image')
+train_image_dir = os.path.join(train_dir, 'images')
 
 test_chat_dir = os.path.join(test_dir, 'chat')
-test_image_dir = os.path.join(test_dir, 'image')
+test_image_dir = os.path.join(test_dir, 'images')
 
 train_chat_fnames = os.listdir(train_chat_dir)
 train_image_fnames = os.listdir(train_image_dir)
@@ -89,7 +89,7 @@ model = tf.keras.models.Sequential([
 
 model.summary()
 
-model.compile(optimizer=RMSprop(learning_rate=0.001),
+model.compile(optimizer=RMSprop(learning_rate=0.01),
               loss='binary_crossentropy',
               metrics = ['accuracy'])
 
@@ -114,7 +114,7 @@ validation_generator =  test_datagen.flow_from_directory(test_dir,
 
 history = model.fit(
             train_generator,
-            epochs=15,
+            epochs=10,
             validation_data=validation_generator,
             verbose=2
             )
@@ -145,7 +145,7 @@ def preprocess_image_from_url(image_url):
         print(f"Error processing image from URL: {e}")
         return None
 
-image_url = "https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w600/2023/10/free-images.jpg"
+image_url = "https://i.pinimg.com/564x/0c/8d/54/0c8d54a53e8f3566a7bbcc15dbe3373e.jpg"
 preprocessed_image = preprocess_image_from_url(image_url)
 
 # Example usage
@@ -155,6 +155,7 @@ preprocessed_image = preprocess_image_from_url(image_url)
 # Make a prediction using the trained model
 prediction = model.predict(preprocessed_image)
 
+print(f"Prediction value: {prediction[0]}")
 # Display the prediction
 if prediction[0] > 0.5:
     print("The model predicts the image is in the 'image' class.")

@@ -37,16 +37,17 @@ def preprocess_image_from_url(image_url):
         print(f"Error processing image from URL: {e}")
         return None
 
-image_url = "https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w600/2023/10/free-images.jpg"
-preprocessed_image = preprocess_image_from_url(image_url)
+# image_url = "https://i.pinimg.com/564x/34/a5/61/34a561fb233e6354a4f7dac3adfae627.jpg"
+# preprocessed_image = preprocess_image_from_url(image_url)
 
 # Example usage
-# uploaded_image_path = r"C:\Users\LENOVO\Desktop\CH2-PS292-Capstone\Machine Learning\Dataset\Images\Screenshot 2023-12-07 020954.png"
-# preprocessed_image = preprocess_image(uploaded_image_path)
+uploaded_image_path = r"C:\Users\LENOVO\Desktop\CH2-PS292-Capstone\Machine Learning\Dataset\Screenshot 2023-12-13 215649.png"
+preprocessed_image = preprocess_image(uploaded_image_path)
 
 # Make a prediction using the trained model
 prediction = model.predict(preprocessed_image)
 
+print(f"Prediction value: {prediction[0]}")
 # Display the prediction
 if prediction[0] > 0.5:
     print("The model predicts the image is in the 'image' class.")
