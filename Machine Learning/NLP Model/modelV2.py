@@ -100,7 +100,7 @@ X_train, X_test, y_train, y_test = train_test_split(padded_sequences, one_hot_la
 
 # Build the model with LSTM layers
 model = tf.keras.Sequential([
-    tf.keras.layers.Embedding(len(word_index) + 1, 64, input_length=padded_sequences.shape[1]),
+    tf.keras.layers.Embedding(len(word_index) + 1, 32, input_length=padded_sequences.shape[1]),
     tf.keras.layers.Bidirectional(tf.keras.layers.LSTM(128, return_sequences=True)),
     tf.keras.layers.Bidirectional(tf.keras.layers.LSTM(128)),
     tf.keras.layers.Dense(128, activation="relu"),
@@ -108,16 +108,17 @@ model = tf.keras.Sequential([
     tf.keras.layers.Dense(len(label_set), activation="softmax")
 ])
 
-model.compile(loss="categorical_crossentropy", optimizer="adam", metrics=["accuracy"])
+model.compile(loss="categorical_crossentropy", optimizer='adam', metrics=["accuracy"])
 
 # Train the model
-model.fit(X_train, y_train, epochs=100, validation_data=(X_test, y_test))
+model.fit(X_train, y_train, epochs=200, validation_data=(X_test, y_test))
 
 # Example usage
-user_input = "Hi there, how can you help me?"
+user_input = "saya mengalami pelecehan seksual"
 sequence = pad_sequences(tokenizer.texts_to_sequences([user_input]), padding="post", maxlen=padded_sequences.shape[1])
 prediction = model.predict(sequence)
 predicted_label = label_set[np.argmax(prediction)]
 response = [intent["responses"] for intent in dataset["intents"] if intent["tag"] == predicted_label][0][0]
 
+print(user_input + '\n')
 print(response)
