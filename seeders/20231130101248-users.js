@@ -1,36 +1,40 @@
-'use strict';
+"use strict";
+const bcrypt = require("bcryptjs");
+
+const password = "123456";
+const encryptedPassword = bcrypt.hashSync(password, 10);
 
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.bulkInsert('Users', [
-      {
-        first_name: 'John',
-        last_name: 'Doe',
-        email: 'john.doe@example.com',
-        password: '567890',
-        role_id: 3,
-      },
-      {
-        first_name: 'Jane',
-        last_name: 'Doe',
-        email: 'jane.doe@example.com',
-        password: '123456',
-        role_id: 3,
-      },
-      // Add more users as needed
-    ], {});
+    await queryInterface.bulkInsert(
+      "Users",
+      [
+        {
+          first_name: "John",
+          last_name: "Doe",
+          email: "john.doe@example.com",
+          password: encryptedPassword,
+          role_id: 3,
+        },
+        {
+          first_name: "Jane",
+          last_name: "Doe",
+          email: "jane.doe@example.com",
+          password: encryptedPassword,
+          role_id: 3,
+        },
+        // Add more users as needed
+      ],
+      {}
+    );
 
     // Fetch users after inserting them
-    const users = await queryInterface.sequelize.query(
-      'SELECT id from Users;'
-    );
+    const users = await queryInterface.sequelize.query("SELECT id from Users;");
 
     const userRows = users[0];
 
     // Fetch tags after inserting them
-    const tags = await queryInterface.sequelize.query(
-      'SELECT id from Tags;'
-    );
+    const tags = await queryInterface.sequelize.query("SELECT id from Tags;");
 
     const tagRows = tags[0];
 
@@ -51,14 +55,14 @@ module.exports = {
     });
 
     // Insert associations into LawyerTags
-    await queryInterface.bulkInsert('LawyerTags', userTagsData, {});
+    await queryInterface.bulkInsert("LawyerTags", userTagsData, {});
   },
 
   async down(queryInterface, Sequelize) {
     // Delete associations from LawyerTags
-    await queryInterface.bulkDelete('LawyerTags', null, {});
+    await queryInterface.bulkDelete("LawyerTags", null, {});
 
     // Delete users
-    await queryInterface.bulkDelete('Users', null, {});
+    await queryInterface.bulkDelete("Users", null, {});
   },
 };

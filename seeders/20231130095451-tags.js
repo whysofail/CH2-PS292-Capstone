@@ -5,12 +5,12 @@ module.exports = {
   async up (queryInterface, Sequelize) {
     await queryInterface.bulkInsert('Tags', [
       {
-        name: 'Tag1',
-        description: 'Description for Tag1',
+        name: 'Pelecehan Seksual',
+        description: 'Spesialisai dalam bidang Pelecehan Seksual',
       },
       {
-        name: 'Tag2',
-        description: 'Description for Tag2',
+        name: 'Hutang Piutang',
+        description: 'Spesialisai dalam bidang Hutang Piutang',
       },
       
     ], {});

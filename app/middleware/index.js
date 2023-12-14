@@ -1,12 +1,11 @@
-const { authorize, isAdmin } = require("./authorization");
-const { emailExist } = require("./emailCheck");
-const { getIdTokenFromMetadataServer } = require("./iam");
-const { uploadImage, processFileMiddleware} = require('./uploadFileGCS')
+const authorization = require("./authorization");
+const emailCheck = require("./emailCheck");
+const iam = require("./iam");
+const uploadFileGCS = require('./uploadFileGCS')
 
 module.exports = {
-  authorize,
-  emailExist,
-  getIdTokenFromMetadataServer,
-  uploadImage,
-  processFileMiddleware,
+  authorization,
+  emailCheck,
+  iam,
+  uploadFileGCS,
 };
