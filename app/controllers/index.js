@@ -4,6 +4,7 @@ const databaseController = require("./databaseController");
 const chatController = require("./chatController");
 const imageController = require('./imageController')
 const consultationController = require('./consultationController')
+const ocrController = require("./ocrController")
 
 module.exports = {
   authController,
@@ -12,4 +13,5 @@ module.exports = {
   chatController,
   imageController,
   consultationController,
+  ocrController,
 };

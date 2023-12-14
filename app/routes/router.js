@@ -8,6 +8,7 @@ const {
   databaseController,
   chatController,
   imageController,
+  ocrController,
   consultationController,
 } = require("../controllers");
 
@@ -32,6 +33,8 @@ router.get("/who", middleware.authorization.authorize, authController.whoAmI);
 
 router.get("/lawyer", lawyerController.getLawyer);
 router.get("/lawyer/search", lawyerController.searchLawyerByTag);
+
+router.post("/ocr", ocrController.upload.single("file"), ocrController.uploadImage, ocrController.ocrImage);
 
 router.post(
   "/chat",
