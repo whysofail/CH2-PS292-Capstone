@@ -87,7 +87,7 @@ const updateConsultation = async (req, res) => {
     const user = req.user;
     const id = req.params.id;
 
-    let consultation = await Consultation.findByPK(id, {
+    let consultation = await Consultation.findByPk(id, {
       where: {
         user_id: user.id,
       },
