@@ -18,7 +18,7 @@ router.get(
 router.post(
   "/",
   middleware.authorization.authorize,
-  middleware.uploadFileGCS.uploadImage,
+  middleware.multer.uploadImage,
   consultationController.createConsultation
 );
 router.get(
@@ -29,7 +29,7 @@ router.get(
 router.put(
   "/:id",
   middleware.authorization.authorize,
-  middleware.uploadFileGCS.uploadImage,
+  middleware.multer.uploadImage,
   consultationController.updateConsultation
 );
 

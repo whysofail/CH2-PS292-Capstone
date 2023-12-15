@@ -5,7 +5,7 @@ const consultationRoute = require("./consultationRoute");
 const authRoute = require("./authRoute");
 const lawyerRoute = require("./lawyerRoute");
 const statusRoute = require("./statusRoute");
-const { chatController, ocrController, consultationController } = require("../controllers");
+const { chatController, ocrController, } = require("../controllers");
 
 const middleware = require("../middleware");
 
@@ -20,7 +20,8 @@ router.post(
   "/classification",
   middleware.authorization.authorize,
   middleware.iam.getIdTokenFromMetadataServer,
-  middleware.uploadFileGCS.uploadImage,
+  middleware.multer.processFileMiddleware,
+  middleware.multer.uploadImage,
   middleware.classification.getImageClassification,
   ocrController.ocrImage,
 );

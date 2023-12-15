@@ -18,7 +18,6 @@ let processFileMiddleware = util.promisify(processFile);
 
 const uploadImage = async (req, res, next) => {
   try {
-    await processFileMiddleware(req, res);
     if (req.file === undefined) {
       console.log('No file attached')
       req.imagePublic_URI = null;

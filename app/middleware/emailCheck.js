@@ -2,10 +2,15 @@ const { User } = require("../../models");
 
 const emailExist = async (req, res, next) => {
   try {
-    const email = req.body.email.toLowerCase();
+    const { email } = req.body
+    console.log(req.body)
+    if(!email){
+      return res.status(400).json({msg : 'Email is required.'})
+    }
+    email.toLowerCase()
     const getEmail = await User.findOne({ where: { email } });
     if (getEmail) {
-      return res.status(400).json({ msg: "email is already used" });
+      return res.status(400).json({ msg: "Email is already used." });
     }
     next();
   } catch (error) {
