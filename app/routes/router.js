@@ -3,11 +3,9 @@ const router = express.Router();
 
 const consultationRoute = require("./consultationRoute");
 const authRoute = require("./authRoute");
-const lawyerRoute = require('./lawyerRoute')
-const statusRoute = require('./statusRoute')
-const {
-  chatController,
-} = require("../controllers");
+const lawyerRoute = require("./lawyerRoute");
+const statusRoute = require("./statusRoute");
+const { chatController, ocrController, consultationController } = require("../controllers");
 
 const middleware = require("../middleware");
 
@@ -18,9 +16,18 @@ router.post(
   chatController.getChat
 );
 
+router.post(
+  "/classification",
+  middleware.authorization.authorize,
+  middleware.iam.getIdTokenFromMetadataServer,
+  middleware.uploadFileGCS.uploadImage,
+  middleware.classification.getImageClassification,
+  ocrController.ocrImage,
+);
+
 router.use("/auth", authRoute);
-router.use('/lawyer', lawyerRoute)
+router.use("/lawyer", lawyerRoute);
 router.use("/consultation", consultationRoute);
-router.use('/status', statusRoute)
+router.use("/status", statusRoute);
 
 module.exports = router;

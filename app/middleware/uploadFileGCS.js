@@ -25,8 +25,6 @@ const uploadImage = async (req, res, next) => {
       next();
     } else {
       console.log('file attached : ' + req.file.originalname)
-
-
       const fileName = generateRandomFileName(req.file.originalname);
       const blob = bucket.file(fileName);
       const blobStream = blob.createWriteStream({
@@ -41,6 +39,7 @@ const uploadImage = async (req, res, next) => {
         const publicUrl = format(
           `https://storage.googleapis.com/${bucket.name}/${blob.name}`
         );
+        req.gs_URI = `gs://${bucket.name}/${blob.name}`
         req.imagePublic_URI = encodeURI(publicUrl);
         next(); // Move next() here to ensure it's called after the file upload is complete
       });

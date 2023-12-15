@@ -51,8 +51,8 @@ const getConsultationById = async (req, res) => {
   }
 };
 
-const createConsultation = async (req, res) => {
-  const { user, imagePublic_URI } = req;
+const createConsultation = async (req, res) => { 
+  const { user, imagePublic_URI, } = req;
   const { lawyer_id } = req.query;
   const { title, description } = req.body;
   const picture_URI = imagePublic_URI || null;

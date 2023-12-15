@@ -30,7 +30,7 @@ function checkPassword(encryptedPassword, password) {
 
 function createToken(payload) {
   const access = jwt.sign(payload, process.env.ACCESS_TOKEN_SECRET, {
-    expiresIn: "6h",
+    expiresIn: "7d",
   });
   const refresh = jwt.sign(payload, process.env.REFRESH_TOKEN_SECRET, {
     expiresIn: "7d",
@@ -180,7 +180,7 @@ const refreshToken = async (req, res) => {
         },
         process.env.ACCESS_TOKEN_SECRET,
         {
-          expiresIn: "6h",
+          expiresIn: "7d",
         }
       );
       res.json({
