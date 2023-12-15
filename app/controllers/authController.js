@@ -42,13 +42,15 @@ const register = async (req, res) => {
   try {
     const { first_name, last_name, email, password, confirmationPassword } =
       req.body;
+    const profile_picture = req.imagePublic_URI || null;
 
     if (
       !first_name ||
       !last_name ||
       !email ||
       !password ||
-      !confirmationPassword
+      !confirmationPassword ||
+      !profile_picture
     ) {
       return res.status(400).json({ msg: "All fields are required" });
     }
@@ -66,6 +68,7 @@ const register = async (req, res) => {
       email,
       password: encryptedPassword,
       role_id,
+      profile_picture,
     });
 
     return res.status(200).json({ msg: "Registration successful" });
@@ -106,6 +109,7 @@ const login = async (req, res) => {
     last_name: user.last_name,
     email: user.email,
     role_id: user.role_id,
+    profile_picture: user.profile_picture,
   });
   const accessToken = token[0];
   const refreshToken = token[1];
@@ -129,6 +133,7 @@ const login = async (req, res) => {
       last_name: user.last_name,
       email: user.email,
       role_id: user.role_id,
+      profile_picture: user.profile_picture,
       accessToken,
     },
   });
