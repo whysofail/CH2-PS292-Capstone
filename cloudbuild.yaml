@@ -1,7 +1,7 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
   script: |
-    docker build -t asia-southeast2-docker.pkg.dev/lawmate-gcp/lawmate-backend/lawmate-backend:test .
+    docker build -t asia-southeast2-docker.pkg.dev/lawmate-gcp/lawmate-backend/lawmate-backend .
   automapSubstitutions: true
 images:
-- 'asia-southeast2-docker.pkg.dev/lawmate-gcp/lawmate-backend/lawmate-backend:test'
+- 'asia-southeast2-docker.pkg.dev/lawmate-gcp/lawmate-backend/lawmate-backend'
