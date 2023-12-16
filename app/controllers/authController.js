@@ -49,8 +49,7 @@ const register = async (req, res) => {
       !last_name ||
       !email ||
       !password ||
-      !confirmationPassword ||
-      !profile_picture
+      !confirmationPassword 
     ) {
       return res.status(400).json({ msg: "All fields are required" });
     }
@@ -207,12 +206,51 @@ const refreshToken = async (req, res) => {
   }
 };
 
+const updateUser = async (req, res) => {
+  try {
+    const { first_name, last_name, email, password } = req.body;
+    const profile_picture = req.imagePublic_URI || null;
+    const user_id = req.user.id;
+
+    let updatedFields = {};
+
+    if (first_name) updatedFields.first_name = first_name;
+    if (last_name) updatedFields.last_name = last_name;
+    if (email) updatedFields.email = email;
+    if (password) updatedFields.password = await encryptPassword(password);
+    if (profile_picture) updatedFields.profile_picture = profile_picture;
+
+    const updatedUser = await User.update(updatedFields, {
+      where: {
+        id: user_id,
+      },
+    });
+
+    if (updatedUser) {
+      return res.status(200).json({ msg: "User data updated successfully" });
+    } else {
+      return res.status(400).json({ msg: "Failed to update user data" });
+    }
+  } catch (err) {
+    console.error("Update error:", err);
+
+    return res.status(500).json({
+      error: {
+        name: err.name,
+        msg: "An error occurred during updating",
+      },
+    });
+  }
+};
+
+
 module.exports = {
   register,
   login,
   whoAmI,
   logout,
   refreshToken,
+  updateUser, // Add this line
   onLost(_req, res) {
     res.status(404).json({
       status: "FAIL",
