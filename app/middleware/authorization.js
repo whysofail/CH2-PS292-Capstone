@@ -25,16 +25,28 @@ const authorize = async (req, res, next) => {
   }
 };
 
-module.exports = authorize;
-
+const roles = {
+  user : 1,
+  admin: 2,
+  lawyer: 3
+}
 
 const isAdmin = async (req, res, next) => {
-  const auth = req.user.roleId;
-  if (auth !== 1) {
-    res.status(403).json({ msg: 'member unauthorized' })
+  const role = req.user.roleId;
+  if (role !== roles.admin) {
+    res.status(403).json({ msg: 'Unauthorized' })
     return;
   }
   next();
 };
 
-module.exports = { authorize, isAdmin };
+const isLawyer = async (req, res, next) => {
+  const role = req.user.roleId
+  if(role !== roles.lawyer){
+    res.status(403).json({msg : 'Unauthorized'})
+    return
+  }
+  next()
+}
+
+module.exports = { authorize, isAdmin, isAdmin };

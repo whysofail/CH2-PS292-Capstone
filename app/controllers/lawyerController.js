@@ -27,16 +27,16 @@ const getLawyer = async (req, res) => {
     if (users.length === 0) {
       return res
         .status(404)
-        .json({ message: "No users found with the specified role_id" });
+        .json({ msg: "No users found with the specified role_id" });
     }
 
     return res.status(200).json({
-      message: "Users found successfully",
+      msg: "Users found successfully",
       data: users,
     });
   } catch (error) {
     console.error("Error retrieving users:", error);
-    return res.status(500).json({ message: "Internal Server Error" });
+    return res.status(500).json({ msg: "Internal Server Error" });
   }
 };
 
@@ -46,7 +46,7 @@ const searchLawyerByTag = async (req, res) => {
 
     if (!tag) {
       return res.status(400).json({
-        message: "Tag name is required in the request query parameters",
+        msg: "Tag name is required in the request query parameters",
       });
     }
 
@@ -78,16 +78,16 @@ const searchLawyerByTag = async (req, res) => {
     if (users.length === 0) {
       return res
         .status(404)
-        .json({ message: "No lawyers found with the specified tag" });
+        .json({ msg: "No lawyers found with the specified tag" });
     }
 
     return res.status(200).json({
-      message: "Lawyers found successfully",
+      msg: "Lawyers found successfully",
       data: users,
     });
   } catch (error) {
     console.error("Error searching for lawyers by tag:", error);
-    return res.status(500).json({ message: "Internal Server Error" });
+    return res.status(500).json({ msg: "Internal Server Error" });
   }
 };
 

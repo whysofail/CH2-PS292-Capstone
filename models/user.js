@@ -18,6 +18,8 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "user_id",
         as: "filterLawyerTags",
       });
+      this.hasMany(models.Consultation, { foreignKey: 'user_id' });
+      this.hasMany(models.Consultation, { foreignKey: 'lawyer_id' });
     }
   }
 
@@ -28,6 +30,7 @@ module.exports = (sequelize, DataTypes) => {
       email: DataTypes.STRING,
       password: DataTypes.STRING,
       role_id: DataTypes.INTEGER,
+      profile_picture: DataTypes.STRING, // Kolom baru untuk URL foto profil
     },
     {
       timestamps: false,
