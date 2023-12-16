@@ -18,6 +18,7 @@ router.get(
 router.post(
   "/",
   middleware.authorization.authorize,
+  middleware.multer.processFileMiddleware,
   middleware.multer.uploadImage,
   consultationController.createConsultation
 );
@@ -29,6 +30,7 @@ router.get(
 router.put(
   "/:id",
   middleware.authorization.authorize,
+  middleware.multer.processFileMiddleware,
   middleware.multer.uploadImage,
   consultationController.updateConsultation
 );
