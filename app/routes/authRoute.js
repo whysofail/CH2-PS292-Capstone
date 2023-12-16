@@ -14,6 +14,15 @@ router.post(
   middleware.multer.uploadImage,
   authController.register,
 );
+router.put(
+  "/update",
+  middleware.authorization.authorize,
+  middleware.multer.processFileMiddleware,
+  middleware.multer.uploadImage,
+  authController.updateUser
+);
+
+
 router.get("/who", middleware.authorization.authorize, authController.whoAmI);
 
 module.exports = router
