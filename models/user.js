@@ -31,6 +31,7 @@ module.exports = (sequelize, DataTypes) => {
       password: DataTypes.STRING,
       role_id: DataTypes.INTEGER,
       profile_picture: DataTypes.STRING, // Kolom baru untuk URL foto profil
+      fee : DataTypes.DECIMAL(10,2),
     },
     {
       timestamps: false,

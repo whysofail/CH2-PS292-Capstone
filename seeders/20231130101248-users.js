@@ -15,6 +15,8 @@ module.exports = {
           email: "john.doe@example.com",
           password: encryptedPassword,
           role_id: 3,
+          profile_picture: 'https://storage.googleapis.com/lawmate_user_bucket/20231216T123453.111Z_c99e7953450b46bf81120fae02d94b0c.jpg',
+          fee: 100000
         },
         {
           first_name: "Jane",
@@ -22,6 +24,10 @@ module.exports = {
           email: "jane.doe@example.com",
           password: encryptedPassword,
           role_id: 3,
+          profile_picture: 'https://storage.googleapis.com/lawmate_user_bucket/20231216T123453.111Z_c99e7953450b46bf81120fae02d94b0c.jpg',
+
+          
+          fee: 150000
         },
         // Add more users as needed
       ],

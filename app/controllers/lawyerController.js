@@ -1,4 +1,4 @@
-const { User, Role, LawyerTags, Tags, sequelize } = require("../../models");
+const { User, Role, LawyerTags, Tags, LawyerFee, sequelize } = require("../../models");
 const { Op } = require("@sequelize/core");
 
 const getLawyer = async (req, res) => {
@@ -7,7 +7,7 @@ const getLawyer = async (req, res) => {
 
     const users = await User.findAll({
       where: { role_id },
-      attributes: ["id", "first_name", "last_name", "email"],
+      attributes: ["id", "first_name", "last_name", "email","fee"],
       include: [
         {
           model: Role,
