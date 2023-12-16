@@ -7,7 +7,7 @@ const getLawyer = async (req, res) => {
 
     const users = await User.findAll({
       where: { role_id },
-      attributes: ["id", "first_name", "last_name", "email","fee"],
+      attributes: ["id", "first_name", "last_name", "email","fee", "profile_picture"],
       include: [
         {
           model: Role,
@@ -51,7 +51,7 @@ const searchLawyerByTag = async (req, res) => {
     }
 
     const users = await User.findAll({
-      attributes: ["id", "first_name", "last_name", "email"],
+      attributes: ["id", "first_name", "last_name", "email","fee", "profile_picture"],
       include: [
         {
           model: Role,
