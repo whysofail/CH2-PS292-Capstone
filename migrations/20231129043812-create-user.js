@@ -27,6 +27,10 @@ module.exports = {
       profile_picture: {
         type: Sequelize.STRING
       },
+      fee: {
+        type: Sequelize.DECIMAL(10,2),
+        allowNull: true,
+      }
     });
   },
   async down(queryInterface, Sequelize) {

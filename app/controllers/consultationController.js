@@ -3,7 +3,7 @@ const { User, Consultation } = require("../../models");
 const getAllConsultation = async (req, res) => {
   try {
     const consultation = await Consultation.findAll();
-    return res.status(200).json(consultation);
+    return res.status(200).json({msg: consultation});
   } catch (error) {
     console.error(error);
     return res.status(500).json({ msg: "Internal server error" });
