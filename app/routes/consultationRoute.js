@@ -20,6 +20,8 @@ router.post(
   middleware.authorization.authorize,
   middleware.multer.processFileMiddleware,
   middleware.multer.uploadImage,
+  middleware.classification.getImageClassification,
+  middleware.ocr.ocrImage,
   consultationController.createConsultation
 );
 router.get(
@@ -32,6 +34,8 @@ router.put(
   middleware.authorization.authorize,
   middleware.multer.processFileMiddleware,
   middleware.multer.uploadImage,
+  middleware.classification.getImageClassification,
+  middleware.ocr.ocrImage,
   consultationController.updateConsultation
 );
 
