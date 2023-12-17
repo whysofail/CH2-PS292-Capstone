@@ -24,7 +24,6 @@ if (config.use_env_variable) {
   )),
     { define: { timestamps: false } };
 }
-console.log(process.env.NODE_ENV === 'test')
 if (process.env.NODE_ENV === "test") {
   sequelize.beforeConnect(async (config) => {
     const connector = new Connector();

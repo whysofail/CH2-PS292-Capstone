@@ -53,7 +53,8 @@ const getConsultationById = async (req, res) => {
 
 const createConsultation = async (req, res) => { 
   const { user, imagePublic_URI, extracted_text } = req;
-  console.log(extracted_text)
+  const extractArray = extracted_text.map(item => item.description);
+  console.log(extractArray)
   const { lawyer_id } = req.query;
   const { title, description } = req.body;
   const picture_URI = imagePublic_URI || null;
@@ -75,7 +76,7 @@ const createConsultation = async (req, res) => {
       lawyer_id,
     });
     
-    return res.status(200).json({ msg: consultation});
+    return res.status(200).json({ msg: consultation, extractArray});
   } catch (error) {
     console.error(error);
     return res
