@@ -52,7 +52,8 @@ const getConsultationById = async (req, res) => {
 };
 
 const createConsultation = async (req, res) => { 
-  const { user, imagePublic_URI, } = req;
+  const { user, imagePublic_URI, extracted_text } = req;
+  console.log(extracted_text)
   const { lawyer_id } = req.query;
   const { title, description } = req.body;
   const picture_URI = imagePublic_URI || null;
@@ -73,7 +74,8 @@ const createConsultation = async (req, res) => {
       user_id: user.id,
       lawyer_id,
     });
-    return res.status(200).json({ msg: consultation });
+    
+    return res.status(200).json({ msg: consultation});
   } catch (error) {
     console.error(error);
     return res
@@ -102,13 +104,13 @@ const updateConsultation = async (req, res) => {
     const updatedData = req.body;
 
     consultation = Object.assign(consultation, updatedData);
-
     await Consultation.update(consultation, {
       where: {
         id,
       },
     });
-
+    
+    consultation['extracted_text'] = req.description
     res.status(200).json({ msg: 'Update success', data: consultation });
   } catch (error) {
     console.error("Error updating consultation:", error);

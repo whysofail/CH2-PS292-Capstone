@@ -3,6 +3,7 @@ const emailCheck = require("./emailCheck");
 const iam = require("./iam");
 const multer = require('./multer')
 const classification = require('./classification')
+const ocr = require('./ocr')
 
 module.exports = {
   authorization,
@@ -10,4 +11,5 @@ module.exports = {
   iam,
   multer,
   classification,
+  ocr
 };

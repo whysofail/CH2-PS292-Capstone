@@ -40,7 +40,8 @@ const uploadImage = async (req, res, next) => {
         );
         req.gs_URI = `gs://${bucket.name}/${blob.name}`
         req.imagePublic_URI = encodeURI(publicUrl);
-        next(); // Move next() here to ensure it's called after the file upload is complete
+        console.log(`Image uploaded : ${publicUrl}`)
+        next();
       });
 
       blobStream.end(req.file.buffer);
