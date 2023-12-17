@@ -1,9 +1,13 @@
-const { authorize, isAdmin } = require("./authorization");
-const { emailExist } = require("./emailCheck");
-const { getIdTokenFromMetadataServer } = require("./iam");
+const authorization = require("./authorization");
+const emailCheck = require("./emailCheck");
+const iam = require("./iam");
+const multer = require('./multer')
+const classification = require('./classification')
 
 module.exports = {
-  authorize,
-  emailExist,
-  getIdTokenFromMetadataServer
+  authorization,
+  emailCheck,
+  iam,
+  multer,
+  classification,
 };

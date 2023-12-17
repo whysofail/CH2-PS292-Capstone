@@ -30,7 +30,7 @@ function checkPassword(encryptedPassword, password) {
 
 function createToken(payload) {
   const access = jwt.sign(payload, process.env.ACCESS_TOKEN_SECRET, {
-    expiresIn: "6h",
+    expiresIn: "7d",
   });
   const refresh = jwt.sign(payload, process.env.REFRESH_TOKEN_SECRET, {
     expiresIn: "7d",
@@ -42,13 +42,14 @@ const register = async (req, res) => {
   try {
     const { first_name, last_name, email, password, confirmationPassword } =
       req.body;
+    const profile_picture = req.imagePublic_URI || null;
 
     if (
       !first_name ||
       !last_name ||
       !email ||
       !password ||
-      !confirmationPassword
+      !confirmationPassword 
     ) {
       return res.status(400).json({ msg: "All fields are required" });
     }
@@ -66,6 +67,7 @@ const register = async (req, res) => {
       email,
       password: encryptedPassword,
       role_id,
+      profile_picture,
     });
 
     return res.status(200).json({ msg: "Registration successful" });
@@ -106,6 +108,7 @@ const login = async (req, res) => {
     last_name: user.last_name,
     email: user.email,
     role_id: user.role_id,
+    profile_picture: user.profile_picture,
   });
   const accessToken = token[0];
   const refreshToken = token[1];
@@ -129,6 +132,7 @@ const login = async (req, res) => {
       last_name: user.last_name,
       email: user.email,
       role_id: user.role_id,
+      profile_picture: user.profile_picture,
       accessToken,
     },
   });
@@ -180,7 +184,7 @@ const refreshToken = async (req, res) => {
         },
         process.env.ACCESS_TOKEN_SECRET,
         {
-          expiresIn: "6h",
+          expiresIn: "7d",
         }
       );
       res.json({
@@ -202,12 +206,51 @@ const refreshToken = async (req, res) => {
   }
 };
 
+const updateUser = async (req, res) => {
+  try {
+    const { first_name, last_name, email, password } = req.body;
+    const profile_picture = req.imagePublic_URI || null;
+    const user_id = req.user.id;
+
+    let updatedFields = {};
+
+    if (first_name) updatedFields.first_name = first_name;
+    if (last_name) updatedFields.last_name = last_name;
+    if (email) updatedFields.email = email;
+    if (password) updatedFields.password = await encryptPassword(password);
+    if (profile_picture) updatedFields.profile_picture = profile_picture;
+
+    const updatedUser = await User.update(updatedFields, {
+      where: {
+        id: user_id,
+      },
+    });
+
+    if (updatedUser) {
+      return res.status(200).json({ msg: "User data updated successfully" });
+    } else {
+      return res.status(400).json({ msg: "Failed to update user data" });
+    }
+  } catch (err) {
+    console.error("Update error:", err);
+
+    return res.status(500).json({
+      error: {
+        name: err.name,
+        msg: "An error occurred during updating",
+      },
+    });
+  }
+};
+
+
 module.exports = {
   register,
   login,
   whoAmI,
   logout,
   refreshToken,
+  updateUser, // Add this line
   onLost(_req, res) {
     res.status(404).json({
       status: "FAIL",
