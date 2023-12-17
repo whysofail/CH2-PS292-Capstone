@@ -14,7 +14,7 @@ router.post(
   middleware.multer.uploadImage,
   authController.register,
 );
-router.put(
+router.post(
   "/update",
   middleware.authorization.authorize,
   middleware.multer.processFileMiddleware,

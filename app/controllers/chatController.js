@@ -21,7 +21,7 @@ const getServerStatus = async (req, res) => {
     } else {
       return res
         .status(response.status)
-        .json({ status: "Error", messamsgge: "Unexpected status code" });
+        .json({ status: "Error", message: "Unexpected status code" });
     }
   } catch (error) {
     console.error("Error making HTTP request:", error.message);
