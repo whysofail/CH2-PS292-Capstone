@@ -33,19 +33,19 @@ class OnboardingActivity : AppCompatActivity() {
         onBoardingItemsAdapter = OnboardingAdapter(
             listOf(
                 OnboardingItems(
-                    onBoardingImages = R.drawable.law,
+                    onBoardingImages = R.drawable.onboarding1,
                     title = "Bingung Dengan Hukum?",
                     deskripsi = "Kami akan memberikan solusi dari permasalahan anda"
                 ),
                 OnboardingItems(
-                    onBoardingImages = R.drawable.law,
-                    title = "Bingung Dengan Hukum?",
-                    deskripsi = "Kami akan memberikan solusi dari permasalahan anda"
+                    onBoardingImages = R.drawable.onboarding2,
+                    title = "Mau Update Tentang Hukum?",
+                    deskripsi = "LawMate memberikan kabar hukum terupadate untuk anda"
                 ),
                 OnboardingItems(
-                    onBoardingImages = R.drawable.law,
-                    title = "Bingung Dengan Hukum?",
-                    deskripsi = "Kami akan memberikan solusi dari permasalahan anda"
+                    onBoardingImages = R.drawable.onboarding3,
+                    title = "Ingin Konsultasi?",
+                    deskripsi = "Kami menyediakan lawyer yang siap menjawab permasalahan anda"
                 )
             )
         )

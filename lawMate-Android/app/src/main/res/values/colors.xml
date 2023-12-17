@@ -12,5 +12,6 @@
     <color name="blue">#00A9FF</color>
     <color name="blue_light">#89CFF3</color>
     <color name="blue_dark">#0174BE</color>
+    <color name="light">#ced4da</color>
 
 </resources>

@@ -7,6 +7,7 @@
     tools:context=".ui.authentication.login.LoginActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginHorizontal="16dp">
@@ -32,7 +33,7 @@
                 android:layout_width="42dp"
                 android:layout_height="42dp"
                 android:layout_marginStart="8dp"
-                android:src="@drawable/ic_rocket"/>
+                android:src="@drawable/ic_rocket" />
         </LinearLayout>
 
 
@@ -42,8 +43,8 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="8dp"
             android:lines="2"
-            app:layout_constraintTop_toBottomOf="@+id/ll_login"
-            android:text="@string/login_desc" />
+            android:text="@string/login_desc"
+            app:layout_constraintTop_toBottomOf="@+id/ll_login" />
 
         <!--   email     -->
         <TextView
@@ -103,19 +104,20 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPassword"
+                android:paddingEnd="40dp"
                 tools:ignore="SpeakableTextPresentCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!--    btn Login    -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_proses_masuk"
-            style="@style/Widget.MaterialComponents.Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
             android:backgroundTint="@color/blue_dark"
             android:padding="16dp"
-            android:text="Masuk"
+            android:text="Login"
+            app:cornerRadius="4dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tl_password" />
@@ -123,6 +125,7 @@
 
         <!--    text registrasi    -->
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -144,10 +147,14 @@
 
 
         <!--   progres bar     -->
-        <com.google.android.material.progressindicator.LinearProgressIndicator
-            android:id="@+id/progressIndicator"
-            android:layout_width="match_parent"
-            android:layout_height="10dp"
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

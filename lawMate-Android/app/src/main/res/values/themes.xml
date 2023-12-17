@@ -17,7 +17,7 @@
     </style>
 
     <style name="Theme.LawMate" parent="Base.Theme.LawMate" />
-    
+
     <style name="Custom.Indikator" parent="ShapeAppearance.Material3.NavigationBarView.ActiveIndicator">
         <item name="android:color">@android:color/transparent</item>
     </style>

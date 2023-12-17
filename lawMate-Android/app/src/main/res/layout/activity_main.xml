@@ -17,11 +17,14 @@
             android:id="@+id/topAppBar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
+            android:textStyle="bold"
+            app:menu="@menu/appbar_menu"
             app:title="@string/app_name" />
         <!--app:navigationIcon="@drawable/ic_arrow_back"-->
 
     </com.google.android.material.appbar.AppBarLayout>
     <!--  app bar end -->
+
 
     <FrameLayout
         android:id="@+id/frame_layout"
@@ -32,15 +35,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/blue_dark"
         app:itemActiveIndicatorStyle="@style/Custom.Indikator"
         app:itemIconSize="30dp"
-        app:itemIconTint="@color/white"
-        app:itemTextColor="@color/white"
+        app:itemIconTint="@color/blue_dark"
+        app:itemTextColor="@color/blue_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
