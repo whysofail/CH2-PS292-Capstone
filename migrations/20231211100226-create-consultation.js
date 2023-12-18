@@ -26,7 +26,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       ekstrakteks: {
-        type: Sequelize.STRING(20000)
+        type: Sequelize.STRING(2000)
       },
       createdAt: {
         allowNull: false,
