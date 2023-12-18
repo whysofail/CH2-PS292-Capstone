@@ -18,7 +18,7 @@ const getAllConsultationByUserId = async (req, res) => {
         user_id: user.id,
       },
       order: [
-        ['createdAt', 'ASC']
+        ['createdAt', 'DESC']
       ]
     });
     if (!consultation) {
