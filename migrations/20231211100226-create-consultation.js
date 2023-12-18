@@ -25,6 +25,9 @@ module.exports = {
       lawyer_id: {
         type: Sequelize.INTEGER
       },
+      ekstrakteks: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

@@ -19,6 +19,7 @@ module.exports = (sequelize, DataTypes) => {
       picture_URI: DataTypes.STRING, 
       user_id: DataTypes.INTEGER,
       lawyer_id: DataTypes.INTEGER,
+      ekstrakteks: DataTypes.STRING,
     },
     {
       timestamps: true,
