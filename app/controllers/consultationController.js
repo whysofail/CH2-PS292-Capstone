@@ -17,9 +17,6 @@ const getAllConsultationByUserId = async (req, res) => {
       where: {
         user_id: user.id,
       },
-      order: [
-        ['createdAt', 'DESC']
-      ]
     });
     if (!consultation) {
       return res.status(400).json({ msg: "No consultation found" });
@@ -29,7 +26,6 @@ const getAllConsultationByUserId = async (req, res) => {
     return res.status(500).json({ msg: "Internal server error." });
   }
 };
-
 
 const getConsultationById = async (req, res) => {
   try {
