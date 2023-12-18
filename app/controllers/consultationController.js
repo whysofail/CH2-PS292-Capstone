@@ -56,7 +56,7 @@ const createConsultation = async (req, res) => {
   const { lawyer_id } = req.query;
   const { title, description } = req.body;
   const picture_URI = imagePublic_URI || null;
-  const extractArray = [];
+  let extractArray = [];
   if (picture_URI !== null) {
     extractArray = extracted_text.map((item) => item.description);
   }
@@ -91,7 +91,7 @@ const updateConsultation = async (req, res) => {
   try {
     const { user, imagePublic_URI, extracted_text } = req;
     const picture_URI = imagePublic_URI || null;
-    const extractArray = [];
+    let extractArray = [];
     if (picture_URI !== null) {
       extractArray = extracted_text.map((item) => item.description);
     }
