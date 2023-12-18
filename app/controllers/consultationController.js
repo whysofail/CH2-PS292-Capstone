@@ -33,15 +33,17 @@ const getAllConsultationByUserId = async (req, res) => {
 
 const getConsultationById = async (req, res) => {
   try {
-    const { id } = req.query;
+    const { id } = req.params;
     const user = req.user;
-
-    const consultation = await Consultation.findOne(id, {
+    console.log(id)
+    const consultation = await Consultation.findOne({
       where: {
         id,
         user_id: user.id,
       },
     });
+
+
 
     if (!consultation) {
       return res.status(400).json({
@@ -120,15 +122,15 @@ const updateConsultation = async (req, res) => {
 
     const updatedData = req.body;
     updatedData.ekstrakteks = ekstrakteks
-
+    updatedData.picture_URI = picture_URI
     consultation = Object.assign(consultation, updatedData);
-    await Consultation.update({consultation}, {
-      where: {
-        id,
+    consultationUpdate = await Consultation.update(updatedData, {
+      where : {
+        id 
       },
-    });
+    })
 
-    res.status(200).json({ msg: "Update success", data: consultation });
+    res.status(200).json({ msg: "Update success", consultation});
   } catch (error) {
     console.error("Error updating consultation:", error);
     res.status(500).json({ msg: "Internal Server Error" });
