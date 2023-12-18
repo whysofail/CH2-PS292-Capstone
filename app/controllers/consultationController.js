@@ -118,13 +118,13 @@ const updateConsultation = async (req, res) => {
     updatedData.ekstrakteks = ekstrakteks
 
     consultation = Object.assign(consultation, updatedData);
-    await Consultation.update({consultation}, {
-      where: {
-        id,
+    consultationUpdate = await Consultation.update(updatedData, {
+      where : {
+        id 
       },
-    });
+    })
 
-    res.status(200).json({ msg: "Update success", data: consultation });
+    res.status(200).json({ msg: "Update success", consultation});
   } catch (error) {
     console.error("Error updating consultation:", error);
     res.status(500).json({ msg: "Internal Server Error" });
