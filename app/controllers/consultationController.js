@@ -56,7 +56,8 @@ const createConsultation = async (req, res) => {
   const { lawyer_id } = req.query;
   const { title, description } = req.body;
   const picture_URI = imagePublic_URI || null;
-  let extractArray = [];
+  
+  let ekstrakteks = null
 
   if (!lawyer_id) {
     return res.status(400).json({ msg: "No lawyer id" });
@@ -69,17 +70,19 @@ const createConsultation = async (req, res) => {
         .json({ msg: `No lawyer found with id : ${lawyer_id}` });
     }
     if (picture_URI !== null && imageType === "chat") {
-      extractArray = extracted_text.map((item) => item.description);
+      ekstrakteks = extracted_text[0]['description']
     }
+    
     const consultation = await Consultation.create({
       title,
       description,
       picture_URI,
       user_id: user.id,
       lawyer_id,
+      ekstrakteks,
     });
 
-    return res.status(200).json({ msg: consultation, extractArray });
+    return res.status(200).json({ msg: consultation });
   } catch (error) {
     console.error(error);
     return res
@@ -90,12 +93,10 @@ const createConsultation = async (req, res) => {
 
 const updateConsultation = async (req, res) => {
   try {
-    const { user, imagePublic_URI, extracted_text } = req;
+    const { user, imagePublic_URI, extracted_text, imageType } = req;
     const picture_URI = imagePublic_URI || null;
-    let extractArray = [];
-    if (picture_URI !== null && imageType === "chat") {
-      extractArray = extracted_text.map((item) => item.description);
-    }
+    let ekstrakteks = null
+
     const id = req.params.id;
 
     let consultation = await Consultation.findByPk(id, {
@@ -103,7 +104,10 @@ const updateConsultation = async (req, res) => {
         user_id: user.id,
       },
     });
-
+    if (picture_URI !== null && imageType === "chat") {
+      ekstrakteks = extracted_text[0]['description']
+    }
+    
     if (!consultation) {
       return res.status(400).json({
         msg: "Consultation not found or you dont have permission to see this.",
@@ -111,9 +115,10 @@ const updateConsultation = async (req, res) => {
     }
 
     const updatedData = req.body;
+    updatedData.ekstrakteks = ekstrakteks
 
     consultation = Object.assign(consultation, updatedData);
-    await Consultation.update(consultation, {
+    await Consultation.update({consultation}, {
       where: {
         id,
       },
