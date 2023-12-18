@@ -53,11 +53,13 @@ const getConsultationById = async (req, res) => {
 
 const createConsultation = async (req, res) => { 
   const { user, imagePublic_URI, extracted_text } = req;
-  const extractArray = extracted_text.map(item => item.description);
-  console.log(extractArray)
   const { lawyer_id } = req.query;
   const { title, description } = req.body;
   const picture_URI = imagePublic_URI || null;
+  const extractArray = []
+  if(picture_URI !== null){
+    extractArray = extracted_text.map(item => item.description);
+  }
   if (!lawyer_id) {
     return res.status(400).json({ msg: "No lawyer id" });
   }

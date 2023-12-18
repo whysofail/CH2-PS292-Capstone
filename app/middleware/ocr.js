@@ -7,10 +7,12 @@ const ocrImage = async (req, res, next) => {
       // Pastikan buffer file yang telah disimpan di req
       const imageType = req.imageType
       const gs_URI = req.gs_URI
-      console.log(imageType)
+      if(gs_URI === null){
+        return next()
+      }
       if(imageType !== 'chat' || imageType == undefined){
         console.log('Image is not a chat or undefined')
-        next()
+        return next()
       }
       // Lakukan OCR pada file
       const [result] = await vision.textDetection(gs_URI);
