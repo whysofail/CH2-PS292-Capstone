@@ -17,9 +17,6 @@ const getAllConsultationByUserId = async (req, res) => {
       where: {
         user_id: user.id,
       },
-      order: [
-        ['createdAt', 'DESC']
-      ]
     });
     if (!consultation) {
       return res.status(400).json({ msg: "No consultation found" });
@@ -30,20 +27,17 @@ const getAllConsultationByUserId = async (req, res) => {
   }
 };
 
-
 const getConsultationById = async (req, res) => {
   try {
-    const { id } = req.params;
+    const { id } = req.query;
     const user = req.user;
-    console.log(id)
-    const consultation = await Consultation.findOne({
+
+    const consultation = await Consultation.findOne(id, {
       where: {
         id,
         user_id: user.id,
       },
     });
-
-
 
     if (!consultation) {
       return res.status(400).json({
@@ -122,15 +116,15 @@ const updateConsultation = async (req, res) => {
 
     const updatedData = req.body;
     updatedData.ekstrakteks = ekstrakteks
-    updatedData.picture_URI = picture_URI
-    consultation = Object.assign(consultation, updatedData);
-    consultationUpdate = await Consultation.update(updatedData, {
-      where : {
-        id 
-      },
-    })
 
-    res.status(200).json({ msg: "Update success", consultation});
+    consultation = Object.assign(consultation, updatedData);
+    await Consultation.update({consultation}, {
+      where: {
+        id,
+      },
+    });
+
+    res.status(200).json({ msg: "Update success", data: consultation });
   } catch (error) {
     console.error("Error updating consultation:", error);
     res.status(500).json({ msg: "Internal Server Error" });
