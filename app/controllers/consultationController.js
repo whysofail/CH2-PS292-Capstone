@@ -116,7 +116,7 @@ const updateConsultation = async (req, res) => {
 
     const updatedData = req.body;
     updatedData.ekstrakteks = ekstrakteks
-
+    updatedData.picture_URI = picture_URI
     consultation = Object.assign(consultation, updatedData);
     consultationUpdate = await Consultation.update(updatedData, {
       where : {
