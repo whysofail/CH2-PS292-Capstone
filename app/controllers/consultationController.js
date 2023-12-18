@@ -57,19 +57,20 @@ const createConsultation = async (req, res) => {
   const { title, description } = req.body;
   const picture_URI = imagePublic_URI || null;
   let extractArray = [];
-  if (picture_URI !== null && imageType === 'chat') {
-    extractArray = extracted_text.map((item) => item.description);
-  }
+
   if (!lawyer_id) {
     return res.status(400).json({ msg: "No lawyer id" });
   }
-  const lawyer = await User.findByPk(lawyer_id);
-  if (!lawyer) {
-    return res
-      .status(400)
-      .json({ msg: `No lawyer found with id : ${lawyer_id}` });
-  }
   try {
+    const lawyer = await User.findByPk(lawyer_id);
+    if (!lawyer) {
+      return res
+        .status(400)
+        .json({ msg: `No lawyer found with id : ${lawyer_id}` });
+    }
+    if (picture_URI !== null && imageType === "chat") {
+      extractArray = extracted_text.map((item) => item.description);
+    }
     const consultation = await Consultation.create({
       title,
       description,
@@ -92,7 +93,7 @@ const updateConsultation = async (req, res) => {
     const { user, imagePublic_URI, extracted_text } = req;
     const picture_URI = imagePublic_URI || null;
     let extractArray = [];
-    if (picture_URI !== null) {
+    if (picture_URI !== null && imageType === "chat") {
       extractArray = extracted_text.map((item) => item.description);
     }
     const id = req.params.id;
