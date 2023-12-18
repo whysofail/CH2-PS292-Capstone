@@ -3,7 +3,7 @@ const { User, Consultation } = require("../../models");
 const getAllConsultation = async (req, res) => {
   try {
     const consultation = await Consultation.findAll();
-    return res.status(200).json({msg: consultation});
+    return res.status(200).json({ msg: consultation });
   } catch (error) {
     console.error(error);
     return res.status(500).json({ msg: "Internal server error" });
@@ -51,14 +51,14 @@ const getConsultationById = async (req, res) => {
   }
 };
 
-const createConsultation = async (req, res) => { 
+const createConsultation = async (req, res) => {
   const { user, imagePublic_URI, extracted_text } = req;
   const { lawyer_id } = req.query;
   const { title, description } = req.body;
   const picture_URI = imagePublic_URI || null;
-  const extractArray = []
-  if(picture_URI !== null){
-    extractArray = extracted_text.map(item => item.description);
+  const extractArray = [];
+  if (picture_URI !== null) {
+    extractArray = extracted_text.map((item) => item.description);
   }
   if (!lawyer_id) {
     return res.status(400).json({ msg: "No lawyer id" });
@@ -77,8 +77,8 @@ const createConsultation = async (req, res) => {
       user_id: user.id,
       lawyer_id,
     });
-    
-    return res.status(200).json({ msg: consultation, extractArray});
+
+    return res.status(200).json({ msg: consultation, extractArray });
   } catch (error) {
     console.error(error);
     return res
@@ -89,7 +89,12 @@ const createConsultation = async (req, res) => {
 
 const updateConsultation = async (req, res) => {
   try {
-    const user = req.user;
+    const { user, imagePublic_URI, extracted_text } = req;
+    const picture_URI = imagePublic_URI || null;
+    const extractArray = [];
+    if (picture_URI !== null) {
+      extractArray = extracted_text.map((item) => item.description);
+    }
     const id = req.params.id;
 
     let consultation = await Consultation.findByPk(id, {
@@ -112,9 +117,8 @@ const updateConsultation = async (req, res) => {
         id,
       },
     });
-    
-    consultation['extracted_text'] = req.description
-    res.status(200).json({ msg: 'Update success', data: consultation });
+
+    res.status(200).json({ msg: "Update success", data: consultation });
   } catch (error) {
     console.error("Error updating consultation:", error);
     res.status(500).json({ msg: "Internal Server Error" });
