@@ -52,12 +52,12 @@ const getConsultationById = async (req, res) => {
 };
 
 const createConsultation = async (req, res) => {
-  const { user, imagePublic_URI, extracted_text } = req;
+  const { user, imagePublic_URI, extracted_text, imageType } = req;
   const { lawyer_id } = req.query;
   const { title, description } = req.body;
   const picture_URI = imagePublic_URI || null;
   let extractArray = [];
-  if (picture_URI !== null) {
+  if (picture_URI !== null && imageType === 'chat') {
     extractArray = extracted_text.map((item) => item.description);
   }
   if (!lawyer_id) {
