@@ -30,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
       email: DataTypes.STRING,
       password: DataTypes.STRING,
       role_id: DataTypes.INTEGER,
-      profile_picture: DataTypes.STRING, // Kolom baru untuk URL foto profil
+      profile_picture: DataTypes.STRING,
       fee : DataTypes.DECIMAL(10,2),
     },
     {

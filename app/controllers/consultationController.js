@@ -34,11 +34,18 @@ const getAllConsultationByLawyerId = async (req, res) => {
       where: {
         lawyer_id: user.id,
       },
-      include: [{
-        model: User,
-        as: 'user',
-        attributes: ['first_name', 'last_name'], 
-      }],
+      include: [
+        {
+          model: User,
+          as: 'user',
+          attributes: ['first_name', 'last_name'], 
+        },
+        {
+          model: User,
+          as: 'lawyer',
+          attributes: ['first_name', 'last_name'], 
+        }
+      ],
     });
     if (!consultations) {
       return res.status(400).json({ msg: "No consultations found for this lawyer" });
@@ -49,6 +56,7 @@ const getAllConsultationByLawyerId = async (req, res) => {
     return res.status(500).json({ msg: "Internal server error." });
   }
 };
+
 
 
 
