@@ -27,6 +27,25 @@ const getAllConsultationByUserId = async (req, res) => {
   }
 };
 
+const getAllConsultationByLawyerId = async (req, res) => {
+  const { user } = req;
+  try {
+    const consultations = await Consultation.findAll({
+      where: {
+        lawyer_id: user.id,
+      },
+    });
+    if (!consultations) {
+      return res.status(400).json({ msg: "No consultations found for this lawyer" });
+    }
+    return res.status(200).json({ msg: consultations });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ msg: "Internal server error." });
+  }
+};
+
+
 const getConsultationById = async (req, res) => {
   try {
     const { id } = req.params;
@@ -134,6 +153,7 @@ module.exports = {
   getAllConsultation,
   getConsultationById,
   getAllConsultationByUserId,
+  getAllConsultationByLawyerId,
   updateConsultation,
   createConsultation,
 };

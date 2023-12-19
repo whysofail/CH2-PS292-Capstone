@@ -15,6 +15,11 @@ router.get(
   middleware.authorization.authorize,
   consultationController.getAllConsultationByUserId
 );
+router.get(
+  "/lawyer",
+  middleware.authorization.authorize,
+  consultationController.getAllConsultationByLawyerId
+);
 router.post(
   "/",
   middleware.authorization.authorize,
@@ -38,5 +43,6 @@ router.put(
   middleware.ocr.ocrImage,
   consultationController.updateConsultation
 );
+
 
 module.exports = router;
