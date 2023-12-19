@@ -29,15 +29,17 @@ const getAllConsultationByUserId = async (req, res) => {
 
 const getConsultationById = async (req, res) => {
   try {
-    const { id } = req.query;
+    const { id } = req.params;
     const user = req.user;
-
-    const consultation = await Consultation.findOne(id, {
+    console.log(id)
+    const consultation = await Consultation.findOne({
       where: {
         id,
         user_id: user.id,
       },
     });
+
+
 
     if (!consultation) {
       return res.status(400).json({
@@ -91,14 +93,13 @@ const createConsultation = async (req, res) => {
   }
 };
 
+
 const updateConsultation = async (req, res) => {
   try {
     const { user, imagePublic_URI, extracted_text, imageType } = req;
     const picture_URI = imagePublic_URI || null;
     let ekstrakteks = null
-
     const id = req.params.id;
-
     let consultation = await Consultation.findByPk(id, {
       where: {
         user_id: user.id,
@@ -113,18 +114,16 @@ const updateConsultation = async (req, res) => {
         msg: "Consultation not found or you dont have permission to see this.",
       });
     }
-
     const updatedData = req.body;
     updatedData.ekstrakteks = ekstrakteks
-
+    updatedData.picture_URI = picture_URI
     consultation = Object.assign(consultation, updatedData);
-    await Consultation.update({consultation}, {
-      where: {
-        id,
+    consultationUpdate = await Consultation.update(updatedData, {
+      where : {
+        id 
       },
-    });
-
-    res.status(200).json({ msg: "Update success", data: consultation });
+    })
+    res.status(200).json({ msg: "Update success", consultation});
   } catch (error) {
     console.error("Error updating consultation:", error);
     res.status(500).json({ msg: "Internal Server Error" });
