@@ -34,14 +34,6 @@ const getAllConsultationByLawyerId = async (req, res) => {
       where: {
         lawyer_id: user.id,
       },
-      include: [{
-        model: User,
-        as: 'User', // Sesuaikan dengan alias yang telah Anda definisikan dalam model Anda
-        attributes: ['first_name', 'last_name'],
-        where: {
-          id: sequelize.col('Consultation.user_id') // Menambahkan kondisi where untuk mengambil data User berdasarkan user_id pada tabel Consultation
-        }
-      }],
     });
     if (!consultations) {
       return res.status(400).json({ msg: "No consultations found for this lawyer" });
@@ -52,8 +44,6 @@ const getAllConsultationByLawyerId = async (req, res) => {
     return res.status(500).json({ msg: "Internal server error." });
   }
 };
-
-
 
 
 const getConsultationById = async (req, res) => {
