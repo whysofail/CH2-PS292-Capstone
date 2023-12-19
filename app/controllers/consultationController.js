@@ -34,6 +34,11 @@ const getAllConsultationByLawyerId = async (req, res) => {
       where: {
         lawyer_id: user.id,
       },
+      include: [{
+        model: User,
+        as: 'User', // Sesuaikan dengan alias yang telah Anda definisikan dalam model Anda
+        attributes: ['first_name', 'last_name'],
+      }],
     });
     if (!consultations) {
       return res.status(400).json({ msg: "No consultations found for this lawyer" });
