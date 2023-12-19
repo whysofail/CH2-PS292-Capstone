@@ -30,32 +30,35 @@ const getAllConsultationByUserId = async (req, res) => {
 const getAllConsultationByLawyerId = async (req, res) => {
   const { user } = req;
   try {
-    const consultations = await Consultation.findAll({
+    let consultations = await Consultation.findAll({
       where: {
         lawyer_id: user.id,
       },
-      include: [
-        {
-          model: User,
-          as: 'user',
-          attributes: ['first_name', 'last_name'], 
-        },
-        {
-          model: User,
-          as: 'lawyer',
-          attributes: ['first_name', 'last_name'], 
-        }
-      ],
+      include: [{
+        model: User,
+        as: 'user',
+        attributes: ['first_name', 'last_name'], 
+      }],
     });
     if (!consultations) {
       return res.status(400).json({ msg: "No consultations found for this lawyer" });
     }
+    // Modifikasi setiap objek consultation
+    consultations = consultations.map(consultation => {
+      // Tambahkan first_name dan last_name ke objek consultation
+      consultation.dataValues.first_name = consultation.user.first_name;
+      consultation.dataValues.last_name = consultation.user.last_name;
+      // Hapus objek user dari objek consultation
+      delete consultation.dataValues.user;
+      return consultation;
+    });
     return res.status(200).json({ msg: consultations });
   } catch (error) {
     console.error(error);
     return res.status(500).json({ msg: "Internal server error." });
   }
 };
+
 
 
 
