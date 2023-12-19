@@ -7,6 +7,7 @@ const middleware = require("../middleware");
 
 router.post("/login", authController.login);
 router.get("/logout", authController.logout);
+router.get("/user/:id", middleware.authorization.authorize, authController.getUserById);
 router.post(
   "/register",
   middleware.multer.processFileMiddleware,
