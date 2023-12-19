@@ -208,7 +208,7 @@ const refreshToken = async (req, res) => {
 
 const updateUser = async (req, res) => {
   try {
-    const { first_name, last_name, email, password } = req.body;
+    const { first_name, last_name, email } = req.body;
     const profile_picture = req.imagePublic_URI || null;
     const user_id = req.user.id;
 
@@ -217,7 +217,6 @@ const updateUser = async (req, res) => {
     if (first_name) updatedFields.first_name = first_name;
     if (last_name) updatedFields.last_name = last_name;
     if (email) updatedFields.email = email;
-    if (password) updatedFields.password = await encryptPassword(password);
     if (profile_picture) updatedFields.profile_picture = profile_picture;
 
     const updatedUser = await User.update(updatedFields, {
