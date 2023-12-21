@@ -22,10 +22,16 @@
         android:theme="@style/Theme.LawMate"
         tools:targetApi="31">
         <activity
+            android:name=".LawyerMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.consultation.ConsultationActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.profile.Edit_User_Activity"
             android:exported="false" />
         <activity
-            android:name=".ui.chat.ChatActivity"
+            android:name=".ui.chat.DetailConsultationActivity"
             android:exported="false"
             android:label="@string/title_activity_chat"
             android:theme="@style/Theme.LawMate" />

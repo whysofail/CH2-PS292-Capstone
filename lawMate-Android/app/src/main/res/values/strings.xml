@@ -64,5 +64,7 @@
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
     <string name="lawyer_me">Pilihan Lawyer Kami</string>
-    <string name="desc_lawyer_me">Terhubung dengan lawyers berpengalaman kami</string>
+    <string name="lawyer_rek">Rekomendasi Lawyer</string>
+    <string name="desc_lawyer_me">Terhubunglah dengan lawyers berpengalaman kami</string>
+    <string name="desc_lawyer_rek">Kami merekomendasikan beberapa lawyer yang sesuai dengan masalah anda</string>
 </resources>

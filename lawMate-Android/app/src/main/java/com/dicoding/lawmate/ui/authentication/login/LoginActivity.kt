@@ -8,6 +8,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.dicoding.lawmate.LawyerMainActivity
 import com.dicoding.lawmate.MainActivity
 import com.dicoding.lawmate.api.response.ErrorResponse
 import com.dicoding.lawmate.databinding.ActivityLoginBinding
@@ -67,7 +68,15 @@ class LoginActivity : AppCompatActivity() {
                             it.user.accessToken
                         )
                         userPref.setUser(dataUser)
+
+                    }
+
+                    val id = it.user?.roleId
+                    if (id == "1"){
                         startActivity(Intent(applicationContext, MainActivity::class.java))
+                        finish()
+                    }else{
+                        startActivity(Intent(applicationContext, LawyerMainActivity::class.java))
                         finish()
                     }
                 }

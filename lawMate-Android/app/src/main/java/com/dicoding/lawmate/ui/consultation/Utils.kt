@@ -1,4 +1,4 @@
-package com.dicoding.lawmate.ui.lawbot
+package com.dicoding.lawmate.ui.consultation
 
 import android.content.ContentValues
 import android.content.Context
@@ -26,7 +26,7 @@ object Utils {
     private const val MAXIMAL_SIZE = 1000000
 
     // Mendapatkan URI untuk menyimpan gambar menggunakan MediaStore (Android Q+)
-    fun getImageUri(context: LawBotFragment): Uri {
+    fun getImageUri(context: Context): Uri {
         var uri: Uri? = null
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             val contentValues = ContentValues().apply {
@@ -34,7 +34,7 @@ object Utils {
                 put(MediaStore.MediaColumns.MIME_TYPE, "image/jpeg")
                 put(MediaStore.MediaColumns.RELATIVE_PATH, "Pictures/MyCamera/")
             }
-            uri = context.getActivity()?.getContentResolver()?.insert(
+            uri = context.contentResolver.insert(
                 MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
                 contentValues
             )
@@ -43,21 +43,15 @@ object Utils {
     }
 
     // Mendapatkan URI untuk menyimpan gambar di perangkat dengan Android versi sebelumnya (Pre-Q)
-    private fun getImageUriForPreQ(context: LawBotFragment): Uri {
-        try {
-            val filesDir = context.requireContext().getExternalFilesDir(Environment.DIRECTORY_PICTURES)
-            val imageFile = File(filesDir, "/MyCamera/$timeStamp.jpg")
-            if (imageFile.parentFile?.exists() == false) imageFile.parentFile?.mkdir()
-            return FileProvider.getUriForFile(
-                context.requireContext(),
-                "com.dicoding.lawmate.fileprovider",
-                imageFile
-            )
-        } catch (e: Exception) {
-            e.printStackTrace()
-            Log.e("Camera", "Error in getImageUriForPreQ: ${e.message}")
-            throw e
-        }
+    private fun getImageUriForPreQ(context: Context): Uri {
+        val filesDir = context.getExternalFilesDir(Environment.DIRECTORY_PICTURES)
+        val imageFile = File(filesDir, "/MyCamera/$timeStamp.jpg")
+        if (imageFile.parentFile?.exists() == false) imageFile.parentFile?.mkdir()
+        return FileProvider.getUriForFile(
+            context,
+            "com.dicoding.lawmate.fileprovider",
+            imageFile
+        )
     }
 
     // Membuat file sementara kustom

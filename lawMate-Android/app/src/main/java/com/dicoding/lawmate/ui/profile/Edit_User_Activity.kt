@@ -139,7 +139,43 @@ class Edit_User_Activity : AppCompatActivity() {
                     showLoading(false)
                 }
             }
-        } ?: showToast("Silakan masukkan berkas gambar terlebih dahulu.")
+        } ?: run {
+            // Jika currentImageUri null, user hanya ingin mengganti firstName dan lastName
+            showLoading(true)
+            val _firstName = binding.edFirstName.text.toString()
+            val _lastName = binding.edLastName.text.toString()
+            val _email = intent.getStringExtra("email").toString()
+            val _password = intent.getStringExtra("password").toString()
+
+            val firstName = _firstName.toRequestBody("text/plain".toMediaType())
+            val lastName = _lastName.toRequestBody("text/plain".toMediaType())
+            val email = _email.toRequestBody("text/plain".toMediaType())
+            val password = _password.toRequestBody("text/plain".toMediaType())
+
+            lifecycleScope.launch {
+                try {
+                    if (userPref.preference.contains(UserPref.ACCESSTOKEN)) {
+                        val token = userPref.getUser().accessToken
+                        val apiService = ApiConfig.getApiService(token)
+                        val successResponse =
+                            apiService.editUserNoFile(firstName, lastName, email, password)
+                        showToast(successResponse.msg)
+                    }
+
+                    showLoading(false)
+                    onBackPressed()
+                } catch (e: HttpException) {
+                    e.message?.let { showToast(it) }
+                    val errorBody = e.response()?.errorBody()?.string()
+                    val errorResponse = Gson().fromJson(errorBody, ErrorResponse::class.java)
+                    errorResponse.msg?.let { showToast(it) }
+                    showLoading(false)
+                } catch (e: Exception) {
+                    e.message?.let { showToast(it) }
+                    showLoading(false)
+                }
+            }
+        }
     }
 
     private fun showLoading(isLoading: Boolean) {

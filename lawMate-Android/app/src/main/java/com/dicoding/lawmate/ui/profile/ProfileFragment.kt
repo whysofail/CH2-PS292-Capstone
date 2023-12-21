@@ -9,10 +9,13 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.bumptech.glide.Glide
+import com.dicoding.lawmate.MainActivity
+import com.dicoding.lawmate.R
 import com.dicoding.lawmate.databinding.FragmentProfileBinding
 import com.dicoding.lawmate.ui.authentication.login.LoginActivity
 import com.dicoding.lawmate.ui.home.DetailArticleActivity
 import com.dicoding.mystoryapp.preference.UserPref
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.coroutines.launch
 
 // TODO: Rename parameter arguments, choose names that match
@@ -35,6 +38,8 @@ class ProfileFragment : Fragment() {
     // Declare UserPref
     private lateinit var userPref: UserPref
 
+    private lateinit var viewModel:ProfileViewModel
+
     private lateinit var userFirstName:String
     private lateinit var userLastName:String
     private lateinit var email:String
@@ -46,7 +51,7 @@ class ProfileFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val viewModel = ViewModelProvider(this).get(ProfileViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(ProfileViewModel::class.java)
 
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
         val root: View = binding.root
@@ -67,7 +72,7 @@ class ProfileFragment : Fragment() {
             userPref = UserPref(requireContext())
             if (userPref.preference.contains(UserPref.ACCESSTOKEN)) {
                 val token = userPref.getUser().accessToken
-                token?.let { viewModel.getLawyers(it) }
+                token?.let { viewModel.getUser(it) }
             }
 
             viewModel.user.observe(viewLifecycleOwner){
@@ -90,8 +95,38 @@ class ProfileFragment : Fragment() {
             }
         }
 
-
         return root
+    }
+
+    override fun onResume() {
+        super.onResume()
+        lifecycleScope.launch {
+            // Initialize UserPref
+            userPref = UserPref(requireContext())
+            if (userPref.preference.contains(UserPref.ACCESSTOKEN)) {
+                val token = userPref.getUser().accessToken
+                token?.let { viewModel.getUser(it) }
+            }
+
+            viewModel.user.observe(viewLifecycleOwner){
+                binding.fullName.text = "${it.firstName} ${it.lastName}"
+                binding.email.text = it.email
+
+                userFirstName = it.firstName.toString()
+                userLastName = it.lastName.toString()
+                email = it.email.toString()
+                password = it.password.toString()
+
+                photo = "https://i0.wp.com/digitalhealthskills.com/wp-content/uploads/2022/11/3da39-no-user-image-icon-27.png?fit=500%2C500&ssl=1"
+                if (it.profilePicture != null){
+                    photo = it.profilePicture.toString()
+                }
+
+                Glide.with(binding.root)
+                    .load(photo)
+                    .into(binding.ivUser)
+            }
+        }
     }
 
     override fun onDestroyView() {

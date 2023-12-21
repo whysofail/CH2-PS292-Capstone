@@ -6,9 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.dicoding.lawmate.MainActivity
 import com.dicoding.lawmate.R
 import com.dicoding.lawmate.databinding.FragmentResponseLawBotBinding
 import com.dicoding.lawmate.ui.lawyer.LawyerFragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class ResponseLawBotFragment : Fragment() {
     private var _binding: FragmentResponseLawBotBinding? = null
@@ -24,7 +26,9 @@ class ResponseLawBotFragment : Fragment() {
     ): View {
         val konsulViewModel =
             ViewModelProvider(this).get(LawBotViewModel::class.java)
+
         val responseChat = arguments?.getString("responseChat")
+        val edChat = arguments?.getString("edChat")
         val responseTag = arguments?.getString("responseTag")
 
 
@@ -33,7 +37,7 @@ class ResponseLawBotFragment : Fragment() {
 
 
         binding.tvResponse.text = responseChat
-        binding.tvRekomendasiTag.text = "kami merekomendasikan advokat dengan spesialisasi '$responseTag'"
+        binding.tvRekomendasiTag.text = "kami merekomendasikan advokat dengan spesialisasi 'Kekerasan Seksual'"
 
         binding.btnDescBack.setOnClickListener {
             val fragmentTujuan = LawBotFragment()
@@ -42,11 +46,17 @@ class ResponseLawBotFragment : Fragment() {
             transaction.commit()
         }
         binding.btnRekomendasi.setOnClickListener {
-            val fragmentTujuan = LawyerFragment()
+            val fragmentTujuan = RekomendasiFragment()
+            val args = Bundle()
+            args.putString("edChat", edChat)
+            args.putString("responseTag", responseTag)
+            fragmentTujuan.arguments = args
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.addToBackStack(null)
             transaction.replace(R.id.frame_layout, fragmentTujuan)
             transaction.commit()
         }
+
 
         return root
     }

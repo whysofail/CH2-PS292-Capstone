@@ -11,7 +11,7 @@ class ProfileViewModel:ViewModel() {
     val user:LiveData<GetUserResponse> = _user
 
 
-    suspend fun getLawyers(token:String){
+    suspend fun getUser(token:String){
         val apiService = ApiConfig.getApiService(token)
         val userResponse = apiService.getUser()
 

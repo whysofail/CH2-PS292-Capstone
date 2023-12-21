@@ -5,8 +5,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.dicoding.lawmate.MainActivity
+import com.dicoding.lawmate.R
 import com.dicoding.lawmate.databinding.FragmentHomeBinding
 import com.dicoding.lawmate.ui.home.HomeViewModel
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeFragment : Fragment() {
 
@@ -26,6 +29,7 @@ class HomeFragment : Fragment() {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
 
         return root
     }

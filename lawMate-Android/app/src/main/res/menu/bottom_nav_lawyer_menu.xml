@@ -5,14 +5,7 @@
         android:id="@+id/navigation_home"
         android:icon="@drawable/ic_home"
         android:title="Home" />
-    <item
-        android:id="@+id/navigation_konsul"
-        android:icon="@drawable/ic_balance"
-        android:title="LawBot" />
-    <item
-        android:id="@+id/navigation_lawyer"
-        android:icon="@drawable/ic_account_balance"
-        android:title="Lawyer" />
+
     <item
         android:id="@+id/navigation_chat"
         android:icon="@drawable/ic_chat"

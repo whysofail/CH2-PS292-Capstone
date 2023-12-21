@@ -1,14 +1,15 @@
 package com.dicoding.lawmate.api.response
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 
 data class LawyerResponse(
 
-	@field:SerializedName("data")
-	val data: List<DataItem> = emptyList(),
+	@field:SerializedName("msg")
+	val msg: String? = null,
 
-	@field:SerializedName("message")
-	val message: String? = null
+	@field:SerializedName("data")
+	val data: List<DataItem> = emptyList()
 )
 
 data class Role(
@@ -26,6 +27,7 @@ data class LawyerTagsItem(
 	val description: String? = null
 )
 
+
 data class DataItem(
 
 	@field:SerializedName("lawyerTags")
@@ -34,11 +36,17 @@ data class DataItem(
 	@field:SerializedName("role")
 	val role: Role? = null,
 
+	@field:SerializedName("fee")
+	val fee: String? = null,
+
 	@field:SerializedName("last_name")
 	val lastName: String? = null,
 
+	@field:SerializedName("profile_picture")
+	val profilePicture: String? = null,
+
 	@field:SerializedName("id")
-	val id: Int? = null,
+	val id: String? = null,
 
 	@field:SerializedName("first_name")
 	val firstName: String? = null,

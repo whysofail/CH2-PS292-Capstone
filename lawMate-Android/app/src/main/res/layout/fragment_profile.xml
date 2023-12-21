@@ -51,6 +51,7 @@
                 android:id="@+id/iv_user"
                 android:layout_width="140dp"
                 android:layout_height="140dp"
+                android:scaleType="centerCrop"
                 tools:src="@tools:sample/avatars" />
         </androidx.cardview.widget.CardView>
 
