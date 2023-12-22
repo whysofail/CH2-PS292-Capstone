@@ -1,14 +1,8 @@
-/* eslint-disable max-len */
-/* eslint-disable no-unused-vars */
-
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
-const randomstring = require('randomstring');
-const { Op } = require('sequelize');
-const { User, UserEmailConfirmation } = require('../../models');
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const { User } = require("../../models");
 
 const SALT = 10;
-
 
 function encryptPassword(password) {
   return new Promise((resolve, reject) => {
@@ -36,79 +30,87 @@ function checkPassword(encryptedPassword, password) {
 
 function createToken(payload) {
   const access = jwt.sign(payload, process.env.ACCESS_TOKEN_SECRET, {
-    expiresIn: '6h',
+    expiresIn: "7d",
   });
   const refresh = jwt.sign(payload, process.env.REFRESH_TOKEN_SECRET, {
-    expiresIn: '7d',
+    expiresIn: "7d",
   });
   return [access, refresh];
 }
 
-
 const register = async (req, res) => {
-  const email = req.body.email.toLowerCase();
-  const {
-    name, password, confirmationPassword, birthDate, gender, phone,
-  } = req.body;
- 
-  if (password !== confirmationPassword) {
-    res.status(401).json({ message: 'password doesn`t match' });
-    return;
-  }
   try {
-    const encryptedPassword = await encryptPassword(password);
+    const { first_name, last_name, email, password, confirmationPassword } =
+      req.body;
+    const profile_picture = req.imagePublic_URI || null;
 
+    if (
+      !first_name ||
+      !last_name ||
+      !email ||
+      !password ||
+      !confirmationPassword 
+    ) {
+      return res.status(400).json({ msg: "All fields are required" });
+    }
+
+    if (password !== confirmationPassword) {
+      return res.status(401).json({ msg: "Passwords do not match" });
+    }
+
+    const encryptedPassword = await encryptPassword(password);
+    const USER = 1;
+    const role_id = USER;
     const user = await User.create({
-      name,
+      first_name,
+      last_name,
       email,
-      encryptedPassword,
-      birthDate: new Date(birthDate).toISOString(),
-      gender,
-      phone,
-      roleId: role,
+      password: encryptedPassword,
+      role_id,
+      profile_picture,
     });
-    res.status(200).json('Register success');
+
+    return res.status(200).json({ msg: "Registration successful" });
   } catch (err) {
-    res.status(400).json({ err: { name: err.name, message: err.message } });
+    console.error("Registration error:", err);
+
+    return res.status(500).json({
+      error: {
+        name: err.name,
+        msg: "An error occurred during registration",
+      },
+    });
   }
 };
 
 const login = async (req, res) => {
-  const email = req.body.email.toLowerCase();
-  const { password } = req.body;
+  const { email, password } = req.body;
 
   const user = await User.findOne({
     where: { email },
   });
 
   if (!user) {
-    res.status(404).json({ message: 'Email not found' });
+    res.status(404).json({ msg: "Email not found" });
     return;
   }
 
-  const isPasswordCorrect = await checkPassword(
-    user.encryptedPassword,
-    password,
-  );
+  const isPasswordCorrect = await checkPassword(user.password, password);
 
   if (!isPasswordCorrect) {
-    res.status(401).json({ message: 'Wrong password!' });
+    res.status(401).json({ msg: "Wrong password!" });
     return;
   }
 
   const token = createToken({
-    id: user.id,
-    name: user.name,
-    image: user.image,
+    user_id: user.id,
+    first_name: user.first_name,
+    last_name: user.last_name,
     email: user.email,
-    birthDate: user.birthDate,
-    gender: user.gender,
-    phone: user.phone,
-    roleId: user.roleId,
-    createdAt: user.createdAt,
-    updatedAt: user.updatedAt,
+    role_id: user.role_id,
+    profile_picture: user.profile_picture,
   });
-  const accesstToken = token[0];
+  const accessToken = token[0];
   const refreshToken = token[1];
   await User.update(
     { refreshToken },
@@ -116,18 +118,22 @@ const login = async (req, res) => {
       where: {
         id: user.id,
       },
-    },
+    }
   );
-  res.cookie('refreshToken', refreshToken, {
+  res.cookie("refreshToken", refreshToken, {
     httpOnly: true,
     maxAge: 24 * 60 * 60 * 1000,
   });
-  res.status(201).json({
-    message: 'login success',
+  res.status(200).json({
+    msg: "login success",
     user: {
-      id: user.id,
+      user_id: user.id,
+      first_name: user.first_name,
+      last_name: user.last_name,
       email: user.email,
-      accesstToken,
+      role_id: user.role_id,
+      profile_picture: user.profile_picture,
+      accessToken,
     },
   });
 };
@@ -138,35 +144,10 @@ const whoAmI = async (req, res) => {
 
 const logout = async (req, res) => {
   try {
-    const refreshToken = req.body.refreshToken === undefined || req.body.refreshToken === null
-      ? req.cookies.refreshToken
-      : req.body.refreshToken;
-    if (!refreshToken) {
-      res.status(204).send('null');
-      return;
-    }
-    const user = await User.findAll({
-      where: {
-        refreshToken,
-      },
-    });
-    if (!user[0]) {
-      res.status(204).send('notfound');
-      return;
-    }
-    const userId = user[0].id;
-    await User.update(
-      { refreshToken: null },
-      {
-        where: {
-          id: userId,
-        },
-      },
-    );
-    res.clearCookie('refreshToken');
-    res.status(200).json('Log out success');
+    res.clearCookie("refreshToken");
+    res.status(200).json({ msg: "Log out success" });
   } catch (error) {
-    res.status(400).json({ msg: 'Something went wrong' });
+    res.status(400).json({ msg: "Something went wrong" });
   }
 };
 
@@ -192,30 +173,26 @@ const refreshToken = async (req, res) => {
         return;
       }
       const userId = user.id;
-      const {
-        email, createdAt, updatedAt, roleId,
-      } = user;
+      const { email, createdAt, updatedAt, role_id } = user;
       const accessToken = jwt.sign(
         {
-          id: user.id,
-          name: user.name,
-          image: user.image,
+          user_id: user.id,
           email: user.email,
-          birthDate: user.birthDate,
-          gender: user.gender,
-          phone: user.phone,
-          roleId: user.roleId,
           createdAt: user.createdAt,
           updatedAt: user.updatedAt,
+          role_id: user.role_id,
         },
         process.env.ACCESS_TOKEN_SECRET,
         {
-          expiresIn: '6h',
-        },
+          expiresIn: "7d",
+        }
       );
       res.json({
-        userId,
+        user_id: userId,
         email,
+        createdAt,
+        updatedAt,
+        role_id,
         accessToken,
       });
     });
@@ -223,40 +200,94 @@ const refreshToken = async (req, res) => {
     res.status(422).json({
       error: {
         name: err.name,
-        message: err.message,
+        msg: err.msg,
+      },
+    });
+  }
+};
+
+const updateUser = async (req, res) => {
+  try {
+    const { first_name, last_name, email } = req.body;
+    const profile_picture = req.imagePublic_URI || null;
+    const user_id = req.user.id;
+
+    let updatedFields = {};
+
+    if (first_name) updatedFields.first_name = first_name;
+    if (last_name) updatedFields.last_name = last_name;
+    if (email) updatedFields.email = email;
+    if (profile_picture) updatedFields.profile_picture = profile_picture;
+
+    const updatedUser = await User.update(updatedFields, {
+      where: {
+        id: user_id,
+      },
+    });
+
+    if (updatedUser) {
+      return res.status(200).json({ msg: "User data updated successfully" });
+    } else {
+      return res.status(400).json({ msg: "Failed to update user data" });
+    }
+  } catch (err) {
+    console.error("Update error:", err);
+
+    return res.status(500).json({
+      error: {
+        name: err.name,
+        msg: "An error occurred during updating",
+      },
+    });
+  }
+};
+const getUserById = async (req, res) => {
+  try {
+    const user_id = req.params.id;
+    const user = await User.findOne({
+      where: {
+        id: user_id,
+      },
+    });
+
+    if (!user) {
+      return res.status(404).json({ msg: "User not found" });
+    }
+
+    return res.status(200).json(user);
+  } catch (err) {
+    console.error("Get User by ID error:", err);
+
+    return res.status(500).json({
+      error: {
+        name: err.name,
+        msg: "An error occurred while retrieving the user",
       },
     });
   }
 };
 
 
-
 module.exports = {
-  handleRegisterGoogle,
-  handleLoginGoogle,
-  handleGoogleAuthUrl,
-  handleGoogleAuthCb,
-  verifyIdToken,
-  handleEmailVerify,
   register,
-  registerTest,
-  registerAdmin,
   login,
   whoAmI,
   logout,
   refreshToken,
+  updateUser,
+  getUserById,
   onLost(_req, res) {
     res.status(404).json({
-      status: 'FAIL',
-      message: 'Route not found!',
+      status: "FAIL",
+      msg: "Route not found!",
     });
   },
   onError(err, _req, res, _next) {
     res.status(500).json({
-      status: 'ERROR',
+      status: "ERROR",
       error: {
         name: err.name,
-        message: err.message,
+        msg: err.message,
       },
     });
   },

@@ -1,1 +1,5 @@
 node_modules
+*.env
+.env
+/*.env
+tmp/keys/
