@@ -7,7 +7,7 @@ LawMate, your reliable legal companion in Indonesia! Meet Lara, your go-to legal
 ## How to install LawMate
 
 1. Make sure your devices is Android based
-2. Download lawmate via this [link](https://drive.google.com/file/d/1J-JvuSB4-DJYfn3yQ9Il2LjkFfT_RbbH/view?usp=drive_link)
+2. Download lawmate via this [link](https://drive.google.com/file/d/1vxqRWbVYHdKv4WBNmQOuzrWBKMPEgdr5/view?usp=drivesdk)
 3. If there is a warning 'this file is malicious' please ignore it.
 4. If it's already installed you can see how to use LawMate [here](https://drive.google.com/file/d/1J-JvuSB4-DJYfn3yQ9Il2LjkFfT_RbbH/view?usp=drive_link).
 
